@@ -1,6 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:logic_enhancer/pages/lessons.dart';
 import '../main.dart';
 import 'levels.dart';
 
@@ -76,7 +77,10 @@ class _playPageState extends State<playPage> {
               ),) ,SizedBox(height: 40), SizedBox(
                 width: 500,
                 child: RaisedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Lessons()));
+
+                },
                 textColor: const Color.fromRGBO(36, 31, 28, 1),
                 color: const Color.fromRGBO(93, 70, 47, 1),
                 hoverColor: const Color.fromRGBO(147, 112, 71, 1),
