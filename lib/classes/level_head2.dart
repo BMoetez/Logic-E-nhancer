@@ -1,29 +1,31 @@
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
-
 import 'package:logic_enhancer/main.dart';
 import 'package:logic_enhancer/pages/levels.dart';
 
 class LevelHead2 extends StatefulWidget {
   String n = '';
   Widget f = Container();
+  int mov=0;
 
-  LevelHead2(String n,Widget f) {
+  LevelHead2(String n,Widget f,{ this.mov=5}) {
     this.n = n;
     this.f =f;
+    this.mov=mov;
   }
 
   @override
-  _LevelHead2State createState() => _LevelHead2State(this.n,this.f);
+  _LevelHead2State createState() => _LevelHead2State(this.n,this.f,mov: this.mov);
 }
 
 class _LevelHead2State extends State<LevelHead2> {
   String n = '';
   Widget f = Container();
-
-  _LevelHead2State(String n,Widget f) {
+  int mov =0;
+  _LevelHead2State(String n,Widget f,{ this.mov=5}) {
     this.n = n;
     this.f = f;
+    mov=mov;
   }
 
   @override
@@ -46,7 +48,7 @@ class _LevelHead2State extends State<LevelHead2> {
                   icon: Icon(
                     Icons.arrow_back_ios_sharp,
                     size: 40,
-                    color: Color.fromRGBO(147, 112, 71, 1),
+                    color: Colors.white,
                   ),
                 ),
               )),
@@ -60,12 +62,13 @@ class _LevelHead2State extends State<LevelHead2> {
                 style: TextStyle(
                   fontSize: 70,
                   decoration: TextDecoration.none,
-                  color: Color.fromRGBO(147, 112, 71, 1),
+                  color: Colors.blue,
                 ),
               ),
             ),
           ),
-          const Spacer(),
+          const Spacer(),Text('MOVES LEFT:${widget.mov}',
+          style: TextStyle(fontSize: 50,color: Color.fromARGB(255, 255, 255, 255)),),
           Align(
             alignment: Alignment.topRight,
             child: SizedBox(
@@ -78,7 +81,7 @@ class _LevelHead2State extends State<LevelHead2> {
                   icon: Icon(
                     Icons.menu,
                     size: 40,
-                    color: Color.fromRGBO(147, 112, 71, 1),
+                    color: Colors.white,
                   )),
             ),
           )
@@ -139,6 +142,7 @@ class _LevelHead2State extends State<LevelHead2> {
                           height: 50,
                           child: OutlinedButton(
                               onPressed: () {
+                                
                                 Navigator.pushAndRemoveUntil(
                                   context,
                                   MaterialPageRoute(

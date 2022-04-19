@@ -3,15 +3,12 @@ import 'package:logic_enhancer/classes/level_head2.dart';
 import '../classes/LED2.dart';
 import '../classes/bus.dart';
 import '../classes/or_gate.dart';
-import '../classes/level_head.dart';
 import '../classes/no_gate.dart';
-
-int sat1 = 0;
-int sat2 = 0;
 LevelHead2 v = LevelHead2("3",level3());
 or_gate OR = or_gate(height: 100, width: 100);
 no_gate no = no_gate(height: 70, width: 70);
-
+int sat1 = 0;
+int sat2 = 0;
 Bus a1 = Bus(
   activate: sat1,
   hor_length: 150,
@@ -41,35 +38,40 @@ Bus a4 = Bus(
   dx: 2.5,
 );
 int b = OR.activation(a1.activate, a2.activate);
-LED LIGHT2 = LED(x: a3.activate);
+LED LIGHT2 = LED(x: a4.activate,y: 3,);
 int c = no.activation(a3.activate);
 void set (){
-  c = no.activation(a3.activate);
-  LIGHT2 = LED(x: a3.activate);b = OR.activation(a1.activate, a2.activate);a4 = Bus(
-    activate: c,
-    hor_length: 0,
-    ver_length1: 0,
-    ver_length2: 60,
-    dx: 2.5,
-  );a3 = Bus(
-    activate: b,
-    hor_length: 0,
-    ver_length1: 0,
-    ver_length2: 100,
-  );a2 = Bus(
-    activate: sat2,
-    hor_length: -150,
-    ver_length1: -60,
-    ver_length2: -60,
-    dy: -60,
-  );a1 = Bus(
-    activate: sat1,
-    hor_length: 150,
-    ver_length1: 60,
-    ver_length2: 60,
-    dy: -60,
-    dx: -2.5,
-  ); no = no_gate(height: 70, width: 70);OR = or_gate(height: 100, width: 100);sat2 = 0;sat1 = 0;
+   sat1 = 0;
+sat2 = 0;
+ a1 = Bus(
+  activate: sat1,
+  hor_length: 150,
+  ver_length1: 60,
+  ver_length2: 60,
+  dy: -60,
+  dx: -2.5,
+);
+ a2 = Bus(
+  activate: sat2,
+  hor_length: -150,
+  ver_length1: -60,
+  ver_length2: -60,
+  dy: -60,
+); b = OR.activation(a1.activate, a2.activate);
+ a3 = Bus(
+  activate: b,
+  hor_length: 0,
+  ver_length1: 0,
+  ver_length2: 100,
+);c = no.activation(a3.activate);
+a4 = Bus(
+  activate: c,
+  hor_length: 0,
+  ver_length1: 0,
+  ver_length2: 60,
+  dx: 2.5,
+);
+LIGHT2 = LED(x: a4.activate,y: 3,);
 }
 class level3 extends StatefulWidget {
   const level3({Key? key}) : super(key: key);
@@ -141,9 +143,9 @@ class _level3State extends State<level3> {
         );
       }
       if (a4.activate == 1) {
-        LIGHT2 = LED(x: a4.activate);
+        LIGHT2 = LED(x: a4.activate,y: 3,);
       } else {
-        LIGHT2 = LED(x: a4.activate);
+        LIGHT2 = LED(x: a4.activate,y: 3,);
       }
       print("b1:{$c}");
     });
@@ -201,9 +203,9 @@ class _level3State extends State<level3> {
         );
       }
       if (a4.activate == 1) {
-        LIGHT2 = LED(x: a4.activate);
+        LIGHT2 = LED(x: a4.activate,y: 3,);
       } else {
-        LIGHT2 = LED(x: a4.activate);
+        LIGHT2 = LED(x: a4.activate,y: 3,);
       }
       print("b1:{$c}");
     });

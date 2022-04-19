@@ -5,9 +5,10 @@ import '../classes/bus.dart';
 import '../classes/or_gate.dart';
 import 'dart:ui' as ui;
 
+LevelHead2 v = LevelHead2("2", level2());
 int sat1 = 0;
 int sat2 = 0;
-LevelHead2 v = LevelHead2("2", level2());
+int over1 = 0;
 or_gate OR = or_gate();
 
 Bus a1 = Bus(
@@ -31,27 +32,37 @@ Bus a3 = Bus(
   ver_length2: 110,
 );
 int b = OR.activation(a1.activate, a2.activate);
-LED LIGHT2 = LED(x: a3.activate);
-void set (){
-  LIGHT2 = LED(x: a3.activate);b = OR.activation(a1.activate, a2.activate);a3 = Bus(
-    activate: b,
-    hor_length: 0,
-    ver_length1: 0,
-    ver_length2: 110,
+LED LIGHT2 = LED(
+  x: a3.activate,
+  y: 2,
+);
+void set() {sat2 = 0;
+  sat1 = 0;
+  a1 = Bus(
+    activate: sat1,
+    hor_length: 140,
+    ver_length1: 80,
+    ver_length2: 40,
+    dy: -80,
   );a2 = Bus(
     activate: sat2,
     hor_length: -150,
     ver_length1: -40,
     ver_length2: -80,
     dy: -80,
-  );a1 = Bus(
-    activate: sat1,
-    hor_length: 140,
-    ver_length1: 80,
-    ver_length2: 40,
-    dy: -80,
-  );sat2 = 0;sat1 = 0;
+  );
+  b = OR.activation(a1.activate, a2.activate);
+  a3 = Bus(
+    activate: b,
+    hor_length: 0,
+    ver_length1: 0,
+    ver_length2: 110,
+  );LIGHT2 = LED(
+    x: a3.activate,
+    y: 2,
+  );
 }
+
 class level2 extends StatefulWidget {
   const level2({Key? key}) : super(key: key);
 
@@ -67,10 +78,15 @@ class _level2State extends State<level2> {
 
   @override
   void initState() {
-    void initState() {
-      set();
-      super.initState();
-    }    WidgetsBinding.instance.addPostFrameCallback((_) => Overlay.of(context)?.insert(_getEntry(context)));
+    set();
+
+    if (over1 == 0) {
+      WidgetsBinding.instance.addPostFrameCallback(
+          (_) => Overlay.of(context)?.insert(_getEntry(context)));
+      over1 = 1;
+    }
+  
+    super.initState();
   }
 
   void test1() {
@@ -103,7 +119,10 @@ class _level2State extends State<level2> {
           ver_length1: 0,
           ver_length2: 110,
         );
-        LIGHT2 = LED(x: a3.activate);
+        LIGHT2 = LED(
+          x: a3.activate,
+          y: 2,
+        );
       } else {
         a3 = Bus(
           activate: b,
@@ -111,7 +130,10 @@ class _level2State extends State<level2> {
           ver_length1: 0,
           ver_length2: 110,
         );
-        LIGHT2 = LED(x: a3.activate);
+        LIGHT2 = LED(
+          x: a3.activate,
+          y: 2,
+        );
       }
       print("b1:{$b}");
     });
@@ -147,7 +169,10 @@ class _level2State extends State<level2> {
           ver_length1: 0,
           ver_length2: 110,
         );
-        LIGHT2 = LED(x: a3.activate);
+        LIGHT2 = LED(
+          x: a3.activate,
+          y: 2,
+        );
       } else {
         a3 = Bus(
           activate: b,
@@ -155,7 +180,10 @@ class _level2State extends State<level2> {
           ver_length1: 0,
           ver_length2: 110,
         );
-        LIGHT2 = LED(x: a3.activate);
+        LIGHT2 = LED(
+          x: a3.activate,
+          y: 2,
+        );
       }
       print("b2:{$b}");
     });
@@ -251,8 +279,18 @@ class _level2State extends State<level2> {
                     color: Colors.black,
                     child: Column(
                       children: [
-                        Image.asset("../../assets/images/or_unlocked.png",scale: 0.5,),
-                        TextButton(onPressed: (){entry.remove();}, child: Text("GO",style: TextStyle(fontSize: 50),))
+                        Image.asset(
+                          "../../assets/images/or_unlocked.png",
+                          scale: 0.5,
+                        ),
+                        TextButton(
+                            onPressed: () {
+                              entry.remove();
+                            },
+                            child: Text(
+                              "GO",
+                              style: TextStyle(fontSize: 50),
+                            ))
                       ],
                     )),
               ],

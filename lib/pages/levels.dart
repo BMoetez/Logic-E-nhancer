@@ -69,9 +69,9 @@ class _HomePageState extends State<Levels> {
                       icon: Icon(
                         Icons.arrow_back_ios_sharp,
                         size: 40,
-                        color: Color.fromRGBO(93, 70, 47, 1),
+                        color: Colors.white,
                       )),
-                  color: Color.fromRGBO(231, 218, 199, 1),
+                  color: Color.fromRGBO(231, 218, 199, 0),
                 ),
               ),
               Container(
@@ -83,7 +83,7 @@ class _HomePageState extends State<Levels> {
                     fontSize: 90.0,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 3.0,
-                    color: Color.fromRGBO(147, 112, 71, 1),
+                    color: Colors.white,
                   ),
                   textAlign: TextAlign.center,
                 ),
@@ -98,7 +98,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_open,
-                          color: Color.fromRGBO(93, 70, 47, 1),
+                          color: Colors.white,
                           size: 70.0,
                         ),
                         RaisedButton(
@@ -117,7 +117,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Color.fromRGBO(93, 70, 47, 1),
+                          color: Colors.white,
                           size: 80.0,
                         ),
                         RaisedButton(
@@ -139,7 +139,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 100.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Color.fromRGBO(93, 70, 47, 1),
+                          color: Colors.white,
                           size: 80.0,
                         ),
                         RaisedButton(
@@ -161,7 +161,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Color.fromRGBO(93, 70, 47, 1),
+                          color: Colors.white,
                           size: 80.0,
                         ),
                         RaisedButton(
@@ -183,7 +183,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Color.fromRGBO(93, 70, 47, 1),
+                          color: Colors.white,
                           size: 80.0,
                         ),
                         RaisedButton(
@@ -205,7 +205,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Color.fromRGBO(93, 70, 47, 1),
+                          color: Colors.white,
                           size: 80.0,
                         ),
                         RaisedButton(
@@ -240,7 +240,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Color.fromRGBO(93, 70, 47, 1),
+                          color: Colors.white,
                           size: 80.0,
                         ),
                         RaisedButton(
@@ -262,7 +262,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Color.fromRGBO(93, 70, 47, 1),
+                          color: Colors.white,
                           size: 80.0,
                         ),
                         RaisedButton(
@@ -284,7 +284,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Color.fromRGBO(93, 70, 47, 1),
+                          color: Colors.white,
                           size: 80.0,
                         ),
                         RaisedButton(
@@ -306,7 +306,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Color.fromRGBO(93, 70, 47, 1),
+                          color: Colors.white,
                           size: 80.0,
                         ),
                         RaisedButton(
@@ -328,7 +328,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Color.fromRGBO(93, 70, 47, 1),
+                          color: Colors.white,
                           size: 80.0,
                         ),
                         RaisedButton(
@@ -350,7 +350,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Color.fromRGBO(93, 70, 47, 1),
+                          color: Colors.white,
                           size: 80.0,
                         ),
                         RaisedButton(
@@ -385,7 +385,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Color.fromRGBO(93, 70, 47, 1),
+                          color: Colors.white,
                           size: 80.0,
                         ),
                         RaisedButton(
@@ -407,7 +407,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Color.fromRGBO(93, 70, 47, 1),
+                          color: Colors.white,
                           size: 80.0,
                         ),
                         RaisedButton(
@@ -429,7 +429,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Color.fromRGBO(93, 70, 47, 1),
+                          color: Colors.white,
                           size: 80.0,
                         ),
                         RaisedButton(
@@ -451,7 +451,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Color.fromRGBO(93, 70, 47, 1),
+                          color: Colors.white,
                           size: 80.0,
                         ),
                         RaisedButton(
@@ -473,7 +473,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Color.fromRGBO(93, 70, 47, 1),
+                          color: Colors.white,
                           size: 80.0,
                         ),
                         RaisedButton(
@@ -495,7 +495,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Color.fromRGBO(93, 70, 47, 1),
+                          color: Colors.white,
                           size: 80.0,
                         ),
                         RaisedButton(

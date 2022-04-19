@@ -7,13 +7,6 @@ import '../classes/level_head2.dart';
 import '../classes/no_gate.dart';
 import '../classes/and_gate.dart';
 import '../classes/Nand_gate.dart';
-
-int sat1 = 1;
-int sat2 = 0;
-int sat3 = 0;
-int sat4 = 0;
-int sat5 = 0;
-int sat6 = 0;
 LevelHead2 v = LevelHead2("14", level14());
 Nand_gate nand1 = Nand_gate(height: 70, width: 70,rotation: 3);
 Nand_gate nand2 = Nand_gate(height: 70, width: 70,rotation: 3);
@@ -23,6 +16,12 @@ no_gate no2 = no_gate(height: 50, width: 50);
 no_gate no3 = no_gate(height: 50, width: 50);
 and_gate and1 = and_gate(height: 70, width: 70);
 and_gate and2 = and_gate(height: 70, width: 70);
+int sat1 = 1;
+int sat2 = 0;
+int sat3 = 0;
+int sat4 = 0;
+int sat5 = 0;
+int sat6 = 0;
 int nand1_output = nand1.activation(a1.activate, a2.activate);
 int nand2_output = nand2.activation(a3.activate, a4.activate);
 int nand3_output = nand3.activation(a11.activate, a12.activate);
@@ -129,8 +128,113 @@ Bus a14 = Bus(
   ver_length2: 0,
   dy: -10,
 );
-LED light = LED(x: a14.activate);
+LED light = LED(x: a14.activate,y: 14,);
+void set(){
+sat1 = 1;
+sat2 = 0;
+sat3 = 0;
+sat4 = 0;
+sat5 = 0;
+sat6 = 0;
+a1 = Bus(
+  activate: sat1,
+  hor_length: 50,
+  ver_length1: 50,
+  ver_length2: 30,
+  dy: -50,
+);
+a2 = Bus(
+  activate: sat2,
+  hor_length: -50,
+  ver_length1: -30,
+  ver_length2: -50,
+  dx: 2.5,
+  dy: -50,
+);
+a3 = Bus(
+  activate: sat3,
+  ver_length1: 0,
+  ver_length2: 10,
+);
+a4 = Bus(
+  activate: sat4,
+  hor_length: -50,
+  ver_length1: -10,
+  ver_length2: 0,
+);
+a5 = Bus(
+  activate: sat5,
+  hor_length: 0,
+  ver_length1: 0,
+  ver_length2: 35,
+  dx: 2.5,
+);no1_output = no1.activation(a5.activate);
+a6 = Bus(
+  activate: no1_output,
+  hor_length: 55,
+  ver_length1: 45,
+  ver_length2: 45,
 
+);
+a7 = Bus(
+  activate: sat6,
+  hor_length: -60,
+  ver_length1: -85,
+  ver_length2: -90,
+  dy: -90,
+  dx: 2.5,
+);nand1_output = nand1.activation(a1.activate, a2.activate);
+a8 = Bus(
+  activate: nand1_output,
+  hor_length: 140,
+  ver_length1: 25,
+  ver_length2: 30,
+  dy: 10,
+);nand2_output = nand2.activation(a3.activate, a4.activate);
+a9 = Bus(
+  activate: nand2_output,
+  hor_length: 0,
+  ver_length1: 50,
+  ver_length2: 0,
+  dy: -10,
+);no2_output = no2.activation(a9.activate);
+a10 = Bus(
+  activate: no2_output,
+  hor_length: -140,
+  ver_length1: -15,
+  ver_length2: -15,
+  dx: 2.5,
+);and2_output = and2.activation(a8.activate, a10.activate);
+a11 = Bus(
+  activate: and2_output,
+  hor_length: 150,
+  ver_length1: 10,
+  ver_length2: 10,
+  dx: -2.5,
+);and1_output = and1.activation(a6.activate, a7.activate);
+a12 = Bus(
+  activate: and1_output,
+  hor_length: -280,
+  ver_length1: -20,
+  ver_length2: -30,
+  dy: 10,
+);nand3_output = nand3.activation(a11.activate, a12.activate);
+a13 = Bus(
+  activate: nand3_output,
+  hor_length: 0,
+  ver_length1: 40,
+  ver_length2: 0,
+  dy: -30,
+);no3_output = no3.activation(a13.activate);
+a14 = Bus(
+  activate: no3_output,
+  hor_length: 0,
+  ver_length1: 40,
+  ver_length2: 0,
+  dy: -10,
+);
+light = LED(x: a14.activate,y: 14,);
+}
 class level14 extends StatefulWidget {
   const level14({Key? key}) : super(key: key);
 
@@ -143,6 +247,12 @@ class _level14State extends State<level14> {
     "assets/images/button/button0.png",
     "assets/images/button/button1.png"
   ];
+   @override
+  void initState() {
+    set();
+    super.initState();
+  }
+
   void test1() {
     setState(() {
       if (sat1 == 1) {
@@ -229,9 +339,9 @@ class _level14State extends State<level14> {
         );
       }
       if (a14.activate == 1) {
-        light = LED(x: a14.activate);
+        light = LED(x: a14.activate,y: 14,);
       } else {
-        light = LED(x: a14.activate);
+        light = LED(x: a14.activate,y: 14,);
       }
     });
   }
@@ -324,9 +434,9 @@ class _level14State extends State<level14> {
         );
       }
       if (a14.activate == 1) {
-        light = LED(x: a14.activate);
+        light = LED(x: a14.activate,y: 14,);
       } else {
-        light = LED(x: a14.activate);
+        light = LED(x: a14.activate,y: 14,);
       }
     });
   }
@@ -412,9 +522,9 @@ class _level14State extends State<level14> {
         );
       }
       if (a14.activate == 1) {
-        light = LED(x: a14.activate);
+        light = LED(x: a14.activate,y: 14,);
       } else {
-        light = LED(x: a14.activate);
+        light = LED(x: a14.activate,y: 14,);
       }
     });
   }
@@ -519,9 +629,9 @@ class _level14State extends State<level14> {
         );
       }
       if (a14.activate == 1) {
-        light = LED(x: a14.activate);
+        light = LED(x: a14.activate,y: 14,);
       } else {
-        light = LED(x: a14.activate);
+        light = LED(x: a14.activate,y: 14,);
       }
     });
   }
@@ -610,9 +720,9 @@ class _level14State extends State<level14> {
         );
       }
       if (a14.activate == 1) {
-        light = LED(x: a14.activate);
+        light = LED(x: a14.activate,y: 14,);
       } else {
-        light = LED(x: a14.activate);
+        light = LED(x: a14.activate,y: 14,);
       }
     });
   }
@@ -681,9 +791,9 @@ a13 = Bus(
    dy: -10,
 );}
       if (a14.activate == 1) {
-        light = LED(x: a14.activate);
+        light = LED(x: a14.activate,y: 14,);
       } else {
-        light = LED(x: a14.activate);
+        light = LED(x: a14.activate,y: 14,);
       }
     });
   }

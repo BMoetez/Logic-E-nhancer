@@ -44,16 +44,16 @@ class _OptionPageState extends State<OptionPage> {
                       icon: Icon(
                         Icons.arrow_back_ios_sharp,
                         size: 40,
-                        color: Color.fromRGBO(93, 70, 47, 1),
+                        color: Colors.white,
                       )),
-                  color: Color.fromRGBO(231, 218, 199, 1),
+                  color: Color.fromRGBO(231, 218, 199, 0),
                 ),
               ),
               const Text(
                 "Options",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    color: Color.fromRGBO(147, 112, 71, 1),
+                    color: Colors.white,
                     fontSize: 80,
                     decoration: TextDecoration.none,
                     fontFamily: 'Digital7'),
@@ -65,13 +65,13 @@ class _OptionPageState extends State<OptionPage> {
                     children: [
                       const Icon(
                         Icons.music_note,
-                        color: Color.fromRGBO(93, 70, 47, 1),
+                        color: Colors.white,
                         size: 55,
                       ),
                       const Text(
                         "Music",
                         style: TextStyle(
-                            color: Color.fromRGBO(36, 31, 28, 1),
+                            color: Colors.white,
                             decoration: TextDecoration.none,
                             fontSize: 60,
                             fontFamily: 'Digital7'),
@@ -82,7 +82,7 @@ class _OptionPageState extends State<OptionPage> {
                 onPressed: () {
                   //cache.play("music.mp3");
                 },
-                textColor: const Color.fromRGBO(36, 31, 28, 1),
+                textColor: Colors.white,
                 color: const Color.fromRGBO(93, 70, 47, 1),
                 hoverColor: const Color.fromRGBO(147, 112, 71, 1),
                 padding: const EdgeInsets.fromLTRB(20, 20, 20, 30),
@@ -98,13 +98,13 @@ class _OptionPageState extends State<OptionPage> {
                       children: [
                         const Icon(
                           Icons.color_lens,
-                          color: Color.fromRGBO(93, 70, 47, 1),
+                          color: Colors.white,
                           size: 55,
                         ),
                         const Text(
                           "Color Preferences : ",
                           style: TextStyle(
-                              color: Color.fromRGBO(36, 31, 28, 1),
+                              color: Colors.white,
                               decoration: TextDecoration.none,
                               fontSize: 50,
                               fontFamily: 'Digital7'),

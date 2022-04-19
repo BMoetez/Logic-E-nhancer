@@ -77,20 +77,15 @@ Bus a8 = Bus(
   dy: -60,
   dx: -2.5,
 );
-LED light = LED(x: a8.activate);
+LED light = LED(x: a8.activate,y: 6,);
 void set (){
    sat1 = 0;
    sat2 = 0;
   sat3 = 0;
    sat4 = 0;
-  and_gate and1 = and_gate(height: 80, width: 80);
-  and_gate and2 = and_gate(height: 80, width: 80);
-  and_gate and3 = and_gate(height: 80, width: 80);
-  no_gate no1 = no_gate(height: 70, width: 70);
-   no1_output = no1.activation(sat2);
-   and1_output = and1.activation(a1.activate, a3.activate);
-  and2_output = and2.activation(a4.activate, a5.activate);
-   and3_output = and3.activation(a6.activate, a7.activate);
+   
+  
+   
   a1 = Bus(
     activate: sat1,
     hor_length: 50,
@@ -105,7 +100,7 @@ void set (){
     ver_length2: 0,
     dy: -35,
 
-  );
+  );no1_output = no1.activation(sat2);
   a3 = Bus(
     activate: no1_output,
     hor_length: -50,
@@ -126,7 +121,7 @@ void set (){
     ver_length1: -110,
     hor_length: -50,
     dy: -50,
-  );
+  ); and1_output = and1.activation(a1.activate, a3.activate);
   a6 = Bus(
     activate: and1_output,
     hor_length: 160,
@@ -134,14 +129,15 @@ void set (){
     ver_length2: 25,
     dy: -35,
     dx: -2.5,
-  );
+  );  and2_output = and2.activation(a4.activate, a5.activate);
+
   a7 = Bus(
     activate: and2_output,
     hor_length: -160,
     ver_length1: -25,
     ver_length2: -50,
     dy: -40,
-  );
+  );and3_output = and3.activation(a6.activate, a7.activate);
    a8 = Bus(
     activate: and3_output,
     ver_length1: 70,
@@ -150,7 +146,7 @@ void set (){
     dy: -60,
     dx: -2.5,
   );
-  light = LED(x: a8.activate);
+  light = LED(x: a8.activate,y: 6,);
 }
 class level6 extends StatefulWidget {
   const level6({Key? key}) : super(key: key);
@@ -226,9 +222,9 @@ class _level6State extends State<level6> {
         );
       }
       if (a8.activate == 1) {
-        light = LED(x: a8.activate);
+        light = LED(x: a8.activate,y: 6,);
       } else {
-        light = LED(x: a8.activate);
+        light = LED(x: a8.activate,y: 6,);
       }
     });
   }
@@ -304,9 +300,9 @@ a8 = Bus(
 );
       }
       if (a8.activate == 1) {
-        light = LED(x: a8.activate);
+        light = LED(x: a8.activate,y: 6,);
       } else {
-        light = LED(x: a8.activate);
+        light = LED(x: a8.activate,y: 6,);
       }
     });
   }
@@ -358,9 +354,9 @@ a8 = Bus(
 );
       }
       if (a8.activate == 1) {
-        light = LED(x: a8.activate);
+        light = LED(x: a8.activate,y: 6,);
       } else {
-        light = LED(x: a8.activate);
+        light = LED(x: a8.activate,y: 6,);
       }
     });
   }
@@ -414,9 +410,9 @@ a8 = Bus(
 );
       }
       if (a8.activate == 1) {
-        light = LED(x: a8.activate);
+        light = LED(x: a8.activate,y: 6,);
       } else {
-        light = LED(x: a8.activate);
+        light = LED(x: a8.activate,y: 6,);
       }
     });
   }

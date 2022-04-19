@@ -7,7 +7,7 @@ class Nand_gate {
   double height, width;
   int rotation;
 
-  Nand_gate({this.height=100, this.width=150, this.rotation=2}) {
+  Nand_gate({this.height=100, this.width=150, this.rotation=3}) {
     path = "assets/images/gates/3.png";
     height = height;
     width = width;

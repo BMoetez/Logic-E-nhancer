@@ -7,16 +7,21 @@ import '../classes/no_gate.dart';
 import '../classes/and_gate.dart';
 import 'dart:ui' as ui;
 
-bool allow = true;
-int sat1 = 0;
-int sat2 = 1;
-int sat3 = 0;
-int sat4 = 0;
-LevelHead2 v = LevelHead2("5", level5());
+int moves = 8;
+LevelHead2 v = LevelHead2(
+  "5",
+  level5(),
+  mov: moves,
+);
 or_gate OR1 = or_gate(height: 80, width: 80);
 and_gate AND1 = and_gate(height: 80, width: 80);
 and_gate AND2 = and_gate(height: 80, width: 80);
 no_gate no1 = no_gate(height: 70, width: 70);
+int over = 0;
+int sat1 = 0;
+int sat2 = 1;
+int sat3 = 0;
+int sat4 = 0;
 int and1_output = AND1.activation(a3.activate, a4.activate);
 int or1_output = OR1.activation(a1.activate, a2.activate);
 int no_output = no1.activation(a6.activate);
@@ -78,20 +83,21 @@ Bus a8 = Bus(
   dy: 10,
   dx: 2,
 );
-LED light = LED(x: a8.activate);
-void set (){
+LED light = LED(
+  x: a8.activate,
+  y: 5,
+);
+void set() {
+  moves = 8;
+  v = LevelHead2(
+  "5",
+  level5(),
+  mov: moves,
+);
   sat1 = 0;
   sat2 = 1;
   sat3 = 0;
   sat4 = 0;
-  OR1 = or_gate(height: 80, width: 80);
-  AND1 = and_gate(height: 80, width: 80);
-  AND2 = and_gate(height: 80, width: 80);
-  no1 = no_gate(height: 70, width: 70);
-  and1_output = AND1.activation(a3.activate, a4.activate);
-  or1_output = OR1.activation(a1.activate, a2.activate);
-  no_output = no1.activation(a6.activate);
-  and2_output = AND2.activation(a7.activate, a5.activate);
   a1 = Bus(
     activate: sat1,
     hor_length: 50,
@@ -120,6 +126,7 @@ void set (){
     ver_length2: -70,
     dy: -70,
   );
+  and1_output = AND1.activation(a3.activate, a4.activate);
   a5 = Bus(
     activate: and1_output,
     hor_length: -180,
@@ -127,6 +134,7 @@ void set (){
     ver_length2: -40,
     dy: -30,
   );
+  or1_output = OR1.activation(a1.activate, a2.activate);
   a6 = Bus(
     activate: or1_output,
     hor_length: 0,
@@ -134,6 +142,7 @@ void set (){
     ver_length2: 60,
     dy: 10,
   );
+  no_output = no1.activation(a6.activate);
   a7 = Bus(
     activate: no_output,
     hor_length: 180,
@@ -141,6 +150,7 @@ void set (){
     ver_length2: 30,
     dy: -30,
   );
+  and2_output = AND2.activation(a7.activate, a5.activate);
   a8 = Bus(
     activate: and2_output,
     hor_length: 0,
@@ -149,9 +159,12 @@ void set (){
     dy: 10,
     dx: 2,
   );
-  light = LED(x: a8.activate);
-
+  light = LED(
+    x: a8.activate,
+    y: 5,
+  );
 }
+
 class level5 extends StatefulWidget {
   const level5({Key? key}) : super(key: key);
 
@@ -166,17 +179,22 @@ class _level5State extends State<level5> {
   ];
 
   void initState() {
-set();
-    if (allow) {
-      WidgetsBinding.instance.addPostFrameCallback((_) =>
-          Overlay.of(context)?.insert(_getEntry(context)));
-      setState(() {
-        !allow;
-      });
+    set();
+    if (over == 0) {
+      WidgetsBinding.instance.addPostFrameCallback(
+          (_) => Overlay.of(context)?.insert(_getEntry(context)));
+      over = 1;
     }
+    super.initState();
   }
+
   void test1() {
-    setState(() {
+    setState(() {moves = moves-1;
+    v = LevelHead2(
+  "5",
+  level5(),
+  mov: moves,
+);
       if (sat1 == 1) {
         sat1 = 0;
         a1 = Bus(
@@ -247,9 +265,15 @@ set();
         );
       }
       if (a8.activate == 1) {
-        light = LED(x: a8.activate);
+        light = LED(
+          x: a8.activate,
+          y: 5,
+        );
       } else {
-        light = LED(x: a8.activate);
+        light = LED(
+          x: a8.activate,
+          y: 5,
+        );
       }
     });
   }
@@ -326,9 +350,15 @@ set();
         );
       }
       if (a8.activate == 1) {
-        light = LED(x: a8.activate);
+        light = LED(
+          x: a8.activate,
+          y: 5,
+        );
       } else {
-        light = LED(x: a8.activate);
+        light = LED(
+          x: a8.activate,
+          y: 5,
+        );
       }
     });
   }
@@ -389,9 +419,15 @@ set();
         );
       }
       if (a8.activate == 1) {
-        light = LED(x: a8.activate);
+        light = LED(
+          x: a8.activate,
+          y: 5,
+        );
       } else {
-        light = LED(x: a8.activate);
+        light = LED(
+          x: a8.activate,
+          y: 5,
+        );
       }
     });
   }
@@ -452,9 +488,15 @@ set();
         );
       }
       if (a8.activate == 1) {
-        light = LED(x: a8.activate);
+        light = LED(
+          x: a8.activate,
+          y: 5,
+        );
       } else {
-        light = LED(x: a8.activate);
+        light = LED(
+          x: a8.activate,
+          y: 5,
+        );
       }
     });
   }
@@ -603,8 +645,18 @@ set();
                     color: Colors.black,
                     child: Column(
                       children: [
-                        Image.asset("../../assets/images/and_unlocked.png",scale: 0.5,),
-                        TextButton(onPressed: (){entry.remove();}, child: Text("GO",style: TextStyle(fontSize: 50),))
+                        Image.asset(
+                          "../../assets/images/and_unlocked.png",
+                          scale: 0.5,
+                        ),
+                        TextButton(
+                            onPressed: () {
+                              entry.remove();
+                            },
+                            child: Text(
+                              "GO",
+                              style: TextStyle(fontSize: 50),
+                            ))
                       ],
                     )),
               ],

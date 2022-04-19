@@ -5,16 +5,15 @@ import '../classes/or_gate.dart';
 import '../classes/level_head2.dart';
 import '../classes/no_gate.dart';
 import '../classes/and_gate.dart';
-
-int sat1 = 0;
-int sat2 = 0;
-int sat3 = 0;
-int sat4 = 0;
 LevelHead2 v = LevelHead2("7", level7());
 or_gate OR1 = or_gate(height: 80, width: 80);
 and_gate AND1 = and_gate(height: 80, width: 80);
 and_gate AND2 = and_gate(height: 80, width: 80);
 no_gate no1 = no_gate(height: 60, width: 60);
+int sat1 = 0;
+int sat2 = 0;
+int sat3 = 0;
+int sat4 = 0;
 int and1_output = AND1.activation(a1.activate, a3.activate);
 int or1_output = OR1.activation(a4.activate, a5.activate);
 int no_output = no1.activation(a2.activate);
@@ -80,8 +79,75 @@ Bus a8 = Bus(
   dy: 10,
   dx: 2,
 );
-LED light = LED(x: a8.activate);
-
+LED light = LED(x: a8.activate,y: 7,);
+void set(){
+ sat1 = 0;
+ sat2 = 0;
+ sat3 = 0;
+ sat4 = 0;
+ a1 = Bus(
+  activate: sat1,
+  hor_length: 50,
+  ver_length1: 30,
+  ver_length2: 130,
+  dy: -30,
+);
+ a2 = Bus(
+  activate: sat2,
+  hor_length: 0,
+  ver_length1: 50,
+  ver_length2: 0,
+  dy: -50,
+);no_output = no1.activation(a2.activate);
+a3 = Bus(
+  activate: no_output,
+  hor_length: -50,
+  ver_length1: -25,
+  ver_length2: -25,
+  dy: -15,
+  dx: 2.5,
+);
+a4 = Bus(
+  activate: sat3,
+  hor_length: 50,
+  ver_length1: 100,
+  ver_length2: 90,
+  dy: -100,
+  dx: -2.5,
+);
+a5 = Bus(
+  activate: sat4,
+  hor_length: -55,
+  ver_length1: -90,
+  ver_length2: -100,
+  dy: -100,
+  dx: 2.5,
+);and1_output = AND1.activation(a1.activate, a3.activate);
+ a6 = Bus(
+  activate: and1_output,
+  hor_length: 180,
+  ver_length1: 65,
+  ver_length2: 25,
+  dy: -25,
+  dx: -2.5,
+);or1_output = OR1.activation(a4.activate, a5.activate);
+a7 = Bus(
+  activate: or1_output,
+  hor_length: -180,
+  ver_length1: -25,
+  ver_length2: -40,
+  dy: -30,
+);and2_output = AND2.activation(a6.activate, a7.activate);
+a8 = Bus(
+  activate: and2_output,
+  hor_length: 0,
+  ver_length1: 0,
+  ver_length2: 60,
+  dy: 10,
+  dx: 2,
+);
+light = LED(x: a8.activate,y: 7,);
+}
 class level7 extends StatefulWidget {
   const level7({Key? key}) : super(key: key);
 
@@ -94,7 +160,11 @@ class _level7State extends State<level7> {
     "assets/images/button/button0.png",
     "assets/images/button/button1.png"
   ];
-
+ @override
+  void initState() {
+    set();
+    super.initState();
+  }
   void test1() {
     setState(() {
       if (sat1 == 1) {
@@ -153,9 +223,9 @@ class _level7State extends State<level7> {
         );
       }
       if (a8.activate == 1) {
-        light = LED(x: a8.activate);
+        light = LED(x: a8.activate,y: 7,);
       } else {
-        light = LED(x: a8.activate);
+        light = LED(x: a8.activate,y: 7,);
       }
     });
   }
@@ -236,9 +306,9 @@ class _level7State extends State<level7> {
         );
       }
       if (a8.activate == 1) {
-        light = LED(x: a8.activate);
+        light = LED(x: a8.activate,y: 7,);
       } else {
-        light = LED(x: a8.activate);
+        light = LED(x: a8.activate,y: 7,);
       }
     });
   }
@@ -301,9 +371,9 @@ class _level7State extends State<level7> {
         );
       }
       if (a8.activate == 1) {
-        light = LED(x: a8.activate);
+        light = LED(x: a8.activate,y: 7,);
       } else {
-        light = LED(x: a8.activate);
+        light = LED(x: a8.activate,y: 7,);
       }
     });
   }
@@ -359,8 +429,8 @@ a8 = Bus(
   dy: 10,
   dx: 2,
 );}if (a8.activate==1) {
-  light = LED(x: a8.activate);
-} else {light = LED(x: a8.activate);
+  light = LED(x: a8.activate,y: 7,);
+} else {light = LED(x: a8.activate,y: 7,);
 }
     });
   }
