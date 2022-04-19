@@ -70,7 +70,7 @@ class _level2State extends State<level2> {
     void initState() {
       set();
       super.initState();
-    }    WidgetsBinding.instance?.addPostFrameCallback((_) => Overlay.of(context)?.insert(_getEntry(context)));
+    }    WidgetsBinding.instance.addPostFrameCallback((_) => Overlay.of(context)?.insert(_getEntry(context)));
   }
 
   void test1() {

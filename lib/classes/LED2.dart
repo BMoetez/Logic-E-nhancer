@@ -23,7 +23,7 @@ class _LEDState extends State<LED> {
 
   @override
   Widget build(BuildContext context) {
-    WidgetsBinding.instance?.addPostFrameCallback((_) => win_page());
+    WidgetsBinding.instance.addPostFrameCallback((_) => win_page());
     return Material(
       child: Image.asset(
         path[widget.x],

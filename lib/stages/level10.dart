@@ -144,7 +144,7 @@ class _level10State extends State<level10> {
 
   void initState() {
     // TODO: implement initState
-    WidgetsBinding.instance?.addPostFrameCallback((_) => Overlay.of(context)?.insert(_getEntry(context)));
+    WidgetsBinding.instance.addPostFrameCallback((_) => Overlay.of(context)?.insert(_getEntry(context)));
   }
   void test1() {
     setState(() {
