@@ -86,7 +86,7 @@ class _LEDState extends State<LED> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((_) => win_page());
     return Material(
-      child: Lottie.asset("assets/images/light/light.json",
+      child: Lottie.asset("assets/images/light/light1.json",
           width: 100, height: 150, controller: _controller),
       color: const Color.fromRGBO(0, 0, 0, 0),
     );
