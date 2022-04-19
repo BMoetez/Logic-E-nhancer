@@ -491,7 +491,7 @@ a8 = Bus(
               height: 40,
             ),
             a8.show(),
-            AND2.show(),
+            AND2,
             SizedBox(
               height: 40,
             ),
@@ -505,7 +505,7 @@ a8 = Bus(
                     SizedBox(
                       height: 30,
                     ),
-                    AND1.show(),
+                    AND1,
                     SizedBox(
                       height: 30,
                     ),
@@ -515,7 +515,7 @@ a8 = Bus(
                           children: [SizedBox(height: 115,),a1.show(), button1()],
                         ),
                         Column(
-                          children: [a3.show(),no1.show(),SizedBox(height: 40,) ,a2.show(),button2()],
+                          children: [a3.show(),no1,SizedBox(height: 40,) ,a2.show(),button2()],
                         )
                       ],
                     ),
@@ -527,7 +527,7 @@ a8 = Bus(
                 Column(
                   children: [
                     a7.show(),
-                    OR1.show(),
+                    OR1,
                     SizedBox(
                       height: 170,
                     ),

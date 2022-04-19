@@ -16,7 +16,7 @@ and_gate and1 = and_gate(height: 70, width: 70);
 and_gate and2 = and_gate(height: 70, width: 70);
 no_gate no1 = no_gate(height: 50, width: 50);
 no_gate no2 = no_gate(height: 50, width: 50);
-Nand_gate nand = Nand_gate(height: 70, width: 70, rotation: 3);
+nand_gate nand = nand_gate(height: 70, width: 70, rotation: 3);
 int sat1 = 1;
 int sat2 = 1;
 int sat3 = 0;
@@ -266,7 +266,7 @@ class _level10State extends State<level10> {
   void initState() {
     set();
     if (over == 1) {
-      WidgetsBinding.instance.addPostFrameCallback(
+      WidgetsBinding.instance?.addPostFrameCallback(
           (_) => Overlay.of(context)?.insert(_getEntry(context)));
       over = 1;
     }
@@ -875,7 +875,7 @@ class _level10State extends State<level10> {
             SizedBox(
               height: 20,
             ),
-            nand.show(),
+            nand,
             SizedBox(
               height: 20,
             ),
@@ -886,7 +886,7 @@ class _level10State extends State<level10> {
                 Column(
                   children: [
                     a11.show(),
-                    and2.show(),
+                    and2,
                     SizedBox(
                       height: 40,
                     ),
@@ -895,7 +895,7 @@ class _level10State extends State<level10> {
                         Column(
                           children: [
                             a8.show(),
-                            or1.show(),
+                            or1,
                             SizedBox(
                               height: 130,
                             ),
@@ -917,12 +917,12 @@ class _level10State extends State<level10> {
                         Column(
                           children: [
                             a10.show(),
-                            no2.show(),
+                            no2,
                             SizedBox(
                               height: 30,
                             ),
                             a9.show(),
-                            or2.show(),
+                            or2,
                             SizedBox(
                               height: 20,
                             ),
@@ -951,7 +951,7 @@ class _level10State extends State<level10> {
                 Column(
                   children: [
                     a12.show(),
-                    and1.show(),
+                    and1,
                     SizedBox(
                       height: 100,
                     ),
@@ -960,7 +960,7 @@ class _level10State extends State<level10> {
                         Column(
                           children: [
                             a6.show(),
-                            no1.show(),
+                            no1,
                             SizedBox(
                               height: 60,
                             ),

@@ -81,7 +81,7 @@ class _level2State extends State<level2> {
     set();
 
     if (over1 == 0) {
-      WidgetsBinding.instance.addPostFrameCallback(
+      WidgetsBinding.instance?.addPostFrameCallback(
           (_) => Overlay.of(context)?.insert(_getEntry(context)));
       over1 = 1;
     }
@@ -228,7 +228,7 @@ class _level2State extends State<level2> {
               height: 100,
             ),
             a3.show(),
-            OR.show(),
+            OR,
             SizedBox(
               height: 100,
             ),

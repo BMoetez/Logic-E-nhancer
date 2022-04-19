@@ -868,8 +868,8 @@ Widget button6() {
           children: [
             v,
             light,a14.show(),SizedBox(height: 40,),
-          or4.show(),SizedBox(height: 20,),Row(mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,children: [Column(children: [a12.show(),no2.show(),SizedBox(height: 50,),a8.show(),or1.show(),SizedBox(height: 100,),Row(children: [Column(children: [a1.show(),button1()],),Column(children: [a2.show(),button2()],)],)],),SizedBox(width: 100,),Column(children: [a13.show(),or3.show(),Row(children: [Column(children: [SizedBox(height: 50,),a9.show(),and1.show(),SizedBox(height: 100,),Row(children: [Column(children: [a3.show(),button3()],),Column(children: [a4.show(),button4()],)],)],),SizedBox(width: 100,),Column(children: [a11.show(),no3.show(),a10.show(),or2.show(),Row(children: [Column(children: [a6.show(),no1.show(),a5.show(),button5()]),Column(children: [SizedBox(height: 80,),a7.show(),button6()],)],)],)],)],
+          or4,SizedBox(height: 20,),Row(mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,children: [Column(children: [a12.show(),no2,SizedBox(height: 50,),a8.show(),or1,SizedBox(height: 100,),Row(children: [Column(children: [a1.show(),button1()],),Column(children: [a2.show(),button2()],)],)],),SizedBox(width: 100,),Column(children: [a13.show(),or3,Row(children: [Column(children: [SizedBox(height: 50,),a9.show(),and1,SizedBox(height: 100,),Row(children: [Column(children: [a3.show(),button3()],),Column(children: [a4.show(),button4()],)],)],),SizedBox(width: 100,),Column(children: [a11.show(),no3,a10.show(),or2,Row(children: [Column(children: [a6.show(),no1,a5.show(),button5()]),Column(children: [SizedBox(height: 80,),a7.show(),button6()],)],)],)],)],
               )],)],
         ));
   }

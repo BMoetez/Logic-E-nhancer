@@ -468,10 +468,10 @@ a8 = Bus(
           children: [
             v,
           light,
-            SizedBox(height: 50,),a8.show(),and3.show(),SizedBox(height: 50,),Row(
+            SizedBox(height: 50,),a8,and3,SizedBox(height: 50,),Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: [Column(children: [a6.show(),and1.show(),SizedBox(height: 50,),Row(children: [Column(children: [SizedBox(height: 110,),a1.show(),button1()],),Column(children: [a3.show(),no1.show(),SizedBox(height: 30,),a2.show(),button2()],)],)],),SizedBox(width: 100,),Column(children: [a7.show(),and2.show(),SizedBox(height: 150,),Row(children: [Column(children: [a4.show(),button3()],),Column(children: [a5.show(),button4()],)],)],)],)],
+              children: [Column(children: [a6.show(),and1,SizedBox(height: 50,),Row(children: [Column(children: [SizedBox(height: 110,),a1.show(),button1()],),Column(children: [a3.show(),no1,SizedBox(height: 30,),a2.show(),button2()],)],)],),SizedBox(width: 100,),Column(children: [a7.show(),and2,SizedBox(height: 150,),Row(children: [Column(children: [a4.show(),button3()],),Column(children: [a5.show(),button4()],)],)],)],)],
         ));
   }
 }

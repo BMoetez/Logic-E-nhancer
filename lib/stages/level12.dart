@@ -13,7 +13,7 @@ and_gate and2 = and_gate(height: 70, width: 70);
 and_gate and1 = and_gate(height: 70, width: 70);
 no_gate no1 = no_gate(height: 50, width: 50);
 no_gate no2 = no_gate(height: 50, width: 50);
-Nand_gate nand = Nand_gate(height: 70, width: 70,rotation: 3);
+nand_gate nand = nand_gate(height: 70, width: 70,rotation: 3);
 int sat1 = 0;
 int sat2 = 0;
 int sat3 = 0;
@@ -781,7 +781,7 @@ a13 = Bus(
             SizedBox(
               height: 20,
             ),
-            or2.show(),
+            or2,
             SizedBox(
               height: 20,
             ),
@@ -792,7 +792,7 @@ a13 = Bus(
                 Column(
                   children: [
                     a11.show(),
-                    and2.show(),
+                    and2,
                     Row(
                       children: [
                         Column(
@@ -801,9 +801,9 @@ a13 = Bus(
                             SizedBox(
                               height: 30,
                             ),
-                            no2.show(),a8.show(), SizedBox(
+                            no2,a8.show(), SizedBox(
                               height: 30,
-                            ),nand.show(),SizedBox(height: 40,),
+                            ),nand,SizedBox(height: 40,),
                             Row(
                               children: [
                                 Column(
@@ -828,7 +828,7 @@ a13 = Bus(
                             SizedBox(
                               height: 80,
                             ),
-                            and1.show(),
+                            and1,
                             SizedBox(
                               height: 100,
                             ),
@@ -860,14 +860,14 @@ a13 = Bus(
                     SizedBox(
                       height: 30,
                     ),
-                    or1.show(),
+                    or1,
                     SizedBox(
                       height: 30,
                     ),
                     Row(
                       children: [
                         Column(
-                          children: [a6.show(),SizedBox(height: 30,),no1.show(),SizedBox(height: 80,),a5.show() ,button5()],
+                          children: [a6.show(),SizedBox(height: 30,),no1,SizedBox(height: 80,),a5.show() ,button5()],
                         ),
                         SizedBox(
                           width: 50,

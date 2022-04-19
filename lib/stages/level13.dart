@@ -14,8 +14,8 @@ or_gate or2 = or_gate(height: 70, width: 70);
 and_gate and1 = and_gate(height: 70, width: 70);
 no_gate no1 = no_gate(height: 50, width: 50);
 no_gate no2 = no_gate(height: 50, width: 50);
-Nand_gate nand1 = Nand_gate(height: 70, width: 70,rotation: 3);
-Nand_gate nand2 = Nand_gate(height: 70, width: 70,rotation: 3);
+nand_gate nand1 = nand_gate(height: 70, width: 70,rotation: 3);
+nand_gate nand2 = nand_gate(height: 70, width: 70,rotation: 3);
 int sat1 = 1;
 int sat2 = 1;
 int sat3 = 0;
@@ -828,7 +828,7 @@ a13 = Bus(
             SizedBox(
               height: 20,
             ),
-            and1.show(),
+            and1,
             SizedBox(
               height: 20,
             ),
@@ -839,7 +839,7 @@ a13 = Bus(
                 Column(
                   children: [
                     a11.show(),
-                    nand2.show(),
+                    nand2,
                     Row(
                       children: [
                         Column(
@@ -848,7 +848,7 @@ a13 = Bus(
                             SizedBox(
                               height: 85,
                             ),
-                            or1.show(),
+                            or1,
                             SizedBox(
                               height: 85,
                             ),
@@ -876,13 +876,13 @@ a13 = Bus(
                             SizedBox(
                               height: 30,
                             ),
-                            no2.show(),
+                            no2,
                             SizedBox(
                               height: 10,
                             ),
                             a9.show(),SizedBox(
                               height: 30,
-                            ),or2.show(),
+                            ),or2,
                             SizedBox(height: 30,),
                             Row(
                               children: [
@@ -912,7 +912,7 @@ a13 = Bus(
                     SizedBox(
                       height: 30,
                     ),
-                    nand1.show(),
+                    nand1,
                     SizedBox(
                       height: 30,
                     ),
@@ -924,7 +924,7 @@ a13 = Bus(
                             SizedBox(
                               height: 30,
                             ),
-                            no1.show(),
+                            no1,
                             SizedBox(
                               height: 80,
                             ),

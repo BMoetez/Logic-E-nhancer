@@ -519,7 +519,7 @@ class _level4State extends State<level4> {
               height: 50,
             ),
             a9.show(),
-            OR3.show(),
+            OR3,
             SizedBox(
               height: 50,
             ),
@@ -530,7 +530,7 @@ class _level4State extends State<level4> {
                 Column(
                   children: [
                     a7.show(),
-                    OR1.show(),
+                    OR1,
                     SizedBox(
                       height: 50,
                     ),
@@ -548,7 +548,7 @@ class _level4State extends State<level4> {
                         Column(
                           children: [
                             a3.show(),
-                            no1.show(),
+                            no1,
                             SizedBox(
                               height: 30,
                             ),
@@ -566,7 +566,7 @@ class _level4State extends State<level4> {
                 Column(
                   children: [
                     a8.show(),
-                    OR2.show(),
+                    OR2,
                     SizedBox(
                       height: 50,
                     ),
@@ -575,7 +575,7 @@ class _level4State extends State<level4> {
                         Column(
                           children: [
                             a5.show(),
-                            no2.show(),
+                            no2,
                             SizedBox(
                               height: 30,
                             ),

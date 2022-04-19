@@ -133,7 +133,7 @@ class _level1State extends State<level1> with SingleTickerProviderStateMixin {
             LIGHT2,
             Spacer(),
             a2.show(),
-            b.show(),
+            b,
             SizedBox(
               height: 100,
             ),

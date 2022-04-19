@@ -14,13 +14,13 @@ or_gate or3 = or_gate(height: 70, width: 70);
 and_gate and1 = and_gate(height: 70, width: 70);
 no_gate no1 = no_gate(height: 50, width: 50);
 no_gate no2 = no_gate(height: 50, width: 50);
-Nand_gate nand = Nand_gate(height: 70, width: 70,rotation: 3);
+nand_gate nand = nand_gate(height: 70, width: 70,rotation: 3);
 int sat1 =0;
 int sat2 = 0;
 int sat3 = 1;
 int sat4 = 1;
 int sat5 = 1;
-int sat6 = 0;
+int sat6 = 1;
 
 int or1_output = or1.activation(a1.activate, a2.activate);
 int or2_output = or2.activation(a3.activate, a4.activate);
@@ -131,7 +131,7 @@ sat1 =0;
  sat3 = 1;
  sat4 = 1;
  sat5 = 1;
- sat6 = 0;
+ sat6 = 1;
 a1 = Bus(
   activate: sat1,
   hor_length: 50,
@@ -791,14 +791,14 @@ a11 = Bus(
             SizedBox(
               height: 30,
             ),
-            or3.show(),
+            or3,
             SizedBox(
               height: 20,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: [Column(children: [a10.show(),and1.show(),Row(children: [Column(children: [a7.show(),SizedBox(height: 50,),or1.show(),SizedBox(height: 120,),Row(children: [Column(children: [a1.show(),button1()],),SizedBox(width: 30,),Column(children: [a2.show(),button2()],)],)],),SizedBox(width: 100,),Column(children: [a9.show(),SizedBox(height:20,),no1.show(),a8.show(),SizedBox(height: 30,),or2.show(),SizedBox(height: 35,),Row(children: [Column(children: [a3.show(),button3()],),SizedBox(width: 30,),Column(children: [a4.show(),button4()],)],)],)],)],),SizedBox(width: 100,),Column(children: [a12.show(),SizedBox(height: 30,),no2.show(),a11.show(),SizedBox(height: 70,),nand.show(),SizedBox(height: 70,),Row(children: [Column(children: [a5.show(),button5()],),SizedBox(width: 50,),Column(children: [a6.show(),button6()],)],)],)],
+              children: [Column(children: [a10.show(),and1,Row(children: [Column(children: [a7.show(),SizedBox(height: 50,),or1,SizedBox(height: 120,),Row(children: [Column(children: [a1.show(),button1()],),SizedBox(width: 30,),Column(children: [a2.show(),button2()],)],)],),SizedBox(width: 100,),Column(children: [a9.show(),SizedBox(height:20,),no1,a8.show(),SizedBox(height: 30,),or2,SizedBox(height: 35,),Row(children: [Column(children: [a3.show(),button3()],),SizedBox(width: 30,),Column(children: [a4.show(),button4()],)],)],)],)],),SizedBox(width: 100,),Column(children: [a12.show(),SizedBox(height: 30,),no2,a11.show(),SizedBox(height: 70,),nand,SizedBox(height: 70,),Row(children: [Column(children: [a5.show(),button5()],),SizedBox(width: 50,),Column(children: [a6.show(),button6()],)],)],)],
             )
           ],
         ));

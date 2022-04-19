@@ -8,9 +8,9 @@ import '../classes/no_gate.dart';
 import '../classes/and_gate.dart';
 import '../classes/Nand_gate.dart';
 LevelHead2 v = LevelHead2("14", level14());
-Nand_gate nand1 = Nand_gate(height: 70, width: 70,rotation: 3);
-Nand_gate nand2 = Nand_gate(height: 70, width: 70,rotation: 3);
-Nand_gate nand3 = Nand_gate(height: 70, width: 70,rotation: 3);
+nand_gate nand1 = nand_gate(height: 70, width: 70,rotation: 3);
+nand_gate nand2 = nand_gate(height: 70, width: 70,rotation: 3);
+nand_gate nand3 = nand_gate(height: 70, width: 70,rotation: 3);
 no_gate no1 = no_gate(height: 50, width: 50);
 no_gate no2 = no_gate(height: 50, width: 50);
 no_gate no3 = no_gate(height: 50, width: 50);
@@ -850,10 +850,10 @@ a13 = Bus(
             SizedBox(
               height: 20,
             ),
-            no3.show(),
+            no3,
             SizedBox(
               height: 20,
-            ),a13.show(),nand3.show(),
+            ),a13.show(),nand3,
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -861,7 +861,7 @@ a13 = Bus(
                 Column(
                   children: [
                     a11.show(),
-                    and2.show(),
+                    and2,
                     Row(
                       children: [
                         Column(
@@ -870,7 +870,7 @@ a13 = Bus(
                             SizedBox(
                               height: 30,
                             ),
-                            nand1.show(),
+                            nand1,
                             SizedBox(
                               height: 70,
                             ),
@@ -895,12 +895,12 @@ a13 = Bus(
                         Column(
                           children: [
                             a10.show(),
-                            no2.show(),
+                            no2,
                             a9.show(),
                             SizedBox(
                               height: 30,
                             ),
-                            nand2.show(),
+                            nand2,
                             Row(
                               children: [
                                 Column(
@@ -929,7 +929,7 @@ a13 = Bus(
                     SizedBox(
                       height: 30,
                     ),
-                    and1.show(),
+                    and1,
                     SizedBox(
                       height: 30,
                     ),
@@ -941,7 +941,7 @@ a13 = Bus(
                             SizedBox(
                               height: 30,
                             ),
-                            no1.show(),
+                            no1,
                             SizedBox(
                               height: 20,
                             ),

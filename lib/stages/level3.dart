@@ -247,12 +247,12 @@ class _level3State extends State<level3> {
               height: 50,
             ),
             a4.show(),
-            no.show(),
+            no,
             SizedBox(
               height: 100,
             ),
             a3.show(),
-            OR.show(),
+            OR,
             SizedBox(
               height: 100,
             ),

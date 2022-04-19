@@ -17,7 +17,7 @@ no_gate no1 = no_gate(height: 50, width: 50);
 no_gate no2 = no_gate(height: 50, width: 50);
 and_gate and1 = and_gate(height: 70, width: 70);
 and_gate and2 = and_gate(height: 70, width: 70);
-Nor_gate nor1 = Nor_gate(height: 70, width: 70, rotation: 3);
+nor_gate nor1 = nor_gate(height: 70, width: 70, rotation: 3);
 int sat1 = 1;
 int sat2 = 0;
 int sat3 = 0;
@@ -250,7 +250,7 @@ class _level15State extends State<level15> {
   void initState() {
     set();
     if (over == 0) {
-      WidgetsBinding.instance.addPostFrameCallback(
+      WidgetsBinding.instance?.addPostFrameCallback(
           (_) => Overlay.of(context)?.insert(_getEntry(context)));
       over = 1;
     }
@@ -839,7 +839,7 @@ class _level15State extends State<level15> {
             SizedBox(
               height: 40,
             ),
-            nor1.show(),
+            nor1,
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -850,7 +850,7 @@ class _level15State extends State<level15> {
                       height: 40,
                     ),
                     a11.show(),
-                    and2.show(),
+                    and2,
                     Row(
                       children: [
                         Column(
@@ -859,7 +859,7 @@ class _level15State extends State<level15> {
                             SizedBox(
                               height: 50,
                             ),
-                            or1.show(),
+                            or1,
                             SizedBox(
                               height: 80,
                             ),
@@ -884,12 +884,12 @@ class _level15State extends State<level15> {
                         Column(
                           children: [
                             a10.show(),
-                            no2.show(),
+                            no2,
                             a9.show(),
                             SizedBox(
                               height: 30,
                             ),
-                            or2.show(),
+                            or2,
                             SizedBox(
                               height: 30,
                             ),
@@ -921,7 +921,7 @@ class _level15State extends State<level15> {
                     SizedBox(
                       height: 30,
                     ),
-                    and1.show(),
+                    and1,
                     SizedBox(
                       height: 30,
                     ),
@@ -933,7 +933,7 @@ class _level15State extends State<level15> {
                             SizedBox(
                               height: 30,
                             ),
-                            no1.show(),
+                            no1,
                             SizedBox(
                               height: 80,
                             ),

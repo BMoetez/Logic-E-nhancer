@@ -12,8 +12,8 @@ no_gate no1 = no_gate(height: 50, width: 50);
 no_gate no2 = no_gate(height: 50, width: 50);
 and_gate and1 = and_gate(height: 70, width: 70);
 and_gate and2 = and_gate(height: 70, width: 70);
-Nor_gate nor1 = Nor_gate(height: 70, width: 70,rotation: 3);
-Nor_gate nor2 = Nor_gate(height: 70, width: 70,rotation: 3);
+nor_gate nor1 = nor_gate(height: 70, width: 70,rotation: 3);
+nor_gate nor2 = nor_gate(height: 70, width: 70,rotation: 3);
 int sat1 = 1;
 int sat2 = 0;
 int sat3 = 0;
@@ -775,7 +775,7 @@ a12 = Bus(
             SizedBox(
               height: 30,
             ),
-            and2.show(),
+            and2,
             SizedBox(height: 20,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -784,7 +784,7 @@ a12 = Bus(
                 Column(
                   children: [
                     a11.show(),
-                    and1.show(),
+                    and1,
                     Row(
                       children: [
                         Column(
@@ -793,7 +793,7 @@ a12 = Bus(
                             SizedBox(
                               height: 50,
                             ),
-                            nor1.show(),
+                            nor1,
                             SizedBox(
                               height: 120,
                             ),
@@ -818,12 +818,12 @@ a12 = Bus(
                         Column(
                           children: [
                             a10.show(),
-                            no2.show(),
+                            no2,
                             a9.show(),
                             SizedBox(
                               height: 40,
                             ),
-                            or1.show(),
+                            or1,
                             SizedBox(height: 50,),
                             Row(
                               children: [
@@ -853,7 +853,7 @@ a12 = Bus(
                     SizedBox(
                       height: 30,
                     ),
-                    nor2.show(),
+                    nor2,
                     SizedBox(
                       height: 50,
                     ),
@@ -865,7 +865,7 @@ a12 = Bus(
                             SizedBox(
                               height: 60,
                             ),
-                            no1.show(),
+                            no1,
                             SizedBox(
                               height: 30,
                             ),

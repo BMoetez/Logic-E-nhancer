@@ -181,7 +181,7 @@ class _level5State extends State<level5> {
   void initState() {
     set();
     if (over == 0) {
-      WidgetsBinding.instance.addPostFrameCallback(
+      WidgetsBinding.instance?.addPostFrameCallback(
           (_) => Overlay.of(context)?.insert(_getEntry(context)));
       over = 1;
     }
@@ -557,7 +557,7 @@ class _level5State extends State<level5> {
               height: 50,
             ),
             a8.show(),
-            AND2.show(),
+            AND2,
             SizedBox(
               height: 50,
             ),
@@ -568,12 +568,12 @@ class _level5State extends State<level5> {
                 Column(
                   children: [
                     a7.show(),
-                    no1.show(),
+                    no1,
                     SizedBox(
                       height: 50,
                     ),
                     a6.show(),
-                    OR1.show(),
+                    OR1,
                     SizedBox(
                       height: 30,
                     ),
@@ -595,7 +595,7 @@ class _level5State extends State<level5> {
                 Column(
                   children: [
                     a5.show(),
-                    AND1.show(),
+                    AND1,
                     SizedBox(
                       height: 160,
                     ),
