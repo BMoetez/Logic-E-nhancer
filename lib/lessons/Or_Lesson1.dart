@@ -1,5 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'dart:ui' as ui;
+
 
 class Or_Lesson1 extends StatefulWidget {
   const Or_Lesson1({Key? key}) : super(key: key);
@@ -26,12 +27,98 @@ class _Or_Lesson1State extends State<Or_Lesson1> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
             Column(children: [
-              Padding(padding: EdgeInsets.all(20),child: OutlinedButton(onPressed: (){},style: OutlinedButton.styleFrom(fixedSize: const Size(250, 80),side: BorderSide(width: 5.0, color: Colors.white),), child: Text("ONE(1)",style:TextStyle(fontSize: 50),)),),
-              Padding(padding: EdgeInsets.all(20),child: OutlinedButton(onPressed: (){},style: OutlinedButton.styleFrom(fixedSize: const Size(250, 80),side: BorderSide(width: 5.0, color: Colors.white),), child: Text("ZERO(0)",style:TextStyle(fontSize: 50))),)
+              Padding(padding: EdgeInsets.all(20),child: OutlinedButton(onPressed: (){Overlay.of(context)?.insert(rightanswer(context));},style: OutlinedButton.styleFrom(fixedSize: const Size(250, 80),side: BorderSide(width: 5.0, color: Colors.white),), child: Text("ONE(1)",style:TextStyle(fontSize: 50),)),),
+              Padding(padding: EdgeInsets.all(20),child: OutlinedButton(onPressed: (){Overlay.of(context)?.insert(wronganswer(context));},style: OutlinedButton.styleFrom(fixedSize: const Size(250, 80),side: BorderSide(width: 5.0, color: Colors.white),), child: Text("ZERO(0)",style:TextStyle(fontSize: 50))),)
             ],),
+              Image.asset("../../assets/images/quiz1.png",height: 300,width: 300,)
           ],)
         ],
       ),
     );
+  }
+  OverlayEntry rightanswer(context) {
+    OverlayEntry entry = OverlayEntry(builder: (_) => Container());
+
+    entry = OverlayEntry(
+      opaque: false,
+      maintainState: true,
+      builder: (_) => Positioned(
+        left: 0,
+        bottom: 0,
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        child: BackdropFilter(
+          filter: ui.ImageFilter.blur(
+            sigmaX: 2,
+            sigmaY: 2,
+          ),
+          child: Material(
+            type: MaterialType.transparency,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                    width: 700,
+                    height: 450,
+                    color: Colors.black,
+                    child: Column(
+                      children: [
+                        Text("Congratulation ! ",style: TextStyle(fontSize: 90,color: Colors.green),),
+                        SizedBox(height: 100,),
+                        Text("You got it right !!",style: TextStyle(fontSize: 50,color: Colors.white)),
+                        SizedBox(height: 190,),
+                        OutlinedButton(onPressed: (){entry.remove();},style: OutlinedButton.styleFrom(fixedSize: const Size(500, 70),side: BorderSide(width: 5.0, color: Colors.white)), child: Text("To The Next Lesson ",style: TextStyle(fontSize: 50),))
+                      ],
+                    )),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+    return entry;
+  }
+
+  OverlayEntry wronganswer(context) {
+    OverlayEntry entry = OverlayEntry(builder: (_) => Container());
+
+    entry = OverlayEntry(
+      opaque: false,
+      maintainState: true,
+      builder: (_) => Positioned(
+        left: 0,
+        bottom: 0,
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        child: BackdropFilter(
+          filter: ui.ImageFilter.blur(
+            sigmaX: 2,
+            sigmaY: 2,
+          ),
+          child: Material(
+            type: MaterialType.transparency,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                    width: 700,
+                    height: 450,
+                    color: Colors.black,
+                    child: Column(
+                      children: [
+                        Text("Wrong Answer",style: TextStyle(fontSize: 90,color: Colors.red),),
+                        SizedBox(height: 300,),
+                        OutlinedButton(onPressed: (){entry.remove();},style: OutlinedButton.styleFrom(fixedSize: const Size(400, 70),side: BorderSide(width: 5.0, color: Colors.white)), child: Text("Try Again ",style: TextStyle(fontSize: 50),))
+                      ],
+                    )),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+    return entry;
   }
 }
