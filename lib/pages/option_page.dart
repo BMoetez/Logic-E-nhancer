@@ -65,7 +65,7 @@ class _OptionPageState extends State<OptionPage> {
                     children: [
                       const Icon(
                         Icons.music_note,
-                        color: Colors.white,
+                        color: const Color(0xFFa0b6f7),
                         size: 55,
                       ),
                       const Text(
@@ -98,7 +98,7 @@ class _OptionPageState extends State<OptionPage> {
                       children: [
                         const Icon(
                           Icons.color_lens,
-                          color: Colors.white,
+                          color: const Color(0xFFa0b6f7),
                           size: 55,
                         ),
                         const Text(

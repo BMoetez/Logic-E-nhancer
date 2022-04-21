@@ -59,7 +59,7 @@ class _HomePageState extends State<Levels> {
               Align(
                 alignment: Alignment.topLeft,
                 child: Material(
-                  child: IconButton(
+                  child: Padding(padding: EdgeInsets.all(10),child:IconButton(
                       onPressed: () {
                         Navigator.push(
                             context,
@@ -68,9 +68,9 @@ class _HomePageState extends State<Levels> {
                       },
                       icon: Icon(
                         Icons.arrow_back_ios_sharp,
-                        size: 40,
+                        size: 35,
                         color: Colors.white,
-                      )),
+                      )) ,) ,
                   color: Color.fromRGBO(231, 218, 199, 0),
                 ),
               ),
@@ -106,6 +106,7 @@ class _HomePageState extends State<Levels> {
                               Overlay.of(context)?.insert(_getEntry(context));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
+                            hoverColor:const Color(0xFFa0b6f7) ,
                             child: Text(
                               '1',
                               style: TextStyle(
@@ -128,6 +129,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level2()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
+                            hoverColor:const Color(0xFFa0b6f7) ,
                             child: Text(
                               '2',
                               style: TextStyle(
@@ -150,6 +152,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level3()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
+                            hoverColor:const Color(0xFFa0b6f7) ,
                             child: Text(
                               '3',
                               style: TextStyle(
@@ -172,6 +175,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level4()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
+                            hoverColor:const Color(0xFFa0b6f7) ,
                             child: Text(
                               '4',
                               style: TextStyle(
@@ -194,6 +198,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level5()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
+                            hoverColor:const Color(0xFFa0b6f7) ,
                             child: Text(
                               '5',
                               style: TextStyle(
@@ -216,6 +221,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level6()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
+                            hoverColor:const Color(0xFFa0b6f7) ,
                             child: Text(
                               '6',
                               style: TextStyle(
@@ -251,6 +257,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level7()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
+                            hoverColor:const Color(0xFFa0b6f7) ,
                             child: Text(
                               '7',
                               style: TextStyle(
@@ -273,6 +280,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level8()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
+                            hoverColor:const Color(0xFFa0b6f7) ,
                             child: Text(
                               '8',
                               style: TextStyle(
@@ -295,6 +303,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level9()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
+                            hoverColor:const Color(0xFFa0b6f7) ,
                             child: Text(
                               '9',
                               style: TextStyle(
@@ -317,6 +326,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level10()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
+                            hoverColor:const Color(0xFFa0b6f7) ,
                             child: Text(
                               '10',
                               style: TextStyle(
@@ -339,6 +349,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level11()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
+                            hoverColor:const Color(0xFFa0b6f7) ,
                             child: Text(
                               '11',
                               style: TextStyle(
@@ -361,6 +372,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level12()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
+                            hoverColor:const Color(0xFFa0b6f7) ,
                             child: Text(
                               '12',
                               style: TextStyle(
@@ -396,6 +408,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level13()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
+                            hoverColor:const Color(0xFFa0b6f7) ,
                             child: Text(
                               '13',
                               style: TextStyle(
@@ -418,6 +431,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level14()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
+                            hoverColor:const Color(0xFFa0b6f7) ,
                             child: Text(
                               '14',
                               style: TextStyle(
@@ -440,6 +454,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level15()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
+                            hoverColor:const Color(0xFFa0b6f7) ,
                             child: Text(
                               '15',
                               style: TextStyle(
@@ -462,6 +477,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level16()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
+                            hoverColor:const Color(0xFFa0b6f7) ,
                             child: Text(
                               '16',
                               style: TextStyle(
@@ -484,6 +500,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level17()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
+                            hoverColor:const Color(0xFFa0b6f7) ,
                             child: Text(
                               '17',
                               style: TextStyle(
@@ -506,6 +523,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level18()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
+                            hoverColor:const Color(0xFFa0b6f7) ,
                             child: Text(
                               '18',
                               style: TextStyle(

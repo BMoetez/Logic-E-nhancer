@@ -24,16 +24,17 @@ class _playPageState extends State<playPage> {
                Align(
                 alignment: Alignment.topLeft,
                 child: Material(
-                  child: IconButton(
+                  child: Padding(padding: EdgeInsets.all(10), child:IconButton(
                        onPressed:(){
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage())
                 );
                 },
                       icon: Icon(
+                      
                         Icons.arrow_back_ios_sharp,
-                        size: 40,
+                        size: 35,
                         color: Colors.white,
-                      )),
+                      )) ,) ,
                   color: Color.fromRGBO(231, 218, 199, 0),
                 ),
               ),
@@ -45,7 +46,7 @@ class _playPageState extends State<playPage> {
                     fontSize: 80,
                     decoration: TextDecoration.none,
                     fontFamily: 'Digital7'),
-              ),SizedBox(height: 200),
+              ),SizedBox(height: 180),
               SizedBox(
                 width: 500,
                 child: RaisedButton(
@@ -54,8 +55,8 @@ class _playPageState extends State<playPage> {
                   );
                 },
                 textColor:  Colors.black,
-                color:  Colors.grey,
-                hoverColor: Colors.blueGrey,
+                color:  const Color(0xFFa0b6f7),
+                hoverColor: const Color(0xFFf2f261),
                 padding: const EdgeInsets.fromLTRB(20, 20, 20, 30),
                 child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [ const Icon(Icons.gamepad_sharp,size: 40,color: Colors.white,),SizedBox(width: 20),const Text(
                   "level mode",
@@ -66,9 +67,9 @@ class _playPageState extends State<playPage> {
                 width: 500,
                 child: RaisedButton(
                 onPressed: () {},
-                textColor: const Color.fromRGBO(36, 31, 28, 1),
-                color: const Color.fromRGBO(93, 70, 47, 1),
-                hoverColor: const Color.fromRGBO(147, 112, 71, 1),
+                textColor: Colors.black,
+                color: const Color(0xFFa0b6f7),
+                hoverColor: const Color(0xFFf2f261),
                 padding: const EdgeInsets.fromLTRB(20, 20, 20, 30),
                 child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [ const Icon(Icons.all_inbox_outlined,size: 40,color: Colors.white,),SizedBox(width: 20),const Text(
                   "endless mode",
@@ -81,9 +82,9 @@ class _playPageState extends State<playPage> {
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>Lessons()));
 
                 },
-                textColor: const Color.fromRGBO(36, 31, 28, 1),
-                color: const Color.fromRGBO(93, 70, 47, 1),
-                hoverColor: const Color.fromRGBO(147, 112, 71, 1),
+                textColor: Colors.black,
+                color: const Color(0xFFa0b6f7),
+                hoverColor: const Color(0xFFf2f261),
                 padding: const EdgeInsets.fromLTRB(20, 20, 20, 30),
                 child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [ const Icon(Icons.book,size: 40,color: Colors.white,),SizedBox(width: 20),const Text(
                   "learning mode",
@@ -94,9 +95,9 @@ class _playPageState extends State<playPage> {
                 width: 500,
                 child: RaisedButton(
                 onPressed: () {},
-                textColor: const Color.fromRGBO(36, 31, 28, 1),
-                color: const Color.fromRGBO(93, 70, 47, 1),
-                hoverColor: const Color.fromRGBO(147, 112, 71, 1),
+                textColor: Colors.black,
+                color: const Color(0xFFa0b6f7),
+                hoverColor: const Color(0xFFf2f261),
                 padding: const EdgeInsets.fromLTRB(20, 20, 20, 30),
                 child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [ const Icon(Icons.castle_outlined,size: 40,color: Colors.white,),SizedBox(width: 20),const Text(
                   "build mode",

@@ -87,15 +87,14 @@ class _LEDState extends State<LED> with SingleTickerProviderStateMixin {
     WidgetsBinding.instance?.addPostFrameCallback((_) => win_page());
     return Material(
       child: Lottie.asset("assets/images/light/light1.json",
-          width: 100, height: 150, controller: _controller),
+          width: 100, height: 100, controller: _controller),
       color: const Color.fromRGBO(0, 0, 0, 0),
     );
   }
 
   void win_page() {
     if (widget.x == 1) {
-      _controller.animateTo(0.6638906666666667
-);
+      _controller.animateTo(0.6638906666666667);
       Future.delayed(Duration(seconds: 3), (() {
         print(_controller.value);
         Overlay.of(context)?.insert(_getEntry(context));
