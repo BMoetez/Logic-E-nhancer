@@ -10,7 +10,12 @@ import '../classes/Nor_gate.dart';
 import 'dart:ui' as ui;
 
 int over = 0;
-LevelHead2 v = LevelHead2("15", level15());
+int moves = 3;
+LevelHead2 v = LevelHead2(
+  "15",
+  level15(),
+  mov: moves,
+);
 or_gate or1 = or_gate(height: 70, width: 70);
 or_gate or2 = or_gate(height: 70, width: 70);
 no_gate no1 = no_gate(height: 50, width: 50);
@@ -19,11 +24,11 @@ and_gate and1 = and_gate(height: 70, width: 70);
 and_gate and2 = and_gate(height: 70, width: 70);
 nor_gate nor1 = nor_gate(height: 70, width: 70, rotation: 3);
 int sat1 = 1;
-int sat2 = 0;
+int sat2 = 1;
 int sat3 = 0;
 int sat4 = 0;
 int sat5 = 0;
-int sat6 = 0;
+int sat6 = 1;
 int or1_output = or1.activation(a1.activate, a2.activate);
 int or2_output = or2.activation(a3.activate, a4.activate);
 int nor1_output = nor1.activation(a11.activate, a12.activate);
@@ -126,12 +131,14 @@ LED light = LED(
   y: 15,
 );
 void set() {
+  moves = 3;
+  v = LevelHead2("15", level15(),mov: moves,);
   sat1 = 1;
-  sat2 = 0;
+  sat2 = 1;
   sat3 = 0;
   sat4 = 0;
   sat5 = 0;
-  sat6 = 0;
+  sat6 = 1;
 
   a1 = Bus(
     activate: sat1,
@@ -259,6 +266,10 @@ class _level15State extends State<level15> {
 
   void test1() {
     setState(() {
+      if(moves!=0){
+moves-=1;
+v = LevelHead2("15", level15(),mov: moves,);
+}
       if (sat1 == 1) {
         sat1 = 0;
         a1 = Bus(
@@ -340,6 +351,10 @@ class _level15State extends State<level15> {
 
   void test2() {
     setState(() {
+           if(moves!=0){
+moves-=1;
+v = LevelHead2("15", level15(),mov: moves,);
+}
       if (sat2 == 1) {
         sat2 = 0;
         a2 = Bus(
@@ -427,6 +442,10 @@ class _level15State extends State<level15> {
 
   void test3() {
     setState(() {
+           if(moves!=0){
+moves-=1;
+v = LevelHead2("15", level15(),mov: moves,);
+}
       if (sat3 == 1) {
         sat3 = 0;
         a3 = Bus(
@@ -530,6 +549,10 @@ class _level15State extends State<level15> {
 
   void test4() {
     setState(() {
+           if(moves!=0){
+moves-=1;
+v = LevelHead2("15", level15(),mov: moves,);
+}
       if (sat4 == 1) {
         sat4 = 0;
         a4 = Bus(
@@ -635,6 +658,10 @@ class _level15State extends State<level15> {
 
   void test5() {
     setState(() {
+           if(moves!=0){
+moves-=1;
+v = LevelHead2("15", level15(),mov: moves,);
+}
       if (sat5 == 1) {
         sat5 = 0;
         a5 = Bus(
@@ -718,6 +745,10 @@ class _level15State extends State<level15> {
 
   void test6() {
     setState(() {
+           if(moves!=0){
+moves-=1;
+v = LevelHead2("15", level15(),mov: moves,);
+}
       if (sat6 == 1) {
         sat6 = 0;
         a7 = Bus(

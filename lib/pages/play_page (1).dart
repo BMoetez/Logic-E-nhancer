@@ -71,7 +71,7 @@ class _playPageState extends State<playPage> {
                 color: const Color(0xFFa0b6f7),
                 hoverColor: const Color(0xFFf2f261),
                 padding: const EdgeInsets.fromLTRB(20, 20, 20, 30),
-                child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [ const Icon(Icons.all_inbox_outlined,size: 40,color: Colors.white,),SizedBox(width: 20),const Text(
+                child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [ const Icon(Icons.all_inclusive,size: 40,color: Colors.white,),SizedBox(width: 20),const Text(
                   "endless mode",
                   style: TextStyle(fontSize: 40),
                 )],) ,

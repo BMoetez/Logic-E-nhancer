@@ -4,11 +4,17 @@ import '../classes/LED2.dart';
 import '../classes/bus.dart';
 import '../classes/or_gate.dart';
 import '../classes/no_gate.dart';
-LevelHead2 v = LevelHead2("3",level3());
+
+int moves = 3;
+LevelHead2 v = LevelHead2(
+  "3",
+  level3(),
+  mov: moves,
+);
 or_gate OR = or_gate(height: 100, width: 100);
 no_gate no = no_gate(height: 70, width: 70);
-int sat1 = 0;
-int sat2 = 0;
+int sat1 = 1;
+int sat2 = 1;
 Bus a1 = Bus(
   activate: sat1,
   hor_length: 150,
@@ -38,41 +44,56 @@ Bus a4 = Bus(
   dx: 2.5,
 );
 int b = OR.activation(a1.activate, a2.activate);
-LED LIGHT2 = LED(x: a4.activate,y: 3,);
+LED LIGHT2 = LED(
+  x: a4.activate,
+  y: 3,
+);
 int c = no.activation(a3.activate);
-void set (){
-   sat1 = 0;
-sat2 = 0;
- a1 = Bus(
-  activate: sat1,
-  hor_length: 150,
-  ver_length1: 60,
-  ver_length2: 60,
-  dy: -60,
-  dx: -2.5,
+void set() {
+  moves = 3;
+  v = LevelHead2(
+  "3",
+  level3(),
+  mov: moves,
 );
- a2 = Bus(
-  activate: sat2,
-  hor_length: -150,
-  ver_length1: -60,
-  ver_length2: -60,
-  dy: -60,
-); b = OR.activation(a1.activate, a2.activate);
- a3 = Bus(
-  activate: b,
-  hor_length: 0,
-  ver_length1: 0,
-  ver_length2: 100,
-);c = no.activation(a3.activate);
-a4 = Bus(
-  activate: c,
-  hor_length: 0,
-  ver_length1: 0,
-  ver_length2: 60,
-  dx: 2.5,
-);
-LIGHT2 = LED(x: a4.activate,y: 3,);
+  sat1 = 1;
+  sat2 = 1;
+  a1 = Bus(
+    activate: sat1,
+    hor_length: 150,
+    ver_length1: 60,
+    ver_length2: 60,
+    dy: -60,
+    dx: -2.5,
+  );
+  a2 = Bus(
+    activate: sat2,
+    hor_length: -150,
+    ver_length1: -60,
+    ver_length2: -60,
+    dy: -60,
+  );
+  b = OR.activation(a1.activate, a2.activate);
+  a3 = Bus(
+    activate: b,
+    hor_length: 0,
+    ver_length1: 0,
+    ver_length2: 100,
+  );
+  c = no.activation(a3.activate);
+  a4 = Bus(
+    activate: c,
+    hor_length: 0,
+    ver_length1: 0,
+    ver_length2: 60,
+    dx: 2.5,
+  );
+  LIGHT2 = LED(
+    x: a4.activate,
+    y: 3,
+  );
 }
+
 class level3 extends StatefulWidget {
   const level3({Key? key}) : super(key: key);
 
@@ -89,8 +110,17 @@ class _level3State extends State<level3> {
     set();
     super.initState();
   }
+
   void test1() {
     setState(() {
+      if(moves!=0){
+moves-=1;
+v = LevelHead2(
+  "3",
+  level3(),
+  mov: moves,
+);
+}
       if (sat1 == 1) {
         sat1 = 0;
         a1 = Bus(
@@ -143,9 +173,15 @@ class _level3State extends State<level3> {
         );
       }
       if (a4.activate == 1) {
-        LIGHT2 = LED(x: a4.activate,y: 3,);
+        LIGHT2 = LED(
+          x: a4.activate,
+          y: 3,
+        );
       } else {
-        LIGHT2 = LED(x: a4.activate,y: 3,);
+        LIGHT2 = LED(
+          x: a4.activate,
+          y: 3,
+        );
       }
       print("b1:{$c}");
     });
@@ -153,6 +189,14 @@ class _level3State extends State<level3> {
 
   void test2() {
     setState(() {
+            if(moves!=0){
+moves-=1;
+v = LevelHead2(
+  "3",
+  level3(),
+  mov: moves,
+);
+}
       if (sat2 == 1) {
         sat2 = 0;
         a2 = Bus(
@@ -203,9 +247,15 @@ class _level3State extends State<level3> {
         );
       }
       if (a4.activate == 1) {
-        LIGHT2 = LED(x: a4.activate,y: 3,);
+        LIGHT2 = LED(
+          x: a4.activate,
+          y: 3,
+        );
       } else {
-        LIGHT2 = LED(x: a4.activate,y: 3,);
+        LIGHT2 = LED(
+          x: a4.activate,
+          y: 3,
+        );
       }
       print("b1:{$c}");
     });
