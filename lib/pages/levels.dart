@@ -59,7 +59,7 @@ class _HomePageState extends State<Levels> {
               Align(
                 alignment: Alignment.topLeft,
                 child: Material(
-                  child: Padding(padding: EdgeInsets.all(10),child:IconButton(
+                  child: Padding(padding: EdgeInsets.fromLTRB(5, 10, 10, 10),child:IconButton(
                       onPressed: () {
                         Navigator.push(
                             context,
