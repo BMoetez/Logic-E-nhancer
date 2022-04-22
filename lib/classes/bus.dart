@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'button.dart';
 
 class Bus extends CustomPaint{
   double hor_length,ver_length1,ver_length2,stroke,dx,dy;
@@ -63,7 +62,7 @@ class MyPainter extends CustomPainter {
 
     if(this.activate==0) {
       final paint = Paint()
-        ..color = Colors.blue
+        ..color = const Color(0xFFa0b6f7)
         ..strokeWidth = stroke;
       canvas.drawLine(p1, p2, paint);
       canvas.drawLine(p3, p4, paint);
@@ -71,7 +70,7 @@ class MyPainter extends CustomPainter {
 
     }else{
       final paint = Paint()
-        ..color = Colors.amber
+        ..color = const Color(0xFFf2f261)
         ..strokeWidth = stroke;
       canvas.drawLine(p1, p2, paint);
       canvas.drawLine(p3, p4, paint);

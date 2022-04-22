@@ -9,7 +9,12 @@ import '../classes/Nand_gate.dart';
 import 'dart:ui' as ui;
 
 int over = 1;
-LevelHead2 v = LevelHead2("10", level10());
+int moves = 4;
+LevelHead2 v = LevelHead2(
+  "10",
+  level10(),
+  mov: moves,
+);
 or_gate or1 = or_gate(height: 70, width: 70);
 or_gate or2 = or_gate(height: 70, width: 70);
 and_gate and1 = and_gate(height: 70, width: 70);
@@ -133,6 +138,8 @@ LED light = LED(
   y: 10,
 );
 void set() {
+  moves = 4;
+   v = LevelHead2("10", level10(),mov: moves,);
   sat1 = 1;
   sat2 = 1;
   sat3 = 0;
@@ -275,6 +282,10 @@ class _level10State extends State<level10> {
 
   void test1() {
     setState(() {
+      if(moves!=0){
+moves-=1;
+ v = LevelHead2("10", level10(),mov: moves,);
+}
       if (sat1 == 1) {
         sat1 = 0;
         a1 = Bus(
@@ -364,6 +375,10 @@ class _level10State extends State<level10> {
 
   void test2() {
     setState(() {
+            if(moves!=0){
+moves-=1;
+ v = LevelHead2("10", level10(),mov: moves,);
+}
       if (sat2 == 1) {
         sat2 = 0;
         a2 = Bus(
@@ -453,6 +468,10 @@ class _level10State extends State<level10> {
 
   void test3() {
     setState(() {
+            if(moves!=0){
+moves-=1;
+ v = LevelHead2("10", level10(),mov: moves,);
+}
       if (sat3 == 1) {
         sat3 = 0;
         a3 = Bus(
@@ -560,6 +579,10 @@ class _level10State extends State<level10> {
 
   void test4() {
     setState(() {
+            if(moves!=0){
+moves-=1;
+ v = LevelHead2("10", level10(),mov: moves,);
+}
       if (sat4 == 1) {
         sat4 = 0;
         a4 = Bus(
@@ -667,6 +690,10 @@ class _level10State extends State<level10> {
 
   void test5() {
     setState(() {
+            if(moves!=0){
+moves-=1;
+ v = LevelHead2("10", level10(),mov: moves,);
+}
       if (sat5 == 1) {
         sat5 = 0;
         a5 = Bus(
@@ -754,6 +781,10 @@ class _level10State extends State<level10> {
 
   void test6() {
     setState(() {
+            if(moves!=0){
+moves-=1;
+ v = LevelHead2("10", level10(),mov: moves,);
+}
       if (sat6 == 1) {
         sat6 = 0;
         a7 = Bus(

@@ -94,8 +94,7 @@ class _LEDState extends State<LED> with SingleTickerProviderStateMixin {
 
   void win_page() {
     if (widget.x == 1) {
-      _controller.animateTo(0.6638906666666667
-);
+      _controller.animateTo(0.6638906666666667);
       Future.delayed(Duration(seconds: 3), (() {
         print(_controller.value);
         Overlay.of(context)?.insert(_getEntry(context));

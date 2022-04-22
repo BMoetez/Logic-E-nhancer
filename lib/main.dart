@@ -2,17 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:logic_enhancer/pages/option_page.dart';
-import 'package:logic_enhancer/stages/level10.dart';
-import 'package:logic_enhancer/stages/level11.dart';
-import 'package:logic_enhancer/stages/level12.dart';
-import 'package:logic_enhancer/stages/level13.dart';
-import 'package:logic_enhancer/stages/level16.dart';
-import 'package:logic_enhancer/stages/level17.dart';
-import 'package:logic_enhancer/stages/level18.dart';
-import 'package:logic_enhancer/stages/level6.dart';
-import 'package:logic_enhancer/stages/level7.dart';
-import 'package:logic_enhancer/stages/level8.dart';
-import 'package:logic_enhancer/stages/level9.dart';
 import 'pages/play_page (1).dart';
 
 void main() {
@@ -105,7 +94,7 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           Icon(
                             Icons.play_circle_rounded,
-                            color: Color.fromRGBO(93, 70, 47, 1),
+                            color: const Color(0xFFa0b6f7),
                             size: 70.0,
                           ),
                           RaisedButton(
@@ -115,7 +104,7 @@ class _HomePageState extends State<HomePage> {
                                     MaterialPageRoute(
                                         builder: (context) => playPage()));
                               },
-                              hoverColor: Color.fromRGBO(147, 112, 71, 1),
+                              hoverColor: const Color(0xFFa0b6f7),
                               padding: EdgeInsets.fromLTRB(20, 20, 20, 30),
                               child: Text(
                                 'play',
@@ -133,7 +122,7 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           Icon(
                             Icons.miscellaneous_services,
-                            color: Color.fromRGBO(93, 70, 47, 1),
+                            color: const Color(0xFFa0b6f7),
                             size: 65.0,
                           ),
                           RaisedButton(
@@ -143,7 +132,7 @@ class _HomePageState extends State<HomePage> {
                                     MaterialPageRoute(
                                         builder: (context) => OptionPage()));
                               },
-                              hoverColor: Color.fromRGBO(147, 112, 71, 1),
+                              hoverColor: const Color(0xFFa0b6f7),
                               padding: EdgeInsets.fromLTRB(20, 20, 20, 30),
                               child: Text(
                                 'Options',
@@ -161,7 +150,7 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           Icon(
                             Icons.military_tech_sharp,
-                            color: Color.fromRGBO(93, 70, 47, 1),
+                            color: const Color(0xFFa0b6f7),
                             size: 70.0,
                           ),
                           RaisedButton(
@@ -171,7 +160,7 @@ class _HomePageState extends State<HomePage> {
                                     MaterialPageRoute(
                                         builder: (context) => OptionPage()));
                               },
-                              hoverColor: Color.fromRGBO(147, 112, 71, 1),
+                              hoverColor: const Color(0xFFa0b6f7),
                               padding: EdgeInsets.fromLTRB(20, 20, 20, 30),
                               child: Text(
                                 'Credits',

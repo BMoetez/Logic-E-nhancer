@@ -7,7 +7,7 @@ import '../classes/no_gate.dart';
 import '../classes/and_gate.dart';
 import 'dart:ui' as ui;
 
-int moves = 8;
+int moves = 4;
 LevelHead2 v = LevelHead2(
   "5",
   level5(),
@@ -18,10 +18,10 @@ and_gate AND1 = and_gate(height: 80, width: 80);
 and_gate AND2 = and_gate(height: 80, width: 80);
 no_gate no1 = no_gate(height: 70, width: 70);
 int over = 0;
-int sat1 = 0;
+int sat1 = 1;
 int sat2 = 1;
 int sat3 = 0;
-int sat4 = 0;
+int sat4 = 1;
 int and1_output = AND1.activation(a3.activate, a4.activate);
 int or1_output = OR1.activation(a1.activate, a2.activate);
 int no_output = no1.activation(a6.activate);
@@ -88,16 +88,16 @@ LED light = LED(
   y: 5,
 );
 void set() {
-  moves = 8;
+  moves = 4;
   v = LevelHead2(
   "5",
   level5(),
   mov: moves,
 );
-  sat1 = 0;
+  sat1 = 1;
   sat2 = 1;
   sat3 = 0;
-  sat4 = 0;
+  sat4 = 1;
   a1 = Bus(
     activate: sat1,
     hor_length: 50,
@@ -189,12 +189,14 @@ class _level5State extends State<level5> {
   }
 
   void test1() {
-    setState(() {moves = moves-1;
-    v = LevelHead2(
+    setState(() {if(moves!=0){
+moves-=1;
+v = LevelHead2(
   "5",
   level5(),
   mov: moves,
 );
+}
       if (sat1 == 1) {
         sat1 = 0;
         a1 = Bus(
@@ -280,6 +282,14 @@ class _level5State extends State<level5> {
 
   void test2() {
     setState(() {
+      if(moves!=0){
+moves-=1;
+v = LevelHead2(
+  "5",
+  level5(),
+  mov: moves,
+);
+}
       if (sat2 == 1) {
         sat2 = 0;
         a2 = Bus(
@@ -365,6 +375,14 @@ class _level5State extends State<level5> {
 
   void test3() {
     setState(() {
+      if(moves!=0){
+moves-=1;
+v = LevelHead2(
+  "5",
+  level5(),
+  mov: moves,
+);
+}
       if (sat3 == 1) {
         sat3 = 0;
         a3 = Bus(
@@ -434,6 +452,14 @@ class _level5State extends State<level5> {
 
   void test4() {
     setState(() {
+      if(moves!=0){
+moves-=1;
+v = LevelHead2(
+  "5",
+  level5(),
+  mov: moves,
+);
+}
       if (sat4 == 1) {
         sat4 = 0;
         a4 = Bus(
