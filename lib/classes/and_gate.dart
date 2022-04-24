@@ -8,7 +8,7 @@ class and_gate extends StatefulWidget {
   int rotation;
 
   and_gate({this.height=100, this.width=150, this.rotation=3}) {
-    path = "assets/images/gates/4.png";
+    path = "assets/images/gates/2.png";
     height = height;
     width = width;
     rotation = rotation;

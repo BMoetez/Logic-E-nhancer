@@ -31,7 +31,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int colorindex = 0;
   late Timer timer;
-  
+
   @override
   void initState() {
     super.initState();
@@ -41,8 +41,7 @@ class _HomePageState extends State<HomePage> {
         if (colorindex > 1) colorindex = 0;
       });
     });
-    }
-  
+  }
 
   @override
   void dispose() {
@@ -62,6 +61,7 @@ class _HomePageState extends State<HomePage> {
             backgroundColor: Colors.transparent,
             body: Column(children: <Widget>[
               Container(
+                padding: EdgeInsets.all(40),
                 width: double.infinity,
                 child: Text.rich(
                   TextSpan(children: [
@@ -85,18 +85,13 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Padding(
-                  padding: EdgeInsets.fromLTRB(10, 150.0, 20.0, 30.0),
+                  padding: EdgeInsets.fromLTRB(10, 120.0, 20.0, 30.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(
-                            Icons.play_circle_rounded,
-                            color: const Color(0xFFa0b6f7),
-                            size: 70.0,
-                          ),
                           RaisedButton(
                               onPressed: () {
                                 Navigator.push(
@@ -104,15 +99,31 @@ class _HomePageState extends State<HomePage> {
                                     MaterialPageRoute(
                                         builder: (context) => playPage()));
                               },
-                              hoverColor: const Color(0xFFa0b6f7),
-                              padding: EdgeInsets.fromLTRB(20, 20, 20, 30),
-                              child: Text(
-                                'play',
-                                style: TextStyle(
-                                  fontFamily: 'Digital7',
-                                  color: Colors.black,
-                                  fontSize: 70.0,
-                                ),
+                              color: const Color(0xFFa0b6f7),
+                              hoverColor: const Color(0xFFf2f261),
+                              padding: EdgeInsets.fromLTRB(60, 10, 90, 20),
+                              child: Row(
+                                children: [
+                                  Padding(
+                                      padding:
+                                          EdgeInsets.fromLTRB(5, 20, 2, 10),
+                                      child: Icon(
+                                        Icons.play_circle_rounded,
+                                        color: Colors.white,
+                                        size: 60.0,
+                                      )),
+                                  /* SizedBox(
+                                    width: 20,
+                                  ), */
+                                  Text(
+                                    'play',
+                                    style: TextStyle(
+                                      fontFamily: 'Digital7',
+                                      color: Colors.black,
+                                      fontSize: 70.0,
+                                    ),
+                                  )
+                                ],
                               ))
                         ],
                       ),
@@ -120,11 +131,6 @@ class _HomePageState extends State<HomePage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(
-                            Icons.miscellaneous_services,
-                            color: const Color(0xFFa0b6f7),
-                            size: 65.0,
-                          ),
                           RaisedButton(
                               onPressed: () {
                                 Navigator.push(
@@ -132,15 +138,31 @@ class _HomePageState extends State<HomePage> {
                                     MaterialPageRoute(
                                         builder: (context) => OptionPage()));
                               },
-                              hoverColor: const Color(0xFFa0b6f7),
-                              padding: EdgeInsets.fromLTRB(20, 20, 20, 30),
-                              child: Text(
-                                'Options',
-                                style: TextStyle(
-                                  fontFamily: 'Digital7',
-                                  color: Colors.black,
-                                  fontSize: 70.0,
-                                ),
+                              color: const Color(0xFFa0b6f7),
+                              hoverColor: const Color(0xFFf2f261),
+                              padding: EdgeInsets.fromLTRB(30, 10, 40, 20),
+                              child: Row(
+                                children: [
+                                  Padding(
+                                      padding:
+                                          EdgeInsets.fromLTRB(5, 20, 20, 10),
+                                      child: Icon(
+                                        Icons.miscellaneous_services,
+                                        color: Colors.white,
+                                        size: 60.0,
+                                      )),
+                                  /* SizedBox(
+                                    width: 20,
+                                  ), */
+                                  Text(
+                                    'Options',
+                                    style: TextStyle(
+                                      fontFamily: 'Digital7',
+                                      color: Colors.black,
+                                      fontSize: 70.0,
+                                    ),
+                                  )
+                                ],
                               ))
                         ],
                       ),
@@ -148,30 +170,41 @@ class _HomePageState extends State<HomePage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(
-                            Icons.military_tech_sharp,
-                            color: const Color(0xFFa0b6f7),
-                            size: 70.0,
-                          ),
                           RaisedButton(
                               onPressed: () {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => OptionPage()));
+                                        builder: (context) => playPage()));
                               },
-                              hoverColor: const Color(0xFFa0b6f7),
-                              padding: EdgeInsets.fromLTRB(20, 20, 20, 30),
-                              child: Text(
-                                'Credits',
-                                style: TextStyle(
-                                  fontFamily: 'Digital7',
-                                  color: Colors.black,
-                                  fontSize: 75.0,
-                                ),
+                              color: const Color(0xFFa0b6f7),
+                              hoverColor: const Color(0xFFf2f261),
+                              padding: EdgeInsets.fromLTRB(30, 10, 40, 20),
+                              child: Row(
+                                children: [
+                                  Padding(
+                                      padding:
+                                          EdgeInsets.fromLTRB(5, 20, 20, 10),
+                                      child: Icon(
+                                        Icons.military_tech_sharp,
+                                        color: Colors.white,
+                                        size: 60.0,
+                                      )),
+                                  /* SizedBox(
+                                    width: 20,
+                                  ), */
+                                  Text(
+                                    'Credits',
+                                    style: TextStyle(
+                                      fontFamily: 'Digital7',
+                                      color: Colors.black,
+                                      fontSize: 70.0,
+                                    ),
+                                  )
+                                ],
                               ))
                         ],
-                      )
+                      ),
                     ],
                   ))
             ])));
