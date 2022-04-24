@@ -49,13 +49,20 @@ class _LevelHead2State extends State<LevelHead2> {
                   icon: Icon(
                     Icons.arrow_back_ios_sharp,
                     size: 40,
-                    color: Colors.white,
+                    color: Colors.yellow,
                   ),
                 ),
               )),
-          const Spacer(),
+          Align(
+            alignment: Alignment.topLeft,
+            child: SizedBox(
+              width: 280,
+              child:Text('MOVES LEFT:${widget.mov}',
+              style: TextStyle(fontSize: 50,color: Color.fromARGB(255, 255, 255, 255)),) ,)
+          ),
+          Spacer(),
           Padding(
-            padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+            padding: EdgeInsets.fromLTRB(0, 10, 150, 0),
             child: Align(
               alignment: Alignment.topCenter,
               child: Text(
@@ -68,8 +75,23 @@ class _LevelHead2State extends State<LevelHead2> {
               ),
             ),
           ),
-          const Spacer(),Text('MOVES LEFT:${widget.mov}',
-          style: TextStyle(fontSize: 50,color: Color.fromARGB(255, 255, 255, 255)),),
+          Spacer(),
+          Align(
+            alignment: Alignment.topRight,
+              child: SizedBox(
+                width: 120,
+                height: 120,
+                child: IconButton(
+                    onPressed: () {
+                      Overlay.of(context)?.insert(_getEntry2(context));
+                    },
+                    icon: Icon(
+                      Icons.question_mark_rounded,
+                      size: 40,
+                      color: Colors.yellow,
+                    )),
+              )
+          ),
           Align(
             alignment: Alignment.topRight,
             child: SizedBox(
@@ -82,7 +104,7 @@ class _LevelHead2State extends State<LevelHead2> {
                   icon: Icon(
                     Icons.menu,
                     size: 40,
-                    color: Colors.white,
+                    color: Colors.yellow,
                   )),
             ),
           )
@@ -143,7 +165,6 @@ class _LevelHead2State extends State<LevelHead2> {
                           height: 50,
                           child: OutlinedButton(
                               onPressed: () {
-                                
                                 Navigator.pushAndRemoveUntil(
                                   context,
                                   MaterialPageRoute(
@@ -187,6 +208,68 @@ class _LevelHead2State extends State<LevelHead2> {
                                       width: 3.0, color: Colors.white))),
                         ),
                       ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+    return entry;
+  }
+
+  OverlayEntry _getEntry2(context) {
+    OverlayEntry entry = OverlayEntry(builder: (_) => Container());
+
+    entry = OverlayEntry(
+      opaque: false,
+      maintainState: true,
+      builder: (_) => Positioned(
+        left: 0,
+        bottom: 0,
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        child: BackdropFilter(
+          filter: ui.ImageFilter.blur(
+            sigmaX: 2,
+            sigmaY: 2,
+          ),
+          child: Material(
+            type: MaterialType.transparency,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  width: 500,
+                  height: 350,
+                  color: Colors.black,
+                  child: Column(
+                    children: [
+                      Align(
+                        alignment: Alignment.topRight,
+                        child: Material(
+                          child: IconButton(
+                            onPressed: () => entry.remove(),
+                            icon: Icon(Icons.close),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(0, 10, 0, 100),
+                        child: Text(
+                          "HINT",
+                          style: TextStyle(fontSize: 40, color: Colors.white),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                          child: Text("Click On the logic gate to find out how it works",style: TextStyle(color: Colors.white,fontSize: 30,height: 1.2),)
+
+                      ),
+
                     ],
                   ),
                 ),
