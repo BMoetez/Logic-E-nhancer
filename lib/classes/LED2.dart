@@ -82,6 +82,12 @@ class _LEDState extends State<LED> with SingleTickerProviderStateMixin {
     _controller.dispose();
   }
 
+  void didChangeDependencies() {
+    precacheImage(AssetImage("assets/images/party.json"), context);
+
+    super.didChangeDependencies();
+  }
+
   @override
   Widget build(BuildContext context) {
     WidgetsBinding.instance?.addPostFrameCallback((_) => win_page());
@@ -124,8 +130,8 @@ class _LEDState extends State<LED> with SingleTickerProviderStateMixin {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Lottie.network(
-                    'https://assets9.lottiefiles.com/packages/lf20_wys2rrr6.json',
+                Lottie.asset(
+                    "assets/images/party.json",
                     width: 500,
                     height: 500),
                 Column(
@@ -233,8 +239,8 @@ class _LEDState extends State<LED> with SingleTickerProviderStateMixin {
                     ),
                   ],
                 ),
-                Lottie.network(
-                  'https://assets9.lottiefiles.com/packages/lf20_wys2rrr6.json',
+                Lottie.asset(
+                  'assets/images/party.json',
                   width: 500,
                   height: 500,
                 )

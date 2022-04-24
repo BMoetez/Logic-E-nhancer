@@ -11,7 +11,7 @@ LevelHead2 v = LevelHead2(
   mov: moves,
 );
 int sat = 1;
-no_gate b = no_gate();
+no_gate b = no_gate(height: 100,width: 100,);
 int c = b.activation(sat);
 Bus a1 = Bus(
   activate: sat,
@@ -49,7 +49,7 @@ void set() {
     activate: c,
     hor_length: 0,
     ver_length1: 0,
-    ver_length2: 230,
+    ver_length2: 195,
     dx: 2.5,
   );
   LIGHT2 = LED(
@@ -93,7 +93,7 @@ class _level1State extends State<level1> with SingleTickerProviderStateMixin {
             activate: c,
             hor_length: 0,
             ver_length1: 0,
-            ver_length2: 230,
+            ver_length2: 195,
             dx: 2.5);
         a1 =
             Bus(activate: sat, hor_length: 0, ver_length1: 0, ver_length2: 150);
@@ -104,7 +104,7 @@ class _level1State extends State<level1> with SingleTickerProviderStateMixin {
             activate: c,
             hor_length: 0,
             ver_length1: 0,
-            ver_length2: 230,
+            ver_length2: 195,
             dx: 2.5);
         a1 =
             Bus(activate: sat, hor_length: 0, ver_length1: 0, ver_length2: 150);
@@ -149,7 +149,7 @@ class _level1State extends State<level1> with SingleTickerProviderStateMixin {
             a2.show(),
             b,
             SizedBox(
-              height: 100,
+              height: 150,
             ),
             a1.show(),
             button(),

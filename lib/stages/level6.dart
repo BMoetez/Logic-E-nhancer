@@ -15,10 +15,10 @@ LevelHead2 v = LevelHead2(
   level6(),
   mov: moves,
 );
-and_gate and1 = and_gate(height: 80, width: 80);
-and_gate and2 = and_gate(height: 80, width: 80);
-and_gate and3 = and_gate(height: 80, width: 80);
-no_gate no1 = no_gate(height: 70, width: 70);
+and_gate and1 = and_gate(height: 60, width: 60);
+and_gate and2 = and_gate(height: 60, width: 60);
+and_gate and3 = and_gate(height: 60, width: 60);
+no_gate no1 = no_gate(height: 60, width: 60);
 int no1_output = no1.activation(sat2);
 int and1_output = and1.activation(a1.activate, a3.activate);
 int and2_output = and2.activation(a4.activate, a5.activate);
@@ -41,7 +41,7 @@ Bus a3 = Bus(
   activate: no1_output,
   hor_length: -50,
   ver_length1: -30,
-  ver_length2: -30,
+  ver_length2: -35,
   dy: -30,
   dx: 2.5,
 );
@@ -75,10 +75,10 @@ Bus a7 = Bus(
 );
 Bus a8 = Bus(
   activate: and3_output,
-  ver_length1: 70,
+   ver_length1: 80,
   hor_length: 0,
   ver_length2: 0,
-  dy: -60,
+  dy: -70,
   dx: -2.5,
 );
 LED light = LED(
@@ -116,7 +116,7 @@ void set() {
     activate: no1_output,
     hor_length: -50,
     ver_length1: -30,
-    ver_length2: -30,
+    ver_length2: -35,
     dy: -30,
     dx: 2.5,
   );
@@ -154,10 +154,11 @@ void set() {
   and3_output = and3.activation(a6.activate, a7.activate);
   a8 = Bus(
     activate: and3_output,
-    ver_length1: 70,
+     ver_length1: 80,
+
     hor_length: 0,
     ver_length2: 0,
-    dy: -60,
+    dy: -70,
     dx: -2.5,
   );
   light = LED(
@@ -210,10 +211,11 @@ moves-=1;
         and3_output = and3.activation(a6.activate, a7.activate);
         a8 = Bus(
           activate: and3_output,
-          ver_length1: 70,
+           ver_length1: 80,
+
           hor_length: 0,
           ver_length2: 0,
-          dy: -60,
+          dy: -70,
           dx: -2.5,
         );
       } else {
@@ -237,10 +239,11 @@ moves-=1;
         and3_output = and3.activation(a6.activate, a7.activate);
         a8 = Bus(
           activate: and3_output,
-          ver_length1: 70,
+           ver_length1: 80,
+
           hor_length: 0,
           ver_length2: 0,
-          dy: -60,
+          dy: -70,
           dx: -2.5,
         );
       }
@@ -278,7 +281,7 @@ moves-=1;
           activate: no1_output,
           hor_length: -50,
           ver_length1: -30,
-          ver_length2: -30,
+          ver_length2: -35,
           dy: -30,
           dx: 2.5,
         );
@@ -294,10 +297,11 @@ moves-=1;
         and3_output = and3.activation(a6.activate, a7.activate);
         a8 = Bus(
           activate: and3_output,
-          ver_length1: 70,
+           ver_length1: 80,
+
           hor_length: 0,
           ver_length2: 0,
-          dy: -60,
+          dy: -70,
           dx: -2.5,
         );
       } else {
@@ -314,7 +318,7 @@ moves-=1;
           activate: no1_output,
           hor_length: -50,
           ver_length1: -30,
-          ver_length2: -30,
+          ver_length2: -35,
           dy: -30,
           dx: 2.5,
         );
@@ -330,10 +334,11 @@ moves-=1;
         and3_output = and3.activation(a6.activate, a7.activate);
         a8 = Bus(
           activate: and3_output,
-          ver_length1: 70,
+           ver_length1: 80,
+
           hor_length: 0,
           ver_length2: 0,
-          dy: -60,
+          dy: -70,
           dx: -2.5,
         );
       }
@@ -376,10 +381,11 @@ moves-=1;
         and3_output = and3.activation(a6.activate, a7.activate);
         a8 = Bus(
           activate: and3_output,
-          ver_length1: 70,
+           ver_length1: 80,
+
           hor_length: 0,
           ver_length2: 0,
-          dy: -60,
+          dy: -70,
           dx: -2.5,
         );
       } else {
@@ -401,10 +407,11 @@ moves-=1;
         and3_output = and3.activation(a6.activate, a7.activate);
         a8 = Bus(
           activate: and3_output,
-          ver_length1: 70,
+           ver_length1: 80,
+
           hor_length: 0,
           ver_length2: 0,
-          dy: -60,
+          dy: -70,
           dx: -2.5,
         );
       }
@@ -448,10 +455,11 @@ moves-=1;
         and3_output = and3.activation(a6.activate, a7.activate);
         a8 = Bus(
           activate: and3_output,
-          ver_length1: 70,
+           ver_length1: 80,
+
           hor_length: 0,
           ver_length2: 0,
-          dy: -60,
+          dy: -70,
           dx: -2.5,
         );
       } else {
@@ -474,10 +482,11 @@ moves-=1;
         and3_output = and3.activation(a6.activate, a7.activate);
         a8 = Bus(
           activate: and3_output,
-          ver_length1: 70,
+           ver_length1: 80,
+
           hor_length: 0,
           ver_length2: 0,
-          dy: -60,
+          dy: -70,
           dx: -2.5,
         );
       }
@@ -550,7 +559,7 @@ moves-=1;
             SizedBox(
               height: 50,
             ),
-            a8,
+            a8.show(),
             and3,
             SizedBox(
               height: 50,

@@ -14,13 +14,13 @@ LevelHead2 v = LevelHead2(
   level11(),
   mov: moves,
 );
-or_gate or1 = or_gate(height: 70, width: 70);
-or_gate or2 = or_gate(height: 70, width: 70);
-or_gate or3 = or_gate(height: 70, width: 70);
-and_gate and1 = and_gate(height: 70, width: 70);
+or_gate or1 = or_gate(height: 50, width: 50);
+or_gate or2 = or_gate(height: 50, width: 50);
+or_gate or3 = or_gate(height: 50, width: 50);
+and_gate and1 = and_gate(height: 50, width: 50);
 no_gate no1 = no_gate(height: 50, width: 50);
 no_gate no2 = no_gate(height: 50, width: 50);
-nand_gate nand = nand_gate(height: 70, width: 70, rotation: 3);
+nand_gate nand = nand_gate(height: 50, width: 50, rotation: 3);
 int sat1 = 0;
 int sat2 = 0;
 int sat3 = 1;
@@ -127,7 +127,7 @@ Bus a13 = Bus(
   ver_length1: 50,
   ver_length2: 0,
   dx: -2.5,
-  dy: -10,
+  dy: -20,
 );
 LED light = LED(
   x: a13.activate,
@@ -145,7 +145,8 @@ void set() {
   a1 = Bus(
     activate: sat1,
     hor_length: 50,
-    ver_length1: 50,
+   ver_length1: 60,
+
     ver_length2: 90,
     dy: -50,
   );
@@ -197,7 +198,8 @@ void set() {
   a8 = Bus(
     activate: or2_output,
     hor_length: 0,
-    ver_length1: 50,
+   ver_length1: 60,
+
     ver_length2: 0,
     dx: -2.5,
     dy: -10,
@@ -239,10 +241,11 @@ void set() {
   a13 = Bus(
     activate: or3_output,
     hor_length: 0,
-    ver_length1: 50,
+   ver_length1: 60,
+
     ver_length2: 0,
     dx: -2.5,
-    dy: -10,
+    dy: -20,
   );
   light = LED(
     x: a13.activate,
@@ -296,10 +299,11 @@ v = LevelHead2("11", level11(),mov: moves,);
         a13 = Bus(
           activate: or3_output,
           hor_length: 0,
-          ver_length1: 50,
+         ver_length1: 60,
+
           ver_length2: 0,
           dx: -2.5,
-          dy: -10,
+          dy: -20,
         );
       } else {
         sat1 = 1;
@@ -323,10 +327,11 @@ v = LevelHead2("11", level11(),mov: moves,);
         a13 = Bus(
           activate: or3_output,
           hor_length: 0,
-          ver_length1: 50,
+         ver_length1: 60,
+
           ver_length2: 0,
           dx: -2.5,
-          dy: -10,
+          dy: -20,
         );
       }
       if (a13.activate == 1) {
@@ -378,10 +383,11 @@ v = LevelHead2("11", level11(),mov: moves,);
         a13 = Bus(
           activate: or3_output,
           hor_length: 0,
-          ver_length1: 50,
+         ver_length1: 60,
+
           ver_length2: 0,
           dx: -2.5,
-          dy: -10,
+          dy: -20,
         );
       } else {
         sat2 = 1;
@@ -412,10 +418,11 @@ v = LevelHead2("11", level11(),mov: moves,);
         a13 = Bus(
           activate: or3_output,
           hor_length: 0,
-          ver_length1: 50,
+         ver_length1: 60,
+
           ver_length2: 0,
           dx: -2.5,
-          dy: -10,
+          dy: -20,
         );
       }
       if (a13.activate == 1) {
@@ -451,7 +458,8 @@ v = LevelHead2("11", level11(),mov: moves,);
         a8 = Bus(
           activate: or2_output,
           hor_length: 0,
-          ver_length1: 50,
+         ver_length1: 60,
+
           ver_length2: 0,
           dx: -2.5,
           dy: -10,
@@ -476,10 +484,11 @@ v = LevelHead2("11", level11(),mov: moves,);
         a13 = Bus(
           activate: or3_output,
           hor_length: 0,
-          ver_length1: 50,
+         ver_length1: 60,
+
           ver_length2: 0,
           dx: -2.5,
-          dy: -10,
+          dy: -20,
         );
       } else {
         sat3 = 1;
@@ -494,7 +503,8 @@ v = LevelHead2("11", level11(),mov: moves,);
         a8 = Bus(
           activate: or2_output,
           hor_length: 0,
-          ver_length1: 50,
+         ver_length1: 60,
+
           ver_length2: 0,
           dx: -2.5,
           dy: -10,
@@ -519,10 +529,11 @@ v = LevelHead2("11", level11(),mov: moves,);
         a13 = Bus(
           activate: or3_output,
           hor_length: 0,
-          ver_length1: 50,
+         ver_length1: 60,
+
           ver_length2: 0,
           dx: -2.5,
-          dy: -10,
+          dy: -20,
         );
       }
       if (a13.activate == 1) {
@@ -559,7 +570,8 @@ v = LevelHead2("11", level11(),mov: moves,);
         a8 = Bus(
           activate: or2_output,
           hor_length: 0,
-          ver_length1: 50,
+         ver_length1: 60,
+
           ver_length2: 0,
           dx: -2.5,
           dy: -10,
@@ -584,10 +596,11 @@ v = LevelHead2("11", level11(),mov: moves,);
         a13 = Bus(
           activate: or3_output,
           hor_length: 0,
-          ver_length1: 50,
+         ver_length1: 60,
+
           ver_length2: 0,
           dx: -2.5,
-          dy: -10,
+          dy: -20,
         );
       } else {
         sat4 = 1;
@@ -603,7 +616,8 @@ v = LevelHead2("11", level11(),mov: moves,);
         a8 = Bus(
           activate: or2_output,
           hor_length: 0,
-          ver_length1: 50,
+         ver_length1: 60,
+
           ver_length2: 0,
           dx: -2.5,
           dy: -10,
@@ -628,10 +642,11 @@ v = LevelHead2("11", level11(),mov: moves,);
         a13 = Bus(
           activate: or3_output,
           hor_length: 0,
-          ver_length1: 50,
+         ver_length1: 60,
+
           ver_length2: 0,
           dx: -2.5,
-          dy: -10,
+          dy: -20,
         );
       }
       if (a13.activate == 1) {
@@ -684,10 +699,11 @@ v = LevelHead2("11", level11(),mov: moves,);
         a13 = Bus(
           activate: or3_output,
           hor_length: 0,
-          ver_length1: 50,
+         ver_length1: 60,
+
           ver_length2: 0,
           dx: -2.5,
-          dy: -10,
+          dy: -20,
         );
       } else {
         sat5 = 1;
@@ -719,10 +735,11 @@ v = LevelHead2("11", level11(),mov: moves,);
         a13 = Bus(
           activate: or3_output,
           hor_length: 0,
-          ver_length1: 50,
+         ver_length1: 60,
+
           ver_length2: 0,
           dx: -2.5,
-          dy: -10,
+          dy: -20,
         );
       }
       if (a13.activate == 1) {
@@ -775,7 +792,8 @@ v = LevelHead2("11", level11(),mov: moves,);
         a13 = Bus(
           activate: or3_output,
           hor_length: 0,
-          ver_length1: 50,
+         ver_length1: 60,
+
           ver_length2: 0,
           dx: -2.5,
           dy: -10,
@@ -810,7 +828,8 @@ v = LevelHead2("11", level11(),mov: moves,);
         a13 = Bus(
           activate: or3_output,
           hor_length: 0,
-          ver_length1: 50,
+         ver_length1: 60,
+
           ver_length2: 0,
           dx: -2.5,
           dy: -10,

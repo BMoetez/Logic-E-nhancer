@@ -2,6 +2,24 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:logic_enhancer/pages/option_page.dart';
+import 'package:logic_enhancer/stages/level1.dart';
+import 'package:logic_enhancer/stages/level10.dart';
+import 'package:logic_enhancer/stages/level11.dart';
+import 'package:logic_enhancer/stages/level12.dart';
+import 'package:logic_enhancer/stages/level13.dart';
+import 'package:logic_enhancer/stages/level14.dart';
+import 'package:logic_enhancer/stages/level15.dart';
+import 'package:logic_enhancer/stages/level16.dart';
+import 'package:logic_enhancer/stages/level17.dart';
+import 'package:logic_enhancer/stages/level18.dart';
+import 'package:logic_enhancer/stages/level2.dart';
+import 'package:logic_enhancer/stages/level3.dart';
+import 'package:logic_enhancer/stages/level4.dart';
+import 'package:logic_enhancer/stages/level5.dart';
+import 'package:logic_enhancer/stages/level6.dart';
+import 'package:logic_enhancer/stages/level7.dart';
+import 'package:logic_enhancer/stages/level8.dart';
+import 'package:logic_enhancer/stages/level9.dart';
 import 'pages/play_page (1).dart';
 
 void main() {
@@ -15,7 +33,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: level18(),
       theme: ThemeData(fontFamily: 'Digital7'),
     );
   }

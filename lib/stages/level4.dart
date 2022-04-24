@@ -14,9 +14,9 @@ LevelHead2 v = LevelHead2(
   level4(),
   mov: moves,
 );
-or_gate OR1 = or_gate(height: 70, width: 70);
-or_gate OR2 = or_gate(height: 70, width: 70);
-or_gate OR3 = or_gate(height: 70, width: 70);
+or_gate OR1 = or_gate(height: 50, width: 50);
+or_gate OR2 = or_gate(height: 50, width: 50);
+or_gate OR3 = or_gate(height: 50, width: 50);
 no_gate no1 = no_gate(height: 50, width: 70);
 no_gate no2 = no_gate(height: 50, width: 70);
 int sat1 = 0;
@@ -91,7 +91,7 @@ Bus a9 = Bus(
   activate: or3_output,
   hor_length: 0,
   ver_length1: 0,
-  ver_length2: 70,
+  ver_length2: 80,dx:2.5,
   dy: 10,
 );
 LED light = LED(
@@ -179,7 +179,7 @@ void set() {
     activate: or3_output,
     hor_length: 0,
     ver_length1: 0,
-    ver_length2: 70,
+    ver_length2: 80,dx:2.5,
     dy: 10,
   );
   light = LED(
@@ -240,7 +240,7 @@ v = LevelHead2(
           activate: or3_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 70,
+          ver_length2: 80,dx:2.5,
           dy: 10,
         );
       } else {
@@ -267,7 +267,7 @@ v = LevelHead2(
           activate: or3_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 70,
+          ver_length2: 80,dx:2.5,
           dy: 10,
         );
       }
@@ -327,7 +327,7 @@ v = LevelHead2(
           activate: or3_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 70,
+          ver_length2: 80,dx:2.5,
           dy: 10,
         );
       } else {
@@ -362,7 +362,7 @@ v = LevelHead2(
           activate: or3_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 70,
+          ver_length2: 80,dx:2.5,
           dy: 10,
         );
       }
@@ -420,7 +420,7 @@ v = LevelHead2(
           activate: or3_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 70,
+          ver_length2: 80,dx:2.5,
           dy: 10,
         );
       } else {
@@ -453,7 +453,7 @@ v = LevelHead2(
           activate: or3_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 70,
+          ver_length2: 80,dx:2.5,
           dy: 10,
         );
       }
@@ -503,7 +503,7 @@ v = LevelHead2(
           activate: or3_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 70,
+          ver_length2: 80,dx:2.5,
           dy: 10,
         );
       } else {
@@ -528,7 +528,7 @@ v = LevelHead2(
           activate: or3_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 70,
+          ver_length2: 80,dx:2.5,
           dy: 10,
         );
       }

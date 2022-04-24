@@ -15,13 +15,13 @@ LevelHead2 v = LevelHead2(
   level10(),
   mov: moves,
 );
-or_gate or1 = or_gate(height: 70, width: 70);
-or_gate or2 = or_gate(height: 70, width: 70);
-and_gate and1 = and_gate(height: 70, width: 70);
-and_gate and2 = and_gate(height: 70, width: 70);
+or_gate or1 = or_gate(height: 50, width: 50);
+or_gate or2 = or_gate(height: 50, width: 50);
+and_gate and1 = and_gate(height: 50, width: 50);
+and_gate and2 = and_gate(height: 50, width: 50);
 no_gate no1 = no_gate(height: 50, width: 50);
 no_gate no2 = no_gate(height: 50, width: 50);
-nand_gate nand = nand_gate(height: 70, width: 70, rotation: 3);
+nand_gate nand = nand_gate(height: 50, width: 50, rotation: 3);
 int sat1 = 1;
 int sat2 = 1;
 int sat3 = 0;
@@ -128,10 +128,10 @@ Bus a12 = Bus(
 Bus a13 = Bus(
   activate: nand_output,
   hor_length: 0,
-  ver_length1: 40,
+  ver_length1: 50,
   ver_length2: 0,
   dx: -2.5,
-  dy: -10,
+  dy: -20,
 );
 LED light = LED(
   x: a13.activate,
@@ -246,10 +246,10 @@ void set() {
   a13 = Bus(
     activate: nand_output,
     hor_length: 0,
-    ver_length1: 40,
+    ver_length1: 50,
     ver_length2: 0,
     dx: -2.5,
-    dy: -10,
+    dy: -20,
   );
   light = LED(
     x: a13.activate,
@@ -317,10 +317,10 @@ moves-=1;
         a13 = Bus(
           activate: nand_output,
           hor_length: 0,
-          ver_length1: 40,
+          ver_length1: 50,
           ver_length2: 0,
           dx: -2.5,
-          dy: -10,
+          dy: -20,
         );
       } else {
         sat1 = 1;
@@ -353,10 +353,10 @@ moves-=1;
         a13 = Bus(
           activate: nand_output,
           hor_length: 0,
-          ver_length1: 40,
+          ver_length1: 50,
           ver_length2: 0,
           dx: -2.5,
-          dy: -10,
+          dy: -20,
         );
       }
       if (a13.activate == 1) {
@@ -410,10 +410,10 @@ moves-=1;
         a13 = Bus(
           activate: nand_output,
           hor_length: 0,
-          ver_length1: 40,
+          ver_length1: 50,
           ver_length2: 0,
           dx: -2.5,
-          dy: -10,
+          dy: -20,
         );
       } else {
         sat2 = 1;
@@ -446,10 +446,10 @@ moves-=1;
         a13 = Bus(
           activate: nand_output,
           hor_length: 0,
-          ver_length1: 40,
+          ver_length1: 50,
           ver_length2: 0,
           dx: -2.5,
-          dy: -10,
+          dy: -20,
         );
       }
       if (a13.activate == 1) {
@@ -512,10 +512,10 @@ moves-=1;
         a13 = Bus(
           activate: nand_output,
           hor_length: 0,
-          ver_length1: 40,
+          ver_length1: 50,
           ver_length2: 0,
           dx: -2.5,
-          dy: -10,
+          dy: -20,
         );
       } else {
         sat3 = 1;
@@ -557,10 +557,10 @@ moves-=1;
         a13 = Bus(
           activate: nand_output,
           hor_length: 0,
-          ver_length1: 40,
+          ver_length1: 50,
           ver_length2: 0,
           dx: -2.5,
-          dy: -10,
+          dy: -20,
         );
       }
       if (a13.activate == 1) {
@@ -623,10 +623,10 @@ moves-=1;
         a13 = Bus(
           activate: nand_output,
           hor_length: 0,
-          ver_length1: 40,
+          ver_length1: 50,
           ver_length2: 0,
           dx: -2.5,
-          dy: -10,
+          dy: -20,
         );
       } else {
         sat4 = 1;
@@ -668,10 +668,10 @@ moves-=1;
         a13 = Bus(
           activate: nand_output,
           hor_length: 0,
-          ver_length1: 40,
+          ver_length1: 50,
           ver_length2: 0,
           dx: -2.5,
-          dy: -10,
+          dy: -20,
         );
       }
       if (a13.activate == 1) {
@@ -724,10 +724,10 @@ moves-=1;
         a13 = Bus(
           activate: nand_output,
           hor_length: 0,
-          ver_length1: 40,
+          ver_length1: 50,
           ver_length2: 0,
           dx: -2.5,
-          dy: -10,
+          dy: -20,
         );
       } else {
         sat5 = 1;
@@ -759,10 +759,10 @@ moves-=1;
         a13 = Bus(
           activate: nand_output,
           hor_length: 0,
-          ver_length1: 40,
+          ver_length1: 50,
           ver_length2: 0,
           dx: -2.5,
-          dy: -10,
+          dy: -20,
         );
       }
       if (a13.activate == 1) {
@@ -807,10 +807,10 @@ moves-=1;
         a13 = Bus(
           activate: nand_output,
           hor_length: 0,
-          ver_length1: 40,
+          ver_length1: 50,
           ver_length2: 0,
           dx: -2.5,
-          dy: -10,
+          dy: -20,
         );
       } else {
         sat6 = 1;
@@ -834,10 +834,10 @@ moves-=1;
         a13 = Bus(
           activate: nand_output,
           hor_length: 0,
-          ver_length1: 40,
+          ver_length1: 50,
           ver_length2: 0,
           dx: -2.5,
-          dy: -10,
+          dy: -20,
         );
       }
       if (a13.activate == 1) {

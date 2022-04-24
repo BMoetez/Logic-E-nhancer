@@ -3,21 +3,23 @@ import 'package:flutter/material.dart';
 
 
 class no_gate extends StatefulWidget {
-  String path="";
+  late var path;
   double height, width;
   int rotation;
 
 
   no_gate({this.height=100, this.width=150, this.rotation=3}) {
-    path = "assets/images/gates/Picture.png";
     height = height;
     width = width;
     rotation = rotation;
+    path = ValueNotifier('');
   }
   int activation(int x) {
     if (x == 1) {
+      path.value = 'assets/images/gates/no/1.png';
       return 0;
     } else {
+      path.value = 'assets/images/gates/no/2.png';
       return 1;
     }
   }
@@ -27,15 +29,20 @@ class no_gate extends StatefulWidget {
 }
 
 class _no_gateState extends State<no_gate> {
-  String path = "assets/images/gates/Picture.png";
   double height,width;
   int rotation;
 
   _no_gateState({this.height=100, this.width=150, this.rotation=3}) {
-    path = "assets/images/gates/Picture.png";
     height = height;
     width = width;
     rotation = rotation;
+  }
+
+  void didChangeDependencies() {
+    precacheImage(AssetImage("assets/images/gates/no/1.png"), context);
+    precacheImage(AssetImage("assets/images/gates/no/2.png"), context);
+
+    super.didChangeDependencies();
   }
 
 
@@ -48,11 +55,13 @@ class _no_gateState extends State<no_gate> {
             onPressed: () {
               Overlay.of(context)?.insert(_getEntry(context));
             },
-            child: Image.asset(
-              path,
-              fit: BoxFit.cover,
-              height: height,
-            ),
+            child: ValueListenableBuilder(valueListenable: widget.path, builder: (context, String p , _){
+              return Image.asset(
+                p,
+                fit: BoxFit.cover,
+                height: height,
+              );
+            }),
             padding: EdgeInsets.zero,
           )),
       color: const Color.fromRGBO(0, 0, 0, 0),
