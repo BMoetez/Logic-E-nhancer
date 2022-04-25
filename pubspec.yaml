@@ -62,6 +62,11 @@ flutter:
   assets:
      - assets/images/
      - assets/images/gates/
+     - assets/images/gates/or/
+     - assets/images/gates/and/
+     - assets/images/gates/nand/
+     - assets/images/gates/nor/
+     - assets/images/gates/no/
      - assets/images/light/
      - assets/images/button/
      - assets/images/light/light1.json

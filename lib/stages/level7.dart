@@ -12,9 +12,9 @@ LevelHead2 v = LevelHead2(
   level7(),
   mov: moves,
 );
-or_gate OR1 = or_gate(height: 80, width: 80);
-and_gate AND1 = and_gate(height: 80, width: 80);
-and_gate AND2 = and_gate(height: 80, width: 80);
+or_gate OR1 = or_gate(height: 60, width: 60);
+and_gate AND1 = and_gate(height: 60, width: 60);
+and_gate AND2 = and_gate(height: 60, width: 60);
 no_gate no1 = no_gate(height: 60, width: 60);
 int sat1 = 0;
 int sat2 = 1;
@@ -81,7 +81,7 @@ Bus a8 = Bus(
   activate: and2_output,
   hor_length: 0,
   ver_length1: 0,
-  ver_length2: 60,
+  ver_length2: 70,
   dy: 10,
   dx: 2,
 );
@@ -161,7 +161,7 @@ void set() {
     activate: and2_output,
     hor_length: 0,
     ver_length1: 0,
-    ver_length2: 60,
+    ver_length2: 70,
     dy: 10,
     dx: 2,
   );
@@ -222,7 +222,7 @@ v = LevelHead2(
           activate: and2_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 60,
+          ver_length2: 70,
           dy: 10,
           dx: 2,
         );
@@ -249,7 +249,7 @@ v = LevelHead2(
           activate: and2_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 60,
+          ver_length2: 70,
           dy: 10,
           dx: 2,
         );
@@ -310,7 +310,7 @@ v = LevelHead2(
           activate: and2_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 60,
+          ver_length2: 70,
           dy: 10,
           dx: 2,
         );
@@ -346,7 +346,7 @@ v = LevelHead2(
           activate: and2_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 60,
+          ver_length2: 70,
           dy: 10,
           dx: 2,
         );
@@ -398,7 +398,7 @@ v = LevelHead2(
           activate: and2_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 60,
+          ver_length2: 70,
           dy: 10,
           dx: 2,
         );
@@ -425,7 +425,7 @@ v = LevelHead2(
           activate: and2_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 60,
+          ver_length2: 70,
           dy: 10,
           dx: 2,
         );
@@ -477,7 +477,7 @@ v = LevelHead2(
           activate: and2_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 60,
+          ver_length2: 70,
           dy: 10,
           dx: 2,
         );
@@ -504,7 +504,7 @@ v = LevelHead2(
           activate: and2_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 60,
+          ver_length2: 70,
           dy: 10,
           dx: 2,
         );

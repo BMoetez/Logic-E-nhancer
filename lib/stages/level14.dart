@@ -14,14 +14,14 @@ LevelHead2 v = LevelHead2(
   level14(),
   mov: moves,
 );
-nand_gate nand1 = nand_gate(height: 70, width: 70, rotation: 3);
-nand_gate nand2 = nand_gate(height: 70, width: 70, rotation: 3);
-nand_gate nand3 = nand_gate(height: 70, width: 70, rotation: 3);
+nand_gate nand1 = nand_gate(height: 50, width: 50, rotation: 3);
+nand_gate nand2 = nand_gate(height: 50, width: 50, rotation: 3);
+nand_gate nand3 = nand_gate(height: 50, width: 50, rotation: 3);
 no_gate no1 = no_gate(height: 50, width: 50);
 no_gate no2 = no_gate(height: 50, width: 50);
 no_gate no3 = no_gate(height: 50, width: 50);
-and_gate and1 = and_gate(height: 70, width: 70);
-and_gate and2 = and_gate(height: 70, width: 70);
+and_gate and1 = and_gate(height: 50, width: 50);
+and_gate and2 = and_gate(height: 50, width: 50);
 int sat1 = 1;
 int sat2 = 1;
 int sat3 = 0;

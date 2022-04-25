@@ -11,7 +11,7 @@ LevelHead2 v = LevelHead2(
   level3(),
   mov: moves,
 );
-or_gate OR = or_gate(height: 100, width: 100);
+or_gate OR = or_gate(height: 70, width: 70);
 no_gate no = no_gate(height: 70, width: 70);
 int sat1 = 1;
 int sat2 = 1;
@@ -34,13 +34,13 @@ Bus a3 = Bus(
   activate: b,
   hor_length: 0,
   ver_length1: 0,
-  ver_length2: 100,
+  ver_length2: 100,dy:10,
 );
 Bus a4 = Bus(
   activate: c,
   hor_length: 0,
   ver_length1: 0,
-  ver_length2: 60,
+  ver_length2: 70,
   dx: 2.5,
 );
 int b = OR.activation(a1.activate, a2.activate);
@@ -78,14 +78,14 @@ void set() {
     activate: b,
     hor_length: 0,
     ver_length1: 0,
-    ver_length2: 100,
+    ver_length2: 100,dy:10,
   );
   c = no.activation(a3.activate);
   a4 = Bus(
     activate: c,
     hor_length: 0,
     ver_length1: 0,
-    ver_length2: 60,
+    ver_length2: 70,
     dx: 2.5,
   );
   LIGHT2 = LED(
@@ -136,14 +136,14 @@ v = LevelHead2(
           activate: b,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 100,
+          ver_length2: 100,dy:10,
         );
         c = no.activation(a3.activate);
         a4 = Bus(
           activate: c,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 60,
+          ver_length2: 70,
           dx: 2.5,
         );
       } else {
@@ -161,14 +161,14 @@ v = LevelHead2(
           activate: b,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 100,
+          ver_length2: 100,dy:10,
         );
         c = no.activation(a3.activate);
         a4 = Bus(
           activate: c,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 60,
+          ver_length2: 70,
           dx: 2.5,
         );
       }
@@ -211,14 +211,14 @@ v = LevelHead2(
           activate: b,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 100,
+          ver_length2: 100,dy:10,
         );
         c = no.activation(a3.activate);
         a4 = Bus(
           activate: c,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 60,
+          ver_length2: 70,
           dx: 2.5,
         );
       } else {
@@ -235,14 +235,14 @@ v = LevelHead2(
           activate: b,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 100,
+          ver_length2: 100,dy:10,
         );
         c = no.activation(a3.activate);
         a4 = Bus(
           activate: c,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 60,
+          ver_length2: 70,
           dx: 2.5,
         );
       }
@@ -299,7 +299,7 @@ v = LevelHead2(
             a4.show(),
             no,
             SizedBox(
-              height: 100,
+              height: 90,
             ),
             a3.show(),
             OR,

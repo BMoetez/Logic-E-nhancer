@@ -13,10 +13,10 @@ LevelHead2 v = LevelHead2(
   level5(),
   mov: moves,
 );
-or_gate OR1 = or_gate(height: 80, width: 80);
-and_gate AND1 = and_gate(height: 80, width: 80);
-and_gate AND2 = and_gate(height: 80, width: 80);
-no_gate no1 = no_gate(height: 70, width: 70);
+or_gate OR1 = or_gate(height: 60, width: 60);
+and_gate AND1 = and_gate(height: 60, width: 60);
+and_gate AND2 = and_gate(height: 60, width: 60);
+no_gate no1 = no_gate(height: 60, width: 60);
 int over = 0;
 int sat1 = 1;
 int sat2 = 1;
@@ -65,7 +65,8 @@ Bus a6 = Bus(
   activate: or1_output,
   hor_length: 0,
   ver_length1: 0,
-  ver_length2: 60,
+  ver_length2: 70,
+
   dy: 10,
 );
 Bus a7 = Bus(
@@ -73,13 +74,13 @@ Bus a7 = Bus(
   hor_length: 180,
   ver_length1: 30,
   ver_length2: 30,
-  dy: -30,
+  dy: -20,
 );
 Bus a8 = Bus(
   activate: and2_output,
   hor_length: 0,
   ver_length1: 0,
-  ver_length2: 70,
+  ver_length2: 80,
   dy: 10,
   dx: 2,
 );
@@ -139,7 +140,8 @@ void set() {
     activate: or1_output,
     hor_length: 0,
     ver_length1: 0,
-    ver_length2: 60,
+    ver_length2: 70,
+
     dy: 10,
   );
   no_output = no1.activation(a6.activate);
@@ -148,14 +150,14 @@ void set() {
     hor_length: 180,
     ver_length1: 30,
     ver_length2: 30,
-    dy: -30,
+    dy: -20,
   );
   and2_output = AND2.activation(a7.activate, a5.activate);
   a8 = Bus(
     activate: and2_output,
     hor_length: 0,
     ver_length1: 0,
-    ver_length2: 70,
+    ver_length2: 80,
     dy: 10,
     dx: 2,
   );
@@ -211,7 +213,8 @@ v = LevelHead2(
           activate: or1_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 60,
+          ver_length2: 70,
+
           dy: 10,
         );
         no_output = no1.activation(a6.activate);
@@ -220,14 +223,14 @@ v = LevelHead2(
           hor_length: 180,
           ver_length1: 30,
           ver_length2: 30,
-          dy: -30,
+          dy: -20,
         );
         and2_output = AND2.activation(a7.activate, a5.activate);
         a8 = Bus(
           activate: and2_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 70,
+          ver_length2: 80,
           dy: 10,
           dx: 2,
         );
@@ -245,7 +248,8 @@ v = LevelHead2(
           activate: or1_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 60,
+          ver_length2: 70,
+
           dy: 10,
         );
         no_output = no1.activation(a6.activate);
@@ -254,14 +258,14 @@ v = LevelHead2(
           hor_length: 180,
           ver_length1: 30,
           ver_length2: 30,
-          dy: -30,
+          dy: -20,
         );
         and2_output = AND2.activation(a7.activate, a5.activate);
         a8 = Bus(
           activate: and2_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 70,
+          ver_length2: 80,
           dy: 10,
           dx: 2,
         );
@@ -304,7 +308,8 @@ v = LevelHead2(
           activate: or1_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 60,
+          ver_length2: 70,
+
           dy: 10,
         );
         no_output = no1.activation(a6.activate);
@@ -313,14 +318,14 @@ v = LevelHead2(
           hor_length: 180,
           ver_length1: 30,
           ver_length2: 30,
-          dy: -30,
+          dy: -20,
         );
         and2_output = AND2.activation(a7.activate, a5.activate);
         a8 = Bus(
           activate: and2_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 70,
+          ver_length2: 80,
           dy: 10,
           dx: 2,
         );
@@ -338,7 +343,8 @@ v = LevelHead2(
           activate: or1_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 60,
+          ver_length2: 70,
+
           dy: 10,
         );
         no_output = no1.activation(a6.activate);
@@ -347,14 +353,14 @@ v = LevelHead2(
           hor_length: 180,
           ver_length1: 30,
           ver_length2: 30,
-          dy: -30,
+          dy: -20,
         );
         and2_output = AND2.activation(a7.activate, a5.activate);
         a8 = Bus(
           activate: and2_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 70,
+          ver_length2: 80,
           dy: 10,
           dx: 2,
         );
@@ -405,7 +411,7 @@ v = LevelHead2(
           activate: and2_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 70,
+          ver_length2: 80,
           dy: 10,
           dx: 2,
         );
@@ -431,7 +437,7 @@ v = LevelHead2(
           activate: and2_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 70,
+          ver_length2: 80,
           dy: 10,
           dx: 2,
         );
@@ -482,7 +488,7 @@ v = LevelHead2(
           activate: and2_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 70,
+          ver_length2: 80,
           dy: 10,
           dx: 2,
         );
@@ -508,7 +514,7 @@ v = LevelHead2(
           activate: and2_output,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 70,
+          ver_length2: 80,
           dy: 10,
           dx: 2,
         );

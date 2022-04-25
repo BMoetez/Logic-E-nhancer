@@ -3,20 +3,28 @@ import 'package:flutter/material.dart';
 
 
 class nand_gate extends StatefulWidget {
-  String path = "";
+  late var path;
   double height, width;
   int rotation;
 
   nand_gate({this.height=100, this.width=150, this.rotation=2}) {
-    path = "assets/images/gates/3.png";
+    path = ValueNotifier('');
     height = height;
     width = width;
     rotation = rotation;
   }
   int activation(int x,int y) {
     if (x == 1 && y == 1) {
+      path.value = 'assets/images/gates/nand/1.png';
       return 0;
+    } else if (x == 1 && y == 0) {
+      path.value = 'assets/images/gates/nand/2.png';
+      return 1;
+    } else if (x == 0 && y == 1) {
+      path.value = 'assets/images/gates/nand/3.png';
+      return 1;
     } else {
+      path.value = 'assets/images/gates/nand/4.png';
       return 1;
     }
   }
@@ -26,15 +34,22 @@ class nand_gate extends StatefulWidget {
 }
 
 class _nand_gateState extends State<nand_gate> {
-  String path = "";
   double height, width;
   int rotation;
 
   _nand_gateState({this.height=100, this.width=150, this.rotation=2}) {
-    path = "assets/images/gates/3.png";
     height = height;
     width = width;
     rotation = rotation;
+  }
+
+  void didChangeDependencies() {
+    precacheImage(AssetImage("assets/images/gates/nand/1.png"), context);
+    precacheImage(AssetImage("assets/images/gates/nand/2.png"), context);
+    precacheImage(AssetImage("assets/images/gates/nand/3.png"), context);
+    precacheImage(AssetImage("assets/images/gates/nand/4.png"), context);
+
+    super.didChangeDependencies();
   }
 
   @override
@@ -46,11 +61,13 @@ class _nand_gateState extends State<nand_gate> {
             onPressed: () {
               Overlay.of(context)?.insert(_getEntry(context));
             },
-            child: Image.asset(
-              path,
-              fit: BoxFit.cover,
-              height: height,
-            ),
+            child: ValueListenableBuilder(valueListenable: widget.path, builder: (context, String p , _){
+              return Image.asset(
+                p,
+                fit: BoxFit.cover,
+                height: height,
+              );
+            }),
             padding: EdgeInsets.zero,
           )),
       color: const Color.fromRGBO(0, 0, 0, 0),

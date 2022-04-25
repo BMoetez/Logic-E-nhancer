@@ -26,6 +26,10 @@ class _LevelHead2State extends State<LevelHead2> {
     this.n = n;
     this.f = f;
     mov=mov;
+    if(mov==0){
+      WidgetsBinding.instance?.addPostFrameCallback(
+              (_) => Overlay.of(context)?.insert(_getEntry(context)));
+    }
   }
 
   @override

@@ -14,13 +14,13 @@ LevelHead2 v = LevelHead2(
   level17(),
   mov: moves,
 );
-or_gate or1 = or_gate(height: 70, width: 70);
+or_gate or1 = or_gate(height: 50, width: 50);
 no_gate no1 = no_gate(height: 50, width: 50);
 no_gate no2 = no_gate(height: 50, width: 50);
-and_gate and1 = and_gate(height: 70, width: 70);
-nand_gate nand1 = nand_gate(height: 70, width: 70, rotation: 3);
-nor_gate nor1 = nor_gate(height: 70, width: 70, rotation: 3);
-nor_gate nor2 = nor_gate(height: 70, width: 70, rotation: 3);
+and_gate and1 = and_gate(height: 50, width: 50);
+nand_gate nand1 = nand_gate(height: 50, width: 50, rotation: 3);
+nor_gate nor1 = nor_gate(height: 50, width: 50, rotation: 3);
+nor_gate nor2 = nor_gate(height: 50, width: 50, rotation: 3);
 int sat1 = 0;
 int sat2 = 1;
 int sat3 = 0;

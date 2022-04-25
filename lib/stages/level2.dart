@@ -14,14 +14,15 @@ LevelHead2 v = LevelHead2(
 int sat1 = 0;
 int sat2 = 0;
 int over1 = 0;
-or_gate OR = or_gate();
+or_gate OR = or_gate(height: 100,width: 100,);
 
 Bus a1 = Bus(
   activate: sat1,
-  hor_length: 140,
+  hor_length: 150,
   ver_length1: 80,
   ver_length2: 40,
   dy: -80,
+
 );
 Bus a2 = Bus(
   activate: sat2,
@@ -34,7 +35,8 @@ Bus a3 = Bus(
   activate: b,
   hor_length: 0,
   ver_length1: 0,
-  ver_length2: 110,
+  ver_length2: 120,dx: 2.5,
+  dy: 10,
 );
 int b = OR.activation(a1.activate, a2.activate);
 LED LIGHT2 = LED(
@@ -52,7 +54,7 @@ void set() {
   sat1 = 0;
   a1 = Bus(
     activate: sat1,
-    hor_length: 140,
+    hor_length: 150,
     ver_length1: 80,
     ver_length2: 40,
     dy: -80,
@@ -69,7 +71,8 @@ void set() {
     activate: b,
     hor_length: 0,
     ver_length1: 0,
-    ver_length2: 110,
+    ver_length2: 120,dx: 2.5,
+  dy: 10,
   );
   LIGHT2 = LED(
     x: a3.activate,
@@ -95,7 +98,7 @@ class _level2State extends State<level2> {
     set();
 
     if (over1 == 0) {
-      WidgetsBinding.instance.addPostFrameCallback(
+      WidgetsBinding.instance?.addPostFrameCallback(
           (_) => Overlay.of(context)?.insert(_getEntry(context)));
       over1 = 1;
     }
@@ -117,7 +120,7 @@ v = LevelHead2(
         sat1 = 0;
         a1 = Bus(
           activate: sat1,
-          hor_length: 140,
+          hor_length: 150,
           ver_length1: 80,
           ver_length2: 40,
           dy: -80,
@@ -127,7 +130,7 @@ v = LevelHead2(
         sat1 = 1;
         a1 = Bus(
           activate: sat1,
-          hor_length: 140,
+          hor_length: 150,
           ver_length1: 80,
           ver_length2: 40,
           dy: -80,
@@ -139,7 +142,8 @@ v = LevelHead2(
           activate: b,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 110,
+          ver_length2: 120,dx: 2.5,
+  dy: 10,
         );
         LIGHT2 = LED(
           x: a3.activate,
@@ -150,7 +154,8 @@ v = LevelHead2(
           activate: b,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 110,
+          ver_length2: 120,dx: 2.5,
+  dy: 10,
         );
         LIGHT2 = LED(
           x: a3.activate,
@@ -197,7 +202,8 @@ v = LevelHead2(
           activate: b,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 110,
+          ver_length2: 120,dx: 2.5,
+  dy: 10,
         );
         LIGHT2 = LED(
           x: a3.activate,
@@ -208,7 +214,8 @@ v = LevelHead2(
           activate: b,
           hor_length: 0,
           ver_length1: 0,
-          ver_length2: 110,
+          ver_length2: 120,dx: 2.5,
+  dy: 10,
         );
         LIGHT2 = LED(
           x: a3.activate,
@@ -239,6 +246,7 @@ v = LevelHead2(
         ));
   }
 
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -251,16 +259,16 @@ v = LevelHead2(
           children: [
             v,
             SizedBox(
-              height: 20,
+              height: 5,
             ),
             LIGHT2,
             SizedBox(
-              height: 100,
+              height: 95,
             ),
             a3.show(),
             OR,
             SizedBox(
-              height: 100,
+              height: 90,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

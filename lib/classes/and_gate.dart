@@ -2,22 +2,30 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 
 
+
 class and_gate extends StatefulWidget {
-  String path = "";
   double height, width;
   int rotation;
-
+  late var path;
   and_gate({this.height=100, this.width=150, this.rotation=3}) {
-    path = "assets/images/gates/2.png";
     height = height;
     width = width;
     rotation = rotation;
+    path = ValueNotifier('');
   }
 
-  int activation(int x, int y) {
+  int activation(int x,int y) {
     if (x == 1 && y == 1) {
+      path.value = 'assets/images/gates/and/4.png';
       return 1;
+    } else if (x == 1 && y == 0) {
+      path.value = 'assets/images/gates/and/2.png';
+      return 0;
+    } else if (x == 0 && y == 1) {
+      path.value = 'assets/images/gates/and/3.png';
+      return 0;
     } else {
+      path.value = 'assets/images/gates/and/1.png';
       return 0;
     }
   }
@@ -27,21 +35,23 @@ class and_gate extends StatefulWidget {
 
 
 class _and_gateState extends State<and_gate> {
-  String path = "";
   double height=50, width=50;
   int rotation;
 
   _and_gateState({this.height=100, this.width=150, this.rotation=3}) {
-    path = "assets/images/gates/2.png";
     height = height;
     width = width;
   }
 
-  @override
-  void setState(ui.VoidCallback fn) {
-    // TODO: implement setState
-    //widget.bus();
+  void didChangeDependencies() {
+    precacheImage(AssetImage("assets/images/gates/and/1.png"), context);
+    precacheImage(AssetImage("assets/images/gates/and/2.png"), context);
+    precacheImage(AssetImage("assets/images/gates/and/3.png"), context);
+    precacheImage(AssetImage("assets/images/gates/and/4.png"), context);
+
+    super.didChangeDependencies();
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -52,11 +62,13 @@ class _and_gateState extends State<and_gate> {
             onPressed: () {
               Overlay.of(context)?.insert(_getEntry(context));
             },
-            child: Image.asset(
-              path,
-              fit: BoxFit.cover,
-              height: height,
-            ),
+            child: ValueListenableBuilder(valueListenable: widget.path, builder: (context, String p , _){
+              return Image.asset(
+                p,
+                fit: BoxFit.cover,
+                height: height,
+              );
+            }),
             padding: EdgeInsets.zero,
           )),
       color: const Color.fromRGBO(0, 0, 0, 0),

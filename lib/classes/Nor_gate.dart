@@ -3,21 +3,29 @@ import 'package:flutter/material.dart';
 
 
 class nor_gate extends StatefulWidget {
-  String path = "";
+  late var path;
   double height, width;
   int rotation;
 
   nor_gate({this.height=100, this.width=150, this.rotation=3}) {
-    path = "assets/images/gates/1.png";
+    path = ValueNotifier('');
     height = height;
     width = width;
     rotation = rotation;
   }
   int activation(int x,int y) {
-    if (x == 0 && y == 0) {
-      return 1;
-    } else {
+    if (x == 1 && y == 1) {
+      path.value = 'assets/images/gates/nor/1.png';
       return 0;
+    } else if (x == 1 && y == 0) {
+      path.value = 'assets/images/gates/nor/2.png';
+      return 0;
+    } else if (x == 0 && y == 1) {
+      path.value = 'assets/images/gates/nor/3.png';
+      return 0;
+    } else {
+      path.value = 'assets/images/gates/nor/4.png';
+      return 1;
     }
   }
 
@@ -26,15 +34,22 @@ class nor_gate extends StatefulWidget {
 }
 
 class _nor_gateState extends State<nor_gate> {
-  String path = "";
   double height=50, width=50;
   int rotation=2;
 
   _nor_gateState({this.height=100, this.width=150, this.rotation=2}) {
-    path = "assets/images/gates/1.png";
     height = height;
     width = width;
     rotation = rotation;
+  }
+
+  void didChangeDependencies() {
+    precacheImage(AssetImage("assets/images/gates/nor/1.png"), context);
+    precacheImage(AssetImage("assets/images/gates/nor/2.png"), context);
+    precacheImage(AssetImage("assets/images/gates/nor/3.png"), context);
+    precacheImage(AssetImage("assets/images/gates/nor/4.png"), context);
+
+    super.didChangeDependencies();
   }
 
 
@@ -47,11 +62,13 @@ class _nor_gateState extends State<nor_gate> {
             onPressed: () {
               Overlay.of(context)?.insert(_getEntry(context));
             },
-            child: Image.asset(
-              path,
-              fit: BoxFit.cover,
-              height: height,
-            ),
+            child:ValueListenableBuilder(valueListenable: widget.path, builder: (context, String p , _){
+              return Image.asset(
+                p,
+                fit: BoxFit.cover,
+                height: height,
+              );
+            }),
             padding: EdgeInsets.zero,
           )),
       color: const Color.fromRGBO(0, 0, 0, 0),
