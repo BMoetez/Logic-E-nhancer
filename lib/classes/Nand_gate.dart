@@ -8,16 +8,16 @@ class nand_gate extends StatefulWidget {
   int rotation;
 
   nand_gate({this.height=100, this.width=150, this.rotation=2}) {
-    path = "assets/images/gates/4.png";
+    path = "assets/images/gates/3.png";
     height = height;
     width = width;
     rotation = rotation;
   }
   int activation(int x,int y) {
     if (x == 1 && y == 1) {
-      return 1;
-    } else {
       return 0;
+    } else {
+      return 1;
     }
   }
 
@@ -31,7 +31,7 @@ class _nand_gateState extends State<nand_gate> {
   int rotation;
 
   _nand_gateState({this.height=100, this.width=150, this.rotation=2}) {
-    path = "assets/images/gates/2.png";
+    path = "assets/images/gates/3.png";
     height = height;
     width = width;
     rotation = rotation;

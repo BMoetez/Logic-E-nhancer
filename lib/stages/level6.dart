@@ -550,7 +550,7 @@ moves-=1;
             SizedBox(
               height: 50,
             ),
-            a8,
+            a8.show(),
             and3,
             SizedBox(
               height: 50,

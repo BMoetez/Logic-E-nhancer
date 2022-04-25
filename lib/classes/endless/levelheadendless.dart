@@ -3,26 +3,26 @@ import 'dart:ui' as ui;
 import 'package:logic_enhancer/main.dart';
 import 'package:logic_enhancer/pages/levels.dart';
 
-class LevelHead2 extends StatefulWidget {
+class levelheadendless extends StatefulWidget {
   String n = '';
   Widget f = Container();
   int mov=0;
 
-  LevelHead2(String n,Widget f,{ this.mov=5}) {
+  levelheadendless(String n,Widget f,{ this.mov=5}) {
     this.n = n;
     this.f =f;
     this.mov=mov;
   }
 
   @override
-  _LevelHead2State createState() => _LevelHead2State(this.n,this.f,mov: this.mov);
+  _levelheadendlessState createState() => _levelheadendlessState(this.n,this.f,mov: this.mov);
 }
 
-class _LevelHead2State extends State<LevelHead2> {
+class _levelheadendlessState extends State<levelheadendless> {
   String n = '';
   Widget f = Container();
   int mov =0;
-  _LevelHead2State(String n,Widget f,{ this.mov=5}) {
+  _levelheadendlessState(String n,Widget f,{ this.mov=5}) {
     this.n = n;
     this.f = f;
     mov=mov;
@@ -92,22 +92,22 @@ class _LevelHead2State extends State<LevelHead2> {
                     )),
               )
           ),
-          Align(
-            alignment: Alignment.topRight,
-            child: SizedBox(
-              width: 120,
-              height: 120,
-              child: IconButton(
-                  onPressed: () {
-                    Overlay.of(context)?.insert(_getEntry(context));
-                  },
-                  icon: Icon(
-                    Icons.menu,
-                    size: 40,
-                    color: Colors.yellow,
-                  )),
-            ),
-          )
+          // Align(
+          //   alignment: Alignment.topRight,
+          //   child: SizedBox(
+          //     width: 120,
+          //     height: 120,
+          //     child: IconButton(
+          //         onPressed: () {
+          //           Overlay.of(context)?.insert(_getEntry(context));
+          //         },
+          //         icon: Icon(
+          //           Icons.menu,
+          //           size: 40,
+          //           color: Colors.yellow,
+          //         )),
+          //   ),
+          // )
         ],
       )),
       color: Color.fromRGBO(0, 0, 0, 0),
