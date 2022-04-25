@@ -2,24 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:logic_enhancer/pages/option_page.dart';
-import 'package:logic_enhancer/stages/level1.dart';
-import 'package:logic_enhancer/stages/level10.dart';
-import 'package:logic_enhancer/stages/level11.dart';
-import 'package:logic_enhancer/stages/level12.dart';
-import 'package:logic_enhancer/stages/level13.dart';
-import 'package:logic_enhancer/stages/level14.dart';
-import 'package:logic_enhancer/stages/level15.dart';
-import 'package:logic_enhancer/stages/level16.dart';
-import 'package:logic_enhancer/stages/level17.dart';
 import 'package:logic_enhancer/stages/level18.dart';
-import 'package:logic_enhancer/stages/level2.dart';
-import 'package:logic_enhancer/stages/level3.dart';
-import 'package:logic_enhancer/stages/level4.dart';
-import 'package:logic_enhancer/stages/level5.dart';
-import 'package:logic_enhancer/stages/level6.dart';
-import 'package:logic_enhancer/stages/level7.dart';
-import 'package:logic_enhancer/stages/level8.dart';
-import 'package:logic_enhancer/stages/level9.dart';
 import 'pages/play_page (1).dart';
 
 void main() {
@@ -33,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: level18(),
+      home: HomePage(),
       theme: ThemeData(fontFamily: 'Digital7'),
     );
   }
@@ -119,20 +102,20 @@ class _HomePageState extends State<HomePage> {
                               },
                               color: const Color(0xFFa0b6f7),
                               hoverColor: const Color(0xFFf2f261),
-                              padding: EdgeInsets.fromLTRB(60, 10, 90, 20),
+                              padding: EdgeInsets.fromLTRB(45, 10, 90, 30),
                               child: Row(
                                 children: [
                                   Padding(
                                       padding:
-                                          EdgeInsets.fromLTRB(5, 20, 2, 10),
+                                          EdgeInsets.fromLTRB(0, 20, 2, 10),
                                       child: Icon(
                                         Icons.play_circle_rounded,
                                         color: Colors.white,
                                         size: 60.0,
                                       )),
-                                  /* SizedBox(
-                                    width: 20,
-                                  ), */
+                                  SizedBox(
+                                    width: 35,
+                                  ),
                                   Text(
                                     'play',
                                     style: TextStyle(

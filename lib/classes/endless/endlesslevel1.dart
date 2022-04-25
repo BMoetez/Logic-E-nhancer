@@ -17,14 +17,14 @@ levelheadendless v = levelheadendless(
   endlesslevel1(),
   mov: moves,
 );
-nand_gate nand1 = nand_gate(height: 70, width: 70, rotation: 3);
-nand_gate nand2 = nand_gate(height: 70, width: 70, rotation: 3);
-nand_gate nand3 = nand_gate(height: 70, width: 70, rotation: 3);
+nand_gate nand1 = nand_gate(height: 50, width: 50, rotation: 3);
+nand_gate nand2 = nand_gate(height: 50, width: 50, rotation: 3);
+nand_gate nand3 = nand_gate(height: 50, width: 50, rotation: 3);
 no_gate no1 = no_gate(height: 50, width: 50);
 no_gate no2 = no_gate(height: 50, width: 50);
 no_gate no3 = no_gate(height: 50, width: 50);
-and_gate and1 = and_gate(height: 70, width: 70);
-and_gate and2 = and_gate(height: 70, width: 70);
+and_gate and1 = and_gate(height: 50, width: 50);
+and_gate and2 = and_gate(height: 50, width: 50);
 int sat1 = 1;
 int sat2 = 1;
 int sat3 = 0;
@@ -143,10 +143,10 @@ endlessled light = endlessled(
 void set() {
   moves = 5;
   v = levelheadendless(
-  "",
-  endlesslevel1(),
-  mov: moves,
-);
+    "",
+    endlesslevel1(),
+    mov: moves,
+  );
   sat1 = 1;
   sat2 = 1;
   sat3 = 0;
@@ -283,14 +283,14 @@ class _endlesslevel1State extends State<endlesslevel1> {
 
   void test1() {
     setState(() {
-      if(moves!=0){
-moves-=1;
-v = levelheadendless(
-  "",
-  endlesslevel1(),
-  mov: moves,
-);
-}
+      if (moves != 0) {
+        moves -= 1;
+        v = levelheadendless(
+          "",
+          endlesslevel1(),
+          mov: moves,
+        );
+      }
       if (sat1 == 1) {
         sat1 = 0;
         a1 = Bus(
@@ -376,28 +376,28 @@ v = levelheadendless(
       }
       if (a14.activate == 1) {
         light = endlessled(
-  x: a14.activate,
-  y: 1,
-);
+          x: a14.activate,
+          y: 1,
+        );
       } else {
         light = endlessled(
-  x: a14.activate,
-  y: 1,
-);
+          x: a14.activate,
+          y: 1,
+        );
       }
     });
   }
 
   void test2() {
     setState(() {
-           if(moves!=0){
-moves-=1;
-v = levelheadendless(
-  "",
-  endlesslevel1(),
-  mov: moves,
-);
-}
+      if (moves != 0) {
+        moves -= 1;
+        v = levelheadendless(
+          "",
+          endlesslevel1(),
+          mov: moves,
+        );
+      }
       if (sat2 == 1) {
         sat2 = 0;
         a2 = Bus(
@@ -485,28 +485,28 @@ v = levelheadendless(
       }
       if (a14.activate == 1) {
         light = endlessled(
-  x: a14.activate,
-  y: 1,
-);
+          x: a14.activate,
+          y: 1,
+        );
       } else {
         light = endlessled(
-  x: a14.activate,
-  y: 1,
-);
+          x: a14.activate,
+          y: 1,
+        );
       }
     });
   }
 
   void test3() {
     setState(() {
-           if(moves!=0){
-moves-=1;
-v = levelheadendless(
-  "",
-  endlesslevel1(),
-  mov: moves,
-);
-}
+      if (moves != 0) {
+        moves -= 1;
+        v = levelheadendless(
+          "",
+          endlesslevel1(),
+          mov: moves,
+        );
+      }
       if (sat3 == 1) {
         sat3 = 0;
         a3 = Bus(
@@ -588,28 +588,28 @@ v = levelheadendless(
       }
       if (a14.activate == 1) {
         light = endlessled(
-  x: a14.activate,
-  y: 1,
-);
+          x: a14.activate,
+          y: 1,
+        );
       } else {
         light = endlessled(
-  x: a14.activate,
-  y: 1,
-);
+          x: a14.activate,
+          y: 1,
+        );
       }
     });
   }
 
   void test4() {
     setState(() {
-           if(moves!=0){
-moves-=1;
-v = levelheadendless(
-  "",
-  endlesslevel1(),
-  mov: moves,
-);
-}
+      if (moves != 0) {
+        moves -= 1;
+        v = levelheadendless(
+          "",
+          endlesslevel1(),
+          mov: moves,
+        );
+      }
       if (sat4 == 1) {
         sat4 = 0;
         a4 = Bus(
@@ -709,28 +709,28 @@ v = levelheadendless(
       }
       if (a14.activate == 1) {
         light = endlessled(
-  x: a14.activate,
-  y: 1,
-);
+          x: a14.activate,
+          y: 1,
+        );
       } else {
         light = endlessled(
-  x: a14.activate,
-  y: 1,
-);
+          x: a14.activate,
+          y: 1,
+        );
       }
     });
   }
 
   void test5() {
     setState(() {
-           if(moves!=0){
-moves-=1;
-v = levelheadendless(
-  "",
-  endlesslevel1(),
-  mov: moves,
-);
-}
+      if (moves != 0) {
+        moves -= 1;
+        v = levelheadendless(
+          "",
+          endlesslevel1(),
+          mov: moves,
+        );
+      }
       if (sat5 == 1) {
         sat5 = 0;
         a5 = Bus(
@@ -814,28 +814,28 @@ v = levelheadendless(
       }
       if (a14.activate == 1) {
         light = endlessled(
-  x: a14.activate,
-  y: 1,
-);
+          x: a14.activate,
+          y: 1,
+        );
       } else {
         light = endlessled(
-  x: a14.activate,
-  y: 1,
-);
+          x: a14.activate,
+          y: 1,
+        );
       }
     });
   }
 
   void test6() {
     setState(() {
-           if(moves!=0){
-moves-=1;
-v = levelheadendless(
-  "",
-  endlesslevel1(),
-  mov: moves,
-);
-}
+      if (moves != 0) {
+        moves -= 1;
+        v = levelheadendless(
+          "",
+          endlesslevel1(),
+          mov: moves,
+        );
+      }
       if (sat6 == 1) {
         sat6 = 0;
         a7 = Bus(
@@ -907,14 +907,14 @@ v = levelheadendless(
       }
       if (a14.activate == 1) {
         light = endlessled(
-  x: a14.activate,
-  y: 1,
-);
+          x: a14.activate,
+          y: 1,
+        );
       } else {
         light = endlessled(
-  x: a14.activate,
-  y: 1,
-);
+          x: a14.activate,
+          y: 1,
+        );
       }
     });
   }

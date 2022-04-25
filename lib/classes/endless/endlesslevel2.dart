@@ -11,6 +11,7 @@ import '/classes/Nor_gate.dart';
 import 'dart:ui' as ui;
 import 'endlessled.dart';
 import 'levelheadendless.dart';
+
 int over = 0;
 int moves = 3;
 levelheadendless v = levelheadendless(
@@ -18,13 +19,13 @@ levelheadendless v = levelheadendless(
   endlesslevel2(),
   mov: moves,
 );
-or_gate or1 = or_gate(height: 70, width: 70);
-or_gate or2 = or_gate(height: 70, width: 70);
+or_gate or1 = or_gate(height: 50, width: 50);
+or_gate or2 = or_gate(height: 50, width: 50);
 no_gate no1 = no_gate(height: 50, width: 50);
 no_gate no2 = no_gate(height: 50, width: 50);
-and_gate and1 = and_gate(height: 70, width: 70);
-and_gate and2 = and_gate(height: 70, width: 70);
-nor_gate nor1 = nor_gate(height: 70, width: 70, rotation: 3);
+and_gate and1 = and_gate(height: 50, width: 50);
+and_gate and2 = and_gate(height: 50, width: 50);
+nor_gate nor1 = nor_gate(height: 50, width: 50, rotation: 3);
 int sat1 = 1;
 int sat2 = 1;
 int sat3 = 0;
@@ -135,10 +136,10 @@ endlessled light = endlessled(
 void set() {
   moves = 3;
   v = levelheadendless(
-  "",
-  endlesslevel2(),
-  mov: moves,
-);
+    "",
+    endlesslevel2(),
+    mov: moves,
+  );
   sat1 = 1;
   sat2 = 1;
   sat3 = 0;
@@ -243,9 +244,9 @@ void set() {
     dy: -10,
   );
   light = endlessled(
-  x: a13.activate,
-  y: 2,
-);
+    x: a13.activate,
+    y: 2,
+  );
 }
 
 class endlesslevel2 extends StatefulWidget {
@@ -272,14 +273,14 @@ class _endlesslevel2State extends State<endlesslevel2> {
 
   void test1() {
     setState(() {
-      if(moves!=0){
-moves-=1;
-v = levelheadendless(
-  "",
-  endlesslevel2(),
-  mov: moves,
-);
-}
+      if (moves != 0) {
+        moves -= 1;
+        v = levelheadendless(
+          "",
+          endlesslevel2(),
+          mov: moves,
+        );
+      }
       if (sat1 == 1) {
         sat1 = 0;
         a1 = Bus(
@@ -347,28 +348,28 @@ v = levelheadendless(
       }
       if (a13.activate == 1) {
         light = endlessled(
-  x: a13.activate,
-  y: 2,
-);
+          x: a13.activate,
+          y: 2,
+        );
       } else {
         light = endlessled(
-  x: a13.activate,
-  y: 2,
-);
+          x: a13.activate,
+          y: 2,
+        );
       }
     });
   }
 
   void test2() {
     setState(() {
-           if(moves!=0){
-moves-=1;
-v = levelheadendless(
-  "",
-  endlesslevel2(),
-  mov: moves,
-);
-}
+      if (moves != 0) {
+        moves -= 1;
+        v = levelheadendless(
+          "",
+          endlesslevel2(),
+          mov: moves,
+        );
+      }
       if (sat2 == 1) {
         sat2 = 0;
         a2 = Bus(
@@ -442,28 +443,28 @@ v = levelheadendless(
       }
       if (a13.activate == 1) {
         light = endlessled(
-  x: a13.activate,
-  y: 2,
-);
+          x: a13.activate,
+          y: 2,
+        );
       } else {
         light = endlessled(
-  x: a13.activate,
-  y: 2,
-);
+          x: a13.activate,
+          y: 2,
+        );
       }
     });
   }
 
   void test3() {
     setState(() {
-           if(moves!=0){
-moves-=1;
-v = levelheadendless(
-  "",
-  endlesslevel2(),
-  mov: moves,
-);
-}
+      if (moves != 0) {
+        moves -= 1;
+        v = levelheadendless(
+          "",
+          endlesslevel2(),
+          mov: moves,
+        );
+      }
       if (sat3 == 1) {
         sat3 = 0;
         a3 = Bus(
@@ -553,28 +554,28 @@ v = levelheadendless(
       }
       if (a13.activate == 1) {
         light = endlessled(
-  x: a13.activate,
-  y: 2,
-);
+          x: a13.activate,
+          y: 2,
+        );
       } else {
         light = endlessled(
-  x: a13.activate,
-  y: 2,
-);
+          x: a13.activate,
+          y: 2,
+        );
       }
     });
   }
 
   void test4() {
     setState(() {
-           if(moves!=0){
-moves-=1;
-v = levelheadendless(
-  "",
-  endlesslevel2(),
-  mov: moves,
-);
-}
+      if (moves != 0) {
+        moves -= 1;
+        v = levelheadendless(
+          "",
+          endlesslevel2(),
+          mov: moves,
+        );
+      }
       if (sat4 == 1) {
         sat4 = 0;
         a4 = Bus(
@@ -666,28 +667,28 @@ v = levelheadendless(
       }
       if (a13.activate == 1) {
         light = endlessled(
-  x: a13.activate,
-  y: 2,
-);
+          x: a13.activate,
+          y: 2,
+        );
       } else {
         light = endlessled(
-  x: a13.activate,
-  y: 2,
-);
+          x: a13.activate,
+          y: 2,
+        );
       }
     });
   }
 
   void test5() {
     setState(() {
-           if(moves!=0){
-moves-=1;
-v = levelheadendless(
-  "",
-  endlesslevel2(),
-  mov: moves,
-);
-}
+      if (moves != 0) {
+        moves -= 1;
+        v = levelheadendless(
+          "",
+          endlesslevel2(),
+          mov: moves,
+        );
+      }
       if (sat5 == 1) {
         sat5 = 0;
         a5 = Bus(
@@ -757,28 +758,28 @@ v = levelheadendless(
       }
       if (a13.activate == 1) {
         light = endlessled(
-  x: a13.activate,
-  y: 2,
-);
+          x: a13.activate,
+          y: 2,
+        );
       } else {
         light = endlessled(
-  x: a13.activate,
-  y: 2,
-);
+          x: a13.activate,
+          y: 2,
+        );
       }
     });
   }
 
   void test6() {
     setState(() {
-           if(moves!=0){
-moves-=1;
-v = levelheadendless(
-  "",
-  endlesslevel2(),
-  mov: moves,
-);
-}
+      if (moves != 0) {
+        moves -= 1;
+        v = levelheadendless(
+          "",
+          endlesslevel2(),
+          mov: moves,
+        );
+      }
       if (sat6 == 1) {
         sat6 = 0;
         a7 = Bus(
@@ -836,14 +837,14 @@ v = levelheadendless(
       }
       if (a13.activate == 1) {
         light = endlessled(
-  x: a13.activate,
-  y: 2,
-);
+          x: a13.activate,
+          y: 2,
+        );
       } else {
         light = endlessled(
-  x: a13.activate,
-  y: 2,
-);
+          x: a13.activate,
+          y: 2,
+        );
       }
     });
   }
