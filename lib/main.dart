@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:logic_enhancer/pages/option_page.dart';
 import 'package:logic_enhancer/stages/level1.dart';
@@ -33,7 +32,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: level18(),
+      home: HomePage(),
       theme: ThemeData(fontFamily: 'Digital7'),
     );
   }
