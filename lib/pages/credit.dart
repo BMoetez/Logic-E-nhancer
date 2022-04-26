@@ -1,9 +1,11 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_literals_to_create_immutables
-
+import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:logic_enhancer/pages/lessons.dart';
 import '../main.dart';
 import 'levels.dart';
+import 'dart:ui' as ui;
+import 'dart:ui' as ui;import 'dart:ui' as ui;import 'dart:ui' as ui;
 
 
 // ignore: camel_case_types
@@ -75,7 +77,9 @@ class _creditsState extends State<credits> {
               width: 500,
               height: 70,
               child: RaisedButton(
-                onPressed: () {},
+                onPressed: () {
+                      (_) => Overlay.of(context)?.insert(_getEntry(context));
+                },
                 textColor: Colors.black,
                 color: const Color(0xFFa0b6f7),
                 hoverColor: const Color(0xFFf2f261),
@@ -131,5 +135,56 @@ class _creditsState extends State<credits> {
           ],
         )
     );
+  }
+
+  OverlayEntry _getEntry(context) {
+    OverlayEntry entry = OverlayEntry(builder: (_) => Container());
+
+    entry = OverlayEntry(
+      opaque: false,
+      maintainState: true,
+      builder: (_) => Positioned(
+        left: 0,
+        bottom: 0,
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        child: BackdropFilter(
+          filter: ui.ImageFilter.blur(
+            sigmaX: 2,
+            sigmaY: 2,
+          ),
+          child: Material(
+            type: MaterialType.transparency,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                    width: 700,
+                    height: 450,
+                    //color: Colors.black,
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          "../../assets/images/wassim.jpg.jpeg",
+                          scale: 0.5,
+                        ),
+                        TextButton(
+                            onPressed: () {
+                              entry.remove();
+                            },
+                            child: Text(
+                              "HELLO",
+                              style: TextStyle(fontSize: 50),
+                            ))
+                      ],
+                    )),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+    return entry;
   }
 }
