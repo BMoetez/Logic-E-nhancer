@@ -95,7 +95,7 @@ class _creditsState extends State<credits> {
                 hoverColor: const Color(0xFFf2f261),
 
                 child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [
-                  
+
                   SizedBox(width: 20),
                   const Text(
                   "MOETEZ BOUHLEL",
@@ -112,7 +112,10 @@ class _creditsState extends State<credits> {
                 color: const Color(0xFFa0b6f7),
                 hoverColor: const Color(0xFFf2f261),
 
-                child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [ const Icon(Icons.castle_outlined,size: 40,color: Colors.white,),SizedBox(width: 20),const Text(
+                child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [
+                  const Icon(Icons.castle_outlined,size: 40,color: Colors.white,),
+                  SizedBox(width: 20),
+                  const Text(
                   "MOHAMED SOUID",
                   style: TextStyle(fontSize: 55),
                 )],) ,
