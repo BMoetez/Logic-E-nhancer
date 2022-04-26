@@ -39,7 +39,7 @@ class _playPageState extends State<playPage> {
               ),
             ),
             const Text(
-              "play",
+              "CREDITS",
               textAlign: TextAlign.center,
               style: TextStyle(
                   color: Colors.white,
@@ -59,7 +59,7 @@ class _playPageState extends State<playPage> {
                 hoverColor: const Color(0xFFf2f261),
                 padding: const EdgeInsets.fromLTRB(20, 20, 20, 30),
                 child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [ const Icon(Icons.gamepad_sharp,size: 40,color: Colors.white,),SizedBox(width: 20),const Text(
-                  "level mode",
+                  "FIRAS NECIB",
                   style: TextStyle(fontSize: 40),
                 )],) ,
               ),) ,SizedBox(height: 40),
@@ -72,7 +72,7 @@ class _playPageState extends State<playPage> {
                 hoverColor: const Color(0xFFf2f261),
                 padding: const EdgeInsets.fromLTRB(20, 20, 20, 30),
                 child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [ const Icon(Icons.all_inclusive,size: 40,color: Colors.white,),SizedBox(width: 20),const Text(
-                  "endless mode",
+                  "WASSIM CHOUCHEN",
                   style: TextStyle(fontSize: 40),
                 )],) ,
               ),) ,SizedBox(height: 40), SizedBox(
@@ -87,7 +87,7 @@ class _playPageState extends State<playPage> {
                 hoverColor: const Color(0xFFf2f261),
                 padding: const EdgeInsets.fromLTRB(20, 20, 20, 30),
                 child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [ const Icon(Icons.book,size: 40,color: Colors.white,),SizedBox(width: 20),const Text(
-                  "learning mode",
+                  "MOETEZ BOUHLEL",
                   style: TextStyle(fontSize: 40),
                 )],) ,
               ),) ,SizedBox(height: 40),
@@ -98,9 +98,9 @@ class _playPageState extends State<playPage> {
                 textColor: Colors.black,
                 color: const Color(0xFFa0b6f7),
                 hoverColor: const Color(0xFFf2f261),
-                padding: const EdgeInsets.fromLTRB(20, 20, 20, 30),
+                
                 child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [ const Icon(Icons.castle_outlined,size: 40,color: Colors.white,),SizedBox(width: 20),const Text(
-                  "build mode",
+                  "MOHAMED SOUID",
                   style: TextStyle(fontSize: 40),
                 )],) ,
               ),) ,SizedBox(height: 40),
