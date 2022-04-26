@@ -78,7 +78,7 @@ class _creditsState extends State<credits> {
               height: 70,
               child: RaisedButton(
                 onPressed: () {
-                      (_) => Overlay.of(context)?.insert(_getEntry(context));
+                  Overlay.of(context)?.insert(_getEntry(context));
                 },
                 textColor: Colors.black,
                 color: const Color(0xFFa0b6f7),
@@ -160,8 +160,8 @@ class _creditsState extends State<credits> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Container(
-                    width: 700,
-                    height: 450,
+                    width: 280,
+                    height: 300,
                     //color: Colors.black,
                     child: Column(
                       children: [
