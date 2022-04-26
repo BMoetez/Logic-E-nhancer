@@ -1,76 +1,46 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:flutter/material.dart';
-import 'package:logic_enhancer/stages/level1.dart';
-import 'package:logic_enhancer/stages/level10.dart';
-import 'package:logic_enhancer/stages/level11.dart';
-import 'package:logic_enhancer/stages/level12.dart';
-import 'package:logic_enhancer/stages/level13.dart';
-import 'package:logic_enhancer/stages/level14.dart';
-import 'package:logic_enhancer/stages/level15.dart';
-import 'package:logic_enhancer/stages/level16.dart';
-import 'package:logic_enhancer/stages/level17.dart';
-import 'package:logic_enhancer/stages/level18.dart';
-import 'package:logic_enhancer/stages/level2.dart';
-import 'package:logic_enhancer/stages/level3.dart';
-import 'package:logic_enhancer/stages/level4.dart';
-import 'package:logic_enhancer/stages/level5.dart';
-import 'package:logic_enhancer/stages/level6.dart';
-import 'package:logic_enhancer/stages/level7.dart';
-import 'package:logic_enhancer/stages/level8.dart';
-import 'package:logic_enhancer/stages/level9.dart';
 import 'dart:ui' as ui;
-import '../main.dart';
+import '/main.dart';
 import 'package:lottie/lottie.dart';
 import 'dart:math';
 
-import 'endless/endlesslevel1.dart';
-import 'endless/endlesslevel2.dart';
-import 'endless/endlesslevel3.dart';
-import 'endless/endlesslevel4.dart';
-import 'endless/endlesslevel5.dart';
+import '../endless/endlesslevel1.dart';
+import '../endless/endlesslevel2.dart';
+import '../endless/endlesslevel3.dart';
+import '../endless/endlesslevel4.dart';
+import '../endless/endlesslevel5.dart';
 
 var random = Random();
-var list=[endlesslevel1(),endlesslevel2(),endlesslevel3(),endlesslevel4(),endlesslevel5()];
-var levels = [
-  level1(),
-  level2(),
-  level3(),
-  level4(),
-  level5(),
-  level6(),
-  level7(),
-  level8(),
-  level9(),
-  level10(),
-  level11(),
-  level12(),
-  level13(),
-  level14(),
-  level15(),
-  level16(),
-  level17(),
-  level18(),
+int t = random.nextInt(5);
+var list = [
+  endlesslevel1(),
+  endlesslevel2(),
+  endlesslevel3(),
+  endlesslevel4(),
+  endlesslevel5()
 ];
+
 int index(int x) {
-  if (x < 17) {
-    return x + 1;
-  } else {
-    return 17;
+  while (t == x) {
+    t = random.nextInt(5);
   }
+  return t;
 }
 
-class LED extends StatefulWidget {
+class endlessled extends StatefulWidget {
   int x;
   int y;
-  LED({Key? key, required this.x, required this.y}) : super(key: key);
+  endlessled({Key? key, required this.x, required this.y}) : super(key: key);
   @override
   // ignore: no_logic_in_create_state
-  State<LED> createState() => _LEDState();
+  State<endlessled> createState() => _endlessledState();
 }
 
 // ignore: camel_case_types
-class _LEDState extends State<LED> with SingleTickerProviderStateMixin {
+class _endlessledState extends State<endlessled>
+    with SingleTickerProviderStateMixin {
   var path = [
     "assets/images/light/light no.png",
     "assets/images/light/light yes.png"
@@ -89,12 +59,6 @@ class _LEDState extends State<LED> with SingleTickerProviderStateMixin {
   void dispose() {
     super.dispose();
     _controller.dispose();
-  }
-
-  void didChangeDependencies() {
-    precacheImage(AssetImage("assets/images/party.json"), context);
-
-    super.didChangeDependencies();
   }
 
   @override
@@ -139,8 +103,8 @@ class _LEDState extends State<LED> with SingleTickerProviderStateMixin {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Lottie.asset(
-                    "assets/images/party.json",
+                Lottie.network(
+                    'https://assets9.lottiefiles.com/packages/lf20_wys2rrr6.json',
                     width: 500,
                     height: 500),
                 Column(
@@ -161,39 +125,35 @@ class _LEDState extends State<LED> with SingleTickerProviderStateMixin {
                                   TextStyle(fontSize: 40, color: Colors.green),
                             ),
                           ),
-                          (index(widget.y) != 17)
-                              ? Padding(
-                                  padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
-                                  child: SizedBox(
-                                    width: 230,
-                                    height: 50,
-                                    child: OutlinedButton(
-                                        onPressed: () {
-                                          Navigator.pop(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      levels[widget.y - 1]));
-                                          Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) => levels[
-                                                      index(widget.y - 1)]));
-                                          entry.remove();
-                                        },
-                                        child: Text(
-                                          "Next Level",
-                                          style: TextStyle(
-                                              fontSize: 30,
-                                              color: Colors.white),
-                                        ),
-                                        style: OutlinedButton.styleFrom(
-                                            side: BorderSide(
-                                                width: 3.0,
-                                                color: Colors.white))),
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                            child: SizedBox(
+                              width: 230,
+                              height: 50,
+                              child: OutlinedButton(
+                                  onPressed: () {
+                                    Navigator.pop(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                list[widget.y - 1]));
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                list[index(widget.y - 1)]));
+                                    entry.remove();
+                                  },
+                                  child: Text(
+                                    "Next Level",
+                                    style: TextStyle(
+                                        fontSize: 30, color: Colors.white),
                                   ),
-                                )
-                              : Spacer(),
+                                  style: OutlinedButton.styleFrom(
+                                      side: BorderSide(
+                                          width: 3.0, color: Colors.white))),
+                            ),
+                          ),
                           Padding(
                             padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
                             child: SizedBox(
@@ -205,7 +165,7 @@ class _LEDState extends State<LED> with SingleTickerProviderStateMixin {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              levels[widget.y - 1]),
+                                              list[widget.y - 1]),
                                       (Route<dynamic> route) => false,
                                     );
                                     entry.remove();
@@ -248,8 +208,8 @@ class _LEDState extends State<LED> with SingleTickerProviderStateMixin {
                     ),
                   ],
                 ),
-                Lottie.asset(
-                  'assets/images/party.json',
+                Lottie.network(
+                  'https://assets9.lottiefiles.com/packages/lf20_wys2rrr6.json',
                   width: 500,
                   height: 500,
                 )
