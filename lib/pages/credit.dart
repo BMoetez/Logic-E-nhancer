@@ -55,8 +55,7 @@ class _creditsState extends State<credits> {
               height: 70,
               child: RaisedButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Levels())
-                  );
+                  Overlay.of(context)?.insert(_getEntry1(context));
                 },
                 textColor:  Colors.black,
                 color:  const Color(0xFFa0b6f7),
@@ -98,7 +97,7 @@ class _creditsState extends State<credits> {
               height: 70,
               child: RaisedButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Lessons()));
+                  Overlay.of(context)?.insert(_getEntry2(context));
 
                 },
                 textColor: Colors.black,
@@ -118,8 +117,8 @@ class _creditsState extends State<credits> {
               height: 70,
               child: RaisedButton(
                 onPressed: () {
-
-                },
+                  Overlay.of(context)?.insert(_getEntry3(context));
+                   },
                 textColor: Colors.black,
                 color: const Color(0xFFa0b6f7),
                 hoverColor: const Color(0xFFf2f261),
@@ -160,23 +159,16 @@ class _creditsState extends State<credits> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Container(
-                    width: 200,
-                    height: 300,
+                    width: 220,
+                    height: 320,
                     //color: Colors.black,
                     child: Column(
                       children: [
                         Image.asset(
                           "../../assets/images/wassim.jpg.jpeg",
-                          scale: 0.5,
+                          scale: 0.8,
                         ),
-                        TextButton(
-                            onPressed: () {
-                              entry.remove();
-                            },
-                            child: Text(
-                              "HELLO",
-                              style: TextStyle(fontSize: 50),
-                            ))
+
                       ],
                     )),
               ],
@@ -186,5 +178,134 @@ class _creditsState extends State<credits> {
       ),
     );
     return entry;
+  }
+  OverlayEntry _getEntry1(context) {
+    OverlayEntry entry1 = OverlayEntry(builder: (_) => Container());
+
+    entry1 = OverlayEntry(
+      opaque: false,
+      maintainState: true,
+      builder: (_) => Positioned(
+        left: 0,
+        bottom: 0,
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        child: BackdropFilter(
+          filter: ui.ImageFilter.blur(
+            sigmaX: 2,
+            sigmaY: 2,
+          ),
+          child: Material(
+            type: MaterialType.transparency,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                    width: 350,
+                    height: 600,
+                    //color: Colors.black,
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          "../../assets/images/firas.jpg",
+                          scale: 0.8,
+                        ),
+
+                      ],
+                    )),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+    return entry1;
+  }
+  OverlayEntry _getEntry3(context) {
+    OverlayEntry entry3 = OverlayEntry(builder: (_) => Container());
+
+    entry3 = OverlayEntry(
+      opaque: false,
+      maintainState: true,
+      builder: (_) => Positioned(
+        left: 0,
+        bottom: 0,
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        child: BackdropFilter(
+          filter: ui.ImageFilter.blur(
+            sigmaX: 2,
+            sigmaY: 2,
+          ),
+          child: Material(
+            type: MaterialType.transparency,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                    width: 220,
+                    height: 320,
+                    //color: Colors.black,
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          "../../assets/images/wassim.jpg.jpeg",
+                          scale: 0.8,
+                        ),
+
+                      ],
+                    )),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+    return entry3;
+  }
+  OverlayEntry _getEntry2(context) {
+    OverlayEntry entry2 = OverlayEntry(builder: (_) => Container());
+
+    entry2 = OverlayEntry(
+      opaque: false,
+      maintainState: true,
+      builder: (_) => Positioned(
+        left: 0,
+        bottom: 0,
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        child: BackdropFilter(
+          filter: ui.ImageFilter.blur(
+            sigmaX: 2,
+            sigmaY: 2,
+          ),
+          child: Material(
+            type: MaterialType.transparency,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                    width: 220,
+                    height: 320,
+                    //color: Colors.black,
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          "../../assets/images/wassim.jpg.jpeg",
+                          scale: 0.8,
+                        ),
+
+                      ],
+                    )),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+    return entry2;
   }
 }
