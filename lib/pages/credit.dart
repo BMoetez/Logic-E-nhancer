@@ -50,6 +50,7 @@ class _creditsState extends State<credits> {
             ),SizedBox(height: 180),
             SizedBox(
               width: 500,
+              height: 70,
               child: RaisedButton(
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>Levels())
@@ -67,9 +68,12 @@ class _creditsState extends State<credits> {
                   "FIRAS NECIB",
                   style: TextStyle(fontSize: 55),
                 )],) ,
-              ),) ,SizedBox(height: 40),
+              ),
+            ),
+            SizedBox(height: 25),
             SizedBox(
               width: 500,
+              height: 70,
               child: RaisedButton(
                 onPressed: () {},
                 textColor: Colors.black,
@@ -83,8 +87,11 @@ class _creditsState extends State<credits> {
                   "WASSIM CHOUCHEN",
                   style: TextStyle(fontSize: 55),
                 )],) ,
-              ),) ,SizedBox(height: 40), SizedBox(
+              ),) ,
+            SizedBox(height: 25),
+            SizedBox(
               width: 500,
+              height: 70,
               child: RaisedButton(
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>Lessons()));
@@ -101,9 +108,10 @@ class _creditsState extends State<credits> {
                   "MOETEZ BOUHLEL",
                   style: TextStyle(fontSize: 55),
                 )],) ,
-              ),) ,SizedBox(height: 40),
+              ),) ,SizedBox(height: 25),
             SizedBox(
               width: 500,
+              height: 70,
               child: RaisedButton(
                 onPressed: () {
 
@@ -113,13 +121,13 @@ class _creditsState extends State<credits> {
                 hoverColor: const Color(0xFFf2f261),
 
                 child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [
-                  
+
                   SizedBox(width: 20),
                   const Text(
                   "MOHAMED SOUID",
                   style: TextStyle(fontSize: 55),
                 )],) ,
-              ),) ,SizedBox(height: 40),
+              ),) ,
           ],
         )
     );
