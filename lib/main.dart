@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:logic_enhancer/pages/credit.dart';
 import 'package:logic_enhancer/pages/option_page.dart';
 import 'package:logic_enhancer/stages/level1.dart';
 import 'package:logic_enhancer/stages/level10.dart';
@@ -192,7 +193,7 @@ class _HomePageState extends State<HomePage> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => playPage()));
+                                        builder: (context) => credits()));
                               },
                               color: const Color(0xFFa0b6f7),
                               hoverColor: const Color(0xFFf2f261),
