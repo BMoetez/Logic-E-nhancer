@@ -61,7 +61,7 @@ class _creditsState extends State<credits> {
                 padding: const EdgeInsets.fromLTRB(20, 20, 20, 30),
                 child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [ const Icon(Icons.gamepad_sharp,size: 40,color: Colors.white,),SizedBox(width: 20),const Text(
                   "FIRAS NECIB",
-                  style: TextStyle(fontSize: 40),
+                  style: TextStyle(fontSize: 55),
                 )],) ,
               ),) ,SizedBox(height: 40),
             SizedBox(
@@ -74,7 +74,7 @@ class _creditsState extends State<credits> {
 
                 child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [ const Icon(Icons.all_inclusive,size: 40,color: Colors.white,),SizedBox(width: 20),const Text(
                   "WASSIM CHOUCHEN",
-                  style: TextStyle(fontSize: 40),
+                  style: TextStyle(fontSize: 55),
                 )],) ,
               ),) ,SizedBox(height: 40), SizedBox(
               width: 500,
@@ -89,7 +89,7 @@ class _creditsState extends State<credits> {
 
                 child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [ const Icon(Icons.book,size: 40,color: Colors.white,),SizedBox(width: 20),const Text(
                   "MOETEZ BOUHLEL",
-                  style: TextStyle(fontSize: 40),
+                  style: TextStyle(fontSize: 55),
                 )],) ,
               ),) ,SizedBox(height: 40),
             SizedBox(
@@ -104,7 +104,7 @@ class _creditsState extends State<credits> {
 
                 child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [ const Icon(Icons.castle_outlined,size: 40,color: Colors.white,),SizedBox(width: 20),const Text(
                   "MOHAMED SOUID",
-                  style: TextStyle(fontSize: 40),
+                  style: TextStyle(fontSize: 55),
                 )],) ,
               ),) ,SizedBox(height: 40),
           ],
