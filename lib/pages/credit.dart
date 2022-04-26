@@ -5,13 +5,14 @@ import 'package:logic_enhancer/pages/lessons.dart';
 import '../main.dart';
 import 'levels.dart';
 
+
 // ignore: camel_case_types
-class playPage extends StatefulWidget {
+class credits extends StatefulWidget {
   @override
-  State<playPage> createState() => _playPageState();
+  State<credits> createState() => _creditsState();
 }
 
-class _playPageState extends State<playPage> {
+class _creditsState extends State<credits> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -56,7 +57,7 @@ class _playPageState extends State<playPage> {
                 },
                 textColor:  Colors.black,
                 color:  const Color(0xFFa0b6f7),
-                
+
                 padding: const EdgeInsets.fromLTRB(20, 20, 20, 30),
                 child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [ const Icon(Icons.gamepad_sharp,size: 40,color: Colors.white,),SizedBox(width: 20),const Text(
                   "FIRAS NECIB",
