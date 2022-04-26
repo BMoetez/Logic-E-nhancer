@@ -57,9 +57,13 @@ class _creditsState extends State<credits> {
                 },
                 textColor:  Colors.black,
                 color:  const Color(0xFFa0b6f7),
+                hoverColor: const Color(0xFFf2f261),
 
                 padding: const EdgeInsets.fromLTRB(20, 20, 20, 30),
-                child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [ const Icon(Icons.gamepad_sharp,size: 40,color: Colors.white,),SizedBox(width: 20),const Text(
+                child:  Row(mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(width: 20),
+                    const Text(
                   "FIRAS NECIB",
                   style: TextStyle(fontSize: 55),
                 )],) ,
@@ -72,7 +76,10 @@ class _creditsState extends State<credits> {
                 color: const Color(0xFFa0b6f7),
                 hoverColor: const Color(0xFFf2f261),
 
-                child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [ const Icon(Icons.all_inclusive,size: 40,color: Colors.white,),SizedBox(width: 20),const Text(
+                child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [
+
+                  SizedBox(width: 20),
+                  const Text(
                   "WASSIM CHOUCHEN",
                   style: TextStyle(fontSize: 55),
                 )],) ,
@@ -87,7 +94,10 @@ class _creditsState extends State<credits> {
                 color: const Color(0xFFa0b6f7),
                 hoverColor: const Color(0xFFf2f261),
 
-                child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [ const Icon(Icons.book,size: 40,color: Colors.white,),SizedBox(width: 20),const Text(
+                child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [
+                  
+                  SizedBox(width: 20),
+                  const Text(
                   "MOETEZ BOUHLEL",
                   style: TextStyle(fontSize: 55),
                 )],) ,
