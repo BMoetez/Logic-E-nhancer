@@ -168,6 +168,14 @@ class _creditsState extends State<credits> {
                           "../../assets/images/wassim.jpg.jpeg",
                           scale: 0.8,
                         ),
+                        TextButton(
+                            onPressed: () {
+                              entry.remove();
+                            },
+                            child: Text(
+                              "X",
+                              style: TextStyle(fontSize: 20),
+                            ))
 
                       ],
                     )),
@@ -254,6 +262,7 @@ class _creditsState extends State<credits> {
                           "../../assets/images/wassim.jpg.jpeg",
                           scale: 0.8,
                         ),
+
 
                       ],
                     )),
