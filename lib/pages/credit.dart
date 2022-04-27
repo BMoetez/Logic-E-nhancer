@@ -159,8 +159,8 @@ class _creditsState extends State<credits> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Container(
-                    width: 220,
-                    height: 320,
+                    width: 280,
+                    height: 200,
                     //color: Colors.black,
                     child: Column(
                       children: [
@@ -171,6 +171,10 @@ class _creditsState extends State<credits> {
                         TextButton(
                             onPressed: () {
                               entry.remove();
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => credits()));
                             },
                             child: Text(
                               "X",
@@ -219,6 +223,18 @@ class _creditsState extends State<credits> {
                           "../../assets/images/firas.jpg",
                           scale: 0.8,
                         ),
+                        TextButton(
+                            onPressed: () {
+                              entry1.remove();
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => credits()));
+                            },
+                            child: Text(
+                              "X",
+                              style: TextStyle(fontSize: 20),
+                            )),
 
                       ],
                     )),
