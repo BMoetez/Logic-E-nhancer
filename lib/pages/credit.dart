@@ -269,15 +269,27 @@ class _creditsState extends State<credits> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Container(
-                    width: 220,
-                    height: 320,
+                    width: 350,
+                    height: 600,
                     //color: Colors.black,
                     child: Column(
                       children: [
                         Image.asset(
-                          "../../assets/images/wassim.jpg.jpeg",
+                          "../../assets/images/hama.jpg",
                           scale: 0.8,
                         ),
+                        TextButton(
+                            onPressed: () {
+                              entry3.remove();
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => credits()));
+                            },
+                            child: Text(
+                              "X",
+                              style: TextStyle(fontSize: 20),
+                            )),
 
 
                       ],
@@ -313,8 +325,8 @@ class _creditsState extends State<credits> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Container(
-                    width: 220,
-                    height: 320,
+                    width: 350,
+                    height: 600,
                     //color: Colors.black,
                     child: Column(
                       children: [
@@ -322,6 +334,18 @@ class _creditsState extends State<credits> {
                           "../../assets/images/wassim.jpg.jpeg",
                           scale: 0.8,
                         ),
+                        TextButton(
+                            onPressed: () {
+                              entry2.remove();
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => credits()));
+                            },
+                            child: Text(
+                              "X",
+                              style: TextStyle(fontSize: 20),
+                            )),
 
                       ],
                     )),
