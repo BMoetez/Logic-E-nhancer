@@ -159,8 +159,8 @@ class _creditsState extends State<credits> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Container(
-                    width: 50,
-                    height: 50,
+                    width: 200,
+                    height: 250,
                     //color: Colors.black,
                     child: Column(
                       children: [
