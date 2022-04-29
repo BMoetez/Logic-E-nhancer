@@ -331,7 +331,7 @@ class _creditsState extends State<credits> {
                     child: Column(
                       children: [
                         Image.asset(
-                          "../../assets/images/wassim.jpg.jpeg",
+                          "../../assets/images/moetz.png",
                           scale: 0.8,
                         ),
                         TextButton(
