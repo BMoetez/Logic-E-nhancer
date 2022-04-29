@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
 import 'package:logic_enhancer/main.dart';
 import 'package:logic_enhancer/pages/levels.dart';
-
-bool hovering = false;
 import 'LED2.dart';
-
+bool hovering = false;
 class LevelHead2 extends StatefulWidget {
   String n = '';
   Widget f = Container();
