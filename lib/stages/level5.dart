@@ -10,7 +10,7 @@ import 'dart:ui' as ui;
 int moves = 4;
 LevelHead2 v = LevelHead2(
   "5",
-  level5(),
+  level5(),light,
   mov: moves,
 );
 or_gate OR1 = or_gate(height: 60, width: 60);
@@ -92,7 +92,7 @@ void set() {
   moves = 4;
   v = LevelHead2(
   "5",
-  level5(),
+  level5(),light,
   mov: moves,
 );
   sat1 = 1;
@@ -165,6 +165,7 @@ void set() {
     x: a8.activate,
     y: 5,
   );
+
 }
 
 class level5 extends StatefulWidget {
@@ -191,14 +192,7 @@ class _level5State extends State<level5> {
   }
 
   void test1() {
-    setState(() {if(moves!=0){
-moves-=1;
-v = LevelHead2(
-  "5",
-  level5(),
-  mov: moves,
-);
-}
+    setState(() {
       if (sat1 == 1) {
         sat1 = 0;
         a1 = Bus(
@@ -281,6 +275,14 @@ v = LevelHead2(
           y: 5,
         );
       }
+      if(moves!=0){
+        moves-=1;
+        v = LevelHead2(
+          "5",
+          level5(),light,
+          mov: moves,
+        );
+      }
     });
   }
 
@@ -290,7 +292,7 @@ v = LevelHead2(
 moves-=1;
 v = LevelHead2(
   "5",
-  level5(),
+  level5(),light,
   mov: moves,
 );
 }
@@ -385,7 +387,7 @@ v = LevelHead2(
 moves-=1;
 v = LevelHead2(
   "5",
-  level5(),
+  level5(),light,
   mov: moves,
 );
 }
@@ -462,7 +464,7 @@ v = LevelHead2(
 moves-=1;
 v = LevelHead2(
   "5",
-  level5(),
+  level5(),light,
   mov: moves,
 );
 }

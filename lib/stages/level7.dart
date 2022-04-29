@@ -9,7 +9,7 @@ import '../classes/and_gate.dart';
 int moves = 4;
 LevelHead2 v = LevelHead2(
   "7",
-  level7(),
+  level7(),light,
   mov: moves,
 );
 or_gate OR1 = or_gate(height: 60, width: 60);
@@ -93,7 +93,7 @@ void set() {
   moves = 4;
   v = LevelHead2(
   "7",
-  level7(),
+  level7(),light,
   mov: moves,
 );
   sat1 = 0;
@@ -191,14 +191,7 @@ class _level7State extends State<level7> {
 
   void test1() {
     setState(() {
-      if(moves!=0){
-moves-=1;
-v = LevelHead2(
-  "7",
-  level7(),
-  mov: moves,
-);
-}
+
       if (sat1 == 1) {
         sat1 = 0;
         a1 = Bus(
@@ -265,19 +258,20 @@ v = LevelHead2(
           y: 7,
         );
       }
+      if(moves!=0){
+        moves-=1;
+        v = LevelHead2(
+          "7",
+          level7(),light,
+          mov: moves,
+        );
+      }
     });
   }
 
   void test2() {
     setState(() {
-           if(moves!=0){
-moves-=1;
-v = LevelHead2(
-  "7",
-  level7(),
-  mov: moves,
-);
-}
+
       if (sat2 == 1) {
         sat2 = 0;
         a2 = Bus(
@@ -362,19 +356,20 @@ v = LevelHead2(
           y: 7,
         );
       }
+      if(moves!=0){
+        moves-=1;
+        v = LevelHead2(
+          "7",
+          level7(),light,
+          mov: moves,
+        );
+      }
     });
   }
 
   void test3() {
     setState(() {
-           if(moves!=0){
-moves-=1;
-v = LevelHead2(
-  "7",
-  level7(),
-  mov: moves,
-);
-}
+
       if (sat3 == 1) {
         sat3 = 0;
         a4 = Bus(
@@ -441,19 +436,20 @@ v = LevelHead2(
           y: 7,
         );
       }
+      if(moves!=0){
+        moves-=1;
+        v = LevelHead2(
+          "7",
+          level7(),light,
+          mov: moves,
+        );
+      }
     });
   }
 
   void test4() {
     setState(() {
-           if(moves!=0){
-moves-=1;
-v = LevelHead2(
-  "7",
-  level7(),
-  mov: moves,
-);
-}
+
       if (sat4 == 1) {
         sat4 = 0;
         a5 = Bus(
@@ -518,6 +514,14 @@ v = LevelHead2(
         light = LED(
           x: a8.activate,
           y: 7,
+        );
+      }
+      if(moves!=0){
+        moves-=1;
+        v = LevelHead2(
+          "7",
+          level7(),light,
+          mov: moves,
         );
       }
     });

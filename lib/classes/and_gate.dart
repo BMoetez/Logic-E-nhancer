@@ -1,5 +1,6 @@
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
+import 'package:logic_enhancer/main.dart';
 
 
 
@@ -15,7 +16,7 @@ class and_gate extends StatefulWidget {
   }
 
   int activation(int x,int y) {
-    if (x == 1 && y == 1) {
+   if(ind==0) {if (x == 1 && y == 1) {
       path.value = 'assets/images/gates/and/4.png';
       return 1;
     } else if (x == 1 && y == 0) {
@@ -28,6 +29,21 @@ class and_gate extends StatefulWidget {
       path.value = 'assets/images/gates/and/1.png';
       return 0;
     }
+   }else{
+     if (x == 1 && y == 1) {
+       path.value = 'assets/images/gates/and/4copy.png';
+       return 1;
+     } else if (x == 1 && y == 0) {
+       path.value = 'assets/images/gates/and/2copy.png';
+       return 0;
+     } else if (x == 0 && y == 1) {
+       path.value = 'assets/images/gates/and/3copy.png';
+       return 0;
+     } else {
+       path.value = 'assets/images/gates/and/1copy.png';
+       return 0;
+     }
+   }
   }
   @override
   _and_gateState createState() => _and_gateState(height : this.height,width : this.width,rotation : this.rotation);
@@ -48,6 +64,10 @@ class _and_gateState extends State<and_gate> {
     precacheImage(AssetImage("assets/images/gates/and/2.png"), context);
     precacheImage(AssetImage("assets/images/gates/and/3.png"), context);
     precacheImage(AssetImage("assets/images/gates/and/4.png"), context);
+    precacheImage(AssetImage("assets/images/gates/and/1copy.png"), context);
+    precacheImage(AssetImage("assets/images/gates/and/2copy.png"), context);
+    precacheImage(AssetImage("assets/images/gates/and/3copy.png"), context);
+    precacheImage(AssetImage("assets/images/gates/and/4copy.png"), context);
 
     super.didChangeDependencies();
   }

@@ -15,21 +15,27 @@ class levelheadendless extends StatefulWidget {
   }
 
   @override
-  _levelheadendlessState createState() => _levelheadendlessState(this.n,this.f,mov: this.mov);
+  _levelheadendlessState createState() => _levelheadendlessState(this.n,this.f);
 }
 
 class _levelheadendlessState extends State<levelheadendless> {
   String n = '';
   Widget f = Container();
-  int mov =0;
-  _levelheadendlessState(String n,Widget f,{ this.mov=5}) {
+  _levelheadendlessState(String n,Widget f) {
     this.n = n;
     this.f = f;
-    mov=mov;
+
+  }
+  void losepage(){
+    if(widget.mov==0){
+      WidgetsBinding.instance?.addPostFrameCallback(
+              (_) => Overlay.of(context)?.insert(_getEntry3(context)));
+    }
   }
 
   @override
   Widget build(BuildContext context) {
+    losepage();
     return Material(
       child: Container(
           child: Row(
@@ -270,6 +276,63 @@ class _levelheadendlessState extends State<levelheadendless> {
 
                       ),
 
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+    return entry;
+  }
+  OverlayEntry _getEntry3(context) {
+    OverlayEntry entry = OverlayEntry(builder: (_) => Container());
+
+    entry = OverlayEntry(
+      opaque: false,
+      maintainState: true,
+      builder: (_) => Positioned(
+        left: 0,
+        bottom: 0,
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        child: BackdropFilter(
+          filter: ui.ImageFilter.blur(
+            sigmaX: 2,
+            sigmaY: 2,
+          ),
+          child: Material(
+            type: MaterialType.transparency,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  width: 500,
+                  height: 350,
+                  color: Colors.black,
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(0, 10, 0, 100),
+                        child: Text(
+                          "Oh No ",
+                          style: TextStyle(fontSize: 40, color: Colors.red),
+                        ),
+                      ),
+                      Padding(
+                          padding: EdgeInsets.fromLTRB(20, 0, 20, 100),
+                          child: Text("No moves left. Try again",style: TextStyle(color: Colors.white,fontSize: 30,height: 1.2),textAlign: TextAlign.center,)
+                      ),
+                      TextButton(onPressed: (){Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => f),
+                            (Route<dynamic> route) => false,
+                      );
+                      entry.remove();}, child: Text("Try Again",style: TextStyle(fontSize: 50),))
                     ],
                   ),
                 ),

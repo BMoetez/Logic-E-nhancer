@@ -8,7 +8,7 @@ import '../classes/no_gate.dart';
 int moves = 3;
 LevelHead2 v = LevelHead2(
   "3",
-  level3(),
+  level3(),LIGHT2,
   mov: moves,
 );
 or_gate OR = or_gate(height: 70, width: 70);
@@ -53,7 +53,7 @@ void set() {
   moves = 3;
   v = LevelHead2(
   "3",
-  level3(),
+  level3(),LIGHT2,
   mov: moves,
 );
   sat1 = 1;
@@ -92,6 +92,7 @@ void set() {
     x: a4.activate,
     y: 3,
   );
+
 }
 
 class level3 extends StatefulWidget {
@@ -113,14 +114,7 @@ class _level3State extends State<level3> {
 
   void test1() {
     setState(() {
-      if(moves!=0){
-moves-=1;
-v = LevelHead2(
-  "3",
-  level3(),
-  mov: moves,
-);
-}
+
       if (sat1 == 1) {
         sat1 = 0;
         a1 = Bus(
@@ -184,19 +178,21 @@ v = LevelHead2(
         );
       }
       print("b1:{$c}");
+      if(moves!=0){
+        moves-=1;
+        v = LevelHead2(
+          "3",
+          level3(),LIGHT2,
+          mov: moves,
+        );
+      }
     });
+
   }
 
   void test2() {
     setState(() {
-            if(moves!=0){
-moves-=1;
-v = LevelHead2(
-  "3",
-  level3(),
-  mov: moves,
-);
-}
+
       if (sat2 == 1) {
         sat2 = 0;
         a2 = Bus(
@@ -258,7 +254,16 @@ v = LevelHead2(
         );
       }
       print("b1:{$c}");
+      if(moves!=0){
+        moves-=1;
+        v = LevelHead2(
+          "3",
+          level3(),LIGHT2,
+          mov: moves,
+        );
+      }
     });
+
   }
 
   Widget button1() {

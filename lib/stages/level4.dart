@@ -11,7 +11,7 @@ import '../classes/no_gate.dart';
 int moves = 2;
 LevelHead2 v = LevelHead2(
   "4",
-  level4(),
+  level4(),light,
   mov: moves,
 );
 or_gate OR1 = or_gate(height: 50, width: 50);
@@ -102,7 +102,7 @@ void set() {
   moves = 2;
   v = LevelHead2(
   "4",
-  level4(),
+  level4(),light,
   mov: moves,
 );
   sat1 = 0;
@@ -211,7 +211,7 @@ class _level4State extends State<level4> {
 moves-=1;
 v = LevelHead2(
   "4",
-  level4(),
+  level4(),light,
   mov: moves,
 );
 }
@@ -291,7 +291,7 @@ v = LevelHead2(
 moves-=1;
 v = LevelHead2(
   "4",
-  level4(),
+  level4(),light,
   mov: moves,
 );
 }
@@ -386,7 +386,7 @@ v = LevelHead2(
 moves-=1;
 v = LevelHead2(
   "4",
-  level4(),
+  level4(),light,
   mov: moves,
 );
 }
@@ -477,7 +477,7 @@ v = LevelHead2(
 moves-=1;
 v = LevelHead2(
   "4",
-  level4(),
+  level4(),light,
   mov: moves,
 );
 }

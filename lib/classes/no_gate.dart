@@ -1,6 +1,8 @@
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 
+import '../main.dart';
+
 
 class no_gate extends StatefulWidget {
   late var path;
@@ -15,12 +17,22 @@ class no_gate extends StatefulWidget {
     path = ValueNotifier('');
   }
   int activation(int x) {
-    if (x == 1) {
-      path.value = 'assets/images/gates/no/1.png';
-      return 0;
-    } else {
-      path.value = 'assets/images/gates/no/2.png';
-      return 1;
+    if(ind==0) {
+      if (x == 1) {
+        path.value = 'assets/images/gates/no/1.png';
+        return 0;
+      } else {
+        path.value = 'assets/images/gates/no/2.png';
+        return 1;
+      }
+    }else{
+      if (x == 1) {
+        path.value = 'assets/images/gates/no/1copy.png';
+        return 0;
+      } else {
+        path.value = 'assets/images/gates/no/2copy.png';
+        return 1;
+      }
     }
   }
 
@@ -41,6 +53,8 @@ class _no_gateState extends State<no_gate> {
   void didChangeDependencies() {
     precacheImage(AssetImage("assets/images/gates/no/1.png"), context);
     precacheImage(AssetImage("assets/images/gates/no/2.png"), context);
+    precacheImage(AssetImage("assets/images/gates/no/1copy.png"), context);
+    precacheImage(AssetImage("assets/images/gates/no/2copy.png"), context);
 
     super.didChangeDependencies();
   }

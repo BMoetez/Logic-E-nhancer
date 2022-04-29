@@ -58,8 +58,8 @@ class _creditsState extends State<credits> {
                   Overlay.of(context)?.insert(_getEntry1(context));
                 },
                 textColor:  Colors.black,
-                color:  const Color(0xFFa0b6f7),
-                hoverColor: const Color(0xFFf2f261),
+                color: Color(colors[ind]),
+                hoverColor: Color(colors[ind+1]),
 
                 padding: const EdgeInsets.fromLTRB(20, 20, 20, 30),
                 child:  Row(mainAxisAlignment: MainAxisAlignment.center,
@@ -80,8 +80,8 @@ class _creditsState extends State<credits> {
                   Overlay.of(context)?.insert(_getEntry(context));
                 },
                 textColor: Colors.black,
-                color: const Color(0xFFa0b6f7),
-                hoverColor: const Color(0xFFf2f261),
+                color: Color(colors[ind]),
+                hoverColor: Color(colors[ind+1]),
 
                 child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [
 
@@ -101,8 +101,8 @@ class _creditsState extends State<credits> {
 
                 },
                 textColor: Colors.black,
-                color: const Color(0xFFa0b6f7),
-                hoverColor: const Color(0xFFf2f261),
+                color: Color(colors[ind]),
+                hoverColor: Color(colors[ind+1]),
 
                 child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [
 
@@ -120,8 +120,8 @@ class _creditsState extends State<credits> {
                   Overlay.of(context)?.insert(_getEntry3(context));
                    },
                 textColor: Colors.black,
-                color: const Color(0xFFa0b6f7),
-                hoverColor: const Color(0xFFf2f261),
+                color: Color(colors[ind]),
+                hoverColor: Color(colors[ind+1]),
 
                 child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [
 

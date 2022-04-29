@@ -12,7 +12,7 @@ int over = 1;
 int moves = 4;
 LevelHead2 v = LevelHead2(
   "10",
-  level10(),
+  level10(),light,
   mov: moves,
 );
 or_gate or1 = or_gate(height: 50, width: 50);
@@ -139,7 +139,7 @@ LED light = LED(
 );
 void set() {
   moves = 4;
-   v = LevelHead2("10", level10(),mov: moves,);
+   v = LevelHead2("10", level10(),light,mov: moves,);
   sat1 = 1;
   sat2 = 1;
   sat3 = 0;
@@ -282,10 +282,7 @@ class _level10State extends State<level10> {
 
   void test1() {
     setState(() {
-      if(moves!=0){
-moves-=1;
- v = LevelHead2("10", level10(),mov: moves,);
-}
+
       if (sat1 == 1) {
         sat1 = 0;
         a1 = Bus(
@@ -370,15 +367,16 @@ moves-=1;
           y: 10,
         );
       }
+      if(moves!=0){
+        moves-=1;
+        v = LevelHead2("10", level10(),light,mov: moves,);
+      }
     });
   }
 
   void test2() {
     setState(() {
-            if(moves!=0){
-moves-=1;
- v = LevelHead2("10", level10(),mov: moves,);
-}
+
       if (sat2 == 1) {
         sat2 = 0;
         a2 = Bus(
@@ -463,15 +461,16 @@ moves-=1;
           y: 10,
         );
       }
+      if(moves!=0){
+        moves-=1;
+        v = LevelHead2("10", level10(),light,mov: moves,);
+      }
     });
   }
 
   void test3() {
     setState(() {
-            if(moves!=0){
-moves-=1;
- v = LevelHead2("10", level10(),mov: moves,);
-}
+
       if (sat3 == 1) {
         sat3 = 0;
         a3 = Bus(
@@ -574,15 +573,16 @@ moves-=1;
           y: 10,
         );
       }
+      if(moves!=0){
+        moves-=1;
+        v = LevelHead2("10", level10(),light,mov: moves,);
+      }
     });
   }
 
   void test4() {
     setState(() {
-            if(moves!=0){
-moves-=1;
- v = LevelHead2("10", level10(),mov: moves,);
-}
+
       if (sat4 == 1) {
         sat4 = 0;
         a4 = Bus(
@@ -685,15 +685,16 @@ moves-=1;
           y: 10,
         );
       }
+      if(moves!=0){
+        moves-=1;
+        v = LevelHead2("10", level10(),light,mov: moves,);
+      }
     });
   }
 
   void test5() {
     setState(() {
-            if(moves!=0){
-moves-=1;
- v = LevelHead2("10", level10(),mov: moves,);
-}
+
       if (sat5 == 1) {
         sat5 = 0;
         a5 = Bus(
@@ -776,15 +777,16 @@ moves-=1;
           y: 10,
         );
       }
+      if(moves!=0){
+        moves-=1;
+        v = LevelHead2("10", level10(),light,mov: moves,);
+      }
     });
   }
 
   void test6() {
     setState(() {
-            if(moves!=0){
-moves-=1;
- v = LevelHead2("10", level10(),mov: moves,);
-}
+
       if (sat6 == 1) {
         sat6 = 0;
         a7 = Bus(
@@ -850,6 +852,10 @@ moves-=1;
           x: a13.activate,
           y: 10,
         );
+      }
+      if(moves!=0){
+        moves-=1;
+        v = LevelHead2("10", level10(),light,mov: moves,);
       }
     });
   }
