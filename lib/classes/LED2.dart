@@ -22,16 +22,7 @@ import 'package:logic_enhancer/stages/level9.dart';
 import 'dart:ui' as ui;
 import '../main.dart';
 import 'package:lottie/lottie.dart';
-import 'dart:math';
 
-import 'endless/endlesslevel1.dart';
-import 'endless/endlesslevel2.dart';
-import 'endless/endlesslevel3.dart';
-import 'endless/endlesslevel4.dart';
-import 'endless/endlesslevel5.dart';
-
-var random = Random();
-var list=[endlesslevel1(),endlesslevel2(),endlesslevel3(),endlesslevel4(),endlesslevel5()];
 var levels = [
   level1(),
   level2(),
@@ -123,7 +114,9 @@ class _LEDState extends State<LED> with SingleTickerProviderStateMixin {
     entry = OverlayEntry(
       opaque: false,
       maintainState: true,
-      builder: (_) => Positioned(
+      builder: (_) => GestureDetector(onTap: () {
+        
+      },behavior: HitTestBehavior.translucent,child:Positioned(
         left: 0,
         bottom: 0,
         width: MediaQuery.of(context).size.width,
@@ -258,7 +251,7 @@ class _LEDState extends State<LED> with SingleTickerProviderStateMixin {
           ),
         ),
       ),
-    );
+    ));
     return entry;
   }
 }

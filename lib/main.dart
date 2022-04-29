@@ -2,7 +2,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:logic_enhancer/pages/credit.dart';
 import 'package:logic_enhancer/pages/option_page.dart';
-import 'package:logic_enhancer/stages/level18.dart';
 import 'pages/play_page (1).dart';
 
 void main() {

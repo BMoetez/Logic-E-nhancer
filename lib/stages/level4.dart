@@ -5,7 +5,6 @@ import '../classes/LED2.dart';
 import '../classes/bus.dart';
 import '../classes/level_head2.dart';
 import '../classes/or_gate.dart';
-import '../classes/level_head.dart';
 import '../classes/no_gate.dart';
 
 int moves = 2;
@@ -547,43 +546,43 @@ v = LevelHead2(
   }
 
   Widget button1() {
-    return FlatButton(
+    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
         onPressed: test1,
         child: Image.asset(
           buttons[sat1],
           width: 100,
           height: 100,
-        ));
+        )),);
   }
 
   Widget button2() {
-    return FlatButton(
+    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
         onPressed: test2,
         child: Image.asset(
           buttons[sat2],
           width: 100,
           height: 100,
-        ));
+        )),);
   }
 
   Widget button3() {
-    return FlatButton(
+    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
         onPressed: test3,
         child: Image.asset(
           buttons[sat3],
           width: 100,
           height: 100,
-        ));
+        )),);
   }
 
   Widget button4() {
-    return FlatButton(
+    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
         onPressed: test4,
         child: Image.asset(
           buttons[sat4],
           width: 100,
           height: 100,
-        ));
+        )),);
   }
 
   @override
@@ -596,7 +595,7 @@ v = LevelHead2(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            v,
+            IgnorePointer(ignoring: light.x==1,child: v,),
             light,
             SizedBox(
               height: 50,

@@ -1,12 +1,10 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_literals_to_create_immutables
+import 'dart:async';
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
-import 'package:logic_enhancer/pages/lessons.dart';
 import '../main.dart';
-import 'levels.dart';
-import 'dart:ui' as ui;
-import 'dart:ui' as ui;
 
+bool hovering = false;
 
 // ignore: camel_case_types
 class credits extends StatefulWidget {
@@ -15,6 +13,25 @@ class credits extends StatefulWidget {
 }
 
 class _creditsState extends State<credits> {
+int colorindex=0;
+late Timer timer;
+@override
+  void initState() {
+    super.initState();
+    timer = Timer.periodic(Duration(seconds: 1), (timer) {
+      setState(() {
+        colorindex++;
+        if (colorindex>15)colorindex=0;
+      });
+     });
+  }
+
+ @override
+  void dispose() {
+    timer.cancel();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,17 +44,21 @@ class _creditsState extends State<credits> {
             Align(
               alignment: Alignment.topLeft,
               child: Material(
-                child: Padding(padding: EdgeInsets.fromLTRB(5, 10, 10, 10), child:IconButton(
-                    onPressed:(){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage())
-                      );
-                    },
-                    icon: Icon(
-
-                      Icons.arrow_back_ios_sharp,
-                      size: 35,
-                      color: Colors.white,
-                    )) ,) ,
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(5, 10, 10, 10),
+                  child: IconButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HomePage()));
+                      },
+                      icon: Icon(
+                        Icons.arrow_back_ios_sharp,
+                        size: 35,
+                        color: Colors.white,
+                      )),
+                ),
                 color: Color.fromRGBO(231, 218, 199, 0),
               ),
             ),
@@ -49,288 +70,261 @@ class _creditsState extends State<credits> {
                   fontSize: 80,
                   decoration: TextDecoration.none,
                   fontFamily: 'Digital7'),
-            ),SizedBox(height: 180),
+            ),
+            SizedBox(height: 180),
             SizedBox(
               width: 500,
               height: 70,
-              child: RaisedButton(
-                onPressed: () {
-                  Overlay.of(context)?.insert(_getEntry1(context));
-                },
-                textColor:  Colors.black,
-                color:  const Color(0xFFa0b6f7),
-                hoverColor: const Color(0xFFf2f261),
-
-                padding: const EdgeInsets.fromLTRB(20, 20, 20, 30),
-                child:  Row(mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(width: 20),
-                    const Text(
-                  "FIRAS NECIB",
-                  style: TextStyle(fontSize: 55),
-                )],) ,
+              child: IgnorePointer(
+                ignoring: hovering,
+                child: TextButton(onPressed:() {
+                    Overlay.of(context)?.insert(_getEntry2(context));
+                    setState(() {
+                      hovering = !hovering;
+                    });
+                  } , child: Text("MOETEZ BOUHLEL",style: TextStyle(fontSize: 55,color:(colorindex==1 || colorindex==3)? Colors.blue
+                                : Colors.white ),)),
               ),
             ),
             SizedBox(height: 25),
             SizedBox(
               width: 500,
               height: 70,
-              child: RaisedButton(
-                onPressed: () {
-                  Overlay.of(context)?.insert(_getEntry(context));
-                },
-                textColor: Colors.black,
-                color: const Color(0xFFa0b6f7),
-                hoverColor: const Color(0xFFf2f261),
-
-                child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [
-
-                  SizedBox(width: 20),
-                  const Text(
-                  "WASSIM CHOUCHEN",
-                  style: TextStyle(fontSize: 55),
-                )],) ,
-              ),) ,
+              child: IgnorePointer(
+                ignoring: hovering,
+                child: TextButton(onPressed:() {
+                    Overlay.of(context)?.insert(_getEntry(context));
+                    setState(() {
+                      hovering = !hovering;
+                    });
+                  } , child: Text("WASSIM CHOUCHEN",style: TextStyle(fontSize: 55,color:(colorindex==5 || colorindex==7)? Colors.blue
+                                : Colors.white ),)),
+              ),
+            ),
             SizedBox(height: 25),
             SizedBox(
               width: 500,
               height: 70,
-              child: RaisedButton(
-                onPressed: () {
-                  Overlay.of(context)?.insert(_getEntry2(context));
-
-                },
-                textColor: Colors.black,
-                color: const Color(0xFFa0b6f7),
-                hoverColor: const Color(0xFFf2f261),
-
-                child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [
-
-                  SizedBox(width: 20),
-                  const Text(
-                  "MOETEZ BOUHLEL",
-                  style: TextStyle(fontSize: 55),
-                )],) ,
-              ),) ,SizedBox(height: 25),
+              child: IgnorePointer(
+                ignoring: hovering,
+                child: TextButton(onPressed:() {
+                    Overlay.of(context)?.insert(_getEntry1(context));
+                    setState(() {
+                      hovering = !hovering;
+                    });
+                  } , child: Text("FIRAS NECIB",style: TextStyle(fontSize: 55,color:(colorindex==9 || colorindex==11)? Colors.blue
+                                : Colors.white ),)),
+              ),
+            ),
+            SizedBox(height: 25),
             SizedBox(
               width: 500,
               height: 70,
-              child: RaisedButton(
-                onPressed: () {
-                  Overlay.of(context)?.insert(_getEntry3(context));
-                   },
-                textColor: Colors.black,
-                color: const Color(0xFFa0b6f7),
-                hoverColor: const Color(0xFFf2f261),
-
-                child:  Row(mainAxisAlignment: MainAxisAlignment.center,children: [
-
-                  SizedBox(width: 20),
-                  const Text(
-                  "MOHAMED SOUID",
-                  style: TextStyle(fontSize: 55),
-                )],) ,
-              ),) ,
+              child: IgnorePointer(
+                ignoring: hovering,
+                child: TextButton(onPressed:() {
+                    Overlay.of(context)?.insert(_getEntry3(context));
+                    setState(() {
+                      hovering = !hovering;
+                    });
+                  } , child: Text("MOHAMED SOUID",style: TextStyle(fontSize: 55,color:(colorindex==13 || colorindex==15)? Colors.blue
+                                : Colors.white ),)),
+              ),
+            ),
           ],
-        )
-    );
+        ));
   }
 
   OverlayEntry _getEntry(context) {
     OverlayEntry entry = OverlayEntry(builder: (_) => Container());
 
     entry = OverlayEntry(
-      opaque: false,
-      maintainState: true,
-      builder: (_) => Positioned(
-        left: 0,
-        bottom: 0,
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-        child: BackdropFilter(
-          filter: ui.ImageFilter.blur(
-            sigmaX: 2,
-            sigmaY: 2,
-          ),
-          child: Material(
-            type: MaterialType.transparency,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Container(
-                    width: 280,
-                    height: 200,
-                    //color: Colors.black,
+        opaque: false,
+        maintainState: true,
+        builder: (_) => GestureDetector(
+              onTap: () {
+                entry.remove();
+                setState(() {
+                  hovering = !hovering;
+                });
+              },
+              behavior: HitTestBehavior.translucent,
+              child: Positioned(
+                left: 0,
+                bottom: 0,
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                child: BackdropFilter(
+                  filter: ui.ImageFilter.blur(
+                    sigmaX: 2,
+                    sigmaY: 2,
+                  ),
+                  child: Material(
+                    type: MaterialType.transparency,
                     child: Column(
-                      children: [
-                        Image.asset(
-                          "../../assets/images/wassim.jpg.jpeg",
-                          scale: 0.8,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Container(
+                          width: 280,
+                          height: 200,
+                          //color: Colors.black,
+                          child: Image.asset(
+                            "assets/images/credit/wassim.jpg",
+                            scale: 0.8,
+                          ),
                         ),
-                        TextButton(
-                            onPressed: () {
-                              entry.remove();
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => credits()));
-                            },
-                            child: Text(
-                              "X",
-                              style: TextStyle(fontSize: 20),
-                            ))
-
                       ],
-                    )),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
+                    ),
+                  ),
+                ),
+              ),
+            ));
     return entry;
   }
+
   OverlayEntry _getEntry1(context) {
     OverlayEntry entry1 = OverlayEntry(builder: (_) => Container());
 
     entry1 = OverlayEntry(
-      opaque: false,
-      maintainState: true,
-      builder: (_) => Positioned(
-        left: 0,
-        bottom: 0,
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-        child: BackdropFilter(
-          filter: ui.ImageFilter.blur(
-            sigmaX: 2,
-            sigmaY: 2,
-          ),
-          child: Material(
-            type: MaterialType.transparency,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Container(
-                    width: 350,
-                    height: 600,
-                    //color: Colors.black,
+        opaque: false,
+        maintainState: true,
+        builder: (_) => GestureDetector(
+              onTap: () {
+                entry1.remove();
+                setState(() {
+                  // ignore: unnecessary_statements
+                  hovering = !hovering;
+                });
+              },
+              behavior: HitTestBehavior.translucent,
+              child: Positioned(
+                left: 0,
+                bottom: 0,
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                child: BackdropFilter(
+                  filter: ui.ImageFilter.blur(
+                    sigmaX: 2,
+                    sigmaY: 2,
+                  ),
+                  child: Material(
+                    type: MaterialType.transparency,
                     child: Column(
-                      children: [
-                        Image.asset(
-                          "../../assets/images/firas.jpg",
-                          scale: 0.8,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Container(
+                          width: 350,
+                          height: 600,
+                          //color: Colors.black,
+                          child: Image.asset(
+                            "assets/images/credit/firas.jpg",
+                            scale: 0.8,
+                          ),
                         ),
-                        TextButton(
-                            onPressed: () {
-                              entry1.remove();
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => credits()));
-                            },
-                            child: Text(
-                              "X",
-                              style: TextStyle(fontSize: 20),
-                            )),
-
                       ],
-                    )),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
+                    ),
+                  ),
+                ),
+              ),
+            ));
     return entry1;
   }
+
   OverlayEntry _getEntry3(context) {
     OverlayEntry entry3 = OverlayEntry(builder: (_) => Container());
 
     entry3 = OverlayEntry(
-      opaque: false,
-      maintainState: true,
-      builder: (_) => Positioned(
-        left: 0,
-        bottom: 0,
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-        child: BackdropFilter(
-          filter: ui.ImageFilter.blur(
-            sigmaX: 2,
-            sigmaY: 2,
-          ),
-          child: Material(
-            type: MaterialType.transparency,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Container(
-                    width: 220,
-                    height: 320,
-                    //color: Colors.black,
+        opaque: false,
+        maintainState: true,
+        builder: (_) => GestureDetector(
+              onTap: () {
+                entry3.remove();
+                setState(() {
+                  hovering = !hovering;
+                });
+              },
+              behavior: HitTestBehavior.translucent,
+              child: Positioned(
+                left: 0,
+                bottom: 0,
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                child: BackdropFilter(
+                  filter: ui.ImageFilter.blur(
+                    sigmaX: 2,
+                    sigmaY: 2,
+                  ),
+                  child: Material(
+                    type: MaterialType.transparency,
                     child: Column(
-                      children: [
-                        Image.asset(
-                          "../../assets/images/wassim.jpg.jpeg",
-                          scale: 0.8,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Container(
+                          width: 220,
+                          height: 320,
+                          //color: Colors.black,
+                          child: Image.asset(
+                            "assets/images/credit/souid.jpg",
+                            scale: 0.8,
+                          ),
                         ),
-
-
                       ],
-                    )),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
+                    ),
+                  ),
+                ),
+              ),
+            ));
     return entry3;
   }
+
   OverlayEntry _getEntry2(context) {
     OverlayEntry entry2 = OverlayEntry(builder: (_) => Container());
 
     entry2 = OverlayEntry(
-      opaque: false,
-      maintainState: true,
-      builder: (_) => Positioned(
-        left: 0,
-        bottom: 0,
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-        child: BackdropFilter(
-          filter: ui.ImageFilter.blur(
-            sigmaX: 2,
-            sigmaY: 2,
-          ),
-          child: Material(
-            type: MaterialType.transparency,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Container(
-                    width: 220,
-                    height: 320,
-                    //color: Colors.black,
+        opaque: false,
+        maintainState: true,
+        builder: (_) => GestureDetector(
+              onTap: () {
+                entry2.remove();
+                setState(() {
+                  hovering = !hovering;
+                });
+              },
+              behavior: HitTestBehavior.translucent,
+              child: Positioned(
+                left: 0,
+                bottom: 0,
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                child: BackdropFilter(
+                  filter: ui.ImageFilter.blur(
+                    sigmaX: 2,
+                    sigmaY: 2,
+                  ),
+                  child: Material(
+                    type: MaterialType.transparency,
                     child: Column(
-                      children: [
-                        Image.asset(
-                          "../../assets/images/wassim.jpg.jpeg",
-                          scale: 0.8,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Container(
+                          width: 220,
+                          height: 320,
+                          //color: Colors.black,
+                          child: Image.asset(
+                            "assets/images/credit/moetez.jpg",
+                            scale: 0.8,
+                          ),
                         ),
-
                       ],
-                    )),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
+                    ),
+                  ),
+                ),
+              ),
+            ));
     return entry2;
   }
 }

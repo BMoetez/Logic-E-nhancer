@@ -20,6 +20,7 @@ import 'package:logic_enhancer/stages/level9.dart';
 import 'play_page (1).dart';
 import 'dart:ui' as ui;
 
+bool hovering = false;
 void main() {
   runApp(const MyApp());
 }
@@ -59,18 +60,21 @@ class _HomePageState extends State<Levels> {
               Align(
                 alignment: Alignment.topLeft,
                 child: Material(
-                  child: Padding(padding: EdgeInsets.fromLTRB(5, 10, 10, 10),child:IconButton(
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => playPage()));
-                      },
-                      icon: Icon(
-                        Icons.arrow_back_ios_sharp,
-                        size: 35,
-                        color: Colors.white,
-                      )) ,) ,
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(5, 10, 10, 10),
+                    child: IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => playPage()));
+                        },
+                        icon: Icon(
+                          Icons.arrow_back_ios_sharp,
+                          size: 35,
+                          color: Colors.white,
+                        )),
+                  ),
                   color: Color.fromRGBO(231, 218, 199, 0),
                 ),
               ),
@@ -101,12 +105,15 @@ class _HomePageState extends State<Levels> {
                           color: Colors.white,
                           size: 70.0,
                         ),
-                        RaisedButton(
+                        IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
+                              setState(() {
+                                hovering = !hovering;
+                              });
                               Overlay.of(context)?.insert(_getEntry(context));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor:const Color(0xFFa0b6f7) ,
+                            hoverColor: const Color(0xFFa0b6f7),
                             child: Text(
                               '1',
                               style: TextStyle(
@@ -114,14 +121,14 @@ class _HomePageState extends State<Levels> {
                                 color: Colors.black,
                                 fontSize: 80.0,
                               ),
-                            )),
+                            )),),
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
                           color: Colors.white,
                           size: 80.0,
                         ),
-                        RaisedButton(
+                        IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
                               Navigator.push(
                                   context,
@@ -129,7 +136,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level2()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor:const Color(0xFFa0b6f7) ,
+                            hoverColor: const Color(0xFFa0b6f7),
                             child: Text(
                               '2',
                               style: TextStyle(
@@ -137,14 +144,14 @@ class _HomePageState extends State<Levels> {
                                 color: Colors.black,
                                 fontSize: 80.0,
                               ),
-                            )),
+                            )),),
                         SizedBox(width: 100.0),
                         Icon(
                           Icons.lock_outline,
                           color: Colors.white,
                           size: 80.0,
                         ),
-                        RaisedButton(
+                        IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
                               Navigator.push(
                                   context,
@@ -152,7 +159,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level3()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor:const Color(0xFFa0b6f7) ,
+                            hoverColor: const Color(0xFFa0b6f7),
                             child: Text(
                               '3',
                               style: TextStyle(
@@ -160,14 +167,14 @@ class _HomePageState extends State<Levels> {
                                 color: Colors.black,
                                 fontSize: 80.0,
                               ),
-                            )),
+                            )),),
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
                           color: Colors.white,
                           size: 80.0,
                         ),
-                        RaisedButton(
+                        IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
                               Navigator.push(
                                   context,
@@ -175,7 +182,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level4()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor:const Color(0xFFa0b6f7) ,
+                            hoverColor: const Color(0xFFa0b6f7),
                             child: Text(
                               '4',
                               style: TextStyle(
@@ -183,14 +190,14 @@ class _HomePageState extends State<Levels> {
                                 color: Colors.black,
                                 fontSize: 80.0,
                               ),
-                            )),
+                            )),),
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
                           color: Colors.white,
                           size: 80.0,
                         ),
-                        RaisedButton(
+                        IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
                               Navigator.push(
                                   context,
@@ -198,7 +205,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level5()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor:const Color(0xFFa0b6f7) ,
+                            hoverColor: const Color(0xFFa0b6f7),
                             child: Text(
                               '5',
                               style: TextStyle(
@@ -206,14 +213,14 @@ class _HomePageState extends State<Levels> {
                                 color: Colors.black,
                                 fontSize: 80.0,
                               ),
-                            )),
+                            )),),
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
                           color: Colors.white,
                           size: 80.0,
                         ),
-                        RaisedButton(
+                       IgnorePointer(ignoring: hovering,child:  RaisedButton(
                             onPressed: () {
                               Navigator.push(
                                   context,
@@ -221,7 +228,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level6()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor:const Color(0xFFa0b6f7) ,
+                            hoverColor: const Color(0xFFa0b6f7),
                             child: Text(
                               '6',
                               style: TextStyle(
@@ -229,7 +236,7 @@ class _HomePageState extends State<Levels> {
                                 color: Colors.black,
                                 fontSize: 80.0,
                               ),
-                            )),
+                            )),),
                       ],
                     ),
                   ],
@@ -249,7 +256,7 @@ class _HomePageState extends State<Levels> {
                           color: Colors.white,
                           size: 80.0,
                         ),
-                        RaisedButton(
+                        IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
                               Navigator.push(
                                   context,
@@ -257,7 +264,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level7()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor:const Color(0xFFa0b6f7) ,
+                            hoverColor: const Color(0xFFa0b6f7),
                             child: Text(
                               '7',
                               style: TextStyle(
@@ -265,14 +272,14 @@ class _HomePageState extends State<Levels> {
                                 color: Colors.black,
                                 fontSize: 80.0,
                               ),
-                            )),
+                            )),),
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
                           color: Colors.white,
                           size: 80.0,
                         ),
-                        RaisedButton(
+                        IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
                               Navigator.push(
                                   context,
@@ -280,7 +287,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level8()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor:const Color(0xFFa0b6f7) ,
+                            hoverColor: const Color(0xFFa0b6f7),
                             child: Text(
                               '8',
                               style: TextStyle(
@@ -288,14 +295,14 @@ class _HomePageState extends State<Levels> {
                                 color: Colors.black,
                                 fontSize: 80.0,
                               ),
-                            )),
+                            )),),
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
                           color: Colors.white,
                           size: 80.0,
                         ),
-                        RaisedButton(
+                       IgnorePointer(ignoring: hovering,child:  RaisedButton(
                             onPressed: () {
                               Navigator.push(
                                   context,
@@ -303,7 +310,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level9()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor:const Color(0xFFa0b6f7) ,
+                            hoverColor: const Color(0xFFa0b6f7),
                             child: Text(
                               '9',
                               style: TextStyle(
@@ -311,14 +318,14 @@ class _HomePageState extends State<Levels> {
                                 color: Colors.black,
                                 fontSize: 80.0,
                               ),
-                            )),
+                            )),),
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
                           color: Colors.white,
                           size: 80.0,
                         ),
-                        RaisedButton(
+                        IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
                               Navigator.push(
                                   context,
@@ -326,7 +333,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level10()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor:const Color(0xFFa0b6f7) ,
+                            hoverColor: const Color(0xFFa0b6f7),
                             child: Text(
                               '10',
                               style: TextStyle(
@@ -334,14 +341,14 @@ class _HomePageState extends State<Levels> {
                                 color: Colors.black,
                                 fontSize: 80.0,
                               ),
-                            )),
+                            )),),
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
                           color: Colors.white,
                           size: 80.0,
                         ),
-                        RaisedButton(
+                        IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
                               Navigator.push(
                                   context,
@@ -349,7 +356,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level11()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor:const Color(0xFFa0b6f7) ,
+                            hoverColor: const Color(0xFFa0b6f7),
                             child: Text(
                               '11',
                               style: TextStyle(
@@ -357,14 +364,14 @@ class _HomePageState extends State<Levels> {
                                 color: Colors.black,
                                 fontSize: 80.0,
                               ),
-                            )),
+                            )),),
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
                           color: Colors.white,
                           size: 80.0,
                         ),
-                        RaisedButton(
+                        IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
                               Navigator.push(
                                   context,
@@ -372,7 +379,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level12()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor:const Color(0xFFa0b6f7) ,
+                            hoverColor: const Color(0xFFa0b6f7),
                             child: Text(
                               '12',
                               style: TextStyle(
@@ -380,7 +387,7 @@ class _HomePageState extends State<Levels> {
                                 color: Colors.black,
                                 fontSize: 80.0,
                               ),
-                            )),
+                            )),),
                       ],
                     ),
                   ],
@@ -400,7 +407,7 @@ class _HomePageState extends State<Levels> {
                           color: Colors.white,
                           size: 80.0,
                         ),
-                        RaisedButton(
+                        IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
                               Navigator.push(
                                   context,
@@ -408,7 +415,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level13()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor:const Color(0xFFa0b6f7) ,
+                            hoverColor: const Color(0xFFa0b6f7),
                             child: Text(
                               '13',
                               style: TextStyle(
@@ -416,14 +423,14 @@ class _HomePageState extends State<Levels> {
                                 color: Colors.black,
                                 fontSize: 80.0,
                               ),
-                            )),
+                            )),),
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
                           color: Colors.white,
                           size: 80.0,
                         ),
-                        RaisedButton(
+                        IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
                               Navigator.push(
                                   context,
@@ -431,7 +438,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level14()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor:const Color(0xFFa0b6f7) ,
+                            hoverColor: const Color(0xFFa0b6f7),
                             child: Text(
                               '14',
                               style: TextStyle(
@@ -439,14 +446,14 @@ class _HomePageState extends State<Levels> {
                                 color: Colors.black,
                                 fontSize: 80.0,
                               ),
-                            )),
+                            )),),
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
                           color: Colors.white,
                           size: 80.0,
                         ),
-                        RaisedButton(
+                        IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
                               Navigator.push(
                                   context,
@@ -454,7 +461,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level15()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor:const Color(0xFFa0b6f7) ,
+                            hoverColor: const Color(0xFFa0b6f7),
                             child: Text(
                               '15',
                               style: TextStyle(
@@ -462,14 +469,14 @@ class _HomePageState extends State<Levels> {
                                 color: Colors.black,
                                 fontSize: 80.0,
                               ),
-                            )),
+                            )),),
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
                           color: Colors.white,
                           size: 80.0,
                         ),
-                        RaisedButton(
+                        IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
                               Navigator.push(
                                   context,
@@ -477,7 +484,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level16()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor:const Color(0xFFa0b6f7) ,
+                            hoverColor: const Color(0xFFa0b6f7),
                             child: Text(
                               '16',
                               style: TextStyle(
@@ -485,14 +492,14 @@ class _HomePageState extends State<Levels> {
                                 color: Colors.black,
                                 fontSize: 80.0,
                               ),
-                            )),
+                            )),),
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
                           color: Colors.white,
                           size: 80.0,
                         ),
-                        RaisedButton(
+                        IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
                               Navigator.push(
                                   context,
@@ -500,7 +507,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level17()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor:const Color(0xFFa0b6f7) ,
+                            hoverColor: const Color(0xFFa0b6f7),
                             child: Text(
                               '17',
                               style: TextStyle(
@@ -508,14 +515,14 @@ class _HomePageState extends State<Levels> {
                                 color: Colors.black,
                                 fontSize: 80.0,
                               ),
-                            )),
+                            )),),
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
                           color: Colors.white,
                           size: 80.0,
                         ),
-                        RaisedButton(
+                        IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
                               Navigator.push(
                                   context,
@@ -523,7 +530,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level18()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor:const Color(0xFFa0b6f7) ,
+                            hoverColor: const Color(0xFFa0b6f7),
                             child: Text(
                               '18',
                               style: TextStyle(
@@ -531,7 +538,7 @@ class _HomePageState extends State<Levels> {
                                 color: Colors.black,
                                 fontSize: 80.0,
                               ),
-                            )),
+                            )),),
                       ],
                     ),
                   ],
@@ -544,56 +551,71 @@ class _HomePageState extends State<Levels> {
     OverlayEntry entry = OverlayEntry(builder: (_) => Container());
 
     entry = OverlayEntry(
-      opaque: false,
-      maintainState: true,
-      builder: (_) => Positioned(
-        left: 0,
-        bottom: 0,
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-        child: BackdropFilter(
-          filter: ui.ImageFilter.blur(
-            sigmaX: 2,
-            sigmaY: 2,
-          ),
-          child: Material(
-            type: MaterialType.transparency,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Container(
-                    width: 700,
-                    height: 520,
-                    color: Colors.black,
+        opaque: false,
+        maintainState: true,
+        builder: (_) => GestureDetector(
+              onTap: () {},
+              behavior: HitTestBehavior.translucent,
+              child: Positioned(
+                left: 0,
+                bottom: 0,
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                child: BackdropFilter(
+                  filter: ui.ImageFilter.blur(
+                    sigmaX: 2,
+                    sigmaY: 2,
+                  ),
+                  child: Material(
+                    type: MaterialType.transparency,
                     child: Column(
-                      children: [
-                        Image.asset('../../assets/images/how_to_play.png'),
-                        Padding(
-                          padding: EdgeInsets.all(10),
-                          child: TextButton(
-                              onPressed: () {
-                                entry.remove();
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => level1()));
-                              },
-                            child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [Text("Play",style: TextStyle(fontSize: 50),),Icon(Icons.play_arrow,size: 60,)]),
-                              ),
-
-                          )
-
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Container(
+                            width: 700,
+                            height: 520,
+                            color: Colors.black,
+                            child: Column(
+                              children: [
+                                Image.asset(
+                                    '../../assets/images/how_to_play.png'),
+                                Padding(
+                                  padding: EdgeInsets.all(10),
+                                  child: TextButton(
+                                    onPressed: () {
+                                      setState(() {
+                                        hovering = !hovering;
+                                      });
+                                      entry.remove();
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => level1()));
+                                    },
+                                    child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            "Play",
+                                            style: TextStyle(fontSize: 50),
+                                          ),
+                                          Icon(
+                                            Icons.play_arrow,
+                                            size: 60,
+                                          )
+                                        ]),
+                                  ),
+                                )
+                              ],
+                            )),
                       ],
-                    )),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
+                    ),
+                  ),
+                ),
+              ),
+            ));
     return entry;
   }
 }

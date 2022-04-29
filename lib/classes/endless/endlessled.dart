@@ -5,7 +5,6 @@ import 'dart:ui' as ui;
 import '/main.dart';
 import 'package:lottie/lottie.dart';
 import 'dart:math';
-
 import '../endless/endlesslevel1.dart';
 import '../endless/endlesslevel2.dart';
 import '../endless/endlesslevel3.dart';
@@ -87,7 +86,9 @@ class _endlessledState extends State<endlessled>
     entry = OverlayEntry(
       opaque: false,
       maintainState: true,
-      builder: (_) => Positioned(
+      builder: (_) => GestureDetector(onTap: () {
+        
+      },behavior: HitTestBehavior.translucent,child: Positioned(
         left: 0,
         bottom: 0,
         width: MediaQuery.of(context).size.width,
@@ -217,7 +218,7 @@ class _endlessledState extends State<endlessled>
             ),
           ),
         ),
-      ),
+      ),)
     );
     return entry;
   }

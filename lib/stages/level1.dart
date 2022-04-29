@@ -125,13 +125,13 @@ class _level1State extends State<level1> with SingleTickerProviderStateMixin {
   }
 
   Widget button() {
-    return FlatButton(
+    return IgnorePointer(ignoring: (LIGHT2.x==1),child: FlatButton(
         onPressed: test,
         child: Image.asset(
           buttons[sat],
           width: 100,
           height: 100,
-        ));
+        )),);
   }
 
   @override
@@ -143,7 +143,7 @@ class _level1State extends State<level1> with SingleTickerProviderStateMixin {
                 fit: BoxFit.cover)),
         child: Column(
           children: [
-            v,
+            IgnorePointer(ignoring: LIGHT2.x==1,child: v,),
             LIGHT2,
             Spacer(),
             a2.show(),

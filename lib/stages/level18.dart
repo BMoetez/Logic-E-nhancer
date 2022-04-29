@@ -901,40 +901,65 @@ v = LevelHead2("18", level18(),mov: moves,);
   }
 
   Widget button1() {
-    return FlatButton(
+    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
         onPressed: test1,
-        child: Image.asset(buttons[sat1], height: 60, width: 60));
+        child: Image.asset(
+          buttons[sat1],
+          width: 70,
+          height: 60,
+        )),);
   }
 
   Widget button2() {
-    return FlatButton(
+    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
         onPressed: test2,
-        child: Image.asset(buttons[sat2], height: 60, width: 60));
+        child: Image.asset(
+          buttons[sat2],
+          width: 70,
+          height: 60,
+        )),);
   }
 
   Widget button3() {
-    return FlatButton(
+    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
         onPressed: test3,
-        child: Image.asset(buttons[sat3], height: 60, width: 60));
+        child: Image.asset(
+          buttons[sat3],
+          width: 70,
+          height: 60,
+        )),);
   }
 
   Widget button4() {
-    return FlatButton(
+    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
         onPressed: test4,
-        child: Image.asset(buttons[sat4], height: 60, width: 60));
+        child: Image.asset(
+          buttons[sat4],
+          width: 70,
+          height: 60,
+        )),);
   }
 
   Widget button5() {
-    return FlatButton(
+    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
         onPressed: test5,
-        child: Image.asset(buttons[sat5], height: 60, width: 60));
+        child: Image.asset(
+          buttons[sat5],
+          width: 70,
+          height: 60,
+        )),);
   }
 
   Widget button6() {
-    return FlatButton(
+    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
         onPressed: test6,
-        child: Image.asset(buttons[sat6], height: 60, width: 60));
+        child: Image.asset(
+          buttons[sat6],
+          width: 70,
+          height: 60,
+        )),);
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -946,7 +971,7 @@ v = LevelHead2("18", level18(),mov: moves,);
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            v,
+            IgnorePointer(ignoring: light.x==1,child: v,),
             light,
             a14.show(),
             SizedBox(

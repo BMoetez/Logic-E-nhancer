@@ -222,28 +222,27 @@ v = LevelHead2(
           y: 2,
         );
       }
-      print("b2:{$b}");
     });
   }
 
   Widget button1() {
-    return FlatButton(
+    return IgnorePointer(ignoring: LIGHT2.x==1,child: FlatButton(
         onPressed: test1,
         child: Image.asset(
           buttons[sat1],
           width: 100,
           height: 100,
-        ));
+        )),);
   }
 
   Widget button2() {
-    return FlatButton(
+    return IgnorePointer(ignoring: LIGHT2.x==1,child: FlatButton(
         onPressed: test2,
         child: Image.asset(
           buttons[sat2],
           width: 100,
           height: 100,
-        ));
+        )),);
   }
 
 
@@ -257,7 +256,7 @@ v = LevelHead2(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            v,
+            IgnorePointer(ignoring: LIGHT2.x==1,child: v,),
             SizedBox(
               height: 5,
             ),
@@ -295,7 +294,9 @@ v = LevelHead2(
     entry = OverlayEntry(
       opaque: false,
       maintainState: true,
-      builder: (_) => Positioned(
+      builder: (_) => GestureDetector(onTap: () {
+        
+      },behavior: HitTestBehavior.translucent,child:Positioned(
         left: 0,
         bottom: 0,
         width: MediaQuery.of(context).size.width,
@@ -335,7 +336,7 @@ v = LevelHead2(
             ),
           ),
         ),
-      ),
+      ),)
     );
     return entry;
   }

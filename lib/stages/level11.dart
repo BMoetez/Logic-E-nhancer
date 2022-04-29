@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:logic_enhancer/stages/level10.dart';
 import '../classes/LED2.dart';
 import '../classes/bus.dart';
 import '../classes/or_gate.dart';
@@ -850,39 +849,63 @@ v = LevelHead2("11", level11(),mov: moves,);
   }
 
   Widget button1() {
-    return FlatButton(
+    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
         onPressed: test1,
-        child: Image.asset(buttons[sat1], height: 70, width: 70));
+        child: Image.asset(
+          buttons[sat1],
+          width: 70,
+          height: 70,
+        )),);
   }
 
   Widget button2() {
-    return FlatButton(
+    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
         onPressed: test2,
-        child: Image.asset(buttons[sat2], height: 70, width: 70));
+        child: Image.asset(
+          buttons[sat2],
+          width: 70,
+          height: 70,
+        )),);
   }
 
   Widget button3() {
-    return FlatButton(
+    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
         onPressed: test3,
-        child: Image.asset(buttons[sat3], height: 70, width: 70));
+        child: Image.asset(
+          buttons[sat3],
+          width: 70,
+          height: 70,
+        )),);
   }
 
   Widget button4() {
-    return FlatButton(
+    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
         onPressed: test4,
-        child: Image.asset(buttons[sat4], height: 70, width: 70));
+        child: Image.asset(
+          buttons[sat4],
+          width: 70,
+          height: 70,
+        )),);
   }
 
   Widget button5() {
-    return FlatButton(
+    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
         onPressed: test5,
-        child: Image.asset(buttons[sat5], height: 70, width: 70));
+        child: Image.asset(
+          buttons[sat5],
+          width: 70,
+          height: 70,
+        )),);
   }
 
   Widget button6() {
-    return FlatButton(
+    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
         onPressed: test6,
-        child: Image.asset(buttons[sat6], height: 70, width: 70));
+        child: Image.asset(
+          buttons[sat6],
+          width: 70,
+          height: 70,
+        )),);
   }
 
   @override
@@ -895,7 +918,7 @@ v = LevelHead2("11", level11(),mov: moves,);
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            v,
+            IgnorePointer(ignoring: light.x==1,child: v,),
             light,
             a13.show(),
             SizedBox(

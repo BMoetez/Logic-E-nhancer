@@ -1,20 +1,18 @@
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 
-
-
 class and_gate extends StatefulWidget {
   double height, width;
   int rotation;
   late var path;
-  and_gate({this.height=100, this.width=150, this.rotation=3}) {
+  and_gate({this.height = 100, this.width = 150, this.rotation = 3}) {
     height = height;
     width = width;
     rotation = rotation;
     path = ValueNotifier('');
   }
 
-  int activation(int x,int y) {
+  int activation(int x, int y) {
     if (x == 1 && y == 1) {
       path.value = 'assets/images/gates/and/4.png';
       return 1;
@@ -29,16 +27,17 @@ class and_gate extends StatefulWidget {
       return 0;
     }
   }
+
   @override
-  _and_gateState createState() => _and_gateState(height : this.height,width : this.width,rotation : this.rotation);
+  _and_gateState createState() => _and_gateState(
+      height: this.height, width: this.width, rotation: this.rotation);
 }
 
-
 class _and_gateState extends State<and_gate> {
-  double height=50, width=50;
+  double height = 50, width = 50;
   int rotation;
 
-  _and_gateState({this.height=100, this.width=150, this.rotation=3}) {
+  _and_gateState({this.height = 100, this.width = 150, this.rotation = 3}) {
     height = height;
     width = width;
   }
@@ -52,7 +51,6 @@ class _and_gateState extends State<and_gate> {
     super.didChangeDependencies();
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -62,57 +60,71 @@ class _and_gateState extends State<and_gate> {
             onPressed: () {
               Overlay.of(context)?.insert(_getEntry(context));
             },
-            child: ValueListenableBuilder(valueListenable: widget.path, builder: (context, String p , _){
-              return Image.asset(
-                p,
-                fit: BoxFit.cover,
-                height: height,
-              );
-            }),
+            child: ValueListenableBuilder(
+                valueListenable: widget.path,
+                builder: (context, String p, _) {
+                  return Image.asset(
+                    p,
+                    fit: BoxFit.cover,
+                    height: height,
+                  );
+                }),
             padding: EdgeInsets.zero,
           )),
       color: const Color.fromRGBO(0, 0, 0, 0),
     );
   }
+
   OverlayEntry _getEntry(context) {
     OverlayEntry entry = OverlayEntry(builder: (_) => Container());
 
     entry = OverlayEntry(
-      opaque: false,
-      maintainState: true,
-      builder: (_) => Positioned(
-        left: 0,
-        bottom: 0,
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
-        child: BackdropFilter(
-          filter: ui.ImageFilter.blur(
-            sigmaX: 2,
-            sigmaY: 2,
-          ),
-          child: Material(
-            type: MaterialType.transparency,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Container(
-                    width: 600,
-                    height: 400,
-                    color: Colors.black,
-                    child: Column(children: [Material(child: IconButton(onPressed: (){entry.remove();}, icon: Icon(Icons.close)),),Image.asset('../../assets/images/gates/and_gate_inf.png')],)
+        opaque: false,
+        maintainState: true,
+        builder: (_) => GestureDetector(
+              onTap: () {
+                entry.remove();
+              },
+              behavior: HitTestBehavior.translucent,
+              child: Positioned(
+                left: 0,
+                bottom: 0,
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                child: BackdropFilter(
+                  filter: ui.ImageFilter.blur(
+                    sigmaX: 2,
+                    sigmaY: 2,
+                  ),
+                  child: Material(
+                    type: MaterialType.transparency,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Container(
+                            width: 600,
+                            height: 400,
+                            color: Colors.black,
+                            child: Column(
+                              children: [
+                                Material(
+                                  child: IconButton(
+                                      onPressed: () {
+                                        entry.remove();
+                                      },
+                                      icon: Icon(Icons.close)),
+                                ),
+                                Image.asset(
+                                    '../../assets/images/gates/and_gate_inf.png')
+                              ],
+                            )),
+                      ],
+                    ),
+                  ),
                 ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
+              ),
+            ));
     return entry;
   }
-
-
-
-
-
 }

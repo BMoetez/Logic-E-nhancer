@@ -70,6 +70,7 @@ flutter:
      - assets/images/light/
      - assets/images/button/
      - assets/images/light/light1.json
+     - assets/images/credit/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
