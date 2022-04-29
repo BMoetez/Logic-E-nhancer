@@ -5,9 +5,13 @@ import '../classes/bus.dart';
 import '../classes/no_gate.dart';
 
 int moves = 2;
+LED LIGHT2 = LED(
+  x: a2.activate,
+  y: 1,
+);
 LevelHead2 v = LevelHead2(
   "1",
-  level1(),
+  level1(),LIGHT2,
   mov: moves,
 );
 int sat = 1;
@@ -23,18 +27,14 @@ Bus a2 = Bus(
   activate: c,
   hor_length: 0,
   ver_length1: 0,
-  ver_length2: 230,
+  ver_length2: 190,
   dx: 2.5,
-);
-LED LIGHT2 = LED(
-  x: a2.activate,
-  y: 1,
 );
 void set() {
   moves = 2;
   v = LevelHead2(
     "1",
-    level1(),
+    level1(),LIGHT2,
     mov: moves,
   );
   sat = 1;
@@ -49,7 +49,7 @@ void set() {
     activate: c,
     hor_length: 0,
     ver_length1: 0,
-    ver_length2: 195,
+    ver_length2: 190,
     dx: 2.5,
   );
   LIGHT2 = LED(
@@ -82,7 +82,7 @@ class _level1State extends State<level1> with SingleTickerProviderStateMixin {
         moves -= 1;
         v = LevelHead2(
   "1",
-  level1(),
+  level1(),LIGHT2,
   mov: moves,
 );
       }

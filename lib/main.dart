@@ -4,6 +4,10 @@ import 'package:logic_enhancer/pages/credit.dart';
 import 'package:logic_enhancer/pages/option_page.dart';
 import 'pages/play_page (1).dart';
 
+
+var colors = [0xFFa0b6f7,0xFFf2f261,0xFF4955fd,0xFFa5e300];
+int ind = 0;
+
 void main() {
   runApp(const MyApp());
 }
@@ -71,7 +75,7 @@ class _HomePageState extends State<HomePage> {
                         style: TextStyle(
                             color: (colorindex == 1)
                                 ? Colors.white
-                                : Colors.blue)),
+                                : Color(colors[ind]))),
                     TextSpan(text: '-NHANCER')
                   ]),
                   style: TextStyle(
@@ -99,8 +103,8 @@ class _HomePageState extends State<HomePage> {
                                     MaterialPageRoute(
                                         builder: (context) => playPage()));
                               },
-                              color: const Color(0xFFa0b6f7),
-                              hoverColor: const Color(0xFFf2f261),
+                              color: Color(colors[ind]),
+                              hoverColor: Color(colors[ind+1]),
                               padding: EdgeInsets.fromLTRB(45, 10, 90, 30),
                               child: Row(
                                 children: [
@@ -138,8 +142,8 @@ class _HomePageState extends State<HomePage> {
                                     MaterialPageRoute(
                                         builder: (context) => OptionPage()));
                               },
-                              color: const Color(0xFFa0b6f7),
-                              hoverColor: const Color(0xFFf2f261),
+                              color: Color(colors[ind]),
+                              hoverColor: Color(colors[ind+1]),
                               padding: EdgeInsets.fromLTRB(30, 10, 40, 20),
                               child: Row(
                                 children: [
@@ -177,8 +181,8 @@ class _HomePageState extends State<HomePage> {
                                     MaterialPageRoute(
                                         builder: (context) => credits()));
                               },
-                              color: const Color(0xFFa0b6f7),
-                              hoverColor: const Color(0xFFf2f261),
+                              color: Color(colors[ind]),
+                              hoverColor: Color(colors[ind+1]),
                               padding: EdgeInsets.fromLTRB(30, 10, 40, 20),
                               child: Row(
                                 children: [

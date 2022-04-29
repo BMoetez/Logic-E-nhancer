@@ -10,7 +10,7 @@ import '../classes/Nor_gate.dart';
 int moves = 4;
 LevelHead2 v = LevelHead2(
   "16",
-  level16(),
+  level16(),light,
   mov: moves,
 );
 or_gate or1 = or_gate(height: 50, width: 50);
@@ -132,7 +132,11 @@ LED light = LED(
 );
 void set() {
   moves = 4;
-  v = LevelHead2("16", level16(),mov: moves,);
+  light = LED(
+    x: a13.activate,
+    y: 16,
+  );
+  v = LevelHead2("16", level16(),light,mov: moves,);
   sat1 = 1;
   sat2 = 0;
   sat3 = 1;
@@ -237,10 +241,7 @@ void set() {
     dy: -10,
     dx: -2.5,
   );
-  light = LED(
-    x: a13.activate,
-    y: 16,
-  );
+
 }
 
 class level16 extends StatefulWidget {
@@ -263,10 +264,6 @@ class _level16State extends State<level16> {
 
   void test1() {
     setState(() {
-      if(moves!=0){
-moves-=1;
-v = LevelHead2("16", level16(),mov: moves,);
-}
       if (sat1 == 1) {
         sat1 = 0;
         a1 = Bus(
@@ -347,14 +344,15 @@ v = LevelHead2("16", level16(),mov: moves,);
         );
       }
     });
+    if(moves!=0){
+      moves-=1;
+      v = LevelHead2("16", level16(),light,mov: moves,);
+    }
   }
 
   void test2() {
     setState(() {
-          if(moves!=0){
-moves-=1;
-v = LevelHead2("16", level16(),mov: moves,);
-}
+
       if (sat2 == 1) {
         sat2 = 0;
         a2 = Bus(
@@ -438,14 +436,15 @@ v = LevelHead2("16", level16(),mov: moves,);
         );
       }
     });
+    if(moves!=0){
+      moves-=1;
+      v = LevelHead2("16", level16(),light,mov: moves,);
+    }
   }
 
   void test3() {
     setState(() {
-          if(moves!=0){
-moves-=1;
-v = LevelHead2("16", level16(),mov: moves,);
-}
+
       if (sat3 == 1) {
         sat3 = 0;
         a3 = Bus(
@@ -541,14 +540,15 @@ v = LevelHead2("16", level16(),mov: moves,);
         );
       }
     });
+    if(moves!=0){
+      moves-=1;
+      v = LevelHead2("16", level16(),light,mov: moves,);
+    }
   }
 
   void test4() {
     setState(() {
-          if(moves!=0){
-moves-=1;
-v = LevelHead2("16", level16(),mov: moves,);
-}
+
       if (sat4 == 1) {
         sat4 = 0;
         a4 = Bus(
@@ -646,14 +646,15 @@ v = LevelHead2("16", level16(),mov: moves,);
         );
       }
     });
+    if(moves!=0){
+      moves-=1;
+      v = LevelHead2("16", level16(),light,mov: moves,);
+    }
   }
 
   void test5() {
     setState(() {
-          if(moves!=0){
-moves-=1;
-v = LevelHead2("16", level16(),mov: moves,);
-}
+
       if (sat5 == 1) {
         sat5 = 0;
         a5 = Bus(
@@ -731,14 +732,15 @@ v = LevelHead2("16", level16(),mov: moves,);
         );
       }
     });
+    if(moves!=0){
+      moves-=1;
+      v = LevelHead2("16", level16(),light,mov: moves,);
+    }
   }
 
   void test6() {
     setState(() {
-          if(moves!=0){
-moves-=1;
-v = LevelHead2("16", level16(),mov: moves,);
-}
+
       if (sat6 == 1) {
         sat6 = 0;
         a7 = Bus(
@@ -806,6 +808,10 @@ v = LevelHead2("16", level16(),mov: moves,);
         );
       }
     });
+    if(moves!=0){
+      moves-=1;
+      v = LevelHead2("16", level16(),light,mov: moves,);
+    }
   }
 
   Widget button1() {

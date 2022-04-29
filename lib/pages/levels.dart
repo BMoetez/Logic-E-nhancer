@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:logic_enhancer/main.dart';
 import 'package:logic_enhancer/stages/level1.dart';
 import 'package:logic_enhancer/stages/level10.dart';
 import 'package:logic_enhancer/stages/level11.dart';
@@ -113,7 +114,7 @@ class _HomePageState extends State<Levels> {
                               Overlay.of(context)?.insert(_getEntry(context));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor: const Color(0xFFa0b6f7),
+                            hoverColor:Color(colors[ind]) ,
                             child: Text(
                               '1',
                               style: TextStyle(
@@ -136,7 +137,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level2()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor: const Color(0xFFa0b6f7),
+                            hoverColor:Color(colors[ind]) ,
                             child: Text(
                               '2',
                               style: TextStyle(
@@ -159,7 +160,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level3()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor: const Color(0xFFa0b6f7),
+                            hoverColor:Color(colors[ind]) ,
                             child: Text(
                               '3',
                               style: TextStyle(
@@ -182,7 +183,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level4()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor: const Color(0xFFa0b6f7),
+                            hoverColor:Color(colors[ind]) ,
                             child: Text(
                               '4',
                               style: TextStyle(
@@ -205,7 +206,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level5()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor: const Color(0xFFa0b6f7),
+                            hoverColor:Color(colors[ind]) ,
                             child: Text(
                               '5',
                               style: TextStyle(
@@ -228,7 +229,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level6()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor: const Color(0xFFa0b6f7),
+                            hoverColor:Color(colors[ind]) ,
                             child: Text(
                               '6',
                               style: TextStyle(
@@ -264,7 +265,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level7()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor: const Color(0xFFa0b6f7),
+                            hoverColor:Color(colors[ind]) ,
                             child: Text(
                               '7',
                               style: TextStyle(
@@ -287,7 +288,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level8()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor: const Color(0xFFa0b6f7),
+                            hoverColor:Color(colors[ind]) ,
                             child: Text(
                               '8',
                               style: TextStyle(
@@ -310,7 +311,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level9()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor: const Color(0xFFa0b6f7),
+                            hoverColor:Color(colors[ind]) ,
                             child: Text(
                               '9',
                               style: TextStyle(
@@ -333,7 +334,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level10()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor: const Color(0xFFa0b6f7),
+                            hoverColor:Color(colors[ind]) ,
                             child: Text(
                               '10',
                               style: TextStyle(
@@ -356,7 +357,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level11()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor: const Color(0xFFa0b6f7),
+                            hoverColor:Color(colors[ind]) ,
                             child: Text(
                               '11',
                               style: TextStyle(
@@ -379,7 +380,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level12()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor: const Color(0xFFa0b6f7),
+                            hoverColor:Color(colors[ind]) ,
                             child: Text(
                               '12',
                               style: TextStyle(
@@ -415,7 +416,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level13()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor: const Color(0xFFa0b6f7),
+                            hoverColor:Color(colors[ind]) ,
                             child: Text(
                               '13',
                               style: TextStyle(
@@ -438,7 +439,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level14()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor: const Color(0xFFa0b6f7),
+                            hoverColor:Color(colors[ind]) ,
                             child: Text(
                               '14',
                               style: TextStyle(
@@ -461,7 +462,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level15()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor: const Color(0xFFa0b6f7),
+                            hoverColor:Color(colors[ind]) ,
                             child: Text(
                               '15',
                               style: TextStyle(
@@ -484,7 +485,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level16()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor: const Color(0xFFa0b6f7),
+                            hoverColor:Color(colors[ind]) ,
                             child: Text(
                               '16',
                               style: TextStyle(
@@ -507,7 +508,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level17()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor: const Color(0xFFa0b6f7),
+                            hoverColor:Color(colors[ind]) ,
                             child: Text(
                               '17',
                               style: TextStyle(
@@ -530,7 +531,7 @@ class _HomePageState extends State<Levels> {
                                       builder: (context) => level18()));
                             },
                             padding: EdgeInsets.fromLTRB(2, 20, 20, 30),
-                            hoverColor: const Color(0xFFa0b6f7),
+                            hoverColor:Color(colors[ind]) ,
                             child: Text(
                               '18',
                               style: TextStyle(

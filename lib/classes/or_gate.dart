@@ -1,5 +1,6 @@
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
+import 'package:logic_enhancer/main.dart';
 
 class or_gate extends StatefulWidget {
   double height, width;
@@ -11,19 +12,35 @@ class or_gate extends StatefulWidget {
     rotation = rotation;
     path = ValueNotifier('');
   }
-  int activation(int x, int y) {
-    if (x == 1 && y == 1) {
-      path.value = 'assets/images/gates/or/4.png';
-      return 1;
-    } else if (x == 1 && y == 0) {
-      path.value = 'assets/images/gates/or/2.png';
-      return 1;
-    } else if (x == 0 && y == 1) {
-      path.value = 'assets/images/gates/or/3.png';
-      return 1;
-    } else {
-      path.value = 'assets/images/gates/or/1.png';
-      return 0;
+  int activation(int x,int y) {
+    if(ind==0) {
+      if (x == 1 && y == 1) {
+        path.value = 'assets/images/gates/or/4.png';
+        return 1;
+      } else if (x == 1 && y == 0) {
+        path.value = 'assets/images/gates/or/2.png';
+        return 1;
+      } else if (x == 0 && y == 1) {
+        path.value = 'assets/images/gates/or/3.png';
+        return 1;
+      } else {
+        path.value = 'assets/images/gates/or/1.png';
+        return 0;
+      }
+    }else{
+      if (x == 1 && y == 1) {
+        path.value = 'assets/images/gates/or/4copy.png';
+        return 1;
+      } else if(x == 1 && y==0){
+        path.value = 'assets/images/gates/or/2copy.png';
+        return 1;
+      }else if(x == 0 && y == 1){
+        path.value = 'assets/images/gates/or/3copy.png';
+        return 1;
+      }else{
+        path.value = 'assets/images/gates/or/1copy.png';
+        return 0;
+      }
     }
   }
 
@@ -46,6 +63,10 @@ class _or_gateState extends State<or_gate> {
     precacheImage(AssetImage("assets/images/gates/or/2.png"), context);
     precacheImage(AssetImage("assets/images/gates/or/3.png"), context);
     precacheImage(AssetImage("assets/images/gates/or/4.png"), context);
+    precacheImage(AssetImage("assets/images/gates/or/1copy.png"), context);
+    precacheImage(AssetImage("assets/images/gates/or/2copy.png"), context);
+    precacheImage(AssetImage("assets/images/gates/or/3copy.png"), context);
+    precacheImage(AssetImage("assets/images/gates/or/4copy.png"), context);
 
     super.didChangeDependencies();
   }

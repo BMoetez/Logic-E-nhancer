@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
 
+import 'package:logic_enhancer/pages/lessons.dart';
+
 
 class Or_Lesson1 extends StatefulWidget {
   const Or_Lesson1({Key? key}) : super(key: key);
@@ -30,7 +32,7 @@ class _Or_Lesson1State extends State<Or_Lesson1> {
               Padding(padding: EdgeInsets.all(20),child: OutlinedButton(onPressed: (){Overlay.of(context)?.insert(rightanswer(context));},style: OutlinedButton.styleFrom(fixedSize: const Size(250, 80),side: BorderSide(width: 5.0, color: Colors.white),), child: Text("ONE(1)",style:TextStyle(fontSize: 50),)),),
               Padding(padding: EdgeInsets.all(20),child: OutlinedButton(onPressed: (){Overlay.of(context)?.insert(wronganswer(context));},style: OutlinedButton.styleFrom(fixedSize: const Size(250, 80),side: BorderSide(width: 5.0, color: Colors.white),), child: Text("ZERO(0)",style:TextStyle(fontSize: 50))),)
             ],),
-              Image.asset("../../assets/images/quiz1.png",height: 300,width: 300,)
+              Image.asset("../../assets/images/lessons/or_quiz1.png",height: 300,width: 300,)
           ],)
         ],
       ),
@@ -68,7 +70,12 @@ class _Or_Lesson1State extends State<Or_Lesson1> {
                         SizedBox(height: 100,),
                         Text("You got it right !!",style: TextStyle(fontSize: 50,color: Colors.white)),
                         SizedBox(height: 190,),
-                        OutlinedButton(onPressed: (){entry.remove();},style: OutlinedButton.styleFrom(fixedSize: const Size(500, 70),side: BorderSide(width: 5.0, color: Colors.white)), child: Text("To The Next Lesson ",style: TextStyle(fontSize: 50),))
+                        OutlinedButton(onPressed: (){Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    Lessons()));
+                        entry.remove();entry.remove();},style: OutlinedButton.styleFrom(fixedSize: const Size(500, 70),side: BorderSide(width: 5.0, color: Colors.white)), child: Text("To The Next Lesson ",style: TextStyle(fontSize: 50),))
                       ],
                     )),
               ],

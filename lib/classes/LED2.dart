@@ -154,7 +154,7 @@ class _LEDState extends State<LED> with SingleTickerProviderStateMixin {
                                   TextStyle(fontSize: 40, color: Colors.green),
                             ),
                           ),
-                          (index(widget.y) != 17)
+                          (index(widget.y) != 18)
                               ? Padding(
                                   padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
                                   child: SizedBox(

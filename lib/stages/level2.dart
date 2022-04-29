@@ -8,7 +8,7 @@ import 'dart:ui' as ui;
 int moves = 2;
 LevelHead2 v = LevelHead2(
   "2",
-  level2(),
+  level2(),LIGHT2,
   mov: moves,
 );
 int sat1 = 0;
@@ -47,7 +47,7 @@ void set() {
   moves = 2;
   v = LevelHead2(
   "2",
-  level2(),
+  level2(),LIGHT2,
   mov: moves,
 );
   sat2 = 0;
@@ -112,7 +112,7 @@ class _level2State extends State<level2> {
 moves-=1;
 v = LevelHead2(
   "2",
-  level2(),
+  level2(),LIGHT2,
   mov: moves,
 );
 }
@@ -172,7 +172,7 @@ if(moves!=0){
 moves-=1;
 v = LevelHead2(
   "2",
-  level2(),
+  level2(),LIGHT2,
   mov: moves,
 );
 }

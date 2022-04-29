@@ -76,8 +76,8 @@ class _playPageState extends State<playPage> {
                       MaterialPageRoute(builder: (context) => Levels()));
                 },
                 textColor: Colors.black,
-                color: const Color(0xFFa0b6f7),
-                hoverColor: const Color(0xFFf2f261),
+                color: Color(colors[ind]),
+                hoverColor: Color(colors[ind+1]),
                 padding: const EdgeInsets.fromLTRB(20, 20, 20, 30),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -103,8 +103,8 @@ class _playPageState extends State<playPage> {
                 onPressed: () {Navigator.push(context,
                       MaterialPageRoute(builder: (context) => list[t]));},
                 textColor: Colors.black,
-                color: const Color(0xFFa0b6f7),
-                hoverColor: const Color(0xFFf2f261),
+                color: Color(colors[ind]),
+                hoverColor: Color(colors[ind+1]),
                 padding: const EdgeInsets.fromLTRB(20, 20, 20, 30),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -132,8 +132,8 @@ class _playPageState extends State<playPage> {
                       MaterialPageRoute(builder: (context) => Lessons()));
                 },
                 textColor: Colors.black,
-                color: const Color(0xFFa0b6f7),
-                hoverColor: const Color(0xFFf2f261),
+                color: Color(colors[ind]),
+                hoverColor: Color(colors[ind+1]),
                 padding: const EdgeInsets.fromLTRB(20, 20, 20, 30),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -158,8 +158,8 @@ class _playPageState extends State<playPage> {
               child: RaisedButton(
                 onPressed: () {},
                 textColor: Colors.black,
-                color: const Color(0xFFa0b6f7),
-                hoverColor: const Color(0xFFf2f261),
+                color: Color(colors[ind]),
+                hoverColor: Color(colors[ind+1]),
                 padding: const EdgeInsets.fromLTRB(20, 20, 20, 30),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,

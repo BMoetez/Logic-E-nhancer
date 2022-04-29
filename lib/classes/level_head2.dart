@@ -4,39 +4,43 @@ import 'package:logic_enhancer/main.dart';
 import 'package:logic_enhancer/pages/levels.dart';
 
 bool hovering = false;
+import 'LED2.dart';
 
 class LevelHead2 extends StatefulWidget {
   String n = '';
   Widget f = Container();
-  int mov = 0;
+  int mov=0;
+  LED light = LED(x: 0, y: 1);
 
-  LevelHead2(String n, Widget f, {this.mov = 5}) {
+  LevelHead2(String n,Widget f,LED l,{ this.mov=5}) {
     this.n = n;
-    this.f = f;
-    this.mov = mov;
+    this.f =f;
+    this.mov=mov;
+    this.light = l;
   }
 
   @override
-  _LevelHead2State createState() =>
-      _LevelHead2State(this.n, this.f, mov: this.mov);
+  _LevelHead2State createState() => _LevelHead2State(this.n,this.f);
 }
 
 class _LevelHead2State extends State<LevelHead2> {
   String n = '';
   Widget f = Container();
-  int mov = 0;
-  _LevelHead2State(String n, Widget f, {this.mov = 5}) {
+  _LevelHead2State(String n,Widget f) {
     this.n = n;
     this.f = f;
-    mov = mov;
-    if (mov == 0) {
+  }
+  void losepage(){
+    print(widget.light.x);
+    if(widget.mov==0 && widget.light.x==0){
       WidgetsBinding.instance?.addPostFrameCallback(
-          (_) => Overlay.of(context)?.insert(_getEntry(context)));
+              (_) => Overlay.of(context)?.insert(_getEntry3(context)));
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    losepage();
     return Material(
       child: Container(
           child: Row(
@@ -54,7 +58,7 @@ class _LevelHead2State extends State<LevelHead2> {
                   icon: Icon(
                     Icons.arrow_back_ios_sharp,
                     size: 40,
-                    color: Colors.yellow,
+                    color: Color(colors[ind+1]),
                   ),
                 ),
               )),
@@ -122,11 +126,10 @@ class _LevelHead2State extends State<LevelHead2> {
                     icon: Icon(
                       Icons.menu,
                       size: 40,
-                      color: Colors.yellow,
+                      color: Color(colors[ind+1]),
                     )),
-              ),
-            ),
-          )
+              )
+          ),)
         ],
       )),
       color: Color.fromRGBO(0, 0, 0, 0),
@@ -328,6 +331,64 @@ class _LevelHead2State extends State<LevelHead2> {
                 ),
               ),
             ));
+    return entry;
+  }
+
+  OverlayEntry _getEntry3(context) {
+    OverlayEntry entry = OverlayEntry(builder: (_) => Container());
+
+    entry = OverlayEntry(
+      opaque: false,
+      maintainState: true,
+      builder: (_) => Positioned(
+        left: 0,
+        bottom: 0,
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        child: BackdropFilter(
+          filter: ui.ImageFilter.blur(
+            sigmaX: 2,
+            sigmaY: 2,
+          ),
+          child: Material(
+            type: MaterialType.transparency,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  width: 500,
+                  height: 350,
+                  color: Colors.black,
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(0, 10, 0, 100),
+                        child: Text(
+                          "Oh No ",
+                          style: TextStyle(fontSize: 40, color: Colors.red),
+                        ),
+                      ),
+                      Padding(
+                          padding: EdgeInsets.fromLTRB(20, 0, 20, 100),
+                          child: Text("No moves left. Try again",style: TextStyle(color: Colors.white,fontSize: 30,height: 1.2),textAlign: TextAlign.center,)
+                      ),
+                      TextButton(onPressed: (){Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => f),
+                            (Route<dynamic> route) => false,
+                      );
+                      entry.remove();}, child: Text("Try Again",style: TextStyle(fontSize: 50),))
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
     return entry;
   }
 }
