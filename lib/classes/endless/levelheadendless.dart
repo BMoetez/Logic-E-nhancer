@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
-import 'package:logic_enhancer/pages/levels.dart';
+import 'package:logic_enhancer/pages/play_page%20(1).dart';
 
 import '../../main.dart';
 
@@ -51,7 +51,7 @@ class _levelheadendlessState extends State<levelheadendless> {
                 child: IconButton(
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Levels()));
+                        MaterialPageRoute(builder: (context) => playPage()));
                   },
                   icon: Icon(
                     Icons.arrow_back_ios_sharp,
@@ -72,7 +72,7 @@ class _levelheadendlessState extends State<levelheadendless> {
               )),
           Spacer(),
           Padding(
-            padding: EdgeInsets.fromLTRB(0, 10, 280, 0),
+            padding: EdgeInsets.fromLTRB(0, 0, 150, 0),
             child: Align(
               alignment: Alignment.topCenter,
               child: Icon(Icons.all_inclusive_rounded,size: 80,color: Colors.blue,)
