@@ -7,7 +7,7 @@ import '../classes/no_gate.dart';
 import '../classes/and_gate.dart';
 import '../classes/Nand_gate.dart';
 
-int moves = 3;
+int moves = 4;
 LevelHead2 v = LevelHead2(
   "12",
   level12(),light,
@@ -130,7 +130,7 @@ LED light = LED(
   y: 12,
 );
 void set() {
-  moves = 3;
+  moves = 4;
   v = LevelHead2("12", level12(),light,mov: moves,);
   sat1 = 0;
   sat2 = 0;
@@ -232,10 +232,10 @@ void set() {
   a13 = Bus(
     activate: or2_output,
     hor_length: 0,
-    ver_length1: 40,
+    ver_length1: 50,
     ver_length2: 0,
     dx: -2.5,
-    dy: -10,
+    dy: -20,
   );
   light = LED(
     x: a13.activate,
@@ -300,13 +300,13 @@ class _level12State extends State<level12> {
         );
         or2_output = or2.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: or2_output,
-          hor_length: 0,
-          ver_length1: 40,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: or2_output,
+    hor_length: 0,
+    ver_length1: 50,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -20,
+  );
       } else {
         sat1 = 0;
         a1 = Bus(
@@ -343,13 +343,13 @@ class _level12State extends State<level12> {
         );
         or2_output = or2.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: or2_output,
-          hor_length: 0,
-          ver_length1: 40,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: or2_output,
+    hor_length: 0,
+    ver_length1: 50,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -20,
+  );
       }
       if (a13.activate == 1) {
         light = LED(
@@ -408,13 +408,13 @@ class _level12State extends State<level12> {
         );
         or2_output = or2.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: or2_output,
-          hor_length: 0,
-          ver_length1: 40,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: or2_output,
+    hor_length: 0,
+    ver_length1: 50,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -20,
+  );
       } else {
         sat2 = 1;
         a2 = Bus(
@@ -451,13 +451,13 @@ class _level12State extends State<level12> {
         );
         or2_output = or2.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: or2_output,
-          hor_length: 0,
-          ver_length1: 40,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: or2_output,
+    hor_length: 0,
+    ver_length1: 50,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -20,
+  );
       }
       if (a13.activate == 1) {
         light = LED(
@@ -508,13 +508,13 @@ class _level12State extends State<level12> {
         );
         or2_output = or2.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: or2_output,
-          hor_length: 0,
-          ver_length1: 40,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: or2_output,
+    hor_length: 0,
+    ver_length1: 50,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -20,
+  );
       } else {
         sat3 = 1;
         a3 = Bus(
@@ -543,13 +543,13 @@ class _level12State extends State<level12> {
         );
         or2_output = or2.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: or2_output,
-          hor_length: 0,
-          ver_length1: 40,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: or2_output,
+    hor_length: 0,
+    ver_length1: 50,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -20,
+  );
       }
       if (a13.activate == 1) {
         light = LED(
@@ -601,13 +601,13 @@ class _level12State extends State<level12> {
         );
         or2_output = or2.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: or2_output,
-          hor_length: 0,
-          ver_length1: 40,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: or2_output,
+    hor_length: 0,
+    ver_length1: 50,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -20,
+  );
       } else {
         sat4 = 1;
         a4 = Bus(
@@ -637,13 +637,13 @@ class _level12State extends State<level12> {
         );
         or2_output = or2.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: or2_output,
-          hor_length: 0,
-          ver_length1: 40,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: or2_output,
+    hor_length: 0,
+    ver_length1: 50,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -20,
+  );
       }
       if (a13.activate == 1) {
         light = LED(
@@ -690,13 +690,13 @@ class _level12State extends State<level12> {
         );
         or2_output = or2.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: or2_output,
-          hor_length: 0,
-          ver_length1: 40,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: or2_output,
+    hor_length: 0,
+    ver_length1: 50,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -20,
+  );
       } else {
         sat5 = 1;
         a5 = Bus(
@@ -721,13 +721,13 @@ class _level12State extends State<level12> {
         );
         or2_output = or2.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: or2_output,
-          hor_length: 0,
-          ver_length1: 40,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: or2_output,
+    hor_length: 0,
+    ver_length1: 50,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -20,
+  );
       }
       if (a13.activate == 1) {
         light = LED(
@@ -770,13 +770,13 @@ class _level12State extends State<level12> {
         );
         or2_output = or2.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: or2_output,
-          hor_length: 0,
-          ver_length1: 40,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: or2_output,
+    hor_length: 0,
+    ver_length1: 50,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -20,
+  );
       } else {
         sat6 = 1;
         a7 = Bus(
@@ -797,13 +797,13 @@ class _level12State extends State<level12> {
         );
         or2_output = or2.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: or2_output,
-          hor_length: 0,
-          ver_length1: 40,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: or2_output,
+    hor_length: 0,
+    ver_length1: 50,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -20,
+  );
       }
       if (a13.activate == 1) {
         light = LED(
@@ -824,7 +824,7 @@ class _level12State extends State<level12> {
   }
 
   Widget button1() {
-    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
+    return IgnorePointer(ignoring: (light.x==1 || moves==0),child: FlatButton(
         onPressed: test1,
         child: Image.asset(
           buttons[sat1],
@@ -834,7 +834,7 @@ class _level12State extends State<level12> {
   }
 
   Widget button2() {
-    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
+    return IgnorePointer(ignoring: (light.x==1 || moves==0),child: FlatButton(
         onPressed: test2,
         child: Image.asset(
           buttons[sat2],
@@ -844,7 +844,7 @@ class _level12State extends State<level12> {
   }
 
   Widget button3() {
-    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
+    return IgnorePointer(ignoring: (light.x==1 || moves==0),child: FlatButton(
         onPressed: test3,
         child: Image.asset(
           buttons[sat3],
@@ -854,7 +854,7 @@ class _level12State extends State<level12> {
   }
 
   Widget button4() {
-    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
+    return IgnorePointer(ignoring: (light.x==1 || moves==0),child: FlatButton(
         onPressed: test4,
         child: Image.asset(
           buttons[sat4],
@@ -864,7 +864,7 @@ class _level12State extends State<level12> {
   }
 
   Widget button5() {
-    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
+    return IgnorePointer(ignoring: (light.x==1 || moves==0),child: FlatButton(
         onPressed: test5,
         child: Image.asset(
           buttons[sat5],
@@ -874,7 +874,7 @@ class _level12State extends State<level12> {
   }
 
   Widget button6() {
-    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
+    return IgnorePointer(ignoring: (light.x==1 || moves==0),child: FlatButton(
         onPressed: test6,
         child: Image.asset(
           buttons[sat6],
@@ -894,7 +894,7 @@ class _level12State extends State<level12> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            IgnorePointer(ignoring: light.x==1,child: v,),
+            IgnorePointer(ignoring: (light.x==1 || moves==0),child: v,),
             light,
             a13.show(),
             SizedBox(

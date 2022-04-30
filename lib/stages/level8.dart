@@ -498,7 +498,7 @@ class _level8State extends State<level8> {
   }
 
   Widget button1() {
-    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
+    return IgnorePointer(ignoring: (light.x==1 || moves==0),child: FlatButton(
         onPressed: test1,
         child: Image.asset(
           buttons[sat1],
@@ -508,7 +508,7 @@ class _level8State extends State<level8> {
   }
 
   Widget button2() {
-    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
+    return IgnorePointer(ignoring: (light.x==1 || moves==0),child: FlatButton(
         onPressed: test2,
         child: Image.asset(
           buttons[sat2],
@@ -518,7 +518,7 @@ class _level8State extends State<level8> {
   }
 
   Widget button3() {
-    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
+    return IgnorePointer(ignoring: (light.x==1 || moves==0),child: FlatButton(
         onPressed: test3,
         child: Image.asset(
           buttons[sat3],
@@ -528,7 +528,7 @@ class _level8State extends State<level8> {
   }
 
   Widget button4() {
-    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
+    return IgnorePointer(ignoring: (light.x==1 || moves==0),child: FlatButton(
         onPressed: test4,
         child: Image.asset(
           buttons[sat4],
@@ -547,7 +547,7 @@ class _level8State extends State<level8> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            IgnorePointer(ignoring: light.x==1,child: v,),
+            IgnorePointer(ignoring: (light.x==1 || moves==0),child: v,),
             light,
             SizedBox(
               height: 40,

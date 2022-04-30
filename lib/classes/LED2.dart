@@ -147,14 +147,14 @@ class _LEDState extends State<LED> with SingleTickerProviderStateMixin {
                       child: Column(
                         children: [
                           Padding(
-                            padding: EdgeInsets.fromLTRB(0, 10, 0, 100),
+                            padding: EdgeInsets.fromLTRB(0, 10, 0, 80),
                             child: Text(
                               "Good Job",
                               style:
-                                  TextStyle(fontSize: 40, color: Colors.green),
+                                  TextStyle(fontSize: 60, color: Colors.green),
                             ),
                           ),
-                          (index(widget.y) != 18)
+                          (index(widget.y) != 17)
                               ? Padding(
                                   padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
                                   child: SizedBox(

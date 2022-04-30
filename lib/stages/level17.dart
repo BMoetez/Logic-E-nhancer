@@ -170,7 +170,7 @@ void set() {
   no1_output = no1.activation(a5.activate);
   a6 = Bus(
     activate: no1_output,
-    hor_length: 55,
+    hor_length: 58,
     ver_length2: 65,
   );
   a7 = Bus(
@@ -187,7 +187,8 @@ void set() {
     hor_length: 140,
     ver_length1: 30,
     ver_length2: 60,
-    dy: 45,
+    dy: 50,
+    dx: -2.5,
   );
   or1_output = or1.activation(a3.activate, a4.activate);
   a9 = Bus(
@@ -209,7 +210,7 @@ void set() {
   and1_output = and1.activation(a8.activate, a10.activate);
   a11 = Bus(
     activate: and1_output,
-    hor_length: 150,
+    hor_length: 160,
     ver_length1: 15,
     ver_length2: 20,
   );
@@ -225,10 +226,10 @@ void set() {
   a13 = Bus(
     activate: nor2_output,
     hor_length: 0,
-    ver_length1: 55,
+    ver_length1: 60,
     ver_length2: 0,
     dx: -2.5,
-    dy: -10,
+    dy: -15,
   );
   light = LED(x: a13.activate, y: 17);
 }
@@ -263,28 +264,29 @@ class _level17State extends State<level17> {
         );
         nand1_output = nand1.activation(a1.activate, a2.activate);
         a8 = Bus(
-          activate: nand1_output,
-          hor_length: 140,
-          ver_length1: 30,
-          ver_length2: 60,
-          dy: 45,
-        );
+    activate: nand1_output,
+    hor_length: 140,
+    ver_length1: 30,
+    ver_length2: 60,
+    dy: 50,
+    dx: -2.5,
+  );
         and1_output = and1.activation(a8.activate, a10.activate);
         a11 = Bus(
-          activate: and1_output,
-          hor_length: 150,
-          ver_length1: 15,
-          ver_length2: 20,
-        );
+    activate: and1_output,
+    hor_length: 160,
+    ver_length1: 15,
+    ver_length2: 20,
+  );
         nor2_output = nor2.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: nor2_output,
-          hor_length: 0,
-          ver_length1: 55,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: nor2_output,
+    hor_length: 0,
+    ver_length1: 60,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
       } else {
         sat1 = 1;
         a1 = Bus(
@@ -294,28 +296,29 @@ class _level17State extends State<level17> {
         );
         nand1_output = nand1.activation(a1.activate, a2.activate);
         a8 = Bus(
-          activate: nand1_output,
-          hor_length: 140,
-          ver_length1: 30,
-          ver_length2: 60,
-          dy: 45,
-        );
+    activate: nand1_output,
+    hor_length: 140,
+    ver_length1: 30,
+    ver_length2: 60,
+    dy: 50,
+    dx: -2.5,
+  );
         and1_output = and1.activation(a8.activate, a10.activate);
         a11 = Bus(
-          activate: and1_output,
-          hor_length: 150,
-          ver_length1: 15,
-          ver_length2: 20,
-        );
+    activate: and1_output,
+    hor_length: 160,
+    ver_length1: 15,
+    ver_length2: 20,
+  );
         nor2_output = nor2.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: nor2_output,
-          hor_length: 0,
-          ver_length1: 55,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: nor2_output,
+    hor_length: 0,
+    ver_length1: 60,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
       }
       if (a13.activate == 1) {
         light = LED(x: a13.activate, y: 17);
@@ -343,28 +346,29 @@ class _level17State extends State<level17> {
         );
         nand1_output = nand1.activation(a1.activate, a2.activate);
         a8 = Bus(
-          activate: nand1_output,
-          hor_length: 140,
-          ver_length1: 30,
-          ver_length2: 60,
-          dy: 45,
-        );
+    activate: nand1_output,
+    hor_length: 140,
+    ver_length1: 30,
+    ver_length2: 60,
+    dy: 50,
+    dx: -2.5,
+  );
         and1_output = and1.activation(a8.activate, a10.activate);
         a11 = Bus(
-          activate: and1_output,
-          hor_length: 150,
-          ver_length1: 15,
-          ver_length2: 20,
-        );
+    activate: and1_output,
+    hor_length: 160,
+    ver_length1: 15,
+    ver_length2: 20,
+  );
         nor2_output = nor2.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: nor2_output,
-          hor_length: 0,
-          ver_length1: 55,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: nor2_output,
+    hor_length: 0,
+    ver_length1: 60,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
       } else {
         sat2 = 1;
         a2 = Bus(
@@ -376,28 +380,29 @@ class _level17State extends State<level17> {
         );
         nand1_output = nand1.activation(a1.activate, a2.activate);
         a8 = Bus(
-          activate: nand1_output,
-          hor_length: 140,
-          ver_length1: 30,
-          ver_length2: 60,
-          dy: 45,
-        );
+    activate: nand1_output,
+    hor_length: 140,
+    ver_length1: 30,
+    ver_length2: 60,
+    dy: 50,
+    dx: -2.5,
+  );
         and1_output = and1.activation(a8.activate, a10.activate);
         a11 = Bus(
-          activate: and1_output,
-          hor_length: 150,
-          ver_length1: 15,
-          ver_length2: 20,
-        );
+    activate: and1_output,
+    hor_length: 160,
+    ver_length1: 15,
+    ver_length2: 20,
+  );
         nor2_output = nor2.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: nor2_output,
-          hor_length: 0,
-          ver_length1: 55,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: nor2_output,
+    hor_length: 0,
+    ver_length1: 60,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
       }
       if (a13.activate == 1) {
         light = LED(x: a13.activate, y: 17);
@@ -441,20 +446,20 @@ class _level17State extends State<level17> {
         );
         and1_output = and1.activation(a8.activate, a10.activate);
         a11 = Bus(
-          activate: and1_output,
-          hor_length: 150,
-          ver_length1: 15,
-          ver_length2: 20,
-        );
+    activate: and1_output,
+    hor_length: 160,
+    ver_length1: 15,
+    ver_length2: 20,
+  );
         nor2_output = nor2.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: nor2_output,
-          hor_length: 0,
-          ver_length1: 55,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: nor2_output,
+    hor_length: 0,
+    ver_length1: 60,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
       } else {
         sat3 = 1;
         a3 = Bus(
@@ -482,20 +487,20 @@ class _level17State extends State<level17> {
         );
         and1_output = and1.activation(a8.activate, a10.activate);
         a11 = Bus(
-          activate: and1_output,
-          hor_length: 150,
-          ver_length1: 15,
-          ver_length2: 20,
-        );
+    activate: and1_output,
+    hor_length: 160,
+    ver_length1: 15,
+    ver_length2: 20,
+  );
         nor2_output = nor2.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: nor2_output,
-          hor_length: 0,
-          ver_length1: 55,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: nor2_output,
+    hor_length: 0,
+    ver_length1: 60,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
       }
       if (a13.activate == 1) {
         light = LED(x: a13.activate, y: 17);
@@ -541,20 +546,20 @@ class _level17State extends State<level17> {
         );
         and1_output = and1.activation(a8.activate, a10.activate);
         a11 = Bus(
-          activate: and1_output,
-          hor_length: 150,
-          ver_length1: 15,
-          ver_length2: 20,
-        );
+    activate: and1_output,
+    hor_length: 160,
+    ver_length1: 15,
+    ver_length2: 20,
+  );
         nor2_output = nor2.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: nor2_output,
-          hor_length: 0,
-          ver_length1: 55,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: nor2_output,
+    hor_length: 0,
+    ver_length1: 60,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
       } else {
         sat4 = 1;
         a4 = Bus(
@@ -584,20 +589,20 @@ class _level17State extends State<level17> {
         );
         and1_output = and1.activation(a8.activate, a10.activate);
         a11 = Bus(
-          activate: and1_output,
-          hor_length: 150,
-          ver_length1: 15,
-          ver_length2: 20,
-        );
+    activate: and1_output,
+    hor_length: 160,
+    ver_length1: 15,
+    ver_length2: 20,
+  );
         nor2_output = nor2.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: nor2_output,
-          hor_length: 0,
-          ver_length1: 55,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: nor2_output,
+    hor_length: 0,
+    ver_length1: 60,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
       }
       if (a13.activate == 1) {
         light = LED(x: a13.activate, y: 17);
@@ -625,10 +630,10 @@ class _level17State extends State<level17> {
         );
         no1_output = no1.activation(a5.activate);
         a6 = Bus(
-          activate: no1_output,
-          hor_length: 55,
-          ver_length2: 65,
-        );
+    activate: no1_output,
+    hor_length: 58,
+    ver_length2: 65,
+  );
         nor1_output = nor1.activation(a6.activate, a7.activate);
         a12 = Bus(
           activate: nor1_output,
@@ -639,13 +644,13 @@ class _level17State extends State<level17> {
         );
         nor2_output = nor2.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: nor2_output,
-          hor_length: 0,
-          ver_length1: 55,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: nor2_output,
+    hor_length: 0,
+    ver_length1: 60,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
       } else {
         sat5 = 1;
         a5 = Bus(
@@ -657,10 +662,10 @@ class _level17State extends State<level17> {
         );
         no1_output = no1.activation(a5.activate);
         a6 = Bus(
-          activate: no1_output,
-          hor_length: 55,
-          ver_length2: 65,
-        );
+    activate: no1_output,
+    hor_length: 58,
+    ver_length2: 65,
+  );
         nor1_output = nor1.activation(a6.activate, a7.activate);
         a12 = Bus(
           activate: nor1_output,
@@ -671,13 +676,13 @@ class _level17State extends State<level17> {
         );
         nor2_output = nor2.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: nor2_output,
-          hor_length: 0,
-          ver_length1: 55,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: nor2_output,
+    hor_length: 0,
+    ver_length1: 60,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
       }
       if (a13.activate == 1) {
         light = LED(x: a13.activate, y: 17);
@@ -714,13 +719,13 @@ class _level17State extends State<level17> {
         );
         nor2_output = nor2.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: nor2_output,
-          hor_length: 0,
-          ver_length1: 55,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: nor2_output,
+    hor_length: 0,
+    ver_length1: 60,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
       } else {
         sat6 = 1;
         a7 = Bus(
@@ -741,13 +746,13 @@ class _level17State extends State<level17> {
         );
         nor2_output = nor2.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: nor2_output,
-          hor_length: 0,
-          ver_length1: 55,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: nor2_output,
+    hor_length: 0,
+    ver_length1: 60,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
       }
       if (a13.activate == 1) {
         light = LED(x: a13.activate, y: 17);

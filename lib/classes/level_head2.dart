@@ -200,6 +200,9 @@ class _LevelHead2State extends State<LevelHead2> {
                                               builder: (context) => f),
                                           (Route<dynamic> route) => false,
                                         );
+                                        setState(() {
+                                        hovering = !hovering;
+                                      });
                                         entry.remove();
                                       },
                                       child: Text(
@@ -231,7 +234,9 @@ class _LevelHead2State extends State<LevelHead2> {
                                             MaterialPageRoute(
                                                 builder: (context) =>
                                                     HomePage()));
-
+setState(() {
+                                        hovering = !hovering;
+                                      });
                                         entry.remove();
                                       },
                                       child: Text(
@@ -338,7 +343,9 @@ class _LevelHead2State extends State<LevelHead2> {
     entry = OverlayEntry(
       opaque: false,
       maintainState: true,
-      builder: (_) => Positioned(
+      builder: (_) => GestureDetector(onTap: () {
+        
+      },behavior: HitTestBehavior.translucent,child: Positioned(
         left: 0,
         bottom: 0,
         width: MediaQuery.of(context).size.width,
@@ -364,7 +371,7 @@ class _LevelHead2State extends State<LevelHead2> {
                         padding: EdgeInsets.fromLTRB(0, 10, 0, 100),
                         child: Text(
                           "Oh No ",
-                          style: TextStyle(fontSize: 40, color: Colors.red),
+                          style: TextStyle(fontSize: 100, color: Colors.red),
                         ),
                       ),
                       Padding(
@@ -385,7 +392,7 @@ class _LevelHead2State extends State<LevelHead2> {
             ),
           ),
         ),
-      ),
+      ),)
     );
     return entry;
   }

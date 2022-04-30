@@ -71,6 +71,7 @@ Bus a6 = Bus(
   activate: no1_output,
   hor_length: 60,
   ver_length1: 45,
+  
 );
 Bus a7 = Bus(
   activate: sat6,
@@ -166,15 +167,17 @@ void set() {
   a5 = Bus(
     activate: sat5,
     hor_length: 0,
-    ver_length1: 90,
+    ver_length1: 98,
     ver_length2: 0,
-    dy: -90,
+    dy: -95,
+    dx: -2.5,
   );
   no1_output = no1.activation(a5.activate);
   a6 = Bus(
     activate: no1_output,
     hor_length: 60,
     ver_length1: 45,
+    dx: -2,
   );
   a7 = Bus(
     activate: sat6,
@@ -230,10 +233,10 @@ void set() {
   a13 = Bus(
     activate: nor1_output,
     hor_length: 0,
-    ver_length1: 60,
+    ver_length1: 62,
     ver_length2: 0,
     dx: -2.5,
-    dy: -10,
+    dy: -15,
   );
   light = LED(
     x: a13.activate,
@@ -291,13 +294,13 @@ class _level15State extends State<level15> {
         );
         nor1_output = nor1.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: nor1_output,
-          hor_length: 0,
-          ver_length1: 60,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: nor1_output,
+    hor_length: 0,
+    ver_length1: 62,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
       } else {
         sat1 = 1;
         a1 = Bus(
@@ -323,13 +326,13 @@ class _level15State extends State<level15> {
         );
         nor1_output = nor1.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: nor1_output,
-          hor_length: 0,
-          ver_length1: 60,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: nor1_output,
+    hor_length: 0,
+    ver_length1: 62,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
       }
       if (a13.activate == 1) {
         light = LED(
@@ -380,13 +383,13 @@ class _level15State extends State<level15> {
         );
         nor1_output = nor1.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: nor1_output,
-          hor_length: 0,
-          ver_length1: 60,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: nor1_output,
+    hor_length: 0,
+    ver_length1: 62,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
       } else {
         sat2 = 1;
         a2 = Bus(
@@ -415,13 +418,13 @@ class _level15State extends State<level15> {
         );
         nor1_output = nor1.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: nor1_output,
-          hor_length: 0,
-          ver_length1: 60,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: nor1_output,
+    hor_length: 0,
+    ver_length1: 62,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
       }
       if (a13.activate == 1) {
         light = LED(
@@ -480,13 +483,13 @@ class _level15State extends State<level15> {
         );
         nor1_output = nor1.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: nor1_output,
-          hor_length: 0,
-          ver_length1: 60,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: nor1_output,
+    hor_length: 0,
+    ver_length1: 62,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
       } else {
         sat3 = 1;
         a3 = Bus(
@@ -523,13 +526,13 @@ class _level15State extends State<level15> {
         );
         nor1_output = nor1.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: nor1_output,
-          hor_length: 0,
-          ver_length1: 60,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: nor1_output,
+    hor_length: 0,
+    ver_length1: 62,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
       }
       if (a13.activate == 1) {
         light = LED(
@@ -589,13 +592,13 @@ class _level15State extends State<level15> {
         );
         nor1_output = nor1.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: nor1_output,
-          hor_length: 0,
-          ver_length1: 60,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: nor1_output,
+    hor_length: 0,
+    ver_length1: 62,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
       } else {
         sat4 = 1;
         a4 = Bus(
@@ -633,13 +636,13 @@ class _level15State extends State<level15> {
         );
         nor1_output = nor1.activation(a11.activate, a12.activate);
         a13 = Bus(
-          activate: nor1_output,
-          hor_length: 0,
-          ver_length1: 60,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: nor1_output,
+    hor_length: 0,
+    ver_length1: 62,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
       }
       if (a13.activate == 1) {
         light = LED(
@@ -664,19 +667,21 @@ class _level15State extends State<level15> {
 
       if (sat5 == 1) {
         sat5 = 0;
-        a5 = Bus(
-          activate: sat5,
-          hor_length: 0,
-          ver_length1: 90,
-          ver_length2: 0,
-          dy: -90,
-        );
+       a5 = Bus(
+    activate: sat5,
+    hor_length: 0,
+    ver_length1: 98,
+    ver_length2: 0,
+    dy: -95,
+    dx: -2.5,
+  );
         no1_output = no1.activation(a5.activate);
         a6 = Bus(
-          activate: no1_output,
-          hor_length: 60,
-          ver_length1: 45,
-        );
+    activate: no1_output,
+    hor_length: 60,
+    ver_length1: 45,
+    dx: -2,
+  );
         and1_output = and1.activation(a6.activate, a7.activate);
         a12 = Bus(
           activate: and1_output,
@@ -688,28 +693,30 @@ class _level15State extends State<level15> {
         nor1_output = nor1.activation(a11.activate, a12.activate);
 
         a13 = Bus(
-          activate: nor1_output,
-          hor_length: 0,
-          ver_length1: 60,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: nor1_output,
+    hor_length: 0,
+    ver_length1: 62,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
       } else {
         sat5 = 1;
-        a5 = Bus(
-          activate: sat5,
-          hor_length: 0,
-          ver_length1: 90,
-          ver_length2: 0,
-          dy: -90,
-        );
+       a5 = Bus(
+    activate: sat5,
+    hor_length: 0,
+    ver_length1: 98,
+    ver_length2: 0,
+    dy: -95,
+    dx: -2.5,
+  );
         no1_output = no1.activation(a5.activate);
         a6 = Bus(
-          activate: no1_output,
-          hor_length: 60,
-          ver_length1: 45,
-        );
+    activate: no1_output,
+    hor_length: 60,
+    ver_length1: 45,
+    dx: -2,
+  );
         and1_output = and1.activation(a6.activate, a7.activate);
         a12 = Bus(
           activate: and1_output,
@@ -721,13 +728,13 @@ class _level15State extends State<level15> {
         nor1_output = nor1.activation(a11.activate, a12.activate);
 
         a13 = Bus(
-          activate: nor1_output,
-          hor_length: 0,
-          ver_length1: 60,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: nor1_output,
+    hor_length: 0,
+    ver_length1: 62,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
       }
       if (a13.activate == 1) {
         light = LED(
@@ -770,13 +777,13 @@ class _level15State extends State<level15> {
         nor1_output = nor1.activation(a11.activate, a12.activate);
 
         a13 = Bus(
-          activate: nor1_output,
-          hor_length: 0,
-          ver_length1: 60,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: nor1_output,
+    hor_length: 0,
+    ver_length1: 62,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
       } else {
         sat6 = 1;
         a7 = Bus(
@@ -797,13 +804,13 @@ class _level15State extends State<level15> {
         nor1_output = nor1.activation(a11.activate, a12.activate);
 
         a13 = Bus(
-          activate: nor1_output,
-          hor_length: 0,
-          ver_length1: 60,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+    activate: nor1_output,
+    hor_length: 0,
+    ver_length1: 62,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
       }
       if (a13.activate == 1) {
         light = LED(
@@ -824,7 +831,7 @@ class _level15State extends State<level15> {
   }
 
   Widget button1() {
-    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
+    return IgnorePointer(ignoring: (light.x==1 || moves==0),child: FlatButton(
         onPressed: test1,
         child: Image.asset(
           buttons[sat1],
@@ -834,7 +841,7 @@ class _level15State extends State<level15> {
   }
 
   Widget button2() {
-    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
+    return IgnorePointer(ignoring: (light.x==1 || moves==0),child: FlatButton(
         onPressed: test2,
         child: Image.asset(
           buttons[sat2],
@@ -844,7 +851,7 @@ class _level15State extends State<level15> {
   }
 
   Widget button3() {
-    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
+    return IgnorePointer(ignoring: (light.x==1 || moves==0),child: FlatButton(
         onPressed: test3,
         child: Image.asset(
           buttons[sat3],
@@ -854,7 +861,7 @@ class _level15State extends State<level15> {
   }
 
   Widget button4() {
-    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
+    return IgnorePointer(ignoring: (light.x==1 || moves==0),child: FlatButton(
         onPressed: test4,
         child: Image.asset(
           buttons[sat4],
@@ -864,7 +871,7 @@ class _level15State extends State<level15> {
   }
 
   Widget button5() {
-    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
+    return IgnorePointer(ignoring: (light.x==1 || moves==0),child: FlatButton(
         onPressed: test5,
         child: Image.asset(
           buttons[sat5],
@@ -874,7 +881,7 @@ class _level15State extends State<level15> {
   }
 
   Widget button6() {
-    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
+    return IgnorePointer(ignoring: (light.x==1 || moves==0),child: FlatButton(
         onPressed: test6,
         child: Image.asset(
           buttons[sat6],
@@ -894,7 +901,7 @@ class _level15State extends State<level15> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            IgnorePointer(ignoring: light.x==1,child: v,),
+            IgnorePointer(ignoring: (light.x==1 || moves==0),child: v,),
             light,
             a13.show(),
             SizedBox(
