@@ -73,7 +73,7 @@ Bus a7 = Bus(
   activate: no_output,
   hor_length: 180,
   ver_length1: 30,
-  ver_length2: 30,
+  ver_length2: 35,
   dy: -20,
 );
 Bus a8 = Bus(
@@ -149,7 +149,7 @@ void set() {
     activate: no_output,
     hor_length: 180,
     ver_length1: 30,
-    ver_length2: 30,
+    ver_length2: 35,
     dy: -20,
   );
   and2_output = AND2.activation(a7.activate, a5.activate);
@@ -216,7 +216,7 @@ class _level5State extends State<level5> {
           activate: no_output,
           hor_length: 180,
           ver_length1: 30,
-          ver_length2: 30,
+          ver_length2: 35,
           dy: -20,
         );
         and2_output = AND2.activation(a7.activate, a5.activate);
@@ -251,7 +251,7 @@ class _level5State extends State<level5> {
           activate: no_output,
           hor_length: 180,
           ver_length1: 30,
-          ver_length2: 30,
+          ver_length2: 35,
           dy: -20,
         );
         and2_output = AND2.activation(a7.activate, a5.activate);
@@ -319,7 +319,7 @@ v = LevelHead2(
           activate: no_output,
           hor_length: 180,
           ver_length1: 30,
-          ver_length2: 30,
+          ver_length2: 35,
           dy: -20,
         );
         and2_output = AND2.activation(a7.activate, a5.activate);
@@ -354,7 +354,7 @@ v = LevelHead2(
           activate: no_output,
           hor_length: 180,
           ver_length1: 30,
-          ver_length2: 30,
+          ver_length2: 35,
           dy: -20,
         );
         and2_output = AND2.activation(a7.activate, a5.activate);

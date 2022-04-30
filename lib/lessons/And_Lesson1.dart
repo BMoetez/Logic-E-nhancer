@@ -29,8 +29,8 @@ class _And_Lesson1State extends State<And_Lesson1> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Column(children: [
-                Padding(padding: EdgeInsets.all(20),child: OutlinedButton(onPressed: (){Overlay.of(context)?.insert(rightanswer(context));},style: OutlinedButton.styleFrom(fixedSize: const Size(250, 80),side: BorderSide(width: 5.0, color: Colors.white),), child: Text("ONE(1)",style:TextStyle(fontSize: 50),)),),
-                Padding(padding: EdgeInsets.all(20),child: OutlinedButton(onPressed: (){Overlay.of(context)?.insert(wronganswer(context));},style: OutlinedButton.styleFrom(fixedSize: const Size(250, 80),side: BorderSide(width: 5.0, color: Colors.white),), child: Text("ZERO(0)",style:TextStyle(fontSize: 50))),)
+                Padding(padding: EdgeInsets.all(20),child: OutlinedButton(onPressed: (){Overlay.of(context)?.insert(wronganswer(context));},style: OutlinedButton.styleFrom(fixedSize: const Size(250, 80),side: BorderSide(width: 5.0, color: Colors.white),), child: Text("ONE(1)",style:TextStyle(fontSize: 50),)),),
+                Padding(padding: EdgeInsets.all(20),child: OutlinedButton(onPressed: (){Overlay.of(context)?.insert(rightanswer(context));},style: OutlinedButton.styleFrom(fixedSize: const Size(250, 80),side: BorderSide(width: 5.0, color: Colors.white),), child: Text("ZERO(0)",style:TextStyle(fontSize: 50))),)
               ],),
               Image.asset("../../assets/images/lessons/and_quiz1.png",height: 300,width: 300,)
             ],)
@@ -70,7 +70,8 @@ class _And_Lesson1State extends State<And_Lesson1> {
                         SizedBox(height: 100,),
                         Text("You got it right !!",style: TextStyle(fontSize: 50,color: Colors.white)),
                         SizedBox(height: 190,),
-                        OutlinedButton(onPressed: (){Navigator.push(
+                        OutlinedButton(onPressed: (){
+                          Navigator.push(
                             context,
                             MaterialPageRoute(
                                 builder: (context) =>

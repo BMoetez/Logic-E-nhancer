@@ -18,12 +18,14 @@ import '../lessons/Or_Lesson2.dart';
 class Lessons extends StatefulWidget {
   @override
   State<Lessons> createState() => _LessonsState();
+
 }
 
 class _LessonsState extends State<Lessons> {
   @override
   int act_but = 1;
   int slide = 1;
+
 
   Widget build(BuildContext context) {
     return Container(
@@ -242,7 +244,7 @@ class _LessonsState extends State<Lessons> {
                               ),
                             )),
                         SizedBox(height: 30,),
-                        OutlinedButton(
+                        (act_but==2 || act_but==3)?OutlinedButton(
                             onPressed: () {
                               Overlay.of(context)
                                   ?.insert(_getEntry3(context));
@@ -258,7 +260,7 @@ class _LessonsState extends State<Lessons> {
                                 color: Colors.white,
                                 fontSize: 100.0,
                               ),
-                            )),
+                            )):SizedBox(height: 0,)
                       ],
                     ),
               ),

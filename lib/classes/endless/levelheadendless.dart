@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
 import 'package:logic_enhancer/pages/levels.dart';
 
+import '../../main.dart';
+
 bool hovering = false;
 
 class levelheadendless extends StatefulWidget {
@@ -54,7 +56,7 @@ class _levelheadendlessState extends State<levelheadendless> {
                   icon: Icon(
                     Icons.arrow_back_ios_sharp,
                     size: 40,
-                    color: Colors.yellow,
+                    color: Color(colors[ind+1]),
                   ),
                 ),
               )),
@@ -70,17 +72,10 @@ class _levelheadendlessState extends State<levelheadendless> {
               )),
           Spacer(),
           Padding(
-            padding: EdgeInsets.fromLTRB(0, 10, 150, 0),
+            padding: EdgeInsets.fromLTRB(0, 10, 280, 0),
             child: Align(
               alignment: Alignment.topCenter,
-              child: Text(
-                "Level " + n,
-                style: TextStyle(
-                  fontSize: 70,
-                  decoration: TextDecoration.none,
-                  color: Colors.blue,
-                ),
-              ),
+              child: Icon(Icons.all_inclusive_rounded,size: 80,color: Colors.blue,)
             ),
           ),
           Spacer(),
@@ -101,7 +96,7 @@ class _levelheadendlessState extends State<levelheadendless> {
                       icon: Icon(
                         Icons.question_mark_rounded,
                         size: 40,
-                        color: Colors.yellow,
+                        color: Color(colors[ind+1]),
                       )),
                 )),
           )

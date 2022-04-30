@@ -123,7 +123,7 @@ Bus a12 = Bus(
 Bus a13 = Bus(
   activate: or3_output,
   hor_length: 0,
-  ver_length1: 50,
+  ver_length1: 60,
   ver_length2: 0,
   dx: -2.5,
   dy: -20,
@@ -700,7 +700,6 @@ class _level11State extends State<level11> {
           activate: or3_output,
           hor_length: 0,
          ver_length1: 60,
-
           ver_length2: 0,
           dx: -2.5,
           dy: -20,
@@ -797,7 +796,7 @@ class _level11State extends State<level11> {
 
           ver_length2: 0,
           dx: -2.5,
-          dy: -10,
+          dy: -20,
         );
       } else {
         sat6 = 1;
@@ -833,7 +832,7 @@ class _level11State extends State<level11> {
 
           ver_length2: 0,
           dx: -2.5,
-          dy: -10,
+          dy: -20,
         );
       }
       if (a13.activate == 1) {

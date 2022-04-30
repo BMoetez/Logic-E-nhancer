@@ -26,10 +26,10 @@ class no_gate extends StatefulWidget {
       }
     }else{
       if (x == 1) {
-        path.value = 'assets/images/gates/no/1copy.png';
+        path.value = 'assets/images/gates/no/2copy.png';
         return 0;
       } else {
-        path.value = 'assets/images/gates/no/2copy.png';
+        path.value = 'assets/images/gates/no/1copy.png';
         return 1;
       }
     }

@@ -29,8 +29,8 @@ class _Nor_Lesson3State extends State<Nor_Lesson3> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Column(children: [
-                Padding(padding: EdgeInsets.all(20),child: OutlinedButton(onPressed: (){Overlay.of(context)?.insert(rightanswer(context));},style: OutlinedButton.styleFrom(fixedSize: const Size(250, 80),side: BorderSide(width: 5.0, color: Colors.white),), child: Text("ONE(1)",style:TextStyle(fontSize: 50),)),),
-                Padding(padding: EdgeInsets.all(20),child: OutlinedButton(onPressed: (){Overlay.of(context)?.insert(wronganswer(context));},style: OutlinedButton.styleFrom(fixedSize: const Size(250, 80),side: BorderSide(width: 5.0, color: Colors.white),), child: Text("ZERO(0)",style:TextStyle(fontSize: 50))),)
+                Padding(padding: EdgeInsets.all(20),child: OutlinedButton(onPressed: (){Overlay.of(context)?.insert(wronganswer(context));},style: OutlinedButton.styleFrom(fixedSize: const Size(250, 80),side: BorderSide(width: 5.0, color: Colors.white),), child: Text("ONE(1)",style:TextStyle(fontSize: 50),)),),
+                Padding(padding: EdgeInsets.all(20),child: OutlinedButton(onPressed: (){Overlay.of(context)?.insert(rightanswer(context));},style: OutlinedButton.styleFrom(fixedSize: const Size(250, 80),side: BorderSide(width: 5.0, color: Colors.white),), child: Text("ZERO(0)",style:TextStyle(fontSize: 50))),)
               ],),
               Image.asset("../../assets/images/lessons/nor_quiz3.png",height: 300,width: 300,)
             ],)

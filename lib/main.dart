@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:logic_enhancer/pages/credit.dart';
 import 'package:logic_enhancer/pages/option_page.dart';
 import 'pages/play_page (1).dart';
+import 'package:path_provider/path_provider.dart';
+import 'dart:io';
 
 
 var colors = [0xFFa0b6f7,0xFFf2f261,0xFF4955fd,0xFFa5e300];
@@ -23,6 +25,18 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(fontFamily: 'Digital7'),
     );
   }
+}
+Future<String> getFilePath() async {
+  Directory appDocumentsDirectory = await getApplicationDocumentsDirectory(); // 1
+  String appDocumentsPath = appDocumentsDirectory.path; // 2
+  String filePath = '$appDocumentsPath/demoTextFile.txt'; // 3
+
+  return filePath;
+}
+
+void saveFile() async {
+  File file = File(await getFilePath()); // 1
+  file.writeAsString("name;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0"); // 2
 }
 
 class HomePage extends StatefulWidget {
@@ -55,6 +69,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+
     return Container(
         decoration: const BoxDecoration(
             image: DecorationImage(

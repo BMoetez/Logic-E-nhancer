@@ -10,7 +10,8 @@ import '../classes/Nand_gate.dart';
 int moves = 3;
 LevelHead2 v = LevelHead2(
   "12",
-  level12(),light,
+  level12(),
+  light,
   mov: moves,
 );
 or_gate or1 = or_gate(height: 50, width: 50);
@@ -129,9 +130,15 @@ LED light = LED(
   x: a13.activate,
   y: 12,
 );
+
 void set() {
   moves = 3;
-  v = LevelHead2("12", level12(),light,mov: moves,);
+  v = LevelHead2(
+    "12",
+    level12(),
+    light,
+    mov: moves,
+  );
   sat1 = 0;
   sat2 = 0;
   sat3 = 0;
@@ -255,6 +262,7 @@ class _level12State extends State<level12> {
     "assets/images/button/button0.png",
     "assets/images/button/button1.png"
   ];
+
   @override
   void initState() {
     set();
@@ -263,7 +271,6 @@ class _level12State extends State<level12> {
 
   void test1() {
     setState(() {
-
       if (sat1 == 0) {
         sat1 = 1;
         a1 = Bus(
@@ -362,16 +369,20 @@ class _level12State extends State<level12> {
           y: 12,
         );
       }
-      if(moves!=0){
-        moves-=1;
-        v = LevelHead2("12", level12(),light,mov: moves,);
+      if (moves != 0) {
+        moves -= 1;
+        v = LevelHead2(
+          "12",
+          level12(),
+          light,
+          mov: moves,
+        );
       }
     });
   }
 
   void test2() {
     setState(() {
-
       if (sat2 == 1) {
         sat2 = 0;
         a2 = Bus(
@@ -470,16 +481,20 @@ class _level12State extends State<level12> {
           y: 12,
         );
       }
-      if(moves!=0){
-        moves-=1;
-        v = LevelHead2("12", level12(),light,mov: moves,);
+      if (moves != 0) {
+        moves -= 1;
+        v = LevelHead2(
+          "12",
+          level12(),
+          light,
+          mov: moves,
+        );
       }
     });
   }
 
   void test3() {
     setState(() {
-
       if (sat3 == 1) {
         sat3 = 0;
         a3 = Bus(
@@ -562,16 +577,20 @@ class _level12State extends State<level12> {
           y: 12,
         );
       }
-      if(moves!=0){
-        moves-=1;
-        v = LevelHead2("12", level12(),light,mov: moves,);
+      if (moves != 0) {
+        moves -= 1;
+        v = LevelHead2(
+          "12",
+          level12(),
+          light,
+          mov: moves,
+        );
       }
     });
   }
 
   void test4() {
     setState(() {
-
       if (sat4 == 1) {
         sat4 = 0;
         a4 = Bus(
@@ -656,16 +675,20 @@ class _level12State extends State<level12> {
           y: 12,
         );
       }
-      if(moves!=0){
-        moves-=1;
-        v = LevelHead2("12", level12(),light,mov: moves,);
+      if (moves != 0) {
+        moves -= 1;
+        v = LevelHead2(
+          "12",
+          level12(),
+          light,
+          mov: moves,
+        );
       }
     });
   }
 
   void test5() {
     setState(() {
-
       if (sat5 == 1) {
         sat5 = 0;
         a5 = Bus(
@@ -740,16 +763,20 @@ class _level12State extends State<level12> {
           y: 12,
         );
       }
-      if(moves!=0){
-        moves-=1;
-        v = LevelHead2("12", level12(),light,mov: moves,);
+      if (moves != 0) {
+        moves -= 1;
+        v = LevelHead2(
+          "12",
+          level12(),
+          light,
+          mov: moves,
+        );
       }
     });
   }
 
   void test6() {
     setState(() {
-
       if (sat6 == 1) {
         sat6 = 0;
         a7 = Bus(
@@ -816,73 +843,95 @@ class _level12State extends State<level12> {
           y: 12,
         );
       }
-      if(moves!=0){
-        moves-=1;
-        v = LevelHead2("12", level12(),light,mov: moves,);
+      if (moves != 0) {
+        moves -= 1;
+        v = LevelHead2(
+          "12",
+          level12(),
+          light,
+          mov: moves,
+        );
       }
     });
   }
 
   Widget button1() {
-    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
-        onPressed: test1,
-        child: Image.asset(
-          buttons[sat1],
-          width: 70,
-          height: 70,
-        )),);
+    return IgnorePointer(
+      ignoring: light.x == 1,
+      child: FlatButton(
+          onPressed: test1,
+          child: Image.asset(
+            buttons[sat1],
+            width: 70,
+            height: 70,
+          )),
+    );
   }
 
   Widget button2() {
-    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
-        onPressed: test2,
-        child: Image.asset(
-          buttons[sat2],
-          width: 70,
-          height: 70,
-        )),);
+    return IgnorePointer(
+      ignoring: light.x == 1,
+      child: FlatButton(
+          onPressed: test2,
+          child: Image.asset(
+            buttons[sat2],
+            width: 70,
+            height: 70,
+          )),
+    );
   }
 
   Widget button3() {
-    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
-        onPressed: test3,
-        child: Image.asset(
-          buttons[sat3],
-          width: 70,
-          height: 70,
-        )),);
+    return IgnorePointer(
+      ignoring: light.x == 1,
+      child: FlatButton(
+          onPressed: test3,
+          child: Image.asset(
+            buttons[sat3],
+            width: 70,
+            height: 70,
+          )),
+    );
   }
 
   Widget button4() {
-    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
-        onPressed: test4,
-        child: Image.asset(
-          buttons[sat4],
-          width: 70,
-          height: 70,
-        )),);
+    return IgnorePointer(
+      ignoring: light.x == 1,
+      child: FlatButton(
+          onPressed: test4,
+          child: Image.asset(
+            buttons[sat4],
+            width: 70,
+            height: 70,
+          )),
+    );
   }
 
   Widget button5() {
-    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
-        onPressed: test5,
-        child: Image.asset(
-          buttons[sat5],
-          width: 70,
-          height: 70,
-        )),);
+    return IgnorePointer(
+      ignoring: light.x == 1,
+      child: FlatButton(
+          onPressed: test5,
+          child: Image.asset(
+            buttons[sat5],
+            width: 70,
+            height: 70,
+          )),
+    );
   }
 
   Widget button6() {
-    return IgnorePointer(ignoring: light.x==1,child: FlatButton(
-        onPressed: test6,
-        child: Image.asset(
-          buttons[sat6],
-          width: 70,
-          height: 70,
-        )),);
+    return IgnorePointer(
+      ignoring: light.x == 1,
+      child: FlatButton(
+          onPressed: test6,
+          child: Image.asset(
+            buttons[sat6],
+            width: 70,
+            height: 70,
+          )),
+    );
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -894,7 +943,10 @@ class _level12State extends State<level12> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            IgnorePointer(ignoring: light.x==1,child: v,),
+            IgnorePointer(
+              ignoring: light.x == 1,
+              child: v,
+            ),
             light,
             a13.show(),
             SizedBox(

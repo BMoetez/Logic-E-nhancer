@@ -103,7 +103,7 @@ class _LevelHead2State extends State<LevelHead2> {
                       icon: Icon(
                         Icons.question_mark_rounded,
                         size: 40,
-                        color: Colors.yellow,
+                        color: Color(colors[ind+1]),
                       )),
                 )),
           ),

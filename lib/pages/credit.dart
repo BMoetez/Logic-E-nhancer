@@ -82,8 +82,8 @@ late Timer timer;
                     setState(() {
                       hovering = !hovering;
                     });
-                  } , child: Text("MOETEZ BOUHLEL",style: TextStyle(fontSize: 55,color:(colorindex==1 || colorindex==3)? Colors.blue
-                                : Colors.white ),)),
+                  } , child: Text("MOETEZ BOUHLEL",style: TextStyle(fontSize: 55,color:(colorindex==1)? Color(colors[ind])
+                                :( colorindex==3)? Color(colors[ind+1]) :Colors.white))),
               ),
             ),
             SizedBox(height: 25),
@@ -97,8 +97,8 @@ late Timer timer;
                     setState(() {
                       hovering = !hovering;
                     });
-                  } , child: Text("WASSIM CHOUCHEN",style: TextStyle(fontSize: 55,color:(colorindex==5 || colorindex==7)? Colors.blue
-                                : Colors.white ),)),
+                  } , child: Text("WASSIM CHOUCHEN",style: TextStyle(fontSize: 55,color:(colorindex==5)? Color(colors[ind])
+                    :( colorindex==7)? Color(colors[ind+1]) :Colors.white),)),
               ),
             ),
             SizedBox(height: 25),
@@ -112,8 +112,8 @@ late Timer timer;
                     setState(() {
                       hovering = !hovering;
                     });
-                  } , child: Text("FIRAS NECIB",style: TextStyle(fontSize: 55,color:(colorindex==9 || colorindex==11)? Colors.blue
-                                : Colors.white ),)),
+                  } , child: Text("FIRAS NECIB",style: TextStyle(fontSize: 55,color:(colorindex==9)? Color(colors[ind])
+                    :( colorindex==11)? Color(colors[ind+1]) :Colors.white ),)),
               ),
             ),
             SizedBox(height: 25),
@@ -127,8 +127,8 @@ late Timer timer;
                     setState(() {
                       hovering = !hovering;
                     });
-                  } , child: Text("MOHAMED SOUID",style: TextStyle(fontSize: 55,color:(colorindex==13 || colorindex==15)? Colors.blue
-                                : Colors.white ),)),
+                  } , child: Text("MOHAMED SOUID",style: TextStyle(fontSize: 55,color:(colorindex==13)? Color(colors[ind])
+                    :( colorindex==15)? Color(colors[ind+1]) :Colors.white ),)),
               ),
             ),
           ],
