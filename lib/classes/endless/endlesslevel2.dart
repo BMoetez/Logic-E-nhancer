@@ -851,7 +851,7 @@ class _endlesslevel2State extends State<endlesslevel2> {
         child: Image.asset(
           buttons[sat1],
           width: 70,
-          height: 70,
+          height: 60,
         )),);
   }
 
@@ -861,7 +861,7 @@ class _endlesslevel2State extends State<endlesslevel2> {
         child: Image.asset(
           buttons[sat2],
           width: 70,
-          height: 70,
+          height: 60,
         )),);
   }
 
@@ -871,7 +871,7 @@ class _endlesslevel2State extends State<endlesslevel2> {
         child: Image.asset(
           buttons[sat3],
           width: 70,
-          height: 70,
+          height: 60,
         )),);
   }
 
@@ -881,7 +881,7 @@ class _endlesslevel2State extends State<endlesslevel2> {
         child: Image.asset(
           buttons[sat4],
           width: 70,
-          height: 70,
+          height: 60,
         )),);
   }
 
@@ -891,7 +891,7 @@ class _endlesslevel2State extends State<endlesslevel2> {
         child: Image.asset(
           buttons[sat5],
           width: 70,
-          height: 70,
+          height: 60,
         )),);
   }
 

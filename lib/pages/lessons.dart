@@ -5,9 +5,7 @@ import 'package:logic_enhancer/lessons/Nand_Lesson2.dart';
 import 'package:logic_enhancer/lessons/Or_Lesson1.dart';
 import 'package:logic_enhancer/main.dart';
 import 'dart:ui' as ui;
-
 import 'package:logic_enhancer/pages/play_page%20(1).dart';
-
 import '../lessons/And_Lesson1.dart';
 import '../lessons/Nand_Lesson3.dart';
 import '../lessons/Nor_Lesson1.dart';
@@ -273,7 +271,9 @@ class _LessonsState extends State<Lessons> {
         entry = OverlayEntry(
           opaque: false,
           maintainState: true,
-          builder: (_) => Positioned(
+          builder: (_) => GestureDetector(onTap: () {
+            
+          },behavior: HitTestBehavior.translucent,child: Positioned(
             left: 0,
             bottom: 0,
             width: MediaQuery.of(context).size.width,
@@ -353,7 +353,7 @@ class _LessonsState extends State<Lessons> {
                 ),
               ),
             ),
-          ),
+          ),)
         );
         break;
       }
@@ -361,7 +361,9 @@ class _LessonsState extends State<Lessons> {
         entry = OverlayEntry(
           opaque: false,
           maintainState: true,
-          builder: (_) => Positioned(
+          builder: (_) => GestureDetector(onTap: () {
+            
+          },behavior: HitTestBehavior.translucent,child: Positioned(
             left: 0,
             bottom: 0,
             width: MediaQuery.of(context).size.width,
@@ -441,7 +443,7 @@ class _LessonsState extends State<Lessons> {
                 ),
               ),
             ),
-          ),
+          ),)
         );
         break;
       }
@@ -449,7 +451,9 @@ class _LessonsState extends State<Lessons> {
         entry = OverlayEntry(
           opaque: false,
           maintainState: true,
-          builder: (_) => Positioned(
+          builder: (_) => GestureDetector(onTap: () {
+            
+          },behavior: HitTestBehavior.translucent,child: Positioned(
             left: 0,
             bottom: 0,
             width: MediaQuery.of(context).size.width,
@@ -529,7 +533,7 @@ class _LessonsState extends State<Lessons> {
                 ),
               ),
             ),
-          ),
+          ),)
         );
         break;
       }
@@ -537,7 +541,9 @@ class _LessonsState extends State<Lessons> {
         entry = OverlayEntry(
           opaque: false,
           maintainState: true,
-          builder: (_) => Positioned(
+          builder: (_) => GestureDetector(onTap: () {
+            
+          },behavior: HitTestBehavior.translucent,child: Positioned(
             left: 0,
             bottom: 0,
             width: MediaQuery.of(context).size.width,
@@ -617,7 +623,7 @@ class _LessonsState extends State<Lessons> {
                 ),
               ),
             ),
-          ),
+          ),)
         );
         break;
       }
@@ -634,7 +640,9 @@ class _LessonsState extends State<Lessons> {
         entry = OverlayEntry(
           opaque: false,
           maintainState: true,
-          builder: (_) => Positioned(
+          builder: (_) => GestureDetector(onTap: () {
+            
+          },behavior: HitTestBehavior.translucent,child: Positioned(
             left: 0,
             bottom: 0,
             width: MediaQuery.of(context).size.width,
@@ -680,7 +688,7 @@ class _LessonsState extends State<Lessons> {
                 ),
               ),
             ),
-          ),
+          ),)
         );
         break;
       }
@@ -688,7 +696,9 @@ class _LessonsState extends State<Lessons> {
         entry = OverlayEntry(
           opaque: false,
           maintainState: true,
-          builder: (_) => Positioned(
+          builder: (_) => GestureDetector(onTap: () {
+            
+          },child: Positioned(
             left: 0,
             bottom: 0,
             width: MediaQuery.of(context).size.width,
@@ -736,7 +746,7 @@ class _LessonsState extends State<Lessons> {
                 ),
               ),
             ),
-          ),
+          ),)
         );
         break;
       }
@@ -744,7 +754,9 @@ class _LessonsState extends State<Lessons> {
         entry = OverlayEntry(
           opaque: false,
           maintainState: true,
-          builder: (_) => Positioned(
+          builder: (_) => GestureDetector(onTap: () {
+            
+          },behavior: HitTestBehavior.translucent,child: Positioned(
             left: 0,
             bottom: 0,
             width: MediaQuery.of(context).size.width,
@@ -792,7 +804,7 @@ class _LessonsState extends State<Lessons> {
                 ),
               ),
             ),
-          ),
+          ),)
         );
         break;
       }
@@ -800,7 +812,9 @@ class _LessonsState extends State<Lessons> {
         entry = OverlayEntry(
           opaque: false,
           maintainState: true,
-          builder: (_) => Positioned(
+          builder: (_) => GestureDetector(onTap: () {
+            
+          },behavior: HitTestBehavior.translucent,child: Positioned(
             left: 0,
             bottom: 0,
             width: MediaQuery.of(context).size.width,
@@ -846,7 +860,7 @@ class _LessonsState extends State<Lessons> {
                 ),
               ),
             ),
-          ),
+          ),)
         );
         break;
       }
@@ -863,7 +877,9 @@ class _LessonsState extends State<Lessons> {
         entry = OverlayEntry(
           opaque: false,
           maintainState: true,
-          builder: (_) => Positioned(
+          builder: (_) => GestureDetector(onTap: () {
+            
+          },behavior: HitTestBehavior.translucent,child: Positioned(
             left: 0,
             bottom: 0,
             width: MediaQuery.of(context).size.width,
@@ -910,7 +926,7 @@ class _LessonsState extends State<Lessons> {
                 ),
               ),
             ),
-          ),
+          ),)
         );
         break;
       }
@@ -918,7 +934,9 @@ class _LessonsState extends State<Lessons> {
         entry = OverlayEntry(
           opaque: false,
           maintainState: true,
-          builder: (_) => Positioned(
+          builder: (_) => GestureDetector(onTap: () {
+            
+          },behavior: HitTestBehavior.translucent,child: Positioned(
             left: 0,
             bottom: 0,
             width: MediaQuery.of(context).size.width,
@@ -965,7 +983,7 @@ class _LessonsState extends State<Lessons> {
                 ),
               ),
             ),
-          ),
+          ),)
         );
         break;
       }

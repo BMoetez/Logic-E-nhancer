@@ -127,7 +127,8 @@ late Timer timer;
                     setState(() {
                       hovering = !hovering;
                     });
-                  } , child: Text("MOHAMED SOUID",style: TextStyle(fontSize: 55,color:(colorindex==13 || colorindex==15)? Colors.blue
+                  } , child: Text("MOHAMED SOUID",style: TextStyle(decorationColor: Colors.white
+                  ,decoration: TextDecoration.lineThrough,fontSize: 55,color:(colorindex==13 || colorindex==15)? Colors.blue
                                 : Colors.white ),)),
               ),
             ),
