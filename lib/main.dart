@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:logic_enhancer/pages/credit.dart';
@@ -7,8 +8,8 @@ import 'pages/play_page (1).dart';
 import 'package:path_provider/path_provider.dart';
 import 'dart:io';
 
-
-var colors = [0xFFa0b6f7,0xFFf2f261,0xFF4955fd,0xFFa5e300];
+late AssetsAudioPlayer _assetsAudioPlayer;
+var colors = [0xFFa0b6f7, 0xFFf2f261, 0xFF4955fd, 0xFFa5e300];
 int ind = 0;
 
 void main() {
@@ -28,6 +29,20 @@ class MyApp extends StatelessWidget {
   }
 }
 
+Future<String> getFilePath() async {
+  Directory appDocumentsDirectory =
+      await getApplicationDocumentsDirectory(); // 1
+  String appDocumentsPath = appDocumentsDirectory.path; // 2
+  String filePath = '$appDocumentsPath/demoTextFile.txt'; // 3
+
+  return filePath;
+}
+
+void saveFile() async {
+  File file = File(await getFilePath()); // 1
+  file.writeAsString("name;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0"); // 2
+}
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -42,6 +57,12 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
+    _assetsAudioPlayer = AssetsAudioPlayer();
+    _assetsAudioPlayer.open(Audio("assets/audio/out.mp3"));
+    _assetsAudioPlayer.play();
+    _assetsAudioPlayer.onErrorDo = (errorHandler) {
+      _assetsAudioPlayer.play();
+    };
     timer = Timer.periodic(Duration(seconds: 1), (timer) {
       setState(() {
         colorindex++;
@@ -107,7 +128,7 @@ class _HomePageState extends State<HomePage> {
                                         builder: (context) => playPage()));
                               },
                               color: Color(colors[ind]),
-                              hoverColor: Color(colors[ind+1]),
+                              hoverColor: Color(colors[ind + 1]),
                               padding: EdgeInsets.fromLTRB(45, 10, 90, 30),
                               child: Row(
                                 children: [
@@ -146,7 +167,7 @@ class _HomePageState extends State<HomePage> {
                                         builder: (context) => OptionPage()));
                               },
                               color: Color(colors[ind]),
-                              hoverColor: Color(colors[ind+1]),
+                              hoverColor: Color(colors[ind + 1]),
                               padding: EdgeInsets.fromLTRB(30, 10, 40, 20),
                               child: Row(
                                 children: [
@@ -185,7 +206,7 @@ class _HomePageState extends State<HomePage> {
                                         builder: (context) => credits()));
                               },
                               color: Color(colors[ind]),
-                              hoverColor: Color(colors[ind+1]),
+                              hoverColor: Color(colors[ind + 1]),
                               padding: EdgeInsets.fromLTRB(30, 10, 40, 20),
                               child: Row(
                                 children: [

@@ -1,8 +1,6 @@
-
 import 'package:flutter/material.dart';
-import '../main.dart';
-
-
+import 'package:logic_enhancer/main.dart';
+import 'package:assets_audio_player/assets_audio_player.dart';
 
 class OptionPage extends StatefulWidget {
   @override
@@ -10,19 +8,18 @@ class OptionPage extends StatefulWidget {
 }
 
 class _OptionPageState extends State<OptionPage> {
-
   //AudioPlayer player = AudioPlayer();
   //AudioCache cache = AudioCache();
-
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-   // player = AudioPlayer();
-   // cache = AudioCache(fixedPlayer: player);
-   // cache.load("music.mp3");
+    // player = AudioPlayer();
+    // cache = AudioCache(fixedPlayer: player);
+    // cache.load("music.mp3");
   }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -35,13 +32,14 @@ class _OptionPageState extends State<OptionPage> {
           child: Column(
             children: [
               Align(
-
                 alignment: Alignment.topLeft,
                 child: Material(
                   child: IconButton(
-                      onPressed:(){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage())
-                        );
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HomePage()));
                       },
                       icon: Icon(
                         Icons.arrow_back_ios_sharp,
@@ -82,11 +80,11 @@ class _OptionPageState extends State<OptionPage> {
                   )),
               RaisedButton(
                 onPressed: () {
-                  //cache.play("music.mp3");
+  
                 },
                 textColor: Colors.white,
                 color: Color(colors[ind]),
-                hoverColor: Color(colors[ind+1]),
+                hoverColor: Color(colors[ind + 1]),
                 padding: EdgeInsets.fromLTRB(20, 20, 20, 30),
                 child: Text(
                   "ON/OFF",
@@ -115,7 +113,7 @@ class _OptionPageState extends State<OptionPage> {
               RaisedButton(
                 onPressed: () {
                   setState(() {
-                    ind=2;
+                    ind = 2;
                   });
                 },
                 hoverColor: Color(0xFFa5e300),
@@ -132,14 +130,15 @@ class _OptionPageState extends State<OptionPage> {
                   child: RaisedButton(
                     onPressed: () {
                       setState(() {
-                        ind=0;
+                        ind = 0;
                       });
                     },
                     hoverColor: Color(0xFFf2f261),
                     child: const Text(
                       "Cyan/Yellow",
                       style: TextStyle(
-                          color: Color.fromRGBO(255, 255, 255, 1), fontSize: 40),
+                          color: Color.fromRGBO(255, 255, 255, 1),
+                          fontSize: 40),
                     ),
                     color: const Color(0xFFa0b6f7),
                     padding: const EdgeInsets.fromLTRB(20, 20, 20, 30),
