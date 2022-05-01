@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:logic_enhancer/pages/credit.dart';
 import 'package:logic_enhancer/pages/option_page.dart';
 import 'pages/play_page (1).dart';
@@ -11,7 +12,7 @@ var colors = [0xFFa0b6f7,0xFFf2f261,0xFF4955fd,0xFFa5e300];
 int ind = 0;
 
 void main() {
-  runApp(const MyApp());
+    runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -25,18 +26,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(fontFamily: 'Digital7'),
     );
   }
-}
-Future<String> getFilePath() async {
-  Directory appDocumentsDirectory = await getApplicationDocumentsDirectory(); // 1
-  String appDocumentsPath = appDocumentsDirectory.path; // 2
-  String filePath = '$appDocumentsPath/demoTextFile.txt'; // 3
-
-  return filePath;
-}
-
-void saveFile() async {
-  File file = File(await getFilePath()); // 1
-  file.writeAsString("name;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0"); // 2
 }
 
 class HomePage extends StatefulWidget {
@@ -69,7 +58,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-
     return Container(
         decoration: const BoxDecoration(
             image: DecorationImage(
@@ -125,7 +113,7 @@ class _HomePageState extends State<HomePage> {
                                 children: [
                                   Padding(
                                       padding:
-                                          EdgeInsets.fromLTRB(0, 20, 2, 10),
+                                      EdgeInsets.fromLTRB(0, 20, 2, 10),
                                       child: Icon(
                                         Icons.play_circle_rounded,
                                         color: Colors.white,
@@ -164,7 +152,7 @@ class _HomePageState extends State<HomePage> {
                                 children: [
                                   Padding(
                                       padding:
-                                          EdgeInsets.fromLTRB(5, 20, 20, 10),
+                                      EdgeInsets.fromLTRB(5, 20, 20, 10),
                                       child: Icon(
                                         Icons.miscellaneous_services,
                                         color: Colors.white,
@@ -203,7 +191,7 @@ class _HomePageState extends State<HomePage> {
                                 children: [
                                   Padding(
                                       padding:
-                                          EdgeInsets.fromLTRB(5, 20, 20, 10),
+                                      EdgeInsets.fromLTRB(5, 20, 20, 10),
                                       child: Icon(
                                         Icons.military_tech_sharp,
                                         color: Colors.white,
@@ -226,6 +214,6 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ],
                   ))
-            ])));
+            ])) ,);
   }
 }
