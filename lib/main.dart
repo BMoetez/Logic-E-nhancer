@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:logic_enhancer/pages/credit.dart';
 import 'package:logic_enhancer/pages/option_page.dart';
 import 'pages/play_page (1).dart';
@@ -13,7 +14,7 @@ var colors = [0xFFa0b6f7, 0xFFf2f261, 0xFF4955fd, 0xFFa5e300];
 int ind = 0;
 
 void main() {
-  runApp(const MyApp());
+    runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -141,7 +142,7 @@ class _HomePageState extends State<HomePage> {
                                 children: [
                                   Padding(
                                       padding:
-                                          EdgeInsets.fromLTRB(0, 20, 2, 10),
+                                      EdgeInsets.fromLTRB(0, 20, 2, 10),
                                       child: Icon(
                                         Icons.play_circle_rounded,
                                         color: Colors.white,
@@ -180,7 +181,7 @@ class _HomePageState extends State<HomePage> {
                                 children: [
                                   Padding(
                                       padding:
-                                          EdgeInsets.fromLTRB(5, 20, 20, 10),
+                                      EdgeInsets.fromLTRB(5, 20, 20, 10),
                                       child: Icon(
                                         Icons.miscellaneous_services,
                                         color: Colors.white,
@@ -219,7 +220,7 @@ class _HomePageState extends State<HomePage> {
                                 children: [
                                   Padding(
                                       padding:
-                                          EdgeInsets.fromLTRB(5, 20, 20, 10),
+                                      EdgeInsets.fromLTRB(5, 20, 20, 10),
                                       child: Icon(
                                         Icons.military_tech_sharp,
                                         color: Colors.white,
@@ -242,6 +243,6 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ],
                   ))
-            ])));
+            ])) ,);
   }
 }
