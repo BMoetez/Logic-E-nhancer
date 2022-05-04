@@ -7,7 +7,8 @@ import 'pages/play_page (1).dart';
 import 'package:path_provider/path_provider.dart';
 import 'dart:io';
 
-late AssetsAudioPlayer _assetsAudioPlayer;
+int x = 0;
+late AssetsAudioPlayer assetsAudioPlayer = AssetsAudioPlayer();
 var colors = [0xFFa0b6f7, 0xFFf2f261, 0xFF4955fd, 0xFFa5e300];
 int ind = 0;
 
@@ -56,12 +57,18 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    _assetsAudioPlayer = AssetsAudioPlayer();
-    _assetsAudioPlayer.open(Audio("assets/audio/out.mp3"));
-    _assetsAudioPlayer.play();
-    _assetsAudioPlayer.onErrorDo = (errorHandler) {
-      _assetsAudioPlayer.play();
-    };
+
+    if (x == 0 || x == 1) {
+      assetsAudioPlayer.open(Audio("assets/audio/main.mp3"));
+      assetsAudioPlayer.setVolume(0.5);
+      assetsAudioPlayer.play();
+      setState(() {
+        x += 1;
+      });
+    }
+    if (assetsAudioPlayer.isPlaying.value) {
+      assetsAudioPlayer.setLoopMode(LoopMode.single);
+    }
     timer = Timer.periodic(Duration(seconds: 1), (timer) {
       setState(() {
         colorindex++;
@@ -73,6 +80,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void dispose() {
     timer.cancel();
+    assetsAudioPlayer.dispose();
     super.dispose();
   }
 

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:logic_enhancer/main.dart';
-import 'package:assets_audio_player/assets_audio_player.dart';
 
 class OptionPage extends StatefulWidget {
   @override
@@ -8,18 +7,6 @@ class OptionPage extends StatefulWidget {
 }
 
 class _OptionPageState extends State<OptionPage> {
-  //AudioPlayer player = AudioPlayer();
-  //AudioCache cache = AudioCache();
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    // player = AudioPlayer();
-    // cache = AudioCache(fixedPlayer: player);
-    // cache.load("music.mp3");
-  }
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -80,7 +67,7 @@ class _OptionPageState extends State<OptionPage> {
                   )),
               RaisedButton(
                 onPressed: () {
-  
+                  assetsAudioPlayer.playOrPause();
                 },
                 textColor: Colors.white,
                 color: Color(colors[ind]),
@@ -91,6 +78,21 @@ class _OptionPageState extends State<OptionPage> {
                   style: TextStyle(fontSize: 40),
                 ),
               ),
+              Material(color: Color.fromRGBO(0, 0, 0, 0),child: Row(mainAxisAlignment: MainAxisAlignment.center,
+                children: [Icon(Icons.volume_mute_sharp,color: Color(colors[ind]),size: 55,),Container(height:50,width: 300,child: Slider(
+                min: 0.0,
+                max: 1.0,
+                activeColor: Color(colors[ind]),
+                inactiveColor: Color(colors[ind+1]),
+                value: assetsAudioPlayer.volume.value,
+                onChanged: (double value) {
+                  assetsAudioPlayer.setVolume(value);
+                  setState(() {
+                    
+                  });
+                },
+              ),),Icon(Icons.volume_up_sharp,color: Color(colors[ind]),size: 55,)],
+              )),
               Padding(
                   padding: const EdgeInsets.fromLTRB(0, 50, 0, 30),
                   child: Row(
