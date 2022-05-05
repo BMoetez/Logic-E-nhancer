@@ -44,8 +44,8 @@ var levels = [
   level18(),
 ];
 int index(int x) {
-  if (x < 17) {
-    return x + 1;
+  if (x <= 17) {
+    return x - 1;
   } else {
     return 17;
   }
@@ -166,12 +166,12 @@ class _LEDState extends State<LED> with SingleTickerProviderStateMixin {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      levels[widget.y - 1]));
+                                                      levels[index(widget.y)]));
                                           Navigator.push(
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) => levels[
-                                                      index(widget.y - 1)]));
+                                                      index(widget.y)+1]));
                                           entry.remove();
                                         },
                                         child: Text(
@@ -198,7 +198,7 @@ class _LEDState extends State<LED> with SingleTickerProviderStateMixin {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              levels[widget.y - 1]),
+                                              levels[index(widget.y)]),
                                       (Route<dynamic> route) => false,
                                     );
                                     entry.remove();
