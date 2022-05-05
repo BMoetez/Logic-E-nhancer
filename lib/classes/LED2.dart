@@ -1,6 +1,7 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:flutter/material.dart';
+import 'package:logic_enhancer/save.dart';
 import 'package:logic_enhancer/stages/level1.dart';
 import 'package:logic_enhancer/stages/level10.dart';
 import 'package:logic_enhancer/stages/level11.dart';
@@ -105,6 +106,13 @@ class _LEDState extends State<LED> with SingleTickerProviderStateMixin {
         print(_controller.value);
         Overlay.of(context)?.insert(_getEntry(context));
       }));
+      String s='';
+      for(int i =0;i<18;i++){
+        if(i<=widget.y)
+          s=s+'1';
+        else s=s+'0';
+      }
+      save.setvalue('levels', s);
     }
   }
 
@@ -154,7 +162,7 @@ class _LEDState extends State<LED> with SingleTickerProviderStateMixin {
                                   TextStyle(fontSize: 60, color: Colors.green),
                             ),
                           ),
-                          (index(widget.y) != 17)
+                          (index(widget.y) < 17)
                               ? Padding(
                                   padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
                                   child: SizedBox(

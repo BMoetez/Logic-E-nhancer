@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:logic_enhancer/main.dart';
+import 'package:logic_enhancer/save.dart';
 import 'package:logic_enhancer/stages/level1.dart';
 import 'package:logic_enhancer/stages/level10.dart';
 import 'package:logic_enhancer/stages/level11.dart';
@@ -131,6 +132,7 @@ class _HomePageState extends State<Levels> {
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
+                              if(save.getvalue('levels')[1]=='1')
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
@@ -154,7 +156,8 @@ class _HomePageState extends State<Levels> {
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
-                              Navigator.push(
+                              if(save.getvalue('levels')[2]=='1')
+                                Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => level3()));
@@ -177,7 +180,8 @@ class _HomePageState extends State<Levels> {
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
-                              Navigator.push(
+                              if(save.getvalue('levels')[3]=='1')
+                                Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => level4()));
@@ -200,7 +204,8 @@ class _HomePageState extends State<Levels> {
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
-                              Navigator.push(
+                              if(save.getvalue('levels')[4]=='1')
+                                Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => level5()));
@@ -223,7 +228,8 @@ class _HomePageState extends State<Levels> {
                         ),
                        IgnorePointer(ignoring: hovering,child:  RaisedButton(
                             onPressed: () {
-                              Navigator.push(
+                              if(save.getvalue('levels')[5]=='1')
+                                Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => level6()));
@@ -259,8 +265,9 @@ class _HomePageState extends State<Levels> {
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
-                              Navigator.push(
-                                  context,
+                              if(save.getvalue('levels')[6]=='1')
+                                Navigator.push(
+                              context,
                                   MaterialPageRoute(
                                       builder: (context) => level7()));
                             },
@@ -282,7 +289,8 @@ class _HomePageState extends State<Levels> {
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
-                              Navigator.push(
+                              if(save.getvalue('levels')[7]=='1')
+                                Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => level8()));
@@ -305,7 +313,8 @@ class _HomePageState extends State<Levels> {
                         ),
                        IgnorePointer(ignoring: hovering,child:  RaisedButton(
                             onPressed: () {
-                              Navigator.push(
+                              if(save.getvalue('levels')[8]=='1')
+                                Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => level9()));
@@ -328,7 +337,8 @@ class _HomePageState extends State<Levels> {
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
-                              Navigator.push(
+                              if(save.getvalue('levels')[9]=='1')
+                                Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => level10()));
@@ -351,7 +361,8 @@ class _HomePageState extends State<Levels> {
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
-                              Navigator.push(
+                              if(save.getvalue('levels')[10]=='1')
+                                Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => level11()));
@@ -374,7 +385,8 @@ class _HomePageState extends State<Levels> {
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
-                              Navigator.push(
+                              if(save.getvalue('levels')[11]=='1')
+                                Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => level12()));
@@ -410,7 +422,8 @@ class _HomePageState extends State<Levels> {
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
-                              Navigator.push(
+                              if(save.getvalue('levels')[12]=='1')
+                                Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => level13()));
@@ -433,7 +446,8 @@ class _HomePageState extends State<Levels> {
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
-                              Navigator.push(
+                              if(save.getvalue('levels')[13]=='1')
+                                Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => level14()));
@@ -456,8 +470,9 @@ class _HomePageState extends State<Levels> {
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
+                              if(save.getvalue('levels')[14]=='1')
                               Navigator.push(
-                                  context,
+                              context,
                                   MaterialPageRoute(
                                       builder: (context) => level15()));
                             },
@@ -479,7 +494,8 @@ class _HomePageState extends State<Levels> {
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
-                              Navigator.push(
+                              if(save.getvalue('levels')[15]=='1')
+                                Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => level16()));
@@ -502,7 +518,8 @@ class _HomePageState extends State<Levels> {
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
-                              Navigator.push(
+                              if(save.getvalue('levels')[16]=='1')
+                                Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => level17()));
@@ -525,7 +542,8 @@ class _HomePageState extends State<Levels> {
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
                             onPressed: () {
-                              Navigator.push(
+                              if(save.getvalue('levels')[17]=='1')
+                                Navigator.push(
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) => level18()));

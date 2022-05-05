@@ -198,7 +198,7 @@ class _LevelHead2State extends State<LevelHead2> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) => f),
-                                          (Route<dynamic> route) => false,
+                                          (Route<dynamic> route) => true,
                                         );
                                         setState(() {
                                         hovering = !hovering;
@@ -382,7 +382,7 @@ setState(() {
                         context,
                         MaterialPageRoute(
                             builder: (context) => f),
-                            (Route<dynamic> route) => false,
+                            (Route<dynamic> route) => true,
                       );
                       entry.remove();}, child: Text("Try Again",style: TextStyle(fontSize: 50),))
                     ],

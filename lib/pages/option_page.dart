@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:logic_enhancer/main.dart';
+import 'package:logic_enhancer/save.dart';
 
 class OptionPage extends StatefulWidget {
   @override
@@ -116,6 +117,7 @@ class _OptionPageState extends State<OptionPage> {
                 onPressed: () {
                   setState(() {
                     ind = 2;
+                    save.setvalue('color_pref', '2');
                   });
                 },
                 hoverColor: Color(0xFFa5e300),
@@ -133,6 +135,7 @@ class _OptionPageState extends State<OptionPage> {
                     onPressed: () {
                       setState(() {
                         ind = 0;
+                        save.setvalue('color_pref', '0');
                       });
                     },
                     hoverColor: Color(0xFFf2f261),

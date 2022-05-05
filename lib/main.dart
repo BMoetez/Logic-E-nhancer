@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:logic_enhancer/pages/credit.dart';
 import 'package:logic_enhancer/pages/option_page.dart';
+import 'package:logic_enhancer/save.dart';
 import 'pages/play_page (1).dart';
 import 'package:path_provider/path_provider.dart';
-import 'dart:io';
-
+import 'dart:html';
 int x = 0;
 late AssetsAudioPlayer assetsAudioPlayer = AssetsAudioPlayer();
 var colors = [0xFFa0b6f7, 0xFFf2f261, 0xFF4955fd, 0xFFa5e300];
-int ind = 0;
+int ind = int.parse(save.getvalue('color_pref'));
 
 void main() {
     runApp(const MyApp());
@@ -30,19 +30,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-Future<String> getFilePath() async {
-  Directory appDocumentsDirectory =
-      await getApplicationDocumentsDirectory(); // 1
-  String appDocumentsPath = appDocumentsDirectory.path; // 2
-  String filePath = '$appDocumentsPath/demoTextFile.txt'; // 3
 
-  return filePath;
-}
-
-void saveFile() async {
-  File file = File(await getFilePath()); // 1
-  file.writeAsString("name;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0"); // 2
-}
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -55,13 +43,29 @@ class _HomePageState extends State<HomePage> {
   int colorindex = 0;
   late Timer timer;
 
+  //Future<void> _setsp() async{
+    //final prefs = await SharedPreferences.getInstance();
+    //await prefs.setString('user', 'moetez');
+    //await prefs.setInt('levels', 100000000000000000);
+    //await prefs.setInt('color_preference', 0);
+  //}
+
+  //Future<int> _getuser() async{
+  //  final prefs = await SharedPreferences.getInstance();
+  //  int user = prefs.getInt('levels');
+  //  return user;
+ // }
+
   @override
   void initState() {
     super.initState();
+    if(save.getvalue('user')!='Moetez') {
+      save.initsave();
+    }
 
     if (x == 0 || x == 1) {
       assetsAudioPlayer.open(Audio("assets/audio/main.mp3"));
-      assetsAudioPlayer.setVolume(0.5);
+      assetsAudioPlayer.setVolume(0.2);
       assetsAudioPlayer.play();
       setState(() {
         x += 1;
@@ -76,6 +80,7 @@ class _HomePageState extends State<HomePage> {
         if (colorindex > 1) colorindex = 0;
       });
     });
+
   }
 
   @override
