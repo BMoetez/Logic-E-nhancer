@@ -104,7 +104,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_open,
-                          color: Colors.white,
+                          color: Color(colors[ind]),
                           size: 70.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -127,7 +127,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Colors.white,
+                          color: Color(colors[ind+1]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -151,7 +151,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 100.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Colors.white,
+                          color: Color(colors[ind+1]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -175,7 +175,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Colors.white,
+                          color: Color(colors[ind+1]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -199,7 +199,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Colors.white,
+                          color: Color(colors[ind+1]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -223,7 +223,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Colors.white,
+                          color: Color(colors[ind+1]),
                           size: 80.0,
                         ),
                        IgnorePointer(ignoring: hovering,child:  RaisedButton(
@@ -260,7 +260,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Colors.white,
+                          color: Color(colors[ind+1]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -284,7 +284,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Colors.white,
+                          color: Color(colors[ind+1]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -308,7 +308,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Colors.white,
+                          color: Color(colors[ind+1]),
                           size: 80.0,
                         ),
                        IgnorePointer(ignoring: hovering,child:  RaisedButton(
@@ -332,7 +332,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Colors.white,
+                          color: Color(colors[ind+1]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -356,7 +356,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Colors.white,
+                          color: Color(colors[ind+1]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -380,7 +380,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Colors.white,
+                          color: Color(colors[ind+1]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -417,7 +417,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Colors.white,
+                          color: Color(colors[ind+1]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -441,7 +441,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Colors.white,
+                          color: Color(colors[ind+1]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -465,7 +465,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Colors.white,
+                          color: Color(colors[ind+1]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -489,7 +489,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Colors.white,
+                          color: Color(colors[ind+1]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -513,7 +513,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Colors.white,
+                          color: Color(colors[ind+1]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -537,7 +537,7 @@ class _HomePageState extends State<Levels> {
                         SizedBox(width: 80.0),
                         Icon(
                           Icons.lock_outline,
-                          color: Colors.white,
+                          color: Color(colors[ind+1]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
