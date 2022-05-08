@@ -3,6 +3,7 @@ import 'package:logic_enhancer/classes/endless/endlesslevel2.dart';
 import 'package:logic_enhancer/classes/endless/endlesslevel3.dart';
 import 'package:logic_enhancer/classes/endless/endlesslevel4.dart';
 import 'package:logic_enhancer/classes/endless/endlesslevel5.dart';
+import 'package:logic_enhancer/save.dart';
 
 import '../classes/endless/endlesslevel1.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +11,7 @@ import 'package:logic_enhancer/pages/lessons.dart';
 import '../main.dart';
 import 'levels.dart';
 import 'dart:math';
+import 'dart:ui' as ui;
 
 var rand = Random();
 int t = rand.nextInt(5);
@@ -100,8 +102,15 @@ class _playPageState extends State<playPage> {
             SizedBox(
               width: 500,
               child: RaisedButton(
-                onPressed: () {Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => list[t]));},
+                onPressed: () {
+                  if(save.getvalue('levels')[17]=='1'){
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => list[t]));}
+                  else {
+                    Overlay.of(context)?.insert(_getEntry(context));
+                  }
+
+                  },
                 textColor: Colors.black,
                 color: Color(colors[ind]),
                 hoverColor: Color(colors[ind+1]),
@@ -128,8 +137,12 @@ class _playPageState extends State<playPage> {
               width: 500,
               child: RaisedButton(
                 onPressed: () {
+                  if(save.getvalue('levels')[1]=="1")
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Lessons()));
+else
+                  Overlay.of(context)?.insert(_getEntry2(context));
+
                 },
                 textColor: Colors.black,
                 color: Color(colors[ind]),
@@ -181,5 +194,119 @@ class _playPageState extends State<playPage> {
             SizedBox(height: 40),
           ],
         ));
+  }
+
+  OverlayEntry _getEntry(context) {
+    OverlayEntry entry = OverlayEntry(builder: (_) => Container());
+
+    entry = OverlayEntry(
+        opaque: false,
+        maintainState: true,
+        builder: (_) => GestureDetector(
+          onTap: () {},
+          behavior: HitTestBehavior.translucent,
+          child: Positioned(
+            left: 0,
+            bottom: 0,
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+            child: BackdropFilter(
+              filter: ui.ImageFilter.blur(
+                sigmaX: 2,
+                sigmaY: 2,
+              ),
+              child: Material(
+                type: MaterialType.transparency,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                      width: 350,
+                      height: 350,
+                      color: Colors.black,
+                      child: Column(
+                        children: [
+                          Align(
+                            alignment: Alignment.topRight,
+                            child: Material(
+                              child: IconButton(
+                                onPressed: () {
+                                  entry.remove();
+                                },
+                                icon: Icon(Icons.close),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                              padding: EdgeInsets.fromLTRB(20, 60, 20, 100),
+                              child: Text("Complete Level Mode to Unlock this mode",style: TextStyle(color: Colors.white,fontSize: 30,height: 1.2),textAlign: TextAlign.center,)
+                          ),                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ));
+    return entry;
+  }
+
+  OverlayEntry _getEntry2(context) {
+    OverlayEntry entry = OverlayEntry(builder: (_) => Container());
+
+    entry = OverlayEntry(
+        opaque: false,
+        maintainState: true,
+        builder: (_) => GestureDetector(
+          onTap: () {},
+          behavior: HitTestBehavior.translucent,
+          child: Positioned(
+            left: 0,
+            bottom: 0,
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+            child: BackdropFilter(
+              filter: ui.ImageFilter.blur(
+                sigmaX: 2,
+                sigmaY: 2,
+              ),
+              child: Material(
+                type: MaterialType.transparency,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                      width: 350,
+                      height: 350,
+                      color: Colors.black,
+                      child: Column(
+                        children: [
+                          Align(
+                            alignment: Alignment.topRight,
+                            child: Material(
+                              child: IconButton(
+                                onPressed: () {
+                                  entry.remove();
+                                },
+                                icon: Icon(Icons.close),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                              padding: EdgeInsets.fromLTRB(20, 60, 20, 100),
+                              child: Text("Play level 1 to unlock this mode",style: TextStyle(color: Colors.white,fontSize: 30,height: 1.2),textAlign: TextAlign.center,)
+                          ),                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ));
+    return entry;
   }
 }

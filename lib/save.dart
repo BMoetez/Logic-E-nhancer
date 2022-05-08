@@ -4,9 +4,10 @@ class save{
   static Storage localStorage = window.localStorage;
 
   static void initsave(){
-    localStorage['user'] = 'Moetez';
-    localStorage["levels"] = '100000000000000000';
+    localStorage['user'] = 'user';
+    localStorage['levels'] = '100000000000000000';
     localStorage['color_pref'] = '0';
+    localStorage['music'] = 'on';
   }
 
   static void setvalue(String key,String value){
@@ -15,7 +16,7 @@ class save{
 
   static String getvalue(String key){
     if(localStorage.containsKey(key))
-    return localStorage[key]!;
+      return localStorage[key]!;
     else return '';
   }
 
@@ -27,4 +28,9 @@ class save{
     }
     return false;
   }
+
+  static void delete(){
+    localStorage.clear();
+  }
+
 }

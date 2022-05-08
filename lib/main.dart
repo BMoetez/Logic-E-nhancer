@@ -1,25 +1,23 @@
 import 'dart:async';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:logic_enhancer/pages/credit.dart';
 import 'package:logic_enhancer/pages/option_page.dart';
 import 'package:logic_enhancer/save.dart';
 import 'pages/play_page (1).dart';
-import 'package:path_provider/path_provider.dart';
 import 'dart:html';
+import 'dart:ui' as ui;
 int x = 0;
 late AssetsAudioPlayer assetsAudioPlayer = AssetsAudioPlayer();
 var colors = [0xFFa0b6f7, 0xFFf2f261, 0xFF4955fd, 0xFFa5e300];
 int ind = int.parse(save.getvalue('color_pref'));
-
+int over =0;
 void main() {
     runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -42,26 +40,21 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int colorindex = 0;
   late Timer timer;
-
-  //Future<void> _setsp() async{
-    //final prefs = await SharedPreferences.getInstance();
-    //await prefs.setString('user', 'moetez');
-    //await prefs.setInt('levels', 100000000000000000);
-    //await prefs.setInt('color_preference', 0);
-  //}
-
-  //Future<int> _getuser() async{
-  //  final prefs = await SharedPreferences.getInstance();
-  //  int user = prefs.getInt('levels');
-  //  return user;
- // }
-
+  String name = '';
   @override
   void initState() {
     super.initState();
-    if(save.getvalue('user')!='Moetez') {
+    //if (over == 0) {
+      //WidgetsBinding.instance?.addPostFrameCallback(
+        //      (_) => Overlay.of(context)?.insert(_getEntry(context)));
+      //over = 1;
+    //}
+
+    if(save.localStorage['user'] != 'user'){
       save.initsave();
     }
+
+
 
     if (x == 0 || x == 1) {
       assetsAudioPlayer.open(Audio("assets/audio/main.mp3"));
@@ -92,6 +85,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance?.addPostFrameCallback((_) => _getEntry(context));
     return Container(
         decoration: const BoxDecoration(
             image: DecorationImage(
@@ -249,5 +243,65 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ))
             ])) ,);
+  }
+
+
+  OverlayEntry _getEntry(context) {
+    OverlayEntry entry = OverlayEntry(builder: (_) => Container());
+
+    entry = OverlayEntry(
+        opaque: false,
+        maintainState: true,
+        builder: (_) => GestureDetector(onTap: () {
+
+        },behavior: HitTestBehavior.translucent,child: Positioned(
+          left: 0,
+          bottom: 0,
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          child: BackdropFilter(
+            filter: ui.ImageFilter.blur(
+              sigmaX: 2,
+              sigmaY: 2,
+            ),
+            child: Material(
+              type: MaterialType.transparency,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Container(
+                      width: 300,
+                      height: 300,
+                      color: Colors.black,
+                      child: Column(
+                        children: [
+                          Padding(padding: EdgeInsets.fromLTRB(10, 50, 10, 10),child: Text("ENTER YOUR NAME",style: TextStyle(fontSize: 30,color: Colors.white),),),
+                          Align(alignment: Alignment.center, child: Padding(padding: EdgeInsets.all(50),child:TextField(
+                            decoration: const InputDecoration(
+                              hintText: 'Enter your name',
+                              fillColor: Colors.white,
+                              filled: true
+                            ),
+                            onSubmitted: (String str){
+                              setState(() {
+                                name = str;
+                                //if(name != save.localStorage['user']){
+                                  //save.initsave(name);
+                                //}
+                                entry.remove();
+                              });
+                            },
+                          ) ,),)
+
+                        ],
+                      )),
+                ],
+              ),
+            ),
+          ),
+        ),)
+    );
+    return entry;
   }
 }

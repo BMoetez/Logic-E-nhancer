@@ -227,7 +227,7 @@ class _LevelHead2State extends State<LevelHead2> {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) => f),
-                                          (Route<dynamic> route) => false,
+                                          (Route<dynamic> route) => true,
                                         );
                                         Navigator.push(
                                             context,

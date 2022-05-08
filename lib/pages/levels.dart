@@ -126,8 +126,8 @@ class _HomePageState extends State<Levels> {
                             )),),
                         SizedBox(width: 80.0),
                         Icon(
-                          Icons.lock_outline,
-                          color: Color(colors[ind+1]),
+                          (save.getvalue('levels')[1]=='0')?Icons.lock_outline:Icons.lock_open,
+                          color: (save.getvalue('levels')[1]=='0')?Color(colors[ind+1]):Color(colors[ind]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -150,8 +150,8 @@ class _HomePageState extends State<Levels> {
                             )),),
                         SizedBox(width: 100.0),
                         Icon(
-                          Icons.lock_outline,
-                          color: Color(colors[ind+1]),
+                          (save.getvalue('levels')[2]=='0')?Icons.lock_outline:Icons.lock_open,
+                          color: (save.getvalue('levels')[2]=='0')?Color(colors[ind+1]):Color(colors[ind]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -174,8 +174,8 @@ class _HomePageState extends State<Levels> {
                             )),),
                         SizedBox(width: 80.0),
                         Icon(
-                          Icons.lock_outline,
-                          color: Color(colors[ind+1]),
+                          (save.getvalue('levels')[3]=='0')?Icons.lock_outline:Icons.lock_open,
+                          color: (save.getvalue('levels')[3]=='0')?Color(colors[ind+1]):Color(colors[ind]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -198,8 +198,8 @@ class _HomePageState extends State<Levels> {
                             )),),
                         SizedBox(width: 80.0),
                         Icon(
-                          Icons.lock_outline,
-                          color: Color(colors[ind+1]),
+                          (save.getvalue('levels')[4]=='0')?Icons.lock_outline:Icons.lock_open,
+                          color: (save.getvalue('levels')[4]=='0')?Color(colors[ind+1]):Color(colors[ind]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -222,8 +222,8 @@ class _HomePageState extends State<Levels> {
                             )),),
                         SizedBox(width: 80.0),
                         Icon(
-                          Icons.lock_outline,
-                          color: Color(colors[ind+1]),
+                          (save.getvalue('levels')[5]=='0')?Icons.lock_outline:Icons.lock_open,
+                          color: (save.getvalue('levels')[5]=='0')?Color(colors[ind+1]):Color(colors[ind]),
                           size: 80.0,
                         ),
                        IgnorePointer(ignoring: hovering,child:  RaisedButton(
@@ -259,8 +259,8 @@ class _HomePageState extends State<Levels> {
                       children: [
                         SizedBox(width: 80.0),
                         Icon(
-                          Icons.lock_outline,
-                          color: Color(colors[ind+1]),
+                          (save.getvalue('levels')[6]=='0')?Icons.lock_outline:Icons.lock_open,
+                          color: (save.getvalue('levels')[6]=='0')?Color(colors[ind+1]):Color(colors[ind]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -283,8 +283,8 @@ class _HomePageState extends State<Levels> {
                             )),),
                         SizedBox(width: 80.0),
                         Icon(
-                          Icons.lock_outline,
-                          color: Color(colors[ind+1]),
+                          (save.getvalue('levels')[7]=='0')?Icons.lock_outline:Icons.lock_open,
+                          color: (save.getvalue('levels')[7]=='0')?Color(colors[ind+1]):Color(colors[ind]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -307,8 +307,8 @@ class _HomePageState extends State<Levels> {
                             )),),
                         SizedBox(width: 80.0),
                         Icon(
-                          Icons.lock_outline,
-                          color: Color(colors[ind+1]),
+                          (save.getvalue('levels')[8]=='0')?Icons.lock_outline:Icons.lock_open,
+                          color: (save.getvalue('levels')[8]=='0')?Color(colors[ind+1]):Color(colors[ind]),
                           size: 80.0,
                         ),
                        IgnorePointer(ignoring: hovering,child:  RaisedButton(
@@ -331,8 +331,8 @@ class _HomePageState extends State<Levels> {
                             )),),
                         SizedBox(width: 80.0),
                         Icon(
-                          Icons.lock_outline,
-                          color: Color(colors[ind+1]),
+                          (save.getvalue('levels')[9]=='0')?Icons.lock_outline:Icons.lock_open,
+                          color: (save.getvalue('levels')[9]=='0')?Color(colors[ind+1]):Color(colors[ind]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -355,8 +355,8 @@ class _HomePageState extends State<Levels> {
                             )),),
                         SizedBox(width: 80.0),
                         Icon(
-                          Icons.lock_outline,
-                          color: Color(colors[ind+1]),
+                          (save.getvalue('levels')[10]=='0')?Icons.lock_outline:Icons.lock_open,
+                          color: (save.getvalue('levels')[10]=='0')?Color(colors[ind+1]):Color(colors[ind]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -379,8 +379,8 @@ class _HomePageState extends State<Levels> {
                             )),),
                         SizedBox(width: 80.0),
                         Icon(
-                          Icons.lock_outline,
-                          color: Color(colors[ind+1]),
+                          (save.getvalue('levels')[11]=='0')?Icons.lock_outline:Icons.lock_open,
+                          color: (save.getvalue('levels')[11]=='0')?Color(colors[ind+1]):Color(colors[ind]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -416,8 +416,8 @@ class _HomePageState extends State<Levels> {
                       children: [
                         SizedBox(width: 80.0),
                         Icon(
-                          Icons.lock_outline,
-                          color: Color(colors[ind+1]),
+                          (save.getvalue('levels')[12]=='0')?Icons.lock_outline:Icons.lock_open,
+                          color: (save.getvalue('levels')[12]=='0')?Color(colors[ind+1]):Color(colors[ind]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -440,8 +440,8 @@ class _HomePageState extends State<Levels> {
                             )),),
                         SizedBox(width: 80.0),
                         Icon(
-                          Icons.lock_outline,
-                          color: Color(colors[ind+1]),
+                          (save.getvalue('levels')[13]=='0')?Icons.lock_outline:Icons.lock_open,
+                          color: (save.getvalue('levels')[13]=='0')?Color(colors[ind+1]):Color(colors[ind]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -464,8 +464,8 @@ class _HomePageState extends State<Levels> {
                             )),),
                         SizedBox(width: 80.0),
                         Icon(
-                          Icons.lock_outline,
-                          color: Color(colors[ind+1]),
+                          (save.getvalue('levels')[14]=='0')?Icons.lock_outline:Icons.lock_open,
+                          color: (save.getvalue('levels')[14]=='0')?Color(colors[ind+1]):Color(colors[ind]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -488,8 +488,8 @@ class _HomePageState extends State<Levels> {
                             )),),
                         SizedBox(width: 80.0),
                         Icon(
-                          Icons.lock_outline,
-                          color: Color(colors[ind+1]),
+                          (save.getvalue('levels')[15]=='0')?Icons.lock_outline:Icons.lock_open,
+                          color: (save.getvalue('levels')[15]=='0')?Color(colors[ind+1]):Color(colors[ind]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -512,8 +512,8 @@ class _HomePageState extends State<Levels> {
                             )),),
                         SizedBox(width: 80.0),
                         Icon(
-                          Icons.lock_outline,
-                          color: Color(colors[ind+1]),
+                          (save.getvalue('levels')[16]=='0')?Icons.lock_outline:Icons.lock_open,
+                          color: (save.getvalue('levels')[16]=='0')?Color(colors[ind+1]):Color(colors[ind]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(
@@ -536,8 +536,8 @@ class _HomePageState extends State<Levels> {
                             )),),
                         SizedBox(width: 80.0),
                         Icon(
-                          Icons.lock_outline,
-                          color: Color(colors[ind+1]),
+                          (save.getvalue('levels')[17]=='0')?Icons.lock_outline:Icons.lock_open,
+                          color: (save.getvalue('levels')[17]=='0')?Color(colors[ind+1]):Color(colors[ind]),
                           size: 80.0,
                         ),
                         IgnorePointer(ignoring: hovering,child: RaisedButton(

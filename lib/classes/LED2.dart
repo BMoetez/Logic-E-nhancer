@@ -112,6 +112,7 @@ class _LEDState extends State<LED> with SingleTickerProviderStateMixin {
           s=s+'1';
         else s=s+'0';
       }
+      print(s);
       save.setvalue('levels', s);
     }
   }
@@ -207,7 +208,7 @@ class _LEDState extends State<LED> with SingleTickerProviderStateMixin {
                                       MaterialPageRoute(
                                           builder: (context) =>
                                               levels[index(widget.y)]),
-                                      (Route<dynamic> route) => false,
+                                      (Route<dynamic> route) => true,
                                     );
                                     entry.remove();
                                   },

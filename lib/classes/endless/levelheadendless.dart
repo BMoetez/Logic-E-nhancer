@@ -72,7 +72,7 @@ class _levelheadendlessState extends State<levelheadendless> {
               )),
           Spacer(),
           Padding(
-            padding: EdgeInsets.fromLTRB(0, 0, 150, 0),
+            padding: EdgeInsets.fromLTRB(0, 0, 270, 0),
             child: Align(
               alignment: Alignment.topCenter,
               child: Icon(Icons.all_inclusive_rounded,size: 80,color: Colors.blue,)

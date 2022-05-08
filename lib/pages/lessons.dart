@@ -6,6 +6,7 @@ import 'package:logic_enhancer/lessons/Or_Lesson1.dart';
 import 'package:logic_enhancer/main.dart';
 import 'dart:ui' as ui;
 import 'package:logic_enhancer/pages/play_page%20(1).dart';
+import 'package:logic_enhancer/save.dart';
 import '../lessons/And_Lesson1.dart';
 import '../lessons/Nand_Lesson3.dart';
 import '../lessons/Nor_Lesson1.dart';
@@ -99,6 +100,7 @@ class _LessonsState extends State<Lessons> {
                         OutlinedButton(
                             onPressed: () {
                               setState(() {
+                                if(save.localStorage['levels']![14]=='1')
                                 act_but = 2;
                               });
                             },
@@ -131,6 +133,7 @@ class _LessonsState extends State<Lessons> {
                         OutlinedButton(
                             onPressed: () {
                               setState(() {
+                                if(save.localStorage['levels']![9]=='1')
                                 act_but = 3;
                               });
                             },
@@ -163,6 +166,7 @@ class _LessonsState extends State<Lessons> {
                         OutlinedButton(
                             onPressed: () {
                               setState(() {
+                                if(save.localStorage['levels']![4]=='1')
                                 act_but = 4;
                               });
                             },
