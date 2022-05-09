@@ -111,9 +111,9 @@ class _no_gateState extends State<no_gate> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
                         Container(
-                            // width: 600,
-                            // height: 400,
-                            // color: Colors.black,
+                            width: 600,
+                            height: 400,
+                            color: Colors.black,
                             child:Image.asset(
                                     '../../assets/images/gates/no_gate_inf.png')),
                       ],
