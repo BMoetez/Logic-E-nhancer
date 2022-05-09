@@ -10,7 +10,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="assets/images/readme/Picture1.png" alt="Logo">
   </a>
 
 <h3 align="center">LOGIC E-nhancer</h3>
@@ -19,11 +19,6 @@
     The objective of this app is to Make an excellent introduction for people how to immerse themselves in the world of electronic and logic gates.
 For beginner who want to learn the basics of electronic circuit. Likewise for professionals wanting a certain challenge.
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-  </p>
 </div>
 
 
@@ -57,6 +52,7 @@ For beginner who want to learn the basics of electronic circuit. Likewise for pr
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+![alt text](https://github.com/BMoetez/project/blob/main/assets/images/readme/home.PNG?raw=true)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -93,11 +89,13 @@ To cover all the necessary fundamental we divided the app in 4 major modes:
 <ul>
   <li>Classic Mode:</li>
   <p> Custom-made levels for you to explore with new gate every couple of level to provide an engaging experience</p>
+  <img src="assets/images/readme/classic mode.PNG" alt="Logo" >
   <li>Endless Mode:</li>
   <p>A limitless supply of randomly generated levels, so the circuit based fun never needs to stop!(PS:you need to complete classic mode in order to unlock this mode)</p>
+  <img src="assets/images/readme/endless.PNG" alt="Logo" >
   <li>learning Mode:</li>
   <p>Designed lessons to learn the function of each logic gate with a quiz in the end of each lessons to test your acquired knowledge (PS:you need to complete classic mode in order to unlock this mode)</p>
-  
+  <img src="assets/images/readme/lesson.PNG" alt="Logo" >
 </ul>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -120,9 +118,9 @@ To cover all the necessary fundamental we divided the app in 4 major modes:
 <!-- Contributeurs -->
 ## Contributeurs
 
-* [MOETEZ BOUHLEL]()
-* [WASSIM CHOUCHEN]()
-* [FIRAS NECIB]()
+* [MOETEZ BOUHLEL](https://github.com/BMoetez)
+* [WASSIM CHOUCHEN](https://github.com/wassimchouchen)
+* [FIRAS NECIB](https://github.com/firasnecib)
 * [MOHAMED SOUID]()
 
 <p align="right">(<a href="#top">back to top</a>)</p>
