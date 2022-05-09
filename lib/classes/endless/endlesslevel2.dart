@@ -13,6 +13,7 @@ int moves = 3;
 levelheadendless v = levelheadendless(
   "",
   endlesslevel2(),
+  light,
   mov: moves,
 );
 or_gate or1 = or_gate(height: 50, width: 50);
@@ -111,12 +112,12 @@ Bus a11 = Bus(
   dy: -20,
 );
 Bus a12 = Bus(
-  activate: and1_output,
-  hor_length: -300,
-  ver_length1: -30,
-  ver_length2: -30,
-  dy: 10,
-);
+    activate: and1_output,
+    hor_length: -300,
+    ver_length1: -30,
+    ver_length2: -30,
+    dy: 10,
+  );
 Bus a13 = Bus(
   activate: nor1_output,
   hor_length: 0,
@@ -134,6 +135,7 @@ void set() {
   v = levelheadendless(
     "",
     endlesslevel2(),
+    light,
     mov: moves,
   );
   sat1 = 1;
@@ -223,7 +225,7 @@ void set() {
     dy: -20,
   );
   and1_output = and1.activation(a6.activate, a7.activate);
-  a12 = Bus(
+    a12 = Bus(
     activate: and1_output,
     hor_length: -300,
     ver_length1: -30,
@@ -234,11 +236,12 @@ void set() {
   a13 = Bus(
     activate: nor1_output,
     hor_length: 0,
-    ver_length1: 60,
+    ver_length1: 62,
     ver_length2: 0,
     dx: -2.5,
-    dy: -10,
+    dy: -15,
   );
+  
   light = endlessled(
     x: a13.activate,
     y: 2,
@@ -269,14 +272,7 @@ class _endlesslevel2State extends State<endlesslevel2> {
 
   void test1() {
     setState(() {
-      if (moves != 0) {
-        moves -= 1;
-        v = levelheadendless(
-          "",
-          endlesslevel2(),
-          mov: moves,
-        );
-      }
+
       if (sat1 == 1) {
         sat1 = 0;
         a1 = Bus(
@@ -301,14 +297,15 @@ class _endlesslevel2State extends State<endlesslevel2> {
           dy: -20,
         );
         nor1_output = nor1.activation(a11.activate, a12.activate);
-        a13 = Bus(
-          activate: nor1_output,
-          hor_length: 0,
-          ver_length1: 60,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+          a13 = Bus(
+    activate: nor1_output,
+    hor_length: 0,
+    ver_length1: 62,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
+  
       } else {
         sat1 = 1;
         a1 = Bus(
@@ -333,14 +330,15 @@ class _endlesslevel2State extends State<endlesslevel2> {
           dy: -20,
         );
         nor1_output = nor1.activation(a11.activate, a12.activate);
-        a13 = Bus(
-          activate: nor1_output,
-          hor_length: 0,
-          ver_length1: 60,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+          a13 = Bus(
+    activate: nor1_output,
+    hor_length: 0,
+    ver_length1: 62,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
+  
       }
       if (a13.activate == 1) {
         light = endlessled(
@@ -353,19 +351,20 @@ class _endlesslevel2State extends State<endlesslevel2> {
           y: 2,
         );
       }
+      if (moves != 0) {
+        moves -= 1;
+        v = levelheadendless(
+          "",
+          endlesslevel2(),light,
+          mov: moves,
+        );
+      }
     });
   }
 
   void test2() {
     setState(() {
-      if (moves != 0) {
-        moves -= 1;
-        v = levelheadendless(
-          "",
-          endlesslevel2(),
-          mov: moves,
-        );
-      }
+
       if (sat2 == 1) {
         sat2 = 0;
         a2 = Bus(
@@ -393,14 +392,15 @@ class _endlesslevel2State extends State<endlesslevel2> {
           dy: -20,
         );
         nor1_output = nor1.activation(a11.activate, a12.activate);
-        a13 = Bus(
-          activate: nor1_output,
-          hor_length: 0,
-          ver_length1: 60,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+          a13 = Bus(
+    activate: nor1_output,
+    hor_length: 0,
+    ver_length1: 62,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
+  
       } else {
         sat2 = 1;
         a2 = Bus(
@@ -428,14 +428,15 @@ class _endlesslevel2State extends State<endlesslevel2> {
           dy: -20,
         );
         nor1_output = nor1.activation(a11.activate, a12.activate);
-        a13 = Bus(
-          activate: nor1_output,
-          hor_length: 0,
-          ver_length1: 60,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+          a13 = Bus(
+    activate: nor1_output,
+    hor_length: 0,
+    ver_length1: 62,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
+  
       }
       if (a13.activate == 1) {
         light = endlessled(
@@ -448,19 +449,20 @@ class _endlesslevel2State extends State<endlesslevel2> {
           y: 2,
         );
       }
+      if (moves != 0) {
+        moves -= 1;
+        v = levelheadendless(
+          "",
+          endlesslevel2(),light,
+          mov: moves,
+        );
+      }
     });
   }
 
   void test3() {
     setState(() {
-      if (moves != 0) {
-        moves -= 1;
-        v = levelheadendless(
-          "",
-          endlesslevel2(),
-          mov: moves,
-        );
-      }
+
       if (sat3 == 1) {
         sat3 = 0;
         a3 = Bus(
@@ -496,14 +498,15 @@ class _endlesslevel2State extends State<endlesslevel2> {
           dy: -20,
         );
         nor1_output = nor1.activation(a11.activate, a12.activate);
-        a13 = Bus(
-          activate: nor1_output,
-          hor_length: 0,
-          ver_length1: 60,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+          a13 = Bus(
+    activate: nor1_output,
+    hor_length: 0,
+    ver_length1: 62,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
+  
       } else {
         sat3 = 1;
         a3 = Bus(
@@ -539,14 +542,15 @@ class _endlesslevel2State extends State<endlesslevel2> {
           dy: -20,
         );
         nor1_output = nor1.activation(a11.activate, a12.activate);
-        a13 = Bus(
-          activate: nor1_output,
-          hor_length: 0,
-          ver_length1: 60,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+          a13 = Bus(
+    activate: nor1_output,
+    hor_length: 0,
+    ver_length1: 62,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
+  
       }
       if (a13.activate == 1) {
         light = endlessled(
@@ -559,19 +563,20 @@ class _endlesslevel2State extends State<endlesslevel2> {
           y: 2,
         );
       }
+      if (moves != 0) {
+        moves -= 1;
+        v = levelheadendless(
+          "",
+          endlesslevel2(),light,
+          mov: moves,
+        );
+      }
     });
   }
 
   void test4() {
     setState(() {
-      if (moves != 0) {
-        moves -= 1;
-        v = levelheadendless(
-          "",
-          endlesslevel2(),
-          mov: moves,
-        );
-      }
+
       if (sat4 == 1) {
         sat4 = 0;
         a4 = Bus(
@@ -608,14 +613,15 @@ class _endlesslevel2State extends State<endlesslevel2> {
           dy: -20,
         );
         nor1_output = nor1.activation(a11.activate, a12.activate);
-        a13 = Bus(
-          activate: nor1_output,
-          hor_length: 0,
-          ver_length1: 60,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+          a13 = Bus(
+    activate: nor1_output,
+    hor_length: 0,
+    ver_length1: 62,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
+  
       } else {
         sat4 = 1;
         a4 = Bus(
@@ -652,14 +658,15 @@ class _endlesslevel2State extends State<endlesslevel2> {
           dy: -20,
         );
         nor1_output = nor1.activation(a11.activate, a12.activate);
-        a13 = Bus(
-          activate: nor1_output,
-          hor_length: 0,
-          ver_length1: 60,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+          a13 = Bus(
+    activate: nor1_output,
+    hor_length: 0,
+    ver_length1: 62,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
+  
       }
       if (a13.activate == 1) {
         light = endlessled(
@@ -672,19 +679,20 @@ class _endlesslevel2State extends State<endlesslevel2> {
           y: 2,
         );
       }
+      if (moves != 0) {
+        moves -= 1;
+        v = levelheadendless(
+          "",
+          endlesslevel2(),light,
+          mov: moves,
+        );
+      }
     });
   }
 
   void test5() {
     setState(() {
-      if (moves != 0) {
-        moves -= 1;
-        v = levelheadendless(
-          "",
-          endlesslevel2(),
-          mov: moves,
-        );
-      }
+
       if (sat5 == 1) {
         sat5 = 0;
         a5 = Bus(
@@ -710,14 +718,15 @@ class _endlesslevel2State extends State<endlesslevel2> {
         );
         nor1_output = nor1.activation(a11.activate, a12.activate);
 
-        a13 = Bus(
-          activate: nor1_output,
-          hor_length: 0,
-          ver_length1: 60,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+          a13 = Bus(
+    activate: nor1_output,
+    hor_length: 0,
+    ver_length1: 62,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
+  
       } else {
         sat5 = 1;
         a5 = Bus(
@@ -743,14 +752,15 @@ class _endlesslevel2State extends State<endlesslevel2> {
         );
         nor1_output = nor1.activation(a11.activate, a12.activate);
 
-        a13 = Bus(
-          activate: nor1_output,
-          hor_length: 0,
-          ver_length1: 60,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+          a13 = Bus(
+    activate: nor1_output,
+    hor_length: 0,
+    ver_length1: 62,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
+  
       }
       if (a13.activate == 1) {
         light = endlessled(
@@ -763,19 +773,20 @@ class _endlesslevel2State extends State<endlesslevel2> {
           y: 2,
         );
       }
+      if (moves != 0) {
+        moves -= 1;
+        v = levelheadendless(
+          "",
+          endlesslevel2(),light,
+          mov: moves,
+        );
+      }
     });
   }
 
   void test6() {
     setState(() {
-      if (moves != 0) {
-        moves -= 1;
-        v = levelheadendless(
-          "",
-          endlesslevel2(),
-          mov: moves,
-        );
-      }
+
       if (sat6 == 1) {
         sat6 = 0;
         a7 = Bus(
@@ -795,14 +806,15 @@ class _endlesslevel2State extends State<endlesslevel2> {
         );
         nor1_output = nor1.activation(a11.activate, a12.activate);
 
-        a13 = Bus(
-          activate: nor1_output,
-          hor_length: 0,
-          ver_length1: 60,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+          a13 = Bus(
+    activate: nor1_output,
+    hor_length: 0,
+    ver_length1: 62,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
+  
       } else {
         sat6 = 1;
         a7 = Bus(
@@ -822,14 +834,15 @@ class _endlesslevel2State extends State<endlesslevel2> {
         );
         nor1_output = nor1.activation(a11.activate, a12.activate);
 
-        a13 = Bus(
-          activate: nor1_output,
-          hor_length: 0,
-          ver_length1: 60,
-          ver_length2: 0,
-          dx: -2.5,
-          dy: -10,
-        );
+          a13 = Bus(
+    activate: nor1_output,
+    hor_length: 0,
+    ver_length1: 62,
+    ver_length2: 0,
+    dx: -2.5,
+    dy: -15,
+  );
+  
       }
       if (a13.activate == 1) {
         light = endlessled(
@@ -840,6 +853,14 @@ class _endlesslevel2State extends State<endlesslevel2> {
         light = endlessled(
           x: a13.activate,
           y: 2,
+        );
+      }
+      if (moves != 0) {
+        moves -= 1;
+        v = levelheadendless(
+          "",
+          endlesslevel2(),light,
+          mov: moves,
         );
       }
     });

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:logic_enhancer/classes/endless/endlessled.dart';
 import 'dart:ui' as ui;
 import 'package:logic_enhancer/pages/play_page%20(1).dart';
 
 import '../../main.dart';
+import '../LED2.dart';
 
 bool hovering = false;
 
@@ -10,11 +12,14 @@ class levelheadendless extends StatefulWidget {
   String n = '';
   Widget f = Container();
   int mov = 0;
+  endlessled light = endlessled(x: 0, y: 1);
 
-  levelheadendless(String n, Widget f, {this.mov = 5}) {
+
+  levelheadendless(String n, Widget f,endlessled l, {this.mov = 5}) {
     this.n = n;
     this.f = f;
     this.mov = mov;
+    this.light = l;
   }
 
   @override
@@ -30,7 +35,7 @@ class _levelheadendlessState extends State<levelheadendless> {
 
   }
   void losepage(){
-    if(widget.mov==0){
+    if(widget.mov==0 && widget.light.x==0){
       WidgetsBinding.instance?.addPostFrameCallback(
               (_) => Overlay.of(context)?.insert(_getEntry3(context)));
     }
