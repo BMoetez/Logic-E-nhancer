@@ -128,19 +128,8 @@ class _nor_gateState extends State<nor_gate> {
                             width: 600,
                             height: 400,
                             color: Colors.black,
-                            child: Column(
-                              children: [
-                                Material(
-                                  child: IconButton(
-                                      onPressed: () {
-                                        entry.remove();
-                                      },
-                                      icon: Icon(Icons.close)),
-                                ),
-                                Image.asset(
-                                    '../../assets/images/gates/nor_gate_inf.png')
-                              ],
-                            )),
+                            child: Image.asset(
+                                    '../../assets/images/gates/nor_gate_inf.png')),
                       ],
                     ),
                   ),
