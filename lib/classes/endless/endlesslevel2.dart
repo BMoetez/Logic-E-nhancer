@@ -9,7 +9,7 @@ import 'endlessled.dart';
 import 'levelheadendless.dart';
 
 int over = 0;
-int moves = 3;
+int moves = 4;
 levelheadendless v = levelheadendless(
   "",
   endlesslevel2(),
@@ -131,7 +131,7 @@ endlessled light = endlessled(
   y: 2,
 );
 void set() {
-  moves = 3;
+  moves = 4;
   v = levelheadendless(
     "",
     endlesslevel2(),
