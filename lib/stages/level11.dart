@@ -310,6 +310,13 @@ class _level11State extends State<level11> {
         );
       } else {
         sat1 = 1;
+        a1 = Bus(
+  activate: sat1,
+  hor_length: 50,
+  ver_length1: 50,
+  ver_length2: 90,
+  dy: -50,
+);
         or1_output = or1.activation(a1.activate, a2.activate);
         a7 = Bus(
           activate: or1_output,
