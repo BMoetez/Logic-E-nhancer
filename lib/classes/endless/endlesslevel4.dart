@@ -8,7 +8,7 @@ import '/classes/or_gate.dart';
 import 'endlessled.dart';
 import 'levelheadendless.dart';
 
-int moves = 3;
+int moves = 4;
 levelheadendless v = levelheadendless(
   "",
   endlesslevel4(),
@@ -127,7 +127,7 @@ Bus a13 = Bus(
 );
 endlessled light = endlessled(x: a13.activate, y: 4);
 void set() {
-  moves = 3;
+  moves = 4;
   v = levelheadendless(
     "",
     endlesslevel4(),

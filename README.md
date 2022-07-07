@@ -121,7 +121,7 @@ To cover all the necessary fundamental we divided the app in 4 major modes:
 * [MOETEZ BOUHLEL](https://github.com/BMoetez)
 * [WASSIM CHOUCHEN](https://github.com/wassimchouchen)
 * [FIRAS NECIB](https://github.com/firasnecib)
-* [MOHAMED SOUID]()
+* [MOHAMED SOUID](https://github.com/Mohamed-Souid)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
