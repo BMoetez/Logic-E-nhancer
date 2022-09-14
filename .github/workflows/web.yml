@@ -9,4 +9,5 @@ jobs :
       - uses : actions / checkout @ v2 # Only works with v2
         uses : subosito / flutter - action @ vi
         uses : bluefireteam / flutter - gh - pages @ v
-        with : /Logic-E-nhancer/
+        with : 
+          baseHref: /Logic-E-nhancer/
