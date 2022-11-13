@@ -39,6 +39,7 @@ For beginner who want to learn the basics of electronic circuit. Likewise for pr
         <li><a href="#prerequisites">Prerequisites</a></li>
       </ul>
     </li>
+    <li><a href="#demo">Live Demo</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributeurs">Contributeurs</a></li>
@@ -81,6 +82,12 @@ To verify flutter is set up correctly, run this command in the terminal:
   ```sh
   flutter doctor
   ```
+  
+  
+<!-- Live Demo -->
+## Live Demo
+Here's the link for the Live Demo :
+<a href="https://logic-e-nhancer.web.app/" target="_blank">Live Demo</a>
 <!-- USAGE EXAMPLES -->
 ## Usage
 The purpose of this app is an educational purpose to make it easier for young engineers to learn electronic fundamentals.
